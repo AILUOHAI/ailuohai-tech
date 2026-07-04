@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrainBus Downloads</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .downloads-hero {
+      padding: 72px 0 28px;
+    }
+    .downloads-title {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .downloads-title h1 {
+      font-size: 58px;
+      line-height: 1.02;
+      letter-spacing: -.045em;
+      margin: 0 0 14px;
+    }
+    .downloads-title p {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 22px;
+      max-width: 650px;
+    }
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 38px;
+      padding: 24px 0 88px;
+    }
+    .download-tile {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 22px;
+      margin-top: 18px;
+    }
+    .download-tile h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      letter-spacing: -.02em;
+    }
+    .download-tile p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+    .brainbus-logo {
+      width: 100%;
+      border-radius: 14px;
+    }
+    @media (max-width: 980px) {
+      .downloads-title,
+      .downloads-grid { grid-template-columns: 1fr; }
+      .downloads-title h1 { font-size: 48px; }
+    }
+    @media (max-width: 640px) {
+      .downloads-title h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container bar">
+      <div class="brand">AILUOHAI-TECH</div>
+      <nav class="nav">
+        <a href="index.html#products">Products</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="downloads-hero">
+    <div class="container downloads-title">
+      <div>
+        <div class="breadcrumbs"><a href="index.html">Home</a> / Downloads</div>
+        <h1>BrainBus downloads</h1>
+        <p>BrainBus is an application for setup and firmware updates of the instrument panel. It works over Wi‑Fi and gives you a convenient service tool for configuration and maintenance.</p>
+        <div class="actions">
+          <a class="btn btn-dark" href="#installer">Open installer</a>
+          <a class="btn btn-ghost" href="mailto:info@ailuohai-tech.com">Contact support</a>
+        </div>
+      </div>
+      <div class="side-image">
+        <img class="brainbus-logo" src="img/brainbus-1.png" alt="BrainBus application interface" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="installer">
+    <div class="container downloads-grid">
+      <div class="card">
+        <h3>About BrainBus</h3>
+        <p>BrainBus is used to configure the dashboard, manage service parameters and update firmware through a Wi‑Fi connection. The interface is designed for fast access to calibration and maintenance functions.</p>
+        <ul class="list">
+          <li>Dashboard setup and service.</li>
+          <li>Firmware update over Wi‑Fi.</li>
+          <li>Calibration and parameter management.</li>
+          <li>Single tool for diagnostics and maintenance.</li>
+        </ul>
+        <div class="notice">When your installer is ready, place it in the site folder and keep the button below linked to <strong>downloads/BrainBus-Setup.exe</strong>.</div>
+      </div>
+
+      <div class="card">
+        <h3>Installer</h3>
+        <div class="download-tile">
+          <h3>BrainBus Installer</h3>
+          <p>Windows installer for application setup, dashboard configuration and firmware updates.</p>
+          <a class="btn btn-dark" href="downloads/BrainBus-Setup.exe">Download</a>
+        </div>
+        <div class="download-tile">
+          <h3>Support</h3>
+          <p>For installer issues, release updates and access questions, use the main support email.</p>
+          <a class="btn btn-dark" href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Electronics and control systems for airboats and special-purpose vessels.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="dash-6-8.html">Dash-6.8</a>
+        <a href="ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Downloads</h4>
+        <a href="downloads.html">BrainBus</a>
+        <a href="downloads.html#installer">Installer</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+        <p>For orders and inquiries.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
