@@ -3,64 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dash-6.8 — AILUOHAI-TECH</title>
+  <title>Dash-6.8</title>
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .gallery { margin-top: 24px; }
+    .gallery-main {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #202228;
+    }
+    .gallery-main img {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+    }
+    .thumbs {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .thumbs button {
+      border: none;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+    .thumbs img {
+      width: 120px;
+      border-radius: 10px;
+      opacity: .65;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .thumbs img.active {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 640px) {
+      .thumbs img { width: 88px; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container bar">
-      <a class="brand" href="index.html">AILUOHAI-TECH</a>
+      <div class="brand">AILUOHAI-TECH</div>
       <nav class="nav">
         <a href="index.html#products">Products</a>
+        <a href="downloads.html">Downloads</a>
         <a href="index.html#contact">Contact</a>
-        <a href="index.html">Back</a>
       </nav>
     </div>
   </header>
 
   <section class="product-hero">
     <div class="container">
-      <div class="breadcrumbs"><a href="index.html">Home</a> / <span>Dash-6.8</span></div>
+      <div class="breadcrumbs"><a href="index.html">Home</a> / Dash-6.8</div>
       <div class="product-title">
         <div>
-          <h1>Dash-6.8</h1>
+          <h1>Dash-6.8 instrument panel</h1>
           <p>Configurable instrument panel for airboats and special-purpose vessels, combining readability, diagnostics and system status in a single marine-adapted display.</p>
-          <a class="btn btn-dark" href="mailto:info@ailuohai-tech.com?subject=Dash-6.8">Request information</a>
-          <div class="spec-grid"><div class="spec"><strong>Display</strong><span>6.8 inch</span></div><div class="spec"><strong>Interface</strong><span>CAN / NMEA 2000</span></div><div class="spec"><strong>UI</strong><span>Touch UI</span></div><div class="spec"><strong>Use</strong><span>Marine dash</span></div></div>
+          <a class="btn btn-dark" href="mailto:info@ailuohai-tech.com">Request information</a>
         </div>
-        <div class="side-image"><img src="img/Ailuohai.jpg" alt="Dash-6.8"></div>
+        <div class="side-image">
+          <div class="gallery" id="dash-gallery">
+            <div class="gallery-main">
+              <img id="dash-main-image" src="img/Dash6.8_3.png" alt="Dash-6.8 front" loading="lazy">
+            </div>
+            <div class="thumbs">
+              <button type="button" data-src="img/Dash6.8_3.png" aria-label="Front view">
+                <img src="img/Dash6.8_3.png" alt="Dash-6.8 front" class="active">
+              </button>
+              <button type="button" data-src="img/Dash6.8_4.png" aria-label="Perspective view">
+                <img src="img/Dash6.8_4.png" alt="Dash-6.8 perspective">
+              </button>
+              <button type="button" data-src="img/Dash6.8_2.png" aria-label="Side view">
+                <img src="img/Dash6.8_2.png" alt="Dash-6.8 side">
+              </button>
+              <button type="button" data-src="img/Dash6.8_4.png" aria-label="Rear connector view">
+                <img src="img/Dash6.8_4.png" alt="Dash-6.8 rear connector">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec"><strong>Display</strong><span>6.8" marine panel</span></div>
+        <div class="spec"><strong>Connectivity</strong><span>Wi‑Fi + CAN</span></div>
+        <div class="spec"><strong>Functions</strong><span>Diagnostics & status</span></div>
+        <div class="spec"><strong>Use case</strong><span>Airboats & vessels</span></div>
       </div>
     </div>
   </section>
 
-  <section class="container content-grid">
-    <div>
+  <section class="section">
+    <div class="container content-grid">
       <div class="card">
         <h3>Overview</h3>
-        <p>Configurable instrument panel for airboats and special-purpose vessels, combining readability, diagnostics and system status in a single marine-adapted display.</p>
-        <p>This page can later include real UI screenshots, page hierarchy, warning screen behavior, day/night themes, enclosure dimensions and installation cutout data.</p>
+        <p>Dash-6.8 combines primary engine data, diagnostics and onboard status in a single readable interface for marine and special-purpose applications.</p>
+        <p>This page can later include real UI screenshots, page hierarchy, warning screen behavior, day and night themes, enclosure dimensions and installation cutout data.</p>
+        <p>The structure is ready for diagrams, connector details, supported sensors, firmware update workflow and downloadable technical documents.</p>
       </div>
-      <div class="card" style="margin-top:22px">
-        <h3>Key functions</h3>
-        <ul class="list"><li>Engine RPM, temperatures, pressure and fuel display.</li><li>Fault and warning presentation from ECU.</li><li>Flexible screen layouts for different vessel configurations.</li><li>Readable interface for open cockpit and demanding conditions.</li><li>Expandable with networked sensors and marine devices.</li></ul>
-      </div>
-      <div class="card" style="margin-top:22px">
-        <h3>Interface and installation</h3>
-        <p>This page is structured as a real product page so later you can add diagrams, connectors, pinout, supported sensors, firmware update workflow, and downloadable documents.</p>
-        <p>You can also place photographs from testing, screenshots of the interface, wiring examples, and installation recommendations.</p>
-      </div>
-    </div>
-    <div>
       <div class="card">
-        <h3>Application</h3>
-        <p>Designed for airboats and vessels with non-standard operating conditions, including moisture exposure, vibration and integration of multiple onboard electronic modules.</p>
-        <div class="notice">Next step: replace this block with exact technical data, supported engines or electrical ratings, connector families, and enclosure details.</div>
+        <h3>Key features</h3>
+        <ul class="list">
+          <li>Readable 6.8-inch display for marine environments.</li>
+          <li>Support for RPM, temperature, pressure and fuel information.</li>
+          <li>System indicators and warnings in one interface.</li>
+          <li>Designed for moisture, vibration and integration with onboard electronics.</li>
+        </ul>
       </div>
-      <div class="side-image" style="margin-top:22px"><img src="img/Hero-1-1.jpg" alt="Ailuohai airboat"></div>
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="container footer-grid">
       <div>
         <h4>AILUOHAI-TECH</h4>
@@ -68,19 +126,45 @@
       </div>
       <div>
         <h4>Products</h4>
-        <a href="ecu-cat-gdi4.html">ECU Cat-GDI4</a>
         <a href="dash-6-8.html">Dash-6.8</a>
-        <a href="pdm-12.html">PDM-12</a>
+        <a href="ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Downloads</h4>
+        <a href="downloads.html">BrainBus</a>
+        <a href="downloads.html#installer">Installer</a>
       </div>
       <div>
         <h4>Support</h4>
-        <a href="mailto:info@ailuohai-tech.com">Contact</a>
-      </div>
-      <div>
-        <h4>Back</h4>
-        <a href="index.html">Main page</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+        <p>For orders and inquiries.</p>
       </div>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      const main = document.getElementById('dash-main-image');
+      const buttons = document.querySelectorAll('#dash-gallery .thumbs button');
+      const thumbs = document.querySelectorAll('#dash-gallery .thumbs img');
+
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var src = btn.getAttribute('data-src');
+          if (!src || !main) return;
+
+          main.src = src;
+
+          thumbs.forEach(function(img) {
+            img.classList.remove('active');
+          });
+
+          var img = btn.querySelector('img');
+          if (img) img.classList.add('active');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
