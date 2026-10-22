@@ -280,7 +280,8 @@ img {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 38px;
-  padding: 24px 0 88px;
+  padding-top: 24px;
+  padding-bottom: 88px;
   align-items: stretch;
 }
 
@@ -547,8 +548,9 @@ figure.side-image { margin: 0; }
 @media (max-width: 640px) { .page-nav { padding: 0 18px 8px; } .has-page-nav [data-nav] { scroll-margin-top: 130px; } .has-page-nav [data-nav] h3 { scroll-margin-top: 150px; } }
 @media (min-width: 1180px) {
   .has-page-nav { --rail: 236px; }
-  .has-page-nav .rail-pad { --cw: var(--container); margin-left: max(var(--rail), calc((100vw - var(--cw)) / 2)); margin-right: auto; }
-  .has-page-nav .wide.rail-pad { --cw: var(--wide, 1400px); }
+  /* One left edge for the whole page: the edge of the wide column, or just right of the menu */
+  .has-page-nav .rail-pad, .has-page-nav .product-hero > .container, .has-page-nav .tp-hero > .container {
+    margin-left: max(var(--rail), calc((100vw - var(--wide, 1400px)) / 2)); margin-right: auto; }
   .page-nav { position: fixed; left: 16px; top: 88px; width: 200px; max-height: calc(100vh - 110px); overflow-y: auto; flex-direction: column; gap: 2px; padding: 14px 10px; margin: 0; white-space: normal;
     background: var(--surface); border-radius: 14px; box-shadow: 0 6px 22px rgba(0,0,0,.08); opacity: 0; visibility: hidden; transform: translateX(-8px); transition: opacity .3s, transform .3s, visibility .3s; }
   .page-nav.show { opacity: 1; visibility: visible; transform: none; }
