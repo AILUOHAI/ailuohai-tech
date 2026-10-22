@@ -497,18 +497,13 @@ figure.side-image { margin: 0; }
   border-radius: 20px;
   padding: 22px;
 }
-.feature-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: #1b1c20;
-  color: #f07a2e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-.feature-icon svg { width: 32px; height: 32px; }
+/* One-colour line drawings, no tile behind them */
+.feature-icon { width: 90px; height: 54px; color: #e8661a; margin-bottom: 14px; }
+.feature-icon svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.8px; stroke-linecap: round; stroke-linejoin: round; }
+.feature-icon svg * { vector-effect: non-scaling-stroke; }
+.feature-icon .f, .feature-icon .g { fill: var(--surface); }
+.feature-icon .af, .feature-icon .p { fill: currentColor; stroke: none; }
+.feature-icon .t { opacity: .5; }
 .feature h3 { margin: 0 0 8px; font-size: 20px; letter-spacing: -.02em; }
 .feature p { margin: 0; color: var(--muted); font-size: 15px; }
 .feature .figure { display: block; margin-top: 10px; font-size: 13px; font-weight: 700; color: var(--text); }

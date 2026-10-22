@@ -17,6 +17,20 @@
 
   function clamp01(x) { return Math.min(1, Math.max(0, x)); }
 
+  // Wide screens: the step whose heading has passed the middle of the picture shows its picture.
+  // The picture is measured where it rests (pinned and not scaled), so the switch point never moves,
+  // and scrolling back gives the same steps at the same places. Pages register sec._story.
+  function pickStep(sec, visual) {
+    var st = sec._story;
+    var frame = sec.querySelector('.frame') || visual;
+    var line = parseFloat(getComputedStyle(visual).top) + (frame === visual ? 0 : frame.offsetTop) + frame.offsetHeight / 2;
+    var cur = st.steps[0];
+    st.steps.forEach(function (s) {
+      if ((s.querySelector('h3:not(.sr)') || s).getBoundingClientRect().top <= line) cur = s;
+    });
+    if (!cur.classList.contains('active')) st.activate(cur);
+  }
+
   function update() {
     queued = false;
     var hdr = headerHeight();
@@ -29,6 +43,7 @@
       sec.style.setProperty('--hdr', hdr + 'px');
       sec.style.setProperty('--head-h', headH + 'px');
       if (!visual || !grid) return;
+      if (sec._story && wideMq.matches && sec.classList.contains('scene')) pickStep(sec, visual);
 
       var intros = sec.querySelectorAll('.story-step.intro');
       // data-fixed-visual: the picture stays in its column from the start (no full-width intro).

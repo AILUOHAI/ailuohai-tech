@@ -46,15 +46,13 @@
     .spec-table div { background: var(--surface); border-radius: 12px; padding: 14px; }
     .spec-table strong { display: block; font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
     .spec-table span { font-size: 15px; font-weight: 700; line-height: 1.35; display: block; }
-    /* Light line pictures of the parts the unit drives */
-    .spec-pic { display: block; aspect-ratio: 160 / 96; margin: -4px -4px 12px; border-radius: 9px; background: linear-gradient(160deg, #fbfbf9, #ecece6); }
-    .spec-pic svg { display: block; width: 100%; height: 100%; fill: none; stroke: #2a2b30; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .spec-pic .f { fill: #fff; }
-    .spec-pic .g { fill: #e1e1db; }
-    .spec-pic .a { stroke: #e8661a; }
-    .spec-pic .af { fill: #e8661a; stroke: none; }
-    .spec-pic .p { fill: #2a2b30; stroke: none; }
-    .spec-pic .t { stroke-width: 1.3; opacity: .45; }
+    /* Small one-colour line icons of the parts the unit drives */
+    .spec-pic { display: block; width: 60px; height: 36px; margin: 0 0 8px; color: #e8661a; }
+    .spec-pic svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6px; stroke-linecap: round; stroke-linejoin: round; }
+    .spec-pic svg * { vector-effect: non-scaling-stroke; }
+    .spec-pic .f, .spec-pic .g { fill: var(--surface); }
+    .spec-pic .af, .spec-pic .p { fill: currentColor; stroke: none; }
+    .spec-pic .t { opacity: .5; }
     .hero-shot { margin: 14px 0 0; border-radius: 10px; overflow: hidden; background: #111; aspect-ratio: 1408 / 736; }
     .hero-shot img { width: 100%; height: 100%; object-fit: cover; }
     .story-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .55fr); gap: 44px; }
@@ -219,61 +217,61 @@
     <p class="module-lead">Один блок управляет топливом, воздухом, зажиганием и фазами V8 и записывает всё, что делает.</p>
     <div class="feature-grid">
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="11" y="3" width="10" height="7" rx="2"/><path d="M13 10v10h6V10"/><path d="M14 20l1 4h2l1-4"/><path d="M16 26v1M12 27l-1 2M20 27l1 2"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><path d="M50 44v44h60V44"/><rect class="g" x="54" y="66" width="52" height="12" rx="2"/><path d="M40 44h80"/><path d="M8 36h34l8 8M8 52h30"/><rect class="f" x="20" y="10" width="10" height="20" rx="3"/><path d="M25 30v6"/><path class="t" d="M25 40l-4 7M25 40v8M25 40l4 7"/><rect class="f" x="96" y="6" width="10" height="26" rx="3"/><path d="M101 32v12"/><path d="M101 48l-7 11M101 48v13M101 48l7 11"/></svg></div>
         <h3>Гибридный впрыск</h3>
         <p>8 форсунок прямого впрыска (GDI) и 8 форсунок во впуск. Прямой впрыск 1–3 импульсами за цикл с высоковольтным профилем тока; доля топлива во впуск и напрямую задаётся в калибровке.</p>
         <span class="figure">16 форсунок · 8 GDI + 8 PFI</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h24"/><path d="M8 22v-6h6v6M18 22v-6h6v6"/><path d="M11 16V9h10v7"/><path d="M16 9V5"/><circle cx="16" cy="4" r="1.5"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><rect class="f" x="8" y="42" width="28" height="34" rx="4"/><circle class="p" cx="22" cy="59" r="3"/><path d="M22 42V30h25"/><rect class="f" x="47" y="24" width="102" height="12" rx="6"/><rect class="f" x="57" y="36" width="10" height="22" rx="3"/><path d="M62 58v6"/><path class="t" d="M62 67l-4 8M62 67v9M62 67l4 8"/><rect class="f" x="81" y="36" width="10" height="22" rx="3"/><path d="M86 58v6"/><path class="t" d="M86 67l-4 8M86 67v9M86 67l4 8"/><rect class="f" x="105" y="36" width="10" height="22" rx="3"/><path d="M110 58v6"/><path class="t" d="M110 67l-4 8M110 67v9M110 67l4 8"/><rect class="f" x="129" y="36" width="10" height="22" rx="3"/><path d="M134 58v6"/><path class="t" d="M134 67l-4 8M134 67v9M134 67l4 8"/></svg></div>
         <h3>Высокое давление топлива</h3>
         <p>Два клапана ТНВД, по одному на банк, с регулированием давления в рампе по обратной связи.</p>
         <span class="figure">2 ТНВД · 2 рампы</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="2"/><path d="M16 4v3M16 25v3M4 16h3M25 16h3M7.5 7.5l2.1 2.1M22.4 22.4l2.1 2.1M7.5 24.5l2.1-2.1M22.4 9.6l2.1-2.1"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><rect class="f" x="44" y="46" width="102" height="8" rx="4"/><ellipse class="g" cx="68" cy="43" rx="6" ry="11"/><ellipse class="g" cx="90" cy="57" rx="6" ry="11"/><ellipse class="g" cx="112" cy="43" rx="6" ry="11"/><ellipse class="g" cx="134" cy="57" rx="6" ry="11"/><circle class="f" cx="32" cy="50" r="20"/><circle class="g" cx="32" cy="50" r="8"/><path d="M32 30v8M32 62v8M12 50h8M44 50h8"/><path class="a" d="M16 26a24 24 0 0 1 32 0"/><path class="a" d="M48 26l-7-1 3 6"/></svg></div>
         <h3>Фазы газораспределения</h3>
         <p>Четыре распредвала — впуск и выпуск на каждом банке — и четыре фазовращателя. Регулирование по обратной связи, проверка давления масла, диагностика цепи и фазовращателей, автонастройка.</p>
         <span class="figure">4 распредвала · 4 фазовращателя</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27 16a11 11 0 1 1-4-8.5"/><path d="M24 4v4h-4"/><path d="M16 9v7l4 3"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><circle class="f" cx="66" cy="54" r="32"/><path d="M66 22v-8M58 14h16M92 30l6-6"/><path d="M66 54V34M66 54l14 10"/><circle class="p" cx="66" cy="54" r="3"/><path d="M112 40h36M118 54h30M124 68h24"/></svg></div>
         <h3>Быстрый старт</h3>
         <p>Блок определяет положение мотора по форме распредвала, не дожидаясь пропуска зуба на коленвале, — первый впрыск и искра приходят раньше после начала прокрутки.</p>
         <span class="figure">Синхронизация в среднем за ~190° коленвала вместо ~310° по пропуску</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="3"/><path d="M16 3v3M25.2 6.8l-2.1 2.1M29 16h-3M25.2 25.2l-2.1-2.1M16 29v-3M6.8 25.2l2.1-2.1M3 16h3"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><circle class="f" cx="64" cy="50" r="30"/><path d="M74.3 21.8L76.3 16.2M79.0 24.0L82.0 18.8M83.3 27.0L87.1 22.4M87.0 30.7L91.6 26.9M90.0 35.0L95.2 32.0M92.2 39.7L97.8 37.7M93.5 44.8L99.5 43.7M94.0 50.0L100.0 50.0M93.5 55.2L99.5 56.3M92.2 60.3L97.8 62.3M90.0 65.0L95.2 68.0M87.0 69.3L91.6 73.1M83.3 73.0L87.1 77.6M79.0 76.0L82.0 81.2M74.3 78.2L76.3 83.8M69.2 79.5L70.3 85.5M64.0 80.0L64.0 86.0M58.8 79.5L57.7 85.5M53.7 78.2L51.7 83.8M49.0 76.0L46.0 81.2M44.7 73.0L40.9 77.6M41.0 69.3L36.4 73.1M38.0 65.0L32.8 68.0M35.8 60.3L30.2 62.3M34.5 55.2L28.5 56.3M34.0 50.0L28.0 50.0M34.5 44.8L28.5 43.7M35.8 39.7L30.2 37.7M38.0 35.0L32.8 32.0M41.0 30.7L36.4 26.9M44.7 27.0L40.9 22.4M49.0 24.0L46.0 18.8M53.7 21.8L51.7 16.2M58.8 20.5L57.7 14.5"/><circle class="g" cx="64" cy="50" r="8"/><rect class="f" x="106" y="40" width="34" height="20" rx="4"/><path d="M106 50h-4M140 50h14"/></svg></div>
         <h3>Гибкие задающие диски</h3>
         <p>Диски коленвала 36-1, 60-2, 36-2-2-2 или диск только на распредвале; форма распредвалов задаётся в программе настройки и проверяется встроенным логгером.</p>
         <span class="figure">До 4 входов распредвалов</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l-8 15h7l-2 11 9-16h-7z"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><rect class="g" x="63" y="7" width="34" height="20" rx="4"/><rect class="f" x="97" y="12" width="13" height="10" rx="2"/><rect class="f" x="73" y="27" width="14" height="38" rx="3"/><path class="g" d="M71 65h18l-2 8H73z"/><rect class="f" x="76" y="73" width="8" height="8"/><path d="M80 81v4"/><path class="a" d="M92 84l8-4-4 6 9-2M68 84l-8-4 4 6-9-2"/></svg></div>
         <h3>Зажигание</h3>
         <p>Восемь выходов на пассивные катушки 12 В с адаптивным накоплением или сигнал 5 В на катушки со встроенным коммутатором.</p>
         <span class="figure">8 катушек · свой угол и контроль детонации по цилиндрам</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M8.5 23.5l15-15"/><circle cx="16" cy="16" r="2"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><rect class="f" x="36" y="16" width="64" height="64" rx="10"/><circle class="p" cx="44" cy="24" r="2.2"/><circle class="p" cx="92" cy="24" r="2.2"/><circle class="p" cx="44" cy="72" r="2.2"/><circle class="p" cx="92" cy="72" r="2.2"/><circle class="g" cx="68" cy="48" r="23"/><ellipse class="f" cx="68" cy="48" rx="23" ry="6" transform="rotate(-35 68 48)"/><rect class="f" x="100" y="30" width="30" height="36" rx="6"/><path class="t" d="M108 30v36M116 30v36"/><rect class="af" x="130" y="40" width="8" height="16" rx="2"/></svg></div>
         <h3>Дроссели и вестгейты</h3>
         <p>Четыре H-моста под один-два электронных дросселя и электрические вестгейты. Обучение упоров и автонастройка PID; поддерживаются датчики положения SENT.</p>
         <span class="figure">4 H-моста</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 24a11 11 0 0 1 22 0"/><path d="M16 24l6-8"/><circle cx="16" cy="24" r="1.5"/><path d="M8 18l-1.5-1M24 18l1.5-1M16 13v-2"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><path class="t" d="M30 62h110M30 44h110M30 26h110M62 14v66M96 14v66" stroke-dasharray="3 4"/><path d="M30 12v68h112"/><path class="a" d="M32 74C50 42 70 30 94 28s32 6 46 18" stroke-width="3"/><circle class="af" cx="94" cy="28" r="4.5"/></svg></div>
         <h3>Управление по моменту</h3>
         <p>Модель воздуха и момента, лямбда-регулирование, два канала детонации, широкополосная лямбда и температура выхлопа от модуля по CAN. Давления измеряются синхронно с углом коленвала.</p>
         <span class="figure">2 канала детонации · ШДК + EGT по CAN</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3l10 4v8c0 7-4.5 11.5-10 14-5.5-2.5-10-7-10-14V7z"/><path d="M11.5 16l3 3 6-6"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><path class="f" d="M80 6l32 12v26c0 22-15 36-32 45-17-9-32-23-32-45V18z"/><path d="M65 47l10 10 21-21"/></svg></div>
         <h3>Безопасность в основе</h3>
         <p>Впрыск и искра идут от аппаратных таймеров, а не по шине данных. Три уровня контроля с независимым сторожевым таймером; при неисправности выходы отключаются. Коды ошибок в формате OBD.</p>
         <span class="figure">3 уровня контроля</span>
       </article>
       <article class="feature">
-        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="24" height="16" rx="2"/><path d="M11 27h10M16 22v5"/><path d="M8 17l4-4 3 3 5-6 4 4"/></svg></div>
+        <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 160 96"><rect class="f" x="36" y="10" width="88" height="58" rx="4"/><path d="M24 76h112l-8 9H32z"/><path d="M46 56l16-16 12 10 18-22 22 14"/><path class="t" d="M46 24h28M46 32h18"/></svg></div>
         <h3>Настройка и логи</h3>
         <p>Калибровка, живые данные и логи по Ethernet в BrainBus GDI-8. Калибровки хранятся с возможностью отката, логи пишутся во внутреннюю память. Встроенный имитатор ЭБУ позволяет подготовить калибровку до запуска мотора.</p>
         <span class="figure">Ethernet · 2 × CAN · LIN</span>
@@ -339,24 +337,6 @@
     var narrowMq = window.matchMedia('(max-width: 980px)');
     var observer = null;
 
-    // Wide screens: a step takes the picture when its heading comes into the picture area,
-    // and keeps it until the heading goes past the top of the picture.
-    var watchers = [], queued = false;
-    function pick(sec, steps) {
-      var r = (sec.querySelector('.frame') || sec.querySelector('.story-visual')).getBoundingClientRect();
-      var cur = steps[0];
-      for (var i = 0; i < steps.length; i++) {
-        var h = (steps[i].querySelector('h3:not(.sr)') || steps[i]).getBoundingClientRect();
-        if (h.top >= r.bottom) break;
-        cur = steps[i];
-        if (h.bottom > r.top) break;
-      }
-      return cur;
-    }
-    function runWatchers() { queued = false; watchers.forEach(function (w) { w(); }); }
-    function queueWatchers() { if (!queued) { queued = true; window.requestAnimationFrame(runWatchers); } }
-    window.addEventListener('scroll', queueWatchers, { passive: true });
-    window.addEventListener('resize', queueWatchers);
 
     // Phones: picture and title are pinned on top, so the switch line sits one step below the picture.
     function narrowMargin(sec) {
@@ -377,13 +357,11 @@
 
     function setMode() {
       if (observer) { observer.disconnect(); observer = null; }
-      watchers = [];
+      story._story = null;
       story.classList.toggle('scene', sceneMq.matches);
       if (!sceneMq.matches || !('IntersectionObserver' in window)) return;
-      if (!narrowMq.matches) {
-        var watch = function () { var s = pick(story, steps); if (!s.classList.contains('active')) activate(s); };
-        watchers.push(watch); watch(); return;
-      }
+      // Wide screens: assets/story.js picks the step by the picture.
+      if (!narrowMq.matches) { story._story = { steps: steps, activate: activate }; return; }
       // Narrow: the picture sits on top, so look lower.
       observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
