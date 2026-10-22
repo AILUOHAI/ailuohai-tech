@@ -557,13 +557,21 @@ figure.side-image { margin: 0; }
   .page-nav > a:hover { color: var(--text); background: var(--surface-soft); }
   .page-nav > a.on { color: #fff; background: #1b1c20; }
   .page-nav > a.on i { color: #f07a2e; }
-  .page-nav-sub { margin: 2px 0 6px 18px; padding-left: 10px; border-left: 2px solid var(--line); }
+  .page-nav-sub { margin: 2px 0 6px 28px; }
   .page-nav > a.on + .page-nav-sub { display: block; }
   .page-nav-sub button { display: block; width: 100%; text-align: left; border: 0; background: none; font: inherit; font-size: 13px; line-height: 1.3; color: var(--muted); padding: 5px 4px; cursor: pointer; border-radius: 6px; }
   .page-nav-sub button:hover { color: var(--text); }
   .page-nav-sub button.on { color: #e8661a; font-weight: 700; }
 }
 @media (prefers-reduced-motion: reduce) { .page-nav { transition: none; } }
+
+/* Small one-colour line icons in spec cells */
+.spec-pic { display: block; width: 60px; height: 36px; margin: 0 0 8px; color: #e8661a; }
+.spec-pic svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6px; stroke-linecap: round; stroke-linejoin: round; }
+.spec-pic svg * { vector-effect: non-scaling-stroke; }
+.spec-pic .f, .spec-pic .g { fill: var(--surface); }
+.spec-pic .af, .spec-pic .p { fill: currentColor; stroke: none; }
+.spec-pic .t { opacity: .5; }
 
 /* Big buttons of a product page (documentation, pinout, firmware) */
 .btn-big { min-height: 54px; padding: 0 22px; gap: 10px; font-size: 16px; font-weight: 700; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,.14); }
