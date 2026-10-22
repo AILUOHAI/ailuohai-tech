@@ -9,7 +9,7 @@
   <link rel="alternate" hreflang="ru" href="test-platform.html">
   <link rel="stylesheet" href="../assets/style.css">
   <style>
-    .wide { max-width: 1400px; }
+    .wide { max-width: var(--wide, 1400px); }
     .tp-hero { position: relative; min-height: 600px; display: flex; align-items: flex-end; overflow: hidden; background: #1b1c20; color: #fff; }
     .tp-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     .tp-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.75)); }
