@@ -29,28 +29,28 @@
   <link rel="stylesheet" href="assets/style.css?v=20261022f">
   <style>
     .wide { max-width: var(--wide, 1400px); }
-    .tp-hero { position: relative; min-height: 600px; display: flex; align-items: flex-end; overflow: hidden; background: #1b1c20; color: #fff; }
+    .tp-hero { position: relative; min-height: 600px; display: flex; align-items: flex-start; overflow: hidden; background: #1b1c20; color: #fff; }
     .tp-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .tp-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.75)); }
-    .tp-hero .container { position: relative; z-index: 1; padding-top: 80px; padding-bottom: 48px; width: 100%; }
+    .tp-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.72), rgba(0,0,0,.25) 45%, rgba(0,0,0,0) 70%); }
+    .tp-hero .container { position: relative; z-index: 1; padding-top: 40px; padding-bottom: 48px; width: 100%; }
     .tp-hero h1 { font-size: 64px; line-height: 1.02; letter-spacing: -.045em; margin: 0 0 12px; }
     .tp-hero p { font-size: 19px; color: rgba(255,255,255,.86); max-width: 680px; margin: 0 0 18px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chips span { padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.12); backdrop-filter: blur(6px); font-size: 14px; font-weight: 700; }
-    .chips b { color: #f07a2e; }
     .crumbs-dark { font-size: 14px; color: rgba(255,255,255,.7); margin-bottom: 16px; }
 
     /* Static intro */
-    .intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding-top: 56px; padding-bottom: 24px; }
+    .intro { padding-top: 56px; padding-bottom: 24px; }
+    .intro-text { max-width: 900px; }
+    .goals-title { font-size: 22px; letter-spacing: -.02em; margin: 26px 0 0; }
+    .goals { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 14px; }
+    .goals div { background: var(--surface); border-radius: 14px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.07); }
+    .goals b { display: block; font-size: 16px; line-height: 1.25; margin-bottom: 6px; }
+    .goals span { display: block; font-size: 14px; color: var(--muted); line-height: 1.45; }
     .intro h2 { font-size: 40px; letter-spacing: -.035em; line-height: 1.05; margin: 0 0 16px; }
     .intro p { color: #444; font-size: 17px; margin: 0 0 12px; }
-    .key-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .key-grid div { background: #1b1c20; color: #fff; border-radius: 14px; padding: 16px; }
-    .key-grid b { display: block; font-size: 26px; letter-spacing: -.02em; color: #f07a2e; line-height: 1.1; }
-    .key-grid span { display: block; font-size: 13px; color: #c9cad0; margin-top: 4px; }
-    .legion { background: var(--surface); border-radius: 14px; padding: 18px 20px; margin-top: 14px; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
-    .legion b { letter-spacing: .08em; }
-    .legion p { color: #444; margin: 6px 0 0; font-size: 15px; }
+    .key-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 22px; }
+    .key-grid div { background: var(--surface); border-radius: 14px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.07); }
+    .key-grid b { display: block; font-size: 26px; letter-spacing: -.02em; color: var(--text); line-height: 1.1; }
+    .key-grid span { display: block; font-size: 13px; color: var(--muted); margin-top: 4px; }
     .note { font-size: 13px; color: var(--muted); margin-top: 10px; }
 
     /* Scroll stories: one sticky picture, steps change it */
@@ -144,7 +144,9 @@
       .tl-fill, .scene .frame img, .scene .story-step, .scene .stage { transition: none; }
     }
     @media (max-width: 980px) {
-      .intro, .pt-grid { grid-template-columns: 1fr; gap: 16px; }
+      .pt-grid { grid-template-columns: 1fr; gap: 16px; }
+      .key-grid { grid-template-columns: repeat(3, 1fr); }
+      .goals { grid-template-columns: repeat(2, 1fr); }
       .story-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
       .specs { grid-template-columns: 1fr 1fr; }
       .onboard-grid { grid-template-columns: 1fr 1fr; }
@@ -161,6 +163,7 @@
       .intro h2, .section-title { font-size: 30px; }
       .story-step h3, .stage h3 { font-size: 24px; }
       .key-grid { grid-template-columns: 1fr 1fr; }
+      .goals { grid-template-columns: 1fr; }
       .onboard-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -185,32 +188,33 @@
       <div class="crumbs-dark"><a href="index.html">Home</a> / <span>Test platform</span></div>
       <h1>Test platform</h1>
       <p>We are building our own test boat — to run every AILUOHAI system in real conditions before it reaches customers.</p>
-      <div class="chips"><span><b>5.5 m</b> AMg5 aluminium</span><span><b>~175 hp</b> turbo engine</span><span><b>Cat-GDI4</b> engine control</span><span><b>LEGION</b> electronics</span></div>
     </div>
   </section>
 
   <section class="container intro rail-pad">
-    <div>
+    <div class="intro-text">
       <h2>A test boat for the whole system</h2>
       <p>A 5.5 m aluminium airboat with an engine converted from the Nissan HR12DDR, built for about 175 hp and run by our Cat-GDI4 engine control unit. All our electronics are installed on board.</p>
       <p>We are a young company with long experience behind it: more than 10 years of designing airboats and more than 5 years of engine management and electronics. On this boat it all comes together.</p>
       <p>The boat also shows what we can do: hull, powertrain and electronics designed by one team. We do the same for our customers — from fitting our systems to your boat to developing electronics from scratch.</p>
-      <div class="legion">
-        <b>LEGION</b>
-        <p>One control system for the whole boat: dashboard, engine control, power management and software working as one. LEGION is in development, and this boat is where it is built and tested.</p>
-      </div>
     </div>
-    <div>
-      <div class="key-grid">
-        <div><b>5.5 m</b><span>length</span></div>
-        <div><b>~750 kg</b><span>total weight</span></div>
-        <div><b>~175 hp</b><span>engine output</span></div>
-        <div><b>~90 km/h</b><span>cruising speed</span></div>
-        <div><b>150 km/h</b><span>top speed</span></div>
-        <div><b>2.78 : 1</b><span>belt reduction</span></div>
-      </div>
-      <p class="note">Design figures; they will be confirmed in tests.</p>
+    <h3 class="goals-title">What we test</h3>
+    <div class="goals">
+      <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><path class="f" d="M24 50h88l18-14h14l-8 22H36z"/><path d="M16 72c12-8 24-8 36 0s24 8 36 0 24-8 36 0 18 6 24 4"/><path class="t" d="M30 84c12-6 24-6 36 0s24 6 36 0"/></svg></i><b>Handling on water</b><span>How the boat behaves in turns, on waves, on shallow water and grass: stability, steering and safety.</span></div>
+      <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><path d="M20 74h120"/><path d="M40 52v22M80 52v22M120 52v22"/><rect class="f" x="24" y="24" width="32" height="28" rx="4"/><rect class="f" x="64" y="24" width="32" height="28" rx="4"/><rect class="f" x="104" y="24" width="32" height="28" rx="4"/><circle class="p" cx="40" cy="38" r="3"/><circle class="p" cx="80" cy="38" r="3"/><circle class="p" cx="120" cy="38" r="3"/></svg></i><b>Electronics working together</b><span>The dashboard, engine control, power control and sensors share one CAN network: data exchange, fault reports and the reaction to failures.</span></div>
+      <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><rect class="f" x="36" y="10" width="88" height="58" rx="4"/><path d="M24 76h112l-8 9H32z"/><path d="M46 56l16-16 12 10 18-22 22 14"/></svg></i><b>Software infrastructure</b><span>Setup, diagnostics, logging and firmware updates through BrainBus — in the workshop and on the water.</span></div>
+      <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><circle class="g" cx="80" cy="48" r="8"/><path class="f" d="M80 40c4-14 10-26 14-30 4 4 2 18-6 32zM88 52c14 4 26 10 30 14-4 4-18 2-32-6zM74 54c-6 12-16 22-22 24-2-6 6-18 20-28z"/><circle class="p" cx="80" cy="48" r="3"/></svg></i><b>Engine and propeller</b><span>Engine calibration under the real propeller load, cooling, vibration and long running.</span></div>
+      <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><rect class="f" x="54" y="22" width="52" height="52" rx="8"/><path d="M66 22v-8M80 22v-8M94 22v-8M66 74v8M80 74v8M94 74v8M54 36h-8M54 48h-8M54 60h-8M106 36h8M106 48h8M106 60h8"/><circle class="p" cx="70" cy="40" r="3"/><circle class="p" cx="90" cy="40" r="3"/><circle class="p" cx="80" cy="58" r="3"/><path class="t" d="M70 40l10 18 10-18z"/></svg></i><b>Artificial intelligence</b><span>Every run is recorded. We plan to use this data for AI: log analysis, early fault detection and help with setup.</span></div>
     </div>
+    <div class="key-grid">
+        <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><path class="f" d="M18 52h104l20-14h10l-8 24H30z"/><path d="M18 74h134M18 68v12M152 68v12"/><path d="M26 74l-6 0M144 74h6"/></svg></i><b>5.5 m</b><span>length</span></div>
+        <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><path class="f" d="M50 30h60l14 56H36z"/><path d="M66 30a14 14 0 0 1 28 0"/><path class="t" d="M64 60h32"/></svg></i><b>~750 kg</b><span>dry weight</span></div>
+        <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><path d="M36 70a44 44 0 0 1 88 0"/><path class="t" d="M44 50l6 4M80 26v7M116 50l-6 4M58 32l4 6M102 32l-4 6"/><path d="M80 70l26-26"/><circle class="p" cx="80" cy="70" r="4"/></svg></i><b>~175 hp</b><span>engine output</span></div>
+        <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><path d="M36 70a44 44 0 0 1 88 0"/><path d="M80 70V34"/><circle class="p" cx="80" cy="70" r="4"/><path class="t" d="M44 50l6 4M116 50l-6 4"/></svg></i><b>~90 km/h</b><span>cruising speed</span></div>
+        <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><path d="M36 70a44 44 0 0 1 88 0"/><path d="M80 70l34-14"/><circle class="p" cx="80" cy="70" r="4"/><path class="t" d="M44 50l6 4M80 26v7"/><path d="M118 40l8-8M126 40v-8h-8"/></svg></i><b>150 km/h</b><span>top speed</span></div>
+        <div><i class="spec-pic" aria-hidden="true"><svg viewBox="0 0 160 96"><circle class="f" cx="46" cy="48" r="14"/><circle class="f" cx="114" cy="48" r="30"/><path d="M46 34L114 18M46 62l68 16"/><circle class="p" cx="46" cy="48" r="3"/><circle class="p" cx="114" cy="48" r="4"/></svg></i><b>2.78 : 1</b><span>belt reduction</span></div>
+    </div>
+    <p class="note">Design figures; they will be confirmed in tests.</p>
   </section>
 
   <section class="container wide story rail-pad" id="boat" data-nav="Hull and cockpit">
