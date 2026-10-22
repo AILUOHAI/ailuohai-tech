@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dash-6.8</title>
+  <title>Приборная панель Dash-6.8 — AILUOHAI-TECH</title>
   <link rel="alternate" hreflang="en" href="../dash-6-8.html">
   <link rel="alternate" hreflang="ru" href="dash-6-8.html">
   <link rel="stylesheet" href="../assets/style.css">
@@ -107,6 +107,46 @@
       .thumbs img { width: 88px; }
       .pin-table { font-size: 13px; }
     }
+    .wide { max-width: 1400px; }
+    .overview { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 18px; padding-top: 16px; padding-bottom: 24px; }
+    .overview .card { height: auto; }
+    .kicker { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #e8661a; }
+    .section-title { font-size: 40px; letter-spacing: -.035em; line-height: 1.05; margin: 6px 0 0; }
+    .section-lead { color: var(--muted); font-size: 17px; margin: 6px 0 10px; max-width: 720px; }
+    .story { padding-top: 40px; padding-bottom: 24px; }
+    .story-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .55fr); gap: 44px; }
+    .story-visual { display: none; }
+    .story-step { padding: 26px 0; }
+    .story-step .num { font-size: 13px; font-weight: 800; color: #e8661a; letter-spacing: .06em; }
+    .story-step h3 { font-size: 28px; letter-spacing: -.03em; line-height: 1.1; margin: 6px 0 10px; }
+    .story-step p { color: var(--muted); margin: 0; }
+    .story-step figure { margin: 0 0 16px; border-radius: 10px; overflow: hidden; background: #111; }
+    .story-step figure img { width: 100%; }
+    .scene .story-visual { display: block; position: sticky; align-self: start; }
+    .scene .frame { position: relative; border-radius: 10px; overflow: hidden; background: #111; }
+    .scene .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s ease; }
+    .scene .frame img.on { opacity: 1; }
+    .scene .stage-label { position: absolute; left: 14px; bottom: 14px; padding: 6px 12px; border-radius: 999px; background: rgba(27,28,32,.86); color: #fff; font-size: 13px; font-weight: 700; }
+    .scene .story-step { min-height: 56vh; display: flex; flex-direction: column; justify-content: center; opacity: .3; transition: opacity .4s ease; }
+    .scene .story-step.active { opacity: 1; }
+    .scene .story-step figure { display: none; }
+    .cap { display: block; margin-top: 8px; font-size: 12px; color: var(--muted); }
+    #construction .frame { background: #e8e8e6; }
+    .pinout-cta { padding-top: 24px; padding-bottom: 60px; }
+    .cta-card { display: flex; gap: 24px; align-items: center; justify-content: space-between; }
+    .cta-card p { margin: 0; }
+    @media (prefers-reduced-motion: reduce) { .scene .frame img, .scene .story-step { transition: none; } }
+    @media (max-width: 980px) {
+      .overview { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; gap: 0; }
+      .scene .frame { max-height: 40vh; margin: 0 auto; box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+      .scene .cap { display: none; }
+      .cta-card { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 640px) {
+      .section-title { font-size: 30px; }
+      .story-step h3 { font-size: 24px; }
+    }
   </style>
 </head>
 <body>
@@ -130,10 +170,11 @@
         <div>
           <h1>Приборная панель Dash-6.8</h1>
           <p>Настраиваемая приборная панель для аэролодок и судов специального назначения: читаемость, диагностика и состояние систем на одном экране, адаптированном для воды.</p>
-          <div class="actions">
-  <a class="btn btn-dark" href="mailto:info@ailuohai-tech.com">Запросить информацию</a>
-  <a class="btn btn-dark" href="../files/ota_package.bin" download>Скачать прошивку</a>
-</div>
+          <div class="actions-row">
+            <a class="btn btn-dark" href="dash-pinout.html">Распиновка</a>
+            <a class="btn btn-light" href="contacts.html?topic=Dash-6.8#request">Запросить информацию</a>
+            <a class="btn btn-light" href="../files/ota_package.bin" download>Скачать прошивку</a>
+          </div>
         </div>
         <div class="side-image">
           <div class="gallery" id="dash-gallery">
@@ -141,16 +182,16 @@
               <img id="dash-main-image" src="../img/Dash6.8_3.png" alt="Dash-6.8, вид спереди" loading="lazy">
             </div>
             <div class="thumbs">
-              <button type="button" data-src="../img/Dash6.8_3.png" aria-label="Front view">
+              <button type="button" data-src="../img/Dash6.8_3.png" aria-label="Вид спереди">
                 <img src="../img/Dash6.8_3.png" alt="Dash-6.8, вид спереди" class="active">
               </button>
-              <button type="button" data-src="../img/Dash6.8_4.png" aria-label="Perspective view">
+              <button type="button" data-src="../img/Dash6.8_4.png" aria-label="Вид в перспективе">
                 <img src="../img/Dash6.8_4.png" alt="Dash-6.8 в перспективе">
               </button>
-              <button type="button" data-src="../img/Dash6.8_2.png" aria-label="Side view">
+              <button type="button" data-src="../img/Dash6.8_2.png" aria-label="Вид сбоку">
                 <img src="../img/Dash6.8_2.png" alt="Dash-6.8 сбоку">
               </button>
-              <button type="button" data-src="../img/Dash6.8_4.png" aria-label="Rear connector view">
+              <button type="button" data-src="../img/Dash6.8_4.png" aria-label="Разъём сзади">
                 <img src="../img/Dash6.8_4.png" alt="Разъём Dash-6.8 сзади">
               </button>
             </div>
@@ -167,14 +208,12 @@
     </div>
   </section>
 
-  <section class="section">
-  <div class="container content-grid">
+  <section class="container overview">
     <div class="card">
       <h3>Обзор</h3>
-      <p>Dash-6.8 поддерживает два стандартных протокола CAN: Rusefi и ABIT ADLM. Панель показывает основные данные двигателя и бортовой сети в понятном интерфейсе и рассчитана на ежедневную работу на аэролодках и судах специального назначения.</p>
-
-      <p>Основные рабочие параметры, индикаторы состояния и предупреждения — на одном экране. В Dash-6.8 встроены GPS-модуль для показа скорости, Wi-Fi с веб-сервером для подключения и обновлений, а также функции диагностики и предупреждений.</p>
-
+      <p>Dash-6.8 — приборная панель системы AILUOHAI. Она получает данные мотора по CAN и показывает их на одном экране 6,8": скорость, обороты, температуры, давления, топливо и моточасы. Скорость даёт встроенный GPS, а Wi‑Fi с веб-сервером служит для настройки и обновлений.</p>
+    </div>
+    <div class="card">
       <h3>Основные параметры</h3>
       <ul class="list">
         <li>Обороты двигателя.</li>
@@ -186,97 +225,131 @@
         <li>Уровень топлива.</li>
         <li>Скорость по встроенному GPS.</li>
       </ul>
-
+    </div>
+    <div class="card">
       <h3>Состояние и предупреждения</h3>
       <ul class="list">
+        <li>Знаки неисправности двигателя и предупреждений.</li>
+        <li>Низкое давление масла и низкое напряжение.</li>
+        <li>Перегрев и холодный двигатель.</li>
         <li>Индикатор низкого уровня топлива.</li>
-        <li>Индикатор холодного двигателя.</li>
-        <li>Предупреждение о перегреве.</li>
-        <li>Экраны диагностики и предупреждений.</li>
       </ul>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Экраны интерфейса</h3>
-      <div class="screen-list">
-  <div class="spec screen-item">
-    <img src="../img/warning.png" alt="Экран предупреждений Dash-6.8" loading="lazy">
-    <strong>Предупреждения</strong>
-    <span>Визуальные предупреждения: мало топлива, холодный двигатель, перегрев.</span>
-  </div>
-
-  <div class="spec screen-item">
-    <img src="../img/DTC.png" alt="Экран диагностики Dash-6.8" loading="lazy">
-    <strong>Диагностика</strong>
-    <span>Встроенный экран диагностики с неисправностями и состоянием систем.</span>
-  </div>
-
-  <div class="spec screen-item">
-    <img src="../img/parametr.png" alt="Страница параметров Dash-6.8" loading="lazy">
-    <strong>Страница параметров</strong>
-    <span>Настраиваемый экран параметров с данными двигателя и бортовой сети в реальном времени.</span>
-  </div>
-</div>
+  <section class="container wide story" id="interface">
+    <div class="story-head">
+      <span class="kicker">Экранный интерфейс</span>
+      <h2 class="section-title">Базовый интерфейс и предупреждения</h2>
     </div>
-  </div>
-</section>
-
-  <section class="section">
-    <div class="container content-grid">
-      <div class="card">
-        <h3>Конструкция</h3>
-        <p>В Dash-6.8 стоит дисплей 1280×480 с IPS-матрицей, углом обзора 170°, яркостью до 450 кд/м² и рабочей температурой до −30 °C.</p>
-        <p>Панель собрана в жёстком пластиковом корпусе; корпус может быть выполнен герметичным для тяжёлых условий.</p>
-        <p>Все элементы собраны на нержавеющем крепеже A2. В корпусе есть дренажный клапан: он выпускает пар и не пускает влагу внутрь. Панель рассчитана на перегрузки до 4 G.</p>
+    <p class="section-lead">Прокрутите экраны Dash-6.8 — от основного вида до предупреждений и живых данных.</p>
+    <div class="story-grid">
+      <div class="story-visual" aria-hidden="true">
+        <div class="frame" style="aspect-ratio: 1784 / 666">
+          <img src="../img/dash-screen-base.webp" alt="" class="on" data-img="img/dash-screen-base.webp">
+          <img src="../img/dash-screen-fault.webp" alt="" loading="lazy" data-img="img/dash-screen-fault.webp">
+          <img src="../img/dash-screen-oil.webp" alt="" loading="lazy" data-img="img/dash-screen-oil.webp">
+          <img src="../img/dash-screen-voltage.webp" alt="" loading="lazy" data-img="img/dash-screen-voltage.webp">
+          <img src="../img/dash-screen-overheat.webp" alt="" loading="lazy" data-img="img/dash-screen-overheat.webp">
+          <img src="../img/dash-screen-cold.webp" alt="" loading="lazy" data-img="img/dash-screen-cold.webp">
+          <img src="../img/dash-screen-warning.webp" alt="" loading="lazy" data-img="img/dash-screen-warning.webp">
+          <img src="../img/dash-screen-params.webp" alt="" loading="lazy" data-img="img/dash-screen-params.webp">
+          <span class="stage-label">Базовый экран</span>
+        </div>
+        <span class="cap">Экраны Dash-6.8</span>
       </div>
-
-      <div class="side-image">
-        <img src="../img/rasbor.JPG" alt="Конструкция корпуса Dash-6.8" loading="lazy">
+      <div class="story-steps">
+        <article class="story-step active" data-img="img/dash-screen-base.webp" data-label="Базовый экран">
+          <figure><img src="../img/dash-screen-base.webp" alt="Базовый экран Dash-6.8: скорость, обороты, расход и температура" loading="lazy"></figure>
+          <span class="num">01</span>
+          <h3>Базовый интерфейс</h3>
+          <p>В центре — скорость по GPS и обороты, слева — расход топлива, справа — температура ОЖ. На боковых шкалах — уровень топлива и температура, внизу — моточасы и бортовое напряжение.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-fault.webp" data-label="Неисправность">
+          <figure><img src="../img/dash-screen-fault.webp" alt="Экран Dash-6.8 со знаком неисправности двигателя" loading="lazy"></figure>
+          <span class="num">02</span>
+          <h3>Неисправность двигателя</h3>
+          <p>Когда блок управления двигателем сообщает о неисправности, в центре экрана появляется знак CHECK.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-oil.webp" data-label="Низкое давление масла">
+          <figure><img src="../img/dash-screen-oil.webp" alt="Экран Dash-6.8 с красным значком низкого давления масла" loading="lazy"></figure>
+          <span class="num">03</span>
+          <h3>Низкое давление масла</h3>
+          <p>Значок маслёнки в верхней строке загорается красным, когда давление масла падает ниже порога.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-voltage.webp" data-label="Низкое напряжение">
+          <figure><img src="../img/dash-screen-voltage.webp" alt="Экран Dash-6.8 с оранжевым значком низкого напряжения" loading="lazy"></figure>
+          <span class="num">04</span>
+          <h3>Низкое напряжение</h3>
+          <p>Значок аккумулятора загорается оранжевым, когда бортовое напряжение слишком низкое.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-overheat.webp" data-label="Перегрев">
+          <figure><img src="../img/dash-screen-overheat.webp" alt="Экран Dash-6.8 с красным значком перегрева" loading="lazy"></figure>
+          <span class="num">05</span>
+          <h3>Перегрев</h3>
+          <p>Значок температуры загорается красным, когда двигатель перегревается.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-cold.webp" data-label="Холодный двигатель">
+          <figure><img src="../img/dash-screen-cold.webp" alt="Экран Dash-6.8 с синим значком холодного двигателя" loading="lazy"></figure>
+          <span class="num">06</span>
+          <h3>Холодный двигатель</h3>
+          <p>Значок температуры горит синим, пока двигатель не прогреется.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-warning.webp" data-label="Предупреждение">
+          <figure><img src="../img/dash-screen-warning.webp" alt="Экран Dash-6.8 с жёлтым знаком предупреждения" loading="lazy"></figure>
+          <span class="num">07</span>
+          <h3>Предупреждения</h3>
+          <p>Важные предупреждения сопровождаются жёлтым знаком в центре экрана — их трудно пропустить.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-params.webp" data-label="Живые данные">
+          <figure><img src="../img/dash-screen-params.webp" alt="Экран параметров Dash-6.8 с живыми данными мотора" loading="lazy"></figure>
+          <span class="num">08</span>
+          <h3>Живые данные мотора</h3>
+          <p>Второй экран с текущими значениями: обороты, давление во впуске, угол зажигания, коррекция по детонации, время впрыска, лямбда, педаль и дроссель, температуры ОЖ, впуска, масла и редуктора, давление масла и топлива, расход и напряжение.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="card">
-        <h3>Распиновка разъёма</h3>
-        <p>Разъём Dash-6.8 со стороны задней панели: нумерация контактов и назначение сигналов — питание, CAN, аналоговый вход, цифровые входы и выходы.</p>
-
-        <div class="pinout-wrap">
-          <div class="pinout-image">
-            <img src="../img/black14.jpg" alt="Чертёж 14-контактного разъёма Dash-6.8" loading="lazy">
-            <div class="pin-note">Нумерация контактов показана со стороны задней панели, как на чертеже.</div>
-          </div>
-
-          <div class="pin-table-wrap">
-            <table class="pin-table">
-              <thead>
-                <tr>
-                  <th>Контакт</th>
-                  <th>Тип</th>
-                  <th>Назначение</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>1</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
-                <tr><td>2</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
-                <tr><td>3</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
-                <tr><td>4</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
-                <tr><td>5</td><td><span class="pin-tag">Аналог</span></td><td>ADC (0-5V)</td></tr>
-                <tr><td>6</td><td><span class="pin-tag">CAN</span></td><td>CAN-H</td></tr>
-                <tr><td>7</td><td><span class="pin-tag">12V (7-30V)</span></td><td>Питание от АКБ</td></tr>
-                <tr><td>8</td><td><span class="pin-tag">GND</span></td><td>Масса питания</td></tr>
-                <tr><td>9</td><td><span class="pin-tag">IN</span></td><td>Цифровой вход 12 В</td></tr>
-                <tr><td>10</td><td><span class="pin-tag">CAN</span></td><td>CAN-L</td></tr>
-                <tr><td>11</td><td><span class="pin-tag">OUT</span></td><td>Коммутируемый выход 12 В (интеллектуальный ключ, до 17 А) для включения нагрузки</td></tr>
-                <tr><td>12</td><td><span class="pin-tag">12V (7-30V)</span></td><td>Питание от АКБ</td></tr>
-                <tr><td>13</td><td><span class="pin-tag">5V</span></td><td>Питание датчиков</td></tr>
-                <tr><td>14</td><td><span class="pin-tag">IN</span></td><td>Цифровой вход 12 В</td></tr>
-              </tbody>
-            </table>
-          </div>
+  <section class="container wide story" id="construction">
+    <div class="story-head">
+      <span class="kicker">Конструкция</span>
+      <h2 class="section-title">Корпус</h2>
+    </div>
+    <p class="section-lead">Как панель устроена для воды, вибрации и холода.</p>
+    <div class="story-grid">
+      <div class="story-visual" aria-hidden="true">
+        <div class="frame" style="aspect-ratio: 16 / 10">
+          <img src="../img/dash-enclosure.webp" alt="" class="on" data-img="img/dash-enclosure.webp">
+          <img src="../img/rasbor.JPG" alt="" loading="lazy" data-img="img/rasbor.JPG">
+          <span class="stage-label">Корпус</span>
         </div>
+        <span class="cap">3D-модель</span>
       </div>
+      <div class="story-steps">
+        <article class="story-step active" data-img="img/dash-enclosure.webp" data-label="Корпус">
+          <figure><img src="../img/dash-enclosure.webp" alt="Корпус Dash-6.8, вид сзади с разъёмом, 3D-модель" loading="lazy"></figure>
+          <span class="num">01</span>
+          <h3>Дисплей и корпус</h3>
+          <p>IPS-дисплей 1280×480 с углом обзора 170° и яркостью до 450 кд/м², работает до −30 °C. Жёсткий пластиковый корпус с одним герметичным 14-контактным разъёмом сзади; корпус может быть полностью герметичным.</p>
+        </article>
+        <article class="story-step" data-img="img/rasbor.JPG" data-label="Сборка">
+          <figure><img src="../img/rasbor.JPG" alt="Dash-6.8, корпус в разобранном виде" loading="lazy"></figure>
+          <span class="num">02</span>
+          <h3>Сборка</h3>
+          <p>Все детали собраны на нержавеющем крепеже A2. Дренажный клапан выпускает пар и не пускает влагу в корпус. Панель рассчитана на перегрузки до 4 G.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="container pinout-cta">
+    <div class="card cta-card">
+      <div>
+        <h3>Распиновка разъёма</h3>
+        <p>Один герметичный 14-контактный разъём: питание, CAN, аналоговый и цифровые входы, питание датчиков и коммутируемый выход 12 В. Интерактивная распиновка с описанием каждого контакта.</p>
+      </div>
+      <a class="btn btn-dark" href="dash-pinout.html">Открыть распиновку</a>
     </div>
   </section>
 
@@ -326,5 +399,51 @@
       });
     })();
   </script>
+  <script>
+  (function () {
+    // Scroll modules: the step on the reading line chooses the picture and the label.
+    var sceneMq = window.matchMedia('(min-height: 360px)');
+    var narrowMq = window.matchMedia('(max-width: 980px)');
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.story'));
+    var observers = [];
+
+    // Phones: picture and title are pinned on top, so the switch line sits one step below the picture.
+    function narrowMargin(sec) {
+      var vis = sec.querySelector('.story-visual');
+      var vh = window.innerHeight;
+      var bottom = parseFloat(getComputedStyle(vis).top) + vis.offsetHeight;
+      var line = Math.min(vh - 60, bottom + vh * 0.36);
+      return '-' + Math.round(line) + 'px 0px -' + Math.max(0, Math.round(vh - line - 40)) + 'px 0px';
+    }
+
+    function setup(sec) {
+      var steps = Array.prototype.slice.call(sec.querySelectorAll('.story-step'));
+      var pics = Array.prototype.slice.call(sec.querySelectorAll('.frame img'));
+      var label = sec.querySelector('.stage-label');
+      function activate(step) {
+        steps.forEach(function (s) { s.classList.toggle('active', s === step); });
+        pics.forEach(function (p) { p.classList.toggle('on', p.dataset.img === step.dataset.img); });
+        label.textContent = step.dataset.label;
+      }
+      sec.classList.toggle('scene', sceneMq.matches);
+      if (!sceneMq.matches || !('IntersectionObserver' in window)) return;
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
+      }, { rootMargin: narrowMq.matches ? narrowMargin(sec) : '-45% 0px -45% 0px' });
+      steps.forEach(function (s) { obs.observe(s); });
+      observers.push(obs);
+      activate(steps[0]);
+    }
+    function setMode() {
+      observers.forEach(function (o) { o.disconnect(); });
+      observers = [];
+      sections.forEach(setup);
+    }
+    setMode();
+    if (sceneMq.addEventListener) { sceneMq.addEventListener('change', setMode); narrowMq.addEventListener('change', setMode); }
+  })();
+  </script>
+  <script src="../assets/story.js"></script>
+  <a class="fab" href="contacts.html#request" title="Написать нам"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Написать нам</span></a>
 </body>
 </html>

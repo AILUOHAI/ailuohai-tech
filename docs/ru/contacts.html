@@ -47,6 +47,22 @@
       .facts { grid-template-columns: 1fr; }
       .what, .service-grid, .dealer-grid { grid-template-columns: 1fr; }
     }
+    .request { padding-top: 24px; padding-bottom: 56px; scroll-margin-top: 80px; }
+    .request-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 40px; background: #1b1c20; color: #fff; border-radius: 22px; padding: 32px; }
+    .request h2 { font-size: 36px; letter-spacing: -.03em; margin: 6px 0 10px; }
+    .request p { color: #c9cad0; }
+    .request-points { color: #c9cad0; padding-left: 18px; }
+    .request-points li { margin: 6px 0; }
+    .request-form { display: grid; gap: 12px; }
+    .request-form label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
+    .request-form small { color: #9a9ba3; font-weight: 400; }
+    .request-form input, .request-form select, .request-form textarea { font: inherit; font-size: 15px; color: #111; background: #fff; border: 0; border-radius: 10px; padding: 11px 12px; }
+    .request-form input:focus, .request-form select:focus, .request-form textarea:focus { outline: 3px solid #e8661a; }
+    .request-form .btn { justify-self: start; border: 0; cursor: pointer; background: #e8661a; }
+    .request-form .btn:hover { background: #cf5712; }
+    .request-form .form-note { font-size: 12px; color: #9a9ba3; margin: 0; }
+    .hp { position: absolute; left: -9999px; }
+    @media (max-width: 980px) { .request-grid { grid-template-columns: 1fr; padding: 22px; } }
   </style>
 </head>
 <body>
@@ -126,12 +142,53 @@
       <div class="contact-row"><small>Главный офис</small><p>Шэньчжэнь, Китай</p></div>
       <div class="contact-row"><small>Компания</small><p style="font-size:15px">Shenzhen Ailuohai Power Technology Co., Ltd.</p></div>
       <div class="topics">
-        <a class="btn btn-dark" href="mailto:info@ailuohai-tech.com?subject=Order%20inquiry">Заказ или запрос цены</a>
-        <a class="btn btn-light" href="mailto:info@ailuohai-tech.com?subject=Technical%20support">Техническая поддержка</a>
-        <a class="btn btn-light" href="mailto:info@ailuohai-tech.com?subject=Partnership">Сотрудничество</a>
+        <a class="btn btn-dark" href="#request">Заказ или запрос цены</a>
+        <a class="btn btn-light" href="contacts.html?topic=Technical+support#request">Техническая поддержка</a>
+        <a class="btn btn-light" href="contacts.html?topic=Dealership#request">Сотрудничество</a>
       </div>
     </aside>
   </div>
+
+  <section class="container request" id="request">
+    <div class="request-grid">
+      <div>
+        <span class="kicker">Заявка</span>
+        <h2>Напишите нам</h2>
+        <p>Расскажите о вашей лодке, моторе и задаче. Мы отвечаем по почте, обычно в течение одного рабочего дня.</p>
+        <ul class="request-points">
+          <li>Продукция и цены</li>
+          <li>Внедрение на вашу платформу</li>
+          <li>Разработка с нуля</li>
+          <li>Техподдержка и дилерство</li>
+        </ul>
+      </div>
+      <form class="request-form" action="https://formsubmit.co/info@ailuohai-tech.com" method="POST">
+        <input type="hidden" name="_subject" value="Заявка с сайта ailuohai-tech.com (RU)">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.ailuohai-tech.com/ru/thanks.html">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Имя<input type="text" name="name" required autocomplete="name"></label>
+        <label>Почта<input type="email" name="email" required autocomplete="email"></label>
+        <label>Телефон или мессенджер <small>(необязательно)</small><input type="text" name="phone" autocomplete="tel"></label>
+        <label>Тема
+          <select name="topic" id="request-topic">
+            <option value="General question">Общий вопрос</option>
+            <option>Dash-6.8</option>
+            <option>Cat-GDI4</option>
+            <option>Cat-GDI8</option>
+            <option>Cat-MPI8</option>
+            <option value="Integration into my platform">Внедрение на мою платформу</option>
+            <option value="Development from scratch">Разработка с нуля</option>
+            <option value="Technical support">Техническая поддержка</option>
+            <option value="Dealership">Дилерство</option>
+          </select>
+        </label>
+        <label>Сообщение<textarea name="message" rows="5" required></textarea></label>
+        <button class="btn btn-dark" type="submit">Отправить заявку</button>
+        <p class="form-note">Заявка приходит на info@ailuohai-tech.com через сервис FormSubmit.</p>
+      </form>
+    </div>
+  </section>
 
   <footer class="footer" id="contact">
     <div class="container footer-grid">
@@ -160,5 +217,16 @@
       </div>
     </div>
   </footer>
+  <script>
+  (function () {
+    // Preselect the topic from ?topic=... (links from product pages).
+    var m = /[?&]topic=([^&#]+)/.exec(location.search);
+    var sel = document.getElementById('request-topic');
+    if (!m || !sel) return;
+    var want = decodeURIComponent(m[1].replace(/\+/g, ' '));
+    Array.prototype.forEach.call(sel.options, function (o) { if (o.value === want || o.text === want) sel.value = o.value; });
+  })();
+  </script>
+  <a class="fab" href="contacts.html#request" title="Написать нам"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Написать нам</span></a>
 </body>
 </html>

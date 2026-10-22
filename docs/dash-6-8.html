@@ -107,6 +107,46 @@
       .thumbs img { width: 88px; }
       .pin-table { font-size: 13px; }
     }
+    .wide { max-width: 1400px; }
+    .overview { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 18px; padding-top: 16px; padding-bottom: 24px; }
+    .overview .card { height: auto; }
+    .kicker { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #e8661a; }
+    .section-title { font-size: 40px; letter-spacing: -.035em; line-height: 1.05; margin: 6px 0 0; }
+    .section-lead { color: var(--muted); font-size: 17px; margin: 6px 0 10px; max-width: 720px; }
+    .story { padding-top: 40px; padding-bottom: 24px; }
+    .story-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .55fr); gap: 44px; }
+    .story-visual { display: none; }
+    .story-step { padding: 26px 0; }
+    .story-step .num { font-size: 13px; font-weight: 800; color: #e8661a; letter-spacing: .06em; }
+    .story-step h3 { font-size: 28px; letter-spacing: -.03em; line-height: 1.1; margin: 6px 0 10px; }
+    .story-step p { color: var(--muted); margin: 0; }
+    .story-step figure { margin: 0 0 16px; border-radius: 10px; overflow: hidden; background: #111; }
+    .story-step figure img { width: 100%; }
+    .scene .story-visual { display: block; position: sticky; align-self: start; }
+    .scene .frame { position: relative; border-radius: 10px; overflow: hidden; background: #111; }
+    .scene .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s ease; }
+    .scene .frame img.on { opacity: 1; }
+    .scene .stage-label { position: absolute; left: 14px; bottom: 14px; padding: 6px 12px; border-radius: 999px; background: rgba(27,28,32,.86); color: #fff; font-size: 13px; font-weight: 700; }
+    .scene .story-step { min-height: 56vh; display: flex; flex-direction: column; justify-content: center; opacity: .3; transition: opacity .4s ease; }
+    .scene .story-step.active { opacity: 1; }
+    .scene .story-step figure { display: none; }
+    .cap { display: block; margin-top: 8px; font-size: 12px; color: var(--muted); }
+    #construction .frame { background: #e8e8e6; }
+    .pinout-cta { padding-top: 24px; padding-bottom: 60px; }
+    .cta-card { display: flex; gap: 24px; align-items: center; justify-content: space-between; }
+    .cta-card p { margin: 0; }
+    @media (prefers-reduced-motion: reduce) { .scene .frame img, .scene .story-step { transition: none; } }
+    @media (max-width: 980px) {
+      .overview { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; gap: 0; }
+      .scene .frame { max-height: 40vh; margin: 0 auto; box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+      .scene .cap { display: none; }
+      .cta-card { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 640px) {
+      .section-title { font-size: 30px; }
+      .story-step h3 { font-size: 24px; }
+    }
   </style>
 </head>
 <body>
@@ -130,10 +170,11 @@
         <div>
           <h1>Dash-6.8 instrument panel</h1>
           <p>Configurable instrument panel for airboats and special-purpose vessels, combining readability, diagnostics and system status in a single marine-adapted display.</p>
-          <div class="actions">
-  <a class="btn btn-dark" href="mailto:info@ailuohai-tech.com">Request information</a>
-  <a class="btn btn-dark" href="files/ota_package.bin" download>Download firmware</a>
-</div>
+          <div class="actions-row">
+            <a class="btn btn-dark" href="dash-pinout.html">Pinout</a>
+            <a class="btn btn-light" href="contacts.html?topic=Dash-6.8#request">Request information</a>
+            <a class="btn btn-light" href="files/ota_package.bin" download>Download firmware</a>
+          </div>
         </div>
         <div class="side-image">
           <div class="gallery" id="dash-gallery">
@@ -167,14 +208,12 @@
     </div>
   </section>
 
-  <section class="section">
-  <div class="container content-grid">
+  <section class="container overview">
     <div class="card">
       <h3>Overview</h3>
-      <p>Dash-6.8 supports two standard CAN protocols: Rusefi and ABIT ADLM. The panel displays core engine and onboard data in a clear marine-oriented interface and is designed for everyday use in airboats and special-purpose vessels.</p>
-
-      <p>The system shows key operating values, status indicators and warning messages on a single display. Dash-6.8 also includes a built-in GPS module for speed indication, integrated Wi-Fi with onboard web server for connection and updates, and built-in diagnostics and warning functions.</p>
-
+      <p>Dash-6.8 is the instrument panel of the AILUOHAI system. It reads engine data over CAN and shows it on one 6.8" screen: speed, rpm, temperatures, pressures, fuel and engine hours. A built-in GPS gives the speed, and Wi‑Fi with an onboard web server is used for setup and updates.</p>
+    </div>
+    <div class="card">
       <h3>Main parameters</h3>
       <ul class="list">
         <li>Engine RPM.</li>
@@ -186,97 +225,131 @@
         <li>Fuel level.</li>
         <li>Vehicle speed from built-in GPS.</li>
       </ul>
-
+    </div>
+    <div class="card">
       <h3>Status and alerts</h3>
       <ul class="list">
+        <li>Engine fault and warning signs.</li>
+        <li>Low oil pressure and low voltage.</li>
+        <li>Overheat and cold engine.</li>
         <li>Low fuel indicator.</li>
-        <li>Cold engine indicator.</li>
-        <li>Overheat warning.</li>
-        <li>Diagnostic and warning screens.</li>
       </ul>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Interface screens</h3>
-      <div class="screen-list">
-  <div class="spec screen-item">
-    <img src="img/warning.png" alt="Dash-6.8 warning screen" loading="lazy">
-    <strong>Warnings</strong>
-    <span>Visual alerts for low fuel, cold engine and overheat conditions.</span>
-  </div>
-
-  <div class="spec screen-item">
-    <img src="img/DTC.png" alt="Dash-6.8 diagnostics screen" loading="lazy">
-    <strong>Diagnostics</strong>
-    <span>Built-in diagnostic view with fault and system status indication.</span>
-  </div>
-
-  <div class="spec screen-item">
-    <img src="img/parametr.png" alt="Dash-6.8 parameters page" loading="lazy">
-    <strong>Parameters page</strong>
-    <span>Configurable parameter screen with real-time engine and onboard values.</span>
-  </div>
-</div>
+  <section class="container wide story" id="interface">
+    <div class="story-head">
+      <span class="kicker">Screen interface</span>
+      <h2 class="section-title">Base interface and alerts</h2>
     </div>
-  </div>
-</section>
-
-  <section class="section">
-    <div class="container content-grid">
-      <div class="card">
-        <h3>Construction</h3>
-        <p>Dash-6.8 uses a 1280×480 display with an IPS matrix, 170° viewing angle, brightness up to 450 cd/m² and operating temperature down to −30°C.</p>
-        <p>The instrument panel is built in a rigid plastic enclosure, and the housing design can be made sealed for use in harsh environments.</p>
-        <p>All elements are assembled with stainless A2 fasteners. The enclosure includes a dedicated vent valve that allows vapor release while preventing moisture from entering the housing. The panel is designed to withstand overloads up to 4 G.</p>
+    <p class="section-lead">Scroll through the screens of Dash-6.8 — from the main view to warnings and live data.</p>
+    <div class="story-grid">
+      <div class="story-visual" aria-hidden="true">
+        <div class="frame" style="aspect-ratio: 1784 / 666">
+          <img src="img/dash-screen-base.webp" alt="" class="on" data-img="img/dash-screen-base.webp">
+          <img src="img/dash-screen-fault.webp" alt="" loading="lazy" data-img="img/dash-screen-fault.webp">
+          <img src="img/dash-screen-oil.webp" alt="" loading="lazy" data-img="img/dash-screen-oil.webp">
+          <img src="img/dash-screen-voltage.webp" alt="" loading="lazy" data-img="img/dash-screen-voltage.webp">
+          <img src="img/dash-screen-overheat.webp" alt="" loading="lazy" data-img="img/dash-screen-overheat.webp">
+          <img src="img/dash-screen-cold.webp" alt="" loading="lazy" data-img="img/dash-screen-cold.webp">
+          <img src="img/dash-screen-warning.webp" alt="" loading="lazy" data-img="img/dash-screen-warning.webp">
+          <img src="img/dash-screen-params.webp" alt="" loading="lazy" data-img="img/dash-screen-params.webp">
+          <span class="stage-label">Base screen</span>
+        </div>
+        <span class="cap">Screens of Dash-6.8</span>
       </div>
-
-      <div class="side-image">
-        <img src="img/rasbor.JPG" alt="Dash-6.8 enclosure construction view" loading="lazy">
+      <div class="story-steps">
+        <article class="story-step active" data-img="img/dash-screen-base.webp" data-label="Base screen">
+          <figure><img src="img/dash-screen-base.webp" alt="Dash-6.8 base screen with speed, rpm, consumption and temperature" loading="lazy"></figure>
+          <span class="num">01</span>
+          <h3>Base interface</h3>
+          <p>GPS speed and engine rpm in the centre, fuel consumption on the left, coolant temperature on the right. Fuel level and temperature on the side arcs, engine hours and onboard voltage at the bottom.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-fault.webp" data-label="Fault">
+          <figure><img src="img/dash-screen-fault.webp" alt="Dash-6.8 screen with the engine fault sign" loading="lazy"></figure>
+          <span class="num">02</span>
+          <h3>Engine fault</h3>
+          <p>When the engine control unit reports a fault, the CHECK sign appears in the centre of the screen.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-oil.webp" data-label="Low oil pressure">
+          <figure><img src="img/dash-screen-oil.webp" alt="Dash-6.8 screen with the red low oil pressure icon" loading="lazy"></figure>
+          <span class="num">03</span>
+          <h3>Low oil pressure</h3>
+          <p>The oil can icon in the top bar turns red when oil pressure drops below the limit.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-voltage.webp" data-label="Low voltage">
+          <figure><img src="img/dash-screen-voltage.webp" alt="Dash-6.8 screen with the orange low voltage icon" loading="lazy"></figure>
+          <span class="num">04</span>
+          <h3>Low voltage</h3>
+          <p>The battery icon turns orange when the onboard voltage is too low.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-overheat.webp" data-label="Overheat">
+          <figure><img src="img/dash-screen-overheat.webp" alt="Dash-6.8 screen with the red overheat icon" loading="lazy"></figure>
+          <span class="num">05</span>
+          <h3>Overheat</h3>
+          <p>The temperature icon turns red when the engine overheats.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-cold.webp" data-label="Cold engine">
+          <figure><img src="img/dash-screen-cold.webp" alt="Dash-6.8 screen with the blue cold engine icon" loading="lazy"></figure>
+          <span class="num">06</span>
+          <h3>Cold engine</h3>
+          <p>The temperature icon stays blue until the engine has warmed up.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-warning.webp" data-label="Warning">
+          <figure><img src="img/dash-screen-warning.webp" alt="Dash-6.8 screen with a yellow warning sign" loading="lazy"></figure>
+          <span class="num">07</span>
+          <h3>Warnings</h3>
+          <p>Important warnings come with a yellow sign in the centre of the screen, so they are hard to miss.</p>
+        </article>
+        <article class="story-step" data-img="img/dash-screen-params.webp" data-label="Live data">
+          <figure><img src="img/dash-screen-params.webp" alt="Dash-6.8 parameters screen with live engine data" loading="lazy"></figure>
+          <span class="num">08</span>
+          <h3>Live engine data</h3>
+          <p>A second screen with live values: rpm, intake pressure, ignition angle, knock correction, injection time, lambda, pedal and throttle, coolant, intake, oil and gearbox temperatures, oil and fuel pressure, consumption and voltage.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="card">
-        <h3>Connector pinout</h3>
-        <p>Rear connector view for Dash-6.8 with pin numbering and signal assignment for power, CAN, analog input and digital input/output connections.</p>
-
-        <div class="pinout-wrap">
-          <div class="pinout-image">
-            <img src="img/black14.jpg" alt="Dash-6.8 14-pin connector drawing" loading="lazy">
-            <div class="pin-note">Pin numbering is shown from the rear connector view as illustrated in the drawing.</div>
-          </div>
-
-          <div class="pin-table-wrap">
-            <table class="pin-table">
-              <thead>
-                <tr>
-                  <th>Pin</th>
-                  <th>Type</th>
-                  <th>Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>1</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
-                <tr><td>2</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
-                <tr><td>3</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
-                <tr><td>4</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
-                <tr><td>5</td><td><span class="pin-tag">Analog</span></td><td>ADC (0-5V)</td></tr>
-                <tr><td>6</td><td><span class="pin-tag">CAN</span></td><td>CAN-H</td></tr>
-                <tr><td>7</td><td><span class="pin-tag">12V (7-30V)</span></td><td>Power supply from battery</td></tr>
-                <tr><td>8</td><td><span class="pin-tag">GND</span></td><td>Power GND</td></tr>
-                <tr><td>9</td><td><span class="pin-tag">IN</span></td><td>12V digital input</td></tr>
-                <tr><td>10</td><td><span class="pin-tag">CAN</span></td><td>CAN-L</td></tr>
-                <tr><td>11</td><td><span class="pin-tag">OUT</span></td><td>12V switched output (smart switch, up to 17A) for load enable</td></tr>
-                <tr><td>12</td><td><span class="pin-tag">12V (7-30V)</span></td><td>Power supply from battery</td></tr>
-                <tr><td>13</td><td><span class="pin-tag">5V</span></td><td>Sensor power supply</td></tr>
-                <tr><td>14</td><td><span class="pin-tag">IN</span></td><td>12V digital input</td></tr>
-              </tbody>
-            </table>
-          </div>
+  <section class="container wide story" id="construction">
+    <div class="story-head">
+      <span class="kicker">Construction</span>
+      <h2 class="section-title">Enclosure</h2>
+    </div>
+    <p class="section-lead">How the panel is built for water, vibration and cold.</p>
+    <div class="story-grid">
+      <div class="story-visual" aria-hidden="true">
+        <div class="frame" style="aspect-ratio: 16 / 10">
+          <img src="img/dash-enclosure.webp" alt="" class="on" data-img="img/dash-enclosure.webp">
+          <img src="img/rasbor.JPG" alt="" loading="lazy" data-img="img/rasbor.JPG">
+          <span class="stage-label">Enclosure</span>
         </div>
+        <span class="cap">3D model</span>
       </div>
+      <div class="story-steps">
+        <article class="story-step active" data-img="img/dash-enclosure.webp" data-label="Enclosure">
+          <figure><img src="img/dash-enclosure.webp" alt="Dash-6.8 enclosure, rear view with the connector, 3D model" loading="lazy"></figure>
+          <span class="num">01</span>
+          <h3>Display and enclosure</h3>
+          <p>A 1280×480 IPS display with a 170° viewing angle and brightness up to 450 cd/m², working down to −30 °C. Rigid plastic enclosure with one sealed 14-pin connector on the back; the housing can be made fully sealed.</p>
+        </article>
+        <article class="story-step" data-img="img/rasbor.JPG" data-label="Assembly">
+          <figure><img src="img/rasbor.JPG" alt="Dash-6.8 exploded view of the enclosure" loading="lazy"></figure>
+          <span class="num">02</span>
+          <h3>Assembly</h3>
+          <p>All parts are assembled with stainless A2 fasteners. A vent valve releases vapour and keeps moisture out of the housing. The panel is designed for overloads up to 4 G.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="container pinout-cta">
+    <div class="card cta-card">
+      <div>
+        <h3>Connector pinout</h3>
+        <p>One sealed 14-pin connector: power, CAN, analog and digital inputs, sensor supply and a switched 12 V output. Interactive pinout with the description of every pin.</p>
+      </div>
+      <a class="btn btn-dark" href="dash-pinout.html">Open the pinout</a>
     </div>
   </section>
 
@@ -326,5 +399,51 @@
       });
     })();
   </script>
+  <script>
+  (function () {
+    // Scroll modules: the step on the reading line chooses the picture and the label.
+    var sceneMq = window.matchMedia('(min-height: 360px)');
+    var narrowMq = window.matchMedia('(max-width: 980px)');
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.story'));
+    var observers = [];
+
+    // Phones: picture and title are pinned on top, so the switch line sits one step below the picture.
+    function narrowMargin(sec) {
+      var vis = sec.querySelector('.story-visual');
+      var vh = window.innerHeight;
+      var bottom = parseFloat(getComputedStyle(vis).top) + vis.offsetHeight;
+      var line = Math.min(vh - 60, bottom + vh * 0.36);
+      return '-' + Math.round(line) + 'px 0px -' + Math.max(0, Math.round(vh - line - 40)) + 'px 0px';
+    }
+
+    function setup(sec) {
+      var steps = Array.prototype.slice.call(sec.querySelectorAll('.story-step'));
+      var pics = Array.prototype.slice.call(sec.querySelectorAll('.frame img'));
+      var label = sec.querySelector('.stage-label');
+      function activate(step) {
+        steps.forEach(function (s) { s.classList.toggle('active', s === step); });
+        pics.forEach(function (p) { p.classList.toggle('on', p.dataset.img === step.dataset.img); });
+        label.textContent = step.dataset.label;
+      }
+      sec.classList.toggle('scene', sceneMq.matches);
+      if (!sceneMq.matches || !('IntersectionObserver' in window)) return;
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
+      }, { rootMargin: narrowMq.matches ? narrowMargin(sec) : '-45% 0px -45% 0px' });
+      steps.forEach(function (s) { obs.observe(s); });
+      observers.push(obs);
+      activate(steps[0]);
+    }
+    function setMode() {
+      observers.forEach(function (o) { o.disconnect(); });
+      observers = [];
+      sections.forEach(setup);
+    }
+    setMode();
+    if (sceneMq.addEventListener) { sceneMq.addEventListener('change', setMode); narrowMq.addEventListener('change', setMode); }
+  })();
+  </script>
+  <script src="assets/story.js"></script>
+  <a class="fab" href="contacts.html#request" title="Write to us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Write to us</span></a>
 </body>
 </html>

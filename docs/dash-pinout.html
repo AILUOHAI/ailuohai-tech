@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dash-6.8 pinout — AILUOHAI-TECH</title>
+  <meta name="description" content="Dash-6.8 instrument panel pinout: interactive view of the 14-pin connector — power, CAN, analog and digital inputs, sensor supply and switched output.">
+  <link rel="alternate" hreflang="en" href="dash-pinout.html">
+  <link rel="alternate" hreflang="ru" href="ru/dash-pinout.html">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .wide { max-width: 1400px; }
+    .rear { margin: 0; border-radius: 10px; overflow: hidden; background: #e8e8e6; }
+    .rear svg { display: block; width: 100%; height: auto; }
+    .rear-area { fill: #e8661a; fill-opacity: .14; stroke: #e8661a; stroke-width: 6; cursor: pointer; }
+    a:hover .rear-area, a:focus-visible .rear-area { fill-opacity: .3; }
+    .rear-label rect { fill: #1b1c20; }
+    .rear-label text { fill: #fff; font: 700 30px Inter, Arial, sans-serif; }
+    .caption { font-size: 13px; color: var(--muted); margin: 8px 2px 0; }
+    .pin-section { padding-top: 36px; padding-bottom: 60px; scroll-margin-top: 80px; }
+    .pin-section h2 { font-size: 34px; letter-spacing: -.03em; margin: 0 0 8px; }
+    .pin-section .lead { color: var(--muted); margin: 0 0 22px; max-width: 760px; }
+    .pin-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+    .drawing { margin: 0 0 16px; background: #fff; border-radius: 10px; padding: 10px; }
+    .drawing img { width: 100%; }
+    .face-wrap { background: #1b1c20; border-radius: 14px; padding: 16px; }
+    .face-wrap svg { display: block; width: 100%; height: auto; }
+    .pin { cursor: pointer; }
+    .pin circle { stroke: #1b1c20; stroke-width: 2; transition: opacity .15s ease; }
+    .pin text { font: 700 15px Inter, Arial, sans-serif; fill: #fff; pointer-events: none; }
+    .pin.g-nc text { fill: #333; }
+    .pin:hover circle, .pin:focus circle { stroke: #fff; }
+    .pin:focus { outline: none; }
+    .pin.selected circle { stroke: #fff; stroke-width: 4; }
+    .pin.dim circle { opacity: .18; }
+    .pin.dim text { opacity: .3; }
+    .pin-detail { background: var(--surface); border-radius: 14px; padding: 16px 18px; min-height: 92px; margin-top: 14px; }
+    .pin-detail .where { font-size: 13px; color: var(--muted); }
+    .pin-detail .sig { font-size: 22px; font-weight: 800; letter-spacing: -.02em; margin: 2px 0 4px; display: flex; align-items: center; gap: 8px; }
+    .pin-detail p { margin: 0; color: var(--muted); }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; border: none; border-radius: 999px; padding: 6px 12px; background: var(--surface); font: inherit; font-size: 13px; cursor: pointer; color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+    .chip[aria-pressed="true"] { box-shadow: inset 0 0 0 2px #1b1c20; font-weight: 700; }
+    .chip:focus-visible, .pin-table tr:focus-visible { outline: 3px solid #e8661a; outline-offset: 2px; }
+    .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex: none; margin-right: 6px; background: var(--c); }
+    .chip .dot, .pin-detail .dot { margin-right: 0; }
+    .g-power { --c: #d64545; } .g-ground { --c: #55565c; } .g-out { --c: #8a4fd8; } .g-comm { --c: #1f9d6b; } .g-sens { --c: #1688a3; } .g-nc { --c: #c9c9c4; }
+    .pin-table { width: 100%; margin: 0; background: var(--surface); border-radius: 14px; overflow: hidden; font-size: 15px; }
+    .pin-table th { text-align: left; font-size: 13px; color: var(--muted); }
+    .pin-table td { border-top: 1px solid var(--line); vertical-align: top; }
+    .pin-table td:first-child { font-weight: 700; width: 44px; }
+    .pin-table td:nth-child(2) { font-weight: 700; white-space: nowrap; }
+    .pin-table td:nth-child(3) { color: var(--muted); }
+    .pin-table tbody tr { cursor: pointer; }
+    .pin-table tbody tr:hover { background: #f6f6f3; }
+    .pin-table tbody tr.selected { background: #fff1e6; }
+    .pin-table tbody tr.dim { opacity: .35; }
+    .note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+    @media (max-width: 980px) { .pin-layout { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .pin-table td:nth-child(2) { white-space: normal; } .pin-section h2 { font-size: 28px; } }
+    @media (prefers-reduced-motion: reduce) { .pin circle { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container bar">
+      <a class="brand" href="index.html">AILUOHAI-TECH</a>
+      <nav class="nav">
+        <a href="index.html#products">Products</a>
+        <a href="test-platform.html">Test platform</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="contacts.html">Contacts</a>
+        <a class="lang" href="ru/dash-pinout.html" hreflang="ru" lang="ru" title="Русская версия">RU</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-hero">
+    <div class="container wide">
+      <div class="breadcrumbs"><a href="index.html">Home</a> / <a href="dash-6-8.html">Dash-6.8</a> / <span>Pinout</span></div>
+      <h1 style="font-size:52px;line-height:1.04;letter-spacing:-.045em;margin:0 0 14px">Dash-6.8 pinout</h1>
+      <p style="font-size:18px;color:var(--muted);max-width:760px;margin:0 0 20px">One sealed 14-pin connector on the back of the panel: power, CAN, analog and digital inputs, sensor supply and a switched 12 V output.</p>
+      <div class="actions-row" style="margin-bottom:26px">
+        <a class="btn btn-dark" href="#pinout">Interactive pinout</a>
+        <a class="btn btn-light" href="dash-6-8.html">Product page</a>
+      </div>
+      <figure class="rear">
+        <svg viewBox="0 0 1800 802" role="group" aria-label="Dash-6.8 rear view. Select the connector.">
+          <image href="img/dash-rear.webp" x="0" y="0" width="1800" height="802"/>
+          <a href="#pinout" aria-label="14-pin connector: open the pinout">
+            <rect class="rear-area" x="735" y="272" width="322" height="244" rx="26"/>
+            <g class="rear-label"><rect x="745" y="540" width="302" height="56" rx="14"/><text x="896" y="579" text-anchor="middle">14-pin connector</text></g>
+          </a>
+        </svg>
+      </figure>
+      <p class="caption">Rear view of the panel, 3D model. Select the connector to open its pinout.</p>
+    </div>
+  </section>
+
+  <section class="container wide pin-section" id="pinout">
+    <h2>Interactive pinout</h2>
+    <p class="lead">Select a pin on the connector or a row in the table. Colours show the signal group; select a group to highlight its pins.</p>
+    <div class="pin-layout">
+      <div>
+        <figure class="drawing"><img src="img/black14.jpg" alt="Dash-6.8 14-pin connector drawing with pin numbers"></figure>
+        <div class="pin-visual" hidden>
+          <div class="face-wrap"><svg id="face" viewBox="0 0 420 250" role="group" aria-label="Connector face"></svg></div>
+          <div class="pin-detail" id="pin-detail" aria-live="polite"><p>Select a pin on the connector or a row in the table.</p></div>
+          <div class="legend" aria-label="Signal groups">
+            <button class="chip" data-group="power" aria-pressed="false"><span class="dot g-power"></span>Power</button>
+            <button class="chip" data-group="ground" aria-pressed="false"><span class="dot g-ground"></span>Ground</button>
+            <button class="chip" data-group="comm" aria-pressed="false"><span class="dot g-comm"></span>Communication</button>
+            <button class="chip" data-group="sens" aria-pressed="false"><span class="dot g-sens"></span>Inputs</button>
+            <button class="chip" data-group="out" aria-pressed="false"><span class="dot g-out"></span>Outputs</button>
+            <button class="chip" data-group="nc" aria-pressed="false"><span class="dot g-nc"></span>Not connected</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <table class="pin-table">
+          <thead><tr><th>Pin</th><th>Signal</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr data-pin="1" data-group="nc" tabindex="0"><td>1</td><td><span class="dot g-nc"></span>NC</td><td>Not connected (reserved)</td></tr>
+            <tr data-pin="2" data-group="nc" tabindex="0"><td>2</td><td><span class="dot g-nc"></span>NC</td><td>Not connected (reserved)</td></tr>
+            <tr data-pin="3" data-group="nc" tabindex="0"><td>3</td><td><span class="dot g-nc"></span>NC</td><td>Not connected (reserved)</td></tr>
+            <tr data-pin="4" data-group="nc" tabindex="0"><td>4</td><td><span class="dot g-nc"></span>NC</td><td>Not connected (reserved)</td></tr>
+            <tr data-pin="5" data-group="sens" tabindex="0"><td>5</td><td><span class="dot g-sens"></span>AIN</td><td>Analog input 0–5 V</td></tr>
+            <tr data-pin="6" data-group="comm" tabindex="0"><td>6</td><td><span class="dot g-comm"></span>CAN-H</td><td>CAN bus, high line</td></tr>
+            <tr data-pin="7" data-group="power" tabindex="0"><td>7</td><td><span class="dot g-power"></span>+12V</td><td>Battery supply, 7–30 V</td></tr>
+            <tr data-pin="8" data-group="ground" tabindex="0"><td>8</td><td><span class="dot g-ground"></span>GND</td><td>Power ground</td></tr>
+            <tr data-pin="9" data-group="sens" tabindex="0"><td>9</td><td><span class="dot g-sens"></span>DIN1</td><td>Digital input, 12 V</td></tr>
+            <tr data-pin="10" data-group="comm" tabindex="0"><td>10</td><td><span class="dot g-comm"></span>CAN-L</td><td>CAN bus, low line</td></tr>
+            <tr data-pin="11" data-group="out" tabindex="0"><td>11</td><td><span class="dot g-out"></span>OUT</td><td>Switched 12 V output (smart switch, up to 17 A) to enable a load</td></tr>
+            <tr data-pin="12" data-group="power" tabindex="0"><td>12</td><td><span class="dot g-power"></span>+12V</td><td>Battery supply, 7–30 V</td></tr>
+            <tr data-pin="13" data-group="power" tabindex="0"><td>13</td><td><span class="dot g-power"></span>+5V</td><td>Sensor supply, 5 V (output)</td></tr>
+            <tr data-pin="14" data-group="sens" tabindex="0"><td>14</td><td><span class="dot g-sens"></span>DIN2</td><td>Digital input, 12 V</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Pin numbering is shown from the rear of the panel, as in the drawing.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Electronics and control systems for airboats and special-purpose vessels.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="dash-6-8.html">Dash-6.8</a>
+        <a href="ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Downloads</h4>
+        <a href="downloads.html">BrainBus</a>
+        <a href="downloads.html#installer">Installer</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="contacts.html">Contacts</a>
+        <a href="test-platform.html">Test platform</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    // 14-pin connector, rear view: rows of 5 / 4 / 5, middle row offset by half a pitch.
+    var SVGNS = 'http://www.w3.org/2000/svg';
+    var ROWS = [[1, 5, 0], [6, 9, 0.5], [10, 14, 0]];
+    var PITCH = 62, X0 = 86, Y0 = 70, ROW_GAP = 56, R = 22;
+    var face = document.getElementById('face');
+    var detail = document.getElementById('pin-detail');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('.pin-table tbody tr'));
+    var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+    var state = { pin: null, group: null };
+    document.querySelector('.pin-visual').hidden = false;
+
+    function el(n, a) { var e = document.createElementNS(SVGNS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+    function data(tr) { return { pin: +tr.dataset.pin, group: tr.dataset.group, name: tr.cells[1].textContent, desc: tr.cells[2].textContent }; }
+
+    face.appendChild(el('rect', { x: 8, y: 14, width: 404, height: 222, rx: 30, fill: '#24252a', stroke: '#3c3d44', 'stroke-width': 2 }));
+    face.appendChild(el('rect', { x: 48, y: 32, width: 324, height: 186, rx: 32, fill: '#2d2e34', stroke: '#4a4b53', 'stroke-width': 2 }));
+    face.appendChild(el('rect', { x: 186, y: 20, width: 14, height: 18, rx: 3, fill: '#4a4b53' }));
+    face.appendChild(el('rect', { x: 220, y: 20, width: 14, height: 18, rx: 3, fill: '#4a4b53' }));
+    var byPin = {};
+    rows.forEach(function (tr) { byPin[tr.dataset.pin] = data(tr); });
+    ROWS.forEach(function (row, ri) {
+      for (var p = row[0]; p <= row[1]; p++) {
+        var d = byPin[p], x = X0 + (p - row[0] + row[2]) * PITCH, y = Y0 + ri * ROW_GAP;
+        var g = el('g', { 'class': 'pin g-' + d.group, tabindex: 0, role: 'button', 'data-pin': p, 'aria-label': 'Pin ' + p + ', ' + d.name });
+        g.appendChild(el('circle', { cx: x, cy: y, r: R, fill: 'var(--c)' }));
+        var t = el('text', { x: x, y: y + 5, 'text-anchor': 'middle' }); t.textContent = p; g.appendChild(t);
+        face.appendChild(g);
+      }
+    });
+
+    function paint() {
+      face.querySelectorAll('.pin').forEach(function (g) {
+        var grp = g.getAttribute('class').match(/g-(\w+)/)[1];
+        g.classList.toggle('selected', +g.dataset.pin === state.pin);
+        g.classList.toggle('dim', !!state.group && grp !== state.group);
+      });
+      rows.forEach(function (tr) {
+        tr.classList.toggle('selected', +tr.dataset.pin === state.pin);
+        tr.classList.toggle('dim', !!state.group && tr.dataset.group !== state.group);
+      });
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.group === state.group ? 'true' : 'false'); });
+      var d = state.pin && byPin[state.pin];
+      detail.textContent = '';
+      if (!d) { var e = document.createElement('p'); e.textContent = 'Select a pin on the connector or a row in the table.'; detail.appendChild(e); return; }
+      var chip = document.querySelector('.chip[data-group="' + d.group + '"]');
+      var w = document.createElement('div'); w.className = 'where'; w.textContent = 'Pin ' + d.pin + ' · ' + (chip ? chip.textContent : '');
+      var s = document.createElement('div'); s.className = 'sig';
+      var dot = document.createElement('span'); dot.className = 'dot g-' + d.group; s.appendChild(dot); s.appendChild(document.createTextNode(d.name));
+      var pp = document.createElement('p'); pp.textContent = d.desc;
+      detail.appendChild(w); detail.appendChild(s); detail.appendChild(pp);
+    }
+    function select(pin, from) {
+      state.pin = pin; paint();
+      if (history.replaceState) history.replaceState(null, '', '#pin-' + pin);
+      if (from === 'table' && window.matchMedia('(max-width: 980px)').matches) face.scrollIntoView({ block: 'nearest' });
+    }
+    face.addEventListener('click', function (e) { var g = e.target.closest('.pin'); if (g) select(+g.dataset.pin, 'face'); });
+    face.addEventListener('keydown', function (e) { var g = e.target.closest('.pin'); if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); select(+g.dataset.pin, 'face'); } });
+    rows.forEach(function (tr) {
+      tr.addEventListener('click', function () { select(+tr.dataset.pin, 'table'); });
+      tr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(+tr.dataset.pin, 'table'); } });
+    });
+    chips.forEach(function (c) { c.addEventListener('click', function () { state.group = state.group === c.dataset.group ? null : c.dataset.group; paint(); }); });
+    var m = /^#pin-(\d{1,2})$/.exec(location.hash);
+    if (m && byPin[m[1]]) { state.pin = +m[1]; document.getElementById('pinout').scrollIntoView(); }
+    paint();
+  })();
+  </script>
+  <a class="fab" href="contacts.html#request" title="Write to us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Write to us</span></a>
+</body>
+</html>
