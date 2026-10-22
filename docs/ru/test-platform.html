@@ -26,7 +26,7 @@
   <script src="/assets/metrika-goals.js" defer></script>
   <!-- /Yandex.Metrika counter -->
   <!-- /seo -->
-  <link rel="stylesheet" href="../assets/style.css?v=20261022">
+  <link rel="stylesheet" href="../assets/style.css?v=20261022b">
   <style>
     .wide { max-width: var(--wide, 1400px); }
     .tp-hero { position: relative; min-height: 600px; display: flex; align-items: flex-end; overflow: hidden; background: #1b1c20; color: #fff; }
@@ -123,38 +123,6 @@
     .onboard-grid span { font-size: 14px; color: var(--muted); }
     .onboard-grid .soon { font-size: 12px; font-weight: 800; color: #a4410a; display: block; margin-top: 8px; }
 
-    /* Page menu: a rail on the left on wide screens, a row of links under the header on narrow ones */
-    .tp-nav { display: flex; gap: 6px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; padding: 0 24px 8px; max-width: var(--wide, 1400px); margin: 0 auto; }
-    .tp-nav::-webkit-scrollbar { display: none; }
-    .tp-nav-title, .tp-sub { display: none; }
-    .tp-nav > a { flex: none; padding: 5px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; color: rgba(255,255,255,.78); background: rgba(255,255,255,.08); }
-    .tp-nav > a i { font-style: normal; color: #f07a2e; margin-right: 6px; }
-    .tp-nav > a:hover { color: #fff; background: rgba(255,255,255,.16); }
-    .tp-nav > a.on { color: #fff; background: #e8661a; }
-    .tp-nav > a.on i { color: #fff; }
-    .tp-nav a:focus-visible, .tp-sub button:focus-visible { outline: 3px solid #e8661a; outline-offset: 2px; }
-    .story, .video-sec, .onboard { scroll-margin-top: 64px; }
-    @media (max-width: 1179px) { .story, .video-sec, .onboard { scroll-margin-top: 104px; } }
-    @media (max-width: 640px) { .tp-nav { padding: 0 18px 8px; } .story, .video-sec, .onboard { scroll-margin-top: 130px; } }
-    @media (min-width: 1180px) {
-      :root { --rail: 236px; }
-      .rail-pad { --cw: var(--container); margin-left: max(var(--rail), calc((100vw - var(--cw)) / 2)); margin-right: auto; }
-      .wide.rail-pad { --cw: var(--wide, 1400px); }
-      .tp-nav { position: fixed; left: 16px; top: 88px; width: 200px; max-height: calc(100vh - 110px); overflow-y: auto; flex-direction: column; gap: 2px; padding: 14px 10px; margin: 0; white-space: normal;
-        background: var(--surface); border-radius: 14px; box-shadow: 0 6px 22px rgba(0,0,0,.08); opacity: 0; visibility: hidden; transform: translateX(-8px); transition: opacity .3s, transform .3s, visibility .3s; }
-      .tp-nav.show { opacity: 1; visibility: visible; transform: none; }
-      .tp-nav-title { display: block; padding: 0 10px 6px; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-      .tp-nav > a { padding: 8px 10px; border-radius: 9px; font-size: 15px; line-height: 1.25; color: var(--text); background: none; }
-      .tp-nav > a:hover { color: var(--text); background: var(--surface-soft); }
-      .tp-nav > a.on { color: #fff; background: #1b1c20; }
-      .tp-nav > a.on i { color: #f07a2e; }
-      .tp-sub { margin: 2px 0 6px 18px; padding-left: 10px; border-left: 2px solid var(--line); }
-      .tp-nav > a.on + .tp-sub { display: block; }
-      .tp-sub button { display: block; width: 100%; text-align: left; border: 0; background: none; font: inherit; font-size: 13px; line-height: 1.3; color: var(--muted); padding: 5px 4px; cursor: pointer; border-radius: 6px; }
-      .tp-sub button:hover { color: var(--text); }
-      .tp-sub button.on { color: #e8661a; font-weight: 700; }
-    }
-
     /* Video */
     .video-sec { padding-top: 48px; padding-bottom: 24px; }
     .video-slot { position: relative; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: #1b1c20; color: #fff; margin-top: 18px; }
@@ -209,13 +177,6 @@
         <a class="lang" href="../test-platform.html" hreflang="en" lang="en" title="English version">EN</a>
       </nav>
     </div>
-    <nav class="tp-nav" aria-label="На этой странице">
-      <span class="tp-nav-title">На странице</span>
-      <a href="#boat"><i>01</i>Корпус и кокпит</a>
-      <a href="#powertrain"><i>02</i>Силовая установка</a>
-      <a href="#stages"><i>03</i>Этапы проекта</a>
-      <a href="#video"><i>04</i>Видео</a>
-    </nav>
   </header>
 
   <section class="tp-hero">
@@ -252,7 +213,7 @@
     </div>
   </section>
 
-  <section class="container wide story rail-pad" id="boat">
+  <section class="container wide story rail-pad" id="boat" data-nav="Корпус и кокпит">
     <div class="story-head">
       <span class="kicker">Лодка</span>
       <h2 class="section-title">Корпус и кокпит</h2>
@@ -314,7 +275,7 @@
     </div>
   </section>
 
-  <section class="container wide story rail-pad" id="powertrain">
+  <section class="container wide story rail-pad" id="powertrain" data-nav="Силовая установка">
     <div class="story-head">
       <span class="kicker">Силовая установка</span>
       <h2 class="section-title">Силовая установка</h2>
@@ -403,7 +364,7 @@
     </div>
   </section>
 
-  <section class="container wide story tl-section rail-pad" id="stages" data-fixed-visual>
+  <section class="container wide story tl-section rail-pad" id="stages" data-nav="Этапы проекта" data-fixed-visual>
     <div class="story-head">
       <span class="kicker">Проект</span>
       <h2 class="section-title">Этапы проекта</h2>
@@ -457,7 +418,7 @@
     </div>
   </section>
 
-  <section class="container video-sec rail-pad" id="video">
+  <section class="container video-sec rail-pad" id="video" data-nav="Видео">
     <span class="kicker">Видео</span>
     <h2 class="section-title">Видео</h2>
     <p class="section-lead">Сборка, первый запуск мотора и испытания на воде — на видео, по мере того как лодка собирается.</p>
@@ -573,57 +534,6 @@
   })();
 
   (function () {
-    // Page menu: highlights the section on screen; on wide screens it also lists the steps of that
-    // section and shows itself only between the hero and the footer.
-    var nav = document.querySelector('.tp-nav');
-    var links = Array.prototype.slice.call(nav.querySelectorAll(':scope > a'));
-    var hero = document.querySelector('.tp-hero');
-    var footer = document.querySelector('.footer');
-    var items = links.map(function (a) {
-      var sec = document.querySelector(a.getAttribute('href'));
-      var steps = Array.prototype.slice.call(sec.querySelectorAll('.story-step:not(.intro), .stage'));
-      var buttons = [];
-      if (steps.length) {
-        var sub = document.createElement('div');
-        sub.className = 'tp-sub';
-        steps.forEach(function (step) {
-          var b = document.createElement('button');
-          b.type = 'button';
-          b.textContent = step.querySelector('h3').textContent;
-          b.addEventListener('click', function () { step.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
-          sub.appendChild(b);
-          buttons.push(b);
-        });
-        a.after(sub);
-      }
-      return { a: a, sec: sec, steps: steps, buttons: buttons };
-    });
-    var queued = false;
-
-    function update() {
-      queued = false;
-      var line = window.innerHeight * 0.4;
-      var cur = null;
-      items.forEach(function (it) { if (it.sec.getBoundingClientRect().top <= line) cur = it; });
-      items.forEach(function (it) {
-        var on = it === cur;
-        it.a.classList.toggle('on', on);
-        if (on) it.a.setAttribute('aria-current', 'true'); else it.a.removeAttribute('aria-current');
-        it.buttons.forEach(function (b, i) { b.classList.toggle('on', on && it.steps[i].classList.contains('active')); });
-      });
-      var past = hero.getBoundingClientRect().bottom < window.innerHeight * 0.5;
-      nav.classList.toggle('show', past && footer.getBoundingClientRect().top > nav.getBoundingClientRect().bottom + 24);
-    }
-    function queue() { if (!queued) { queued = true; window.requestAnimationFrame(update); } }
-    window.addEventListener('scroll', queue, { passive: true });
-    window.addEventListener('resize', queue);
-    // The step highlight follows the scroll script above, which switches .active a moment after the scroll.
-    if ('MutationObserver' in window) {
-      var mo = new MutationObserver(queue);
-      items.forEach(function (it) { it.steps.forEach(function (s) { mo.observe(s, { attributes: true, attributeFilter: ['class'] }); }); });
-    }
-    queue();
-
     // Video: shows the YouTube preview; the player loads only after a click.
     Array.prototype.forEach.call(document.querySelectorAll('.video-slot[data-yt]'), function (slot) {
       var id = slot.dataset.yt;
@@ -638,6 +548,7 @@
     });
   })();
   </script>
+  <script src="../assets/page-nav.js?v=20261022b"></script>
   <script src="../assets/story.js?v=20261022"></script>
   <a class="fab" href="contacts.html#request" title="Написать нам"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Написать нам</span></a>
 </body>

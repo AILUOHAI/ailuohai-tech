@@ -26,15 +26,10 @@
   <script src="/assets/metrika-goals.js" defer></script>
   <!-- /Yandex.Metrika counter -->
   <!-- /seo -->
-  <link rel="stylesheet" href="../assets/style.css?v=20261022">
+  <link rel="stylesheet" href="../assets/style.css?v=20261022b">
   <style>
-    .docs-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 44px; padding-top: 8px; padding-bottom: 80px; }
-    .toc { position: sticky; top: 84px; align-self: start; font-size: 14px; }
-    .toc strong { display: block; margin-bottom: 10px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-    .toc a { display: block; padding: 6px 10px; border-radius: 10px; color: var(--muted); }
-    .toc a:hover { background: var(--surface); color: var(--text); }
-    .toc a.current { background: #1b1c20; color: #fff; }
-    .doc section { scroll-margin-top: 84px; padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .docs-layout { padding-top: 8px; padding-bottom: 80px; }
+    .doc section { padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
     .doc section:last-child { border-bottom: none; }
     .doc h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
     .doc h3 { font-size: 20px; margin: 26px 0 8px; }
@@ -71,11 +66,7 @@
     .steps-list > li b { display: block; color: var(--text); margin-bottom: 4px; }
 
     @media (max-width: 980px) {
-      .docs-layout { grid-template-columns: 1fr; gap: 0; }
-      .toc { position: static; display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 26px; }
-      .toc strong { width: 100%; margin: 0; }
-      .toc a { background: var(--surface); }
-      .flow-row.c3 { grid-template-columns: 1fr; }
+            .flow-row.c3 { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .doc h2 { font-size: 26px; }
@@ -111,23 +102,12 @@
     </div>
   </section>
 
-  <div class="container docs-layout">
-    <nav class="toc" aria-label="Содержание">
-      <strong>Содержание</strong>
-      <a href="#principle">Одна прошивка — любой мотор</a>
-      <a href="#torque">Управление по моменту</a>
-      <a href="#air-fuel">Воздух и топливо</a>
-      <a href="#limiter">Ограничитель и винт</a>
-      <a href="#start">Пуск</a>
-      <a href="#protection">Защиты</a>
-      <a href="#setup">Настройка по шагам</a>
-      <a href="#calibration">Калибровки</a>
-    </nav>
+  <div class="container docs-layout rail-pad">
 
     <article class="doc">
       <p class="note">Прошивка в разработке. Модель проверена автотестами и имитатором ЭБУ; следующий этап — испытания на работающем моторе. Каждый раздел помечен: <span class="tag ready">Готово</span> работает в имитаторе, <span class="tag wip">В работе</span> написано и ждёт проверки на плате, <span class="tag plan">В планах</span> ещё не реализовано.</p>
 
-      <section id="principle">
+      <section id="principle" data-nav="Одна прошивка — любой мотор">
         <h2>Одна прошивка — любой мотор <span class="tag ready">Готово</span></h2>
         <p>Cat-GDI8 не делается под один конкретный мотор. Всё, что зависит от двигателя и проводки, описывается данными в BrainBus GDI-8 и хранится в блоке. Прошивка одна для всех установок.</p>
         <p>Модель управления работает с логическими величинами — давление во впуске, положение впускного распредвала банка A, клапан фазовращателя банка A. Конфигурация решает, откуда берётся каждая величина и какой контакт использует каждый выход. Приложение показывает, какие контакты подходят для функции, и проверяет результат: один контакт — одна функция.</p>
@@ -141,7 +121,7 @@
         </ul>
       </section>
 
-      <section id="torque">
+      <section id="torque" data-nav="Управление по моменту">
         <h2>Управление по моменту <span class="tag wip">В работе</span></h2>
         <p>Блок не переводит рычаг газа напрямую в открытие дросселя. Рычаг — это <b>запрос момента</b>. Модель решает, как его выдать — воздухом, углом зажигания или, только в аварии, отключением цилиндров, — а все ограничения действуют на момент. Это тот же принцип, что в современных заводских системах, адаптированный к аэролодке: мотор, редуктор и тяжёлый винт.</p>
 
@@ -177,7 +157,7 @@
         <p>На холостом ходу воздушный путь держит небольшой резерв момента сверх цели, а угол зажигания его использует. Так ХХ реагирует мгновенно, не дожидаясь наполнения коллектора. Фактический момент считается тем же путём вперёд — для контроля и логов.</p>
       </section>
 
-      <section id="air-fuel">
+      <section id="air-fuel" data-nav="Воздух и топливо">
         <h2>Воздух и топливо <span class="tag wip">В работе</span></h2>
         <h3>Наполнение цилиндров</h3>
         <p>Масса воздуха считается по давлению во впуске линейной моделью: наклон и смещение зависят от оборотов и положения впускного и выпускного распредвалов, с поправкой на температуру. Каждый банк считается отдельно, потому что у каждого свои фазы. Модель легко обращается: по нужной массе воздуха блок получает нужное давление во впуске, а через модель расхода — угол дросселя.</p>
@@ -191,13 +171,13 @@
         <p>Уставки четырёх валов — карты по оборотам и нагрузке. Регулирование разрешено только при достаточном давлении масла; при низком давлении валы возвращаются в базовое положение. Диагностируются растяжение цепи, отказы фазовращателей и упоров.</p>
       </section>
 
-      <section id="limiter">
+      <section id="limiter" data-nav="Ограничитель и винт">
         <h2>Ограничитель оборотов и защита винта</h2>
         <p><span class="tag wip">В работе</span> Разгруженный винт может почти мгновенно раскрутить мотор, поэтому ограничитель работает на упреждение: смотрит на ускорение и плавно снимает момент в полосе ниже предела — сначала углом, затем воздухом. В имитаторе срыв винта на полной мощности дал пик 6426 об/мин при пределе 6500, без отключения хотя бы одного цилиндра. Отсечка топлива при крайнем забросе — отдельная настройка, по умолчанию выключена.</p>
         <p><span class="tag plan">В планах</span> Защита редуктора и винта: модель привода (мотор + редуктор + винт), ограничение скорости изменения момента, мягкий проход через ноль для выборки люфта редуктора, гашение крутильных колебаний углом зажигания и запретная полоса вокруг резонанса валопровода. Пока параметры привода неизвестны, блок работает в осторожном режиме с медленными рампами момента.</p>
       </section>
 
-      <section id="start">
+      <section id="start" data-nav="Пуск">
         <h2>Пуск двигателя</h2>
         <div class="table-scroll">
           <table>
@@ -216,7 +196,7 @@
         </div>
       </section>
 
-      <section id="protection">
+      <section id="protection" data-nav="Защиты">
         <h2>Защиты и реакции на неисправности <span class="tag wip">В работе</span></h2>
         <p>У каждой неисправности есть код в формате OBD и реакция из таблицы, которую можно менять в приложении. Реакции сгруппированы по уровням. Как правило, ограничения плавно снижают момент, а не отсекают топливо или искру.</p>
         <div class="table-scroll">
@@ -233,7 +213,7 @@
         <p>Впрыск и искра отсчитываются аппаратными таймерами, а не по шине данных. Второе ядро процессора независимо проверяет, что фактический момент не превышает разрешённый рычагом. Внешний сторожевой таймер перезапускает процессор, если задача двигателя перестала отвечать; при любом перезапуске выходы отключены.</p>
       </section>
 
-      <section id="setup">
+      <section id="setup" data-nav="Настройка по шагам">
         <h2>Настройка по шагам</h2>
         <p>Настройка выполняется в приложении BrainBus GDI-8 для Windows. Приложение разбито на модули: Двигатель, Триггер, Датчики, Исполнительные механизмы, Пуск, Холостой ход, Наддув, Зажигание, Топливо и смесь, Работа (момент), CAN.</p>
         <ol class="steps-list">
@@ -249,7 +229,7 @@
         </ol>
       </section>
 
-      <section id="calibration">
+      <section id="calibration" data-nav="Калибровки">
         <h2>Работа с калибровками <span class="tag ready">Готово</span></h2>
         <ul>
           <li>Карты 32×32, кривые — 16 точек. Каждое значение проверяет блок; значение вне пределов отклоняется.</li>
@@ -290,21 +270,7 @@
     </div>
   </footer>
 
-  <script>
-  (function () {
-    // Highlight the contents entry of the section being read.
-    if (!('IntersectionObserver' in window)) return;
-    var links = {};
-    document.querySelectorAll('.toc a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        Object.keys(links).forEach(function (id) { links[id].classList.toggle('current', id === e.target.id); });
-      });
-    }, { rootMargin: '-20% 0px -70% 0px' });
-    document.querySelectorAll('.doc section').forEach(function (s) { obs.observe(s); });
-  })();
-  </script>
+  <script src="../assets/page-nav.js?v=20261022b"></script>
   <a class="fab" href="contacts.html#request" title="Написать нам"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Написать нам</span></a>
 </body>
 </html>

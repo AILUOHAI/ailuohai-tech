@@ -26,15 +26,10 @@
   <script src="/assets/metrika-goals.js" defer></script>
   <!-- /Yandex.Metrika counter -->
   <!-- /seo -->
-  <link rel="stylesheet" href="assets/style.css?v=20261022">
+  <link rel="stylesheet" href="assets/style.css?v=20261022b">
   <style>
-    .docs-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 44px; padding-top: 8px; padding-bottom: 80px; }
-    .toc { position: sticky; top: 84px; align-self: start; font-size: 14px; }
-    .toc strong { display: block; margin-bottom: 10px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-    .toc a { display: block; padding: 6px 10px; border-radius: 10px; color: var(--muted); }
-    .toc a:hover { background: var(--surface); color: var(--text); }
-    .toc a.current { background: #1b1c20; color: #fff; }
-    .doc section { scroll-margin-top: 84px; padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .docs-layout { padding-top: 8px; padding-bottom: 80px; }
+    .doc section { padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
     .doc section:last-child { border-bottom: none; }
     .doc h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
     .doc h3 { font-size: 20px; margin: 26px 0 8px; }
@@ -71,11 +66,7 @@
     .steps-list > li b { display: block; color: var(--text); margin-bottom: 4px; }
 
     @media (max-width: 980px) {
-      .docs-layout { grid-template-columns: 1fr; gap: 0; }
-      .toc { position: static; display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 26px; }
-      .toc strong { width: 100%; margin: 0; }
-      .toc a { background: var(--surface); }
-      .flow-row.c3 { grid-template-columns: 1fr; }
+            .flow-row.c3 { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .doc h2 { font-size: 26px; }
@@ -111,23 +102,12 @@
     </div>
   </section>
 
-  <div class="container docs-layout">
-    <nav class="toc" aria-label="Contents">
-      <strong>Contents</strong>
-      <a href="#principle">One firmware, any engine</a>
-      <a href="#torque">Torque-based control</a>
-      <a href="#air-fuel">Air and fuel</a>
-      <a href="#limiter">Rev limiter and propeller</a>
-      <a href="#start">Engine start</a>
-      <a href="#protection">Protections</a>
-      <a href="#setup">Setup step by step</a>
-      <a href="#calibration">Working with calibrations</a>
-    </nav>
+  <div class="container docs-layout rail-pad">
 
     <article class="doc">
       <p class="note">Firmware is in development. The model is verified with automated tests and the ECU simulator; testing on a running engine is the next stage. Each section is marked: <span class="tag ready">Ready</span> works in the simulator, <span class="tag wip">In progress</span> written and waiting for hardware tests, <span class="tag plan">Planned</span> not yet implemented.</p>
 
-      <section id="principle">
+      <section id="principle" data-nav="One firmware, any engine">
         <h2>One firmware, any engine <span class="tag ready">Ready</span></h2>
         <p>Cat-GDI8 is not built for one specific engine. Everything that depends on the engine and its wiring is described as data in BrainBus GDI-8 and stored in the unit. The firmware is the same for every installation.</p>
         <p>The control model works with logical values — intake pressure, intake cam position of bank A, the phaser valve of bank A. The configuration decides where each value comes from and which physical pin each output uses. The application shows which pins are suitable for each function and checks the result: one pin — one function.</p>
@@ -141,7 +121,7 @@
         </ul>
       </section>
 
-      <section id="torque">
+      <section id="torque" data-nav="Torque-based control">
         <h2>Torque-based control <span class="tag wip">In progress</span></h2>
         <p>The unit does not convert the throttle lever directly into throttle opening. The lever is a <b>torque request</b>. The model decides how to deliver this torque — with air, with spark timing or, in an emergency only, by cutting cylinders — and all limits act on torque. This is the same principle as in modern OEM engine management, adapted to an airboat: engine, gearbox and a heavy propeller.</p>
 
@@ -177,7 +157,7 @@
         <p>At idle the air path keeps a small torque reserve above the target, and spark timing uses it. This lets the idle react instantly, without waiting for the intake manifold to fill. The actual torque is calculated forward the same way and used for supervision and logs.</p>
       </section>
 
-      <section id="air-fuel">
+      <section id="air-fuel" data-nav="Air and fuel">
         <h2>Air and fuel <span class="tag wip">In progress</span></h2>
         <h3>Cylinder filling</h3>
         <p>Air mass is calculated from intake pressure with a linear model: slope and offset depend on rpm and on intake and exhaust cam positions, with a temperature correction. Each bank is calculated separately because each has its own cam phases. The model is easy to invert: from the required air mass the unit gets the required intake pressure and, through the throttle flow model, the throttle angle.</p>
@@ -191,13 +171,13 @@
         <p>Targets for four cams are maps of rpm and load. Control is allowed only with enough oil pressure; on low oil pressure the cams return to the base position. Chain stretch, phaser and end-stop faults are diagnosed.</p>
       </section>
 
-      <section id="limiter">
+      <section id="limiter" data-nav="Rev limiter and propeller">
         <h2>Rev limiter and propeller protection</h2>
         <p><span class="tag wip">In progress</span> An unloaded propeller can over-rev the engine almost instantly, so the limiter works ahead: it looks at acceleration and removes torque smoothly in a band below the limit — first with spark, then with air. In the simulator, a propeller unloading at full power gave a peak of 6426 rpm with a 6500 rpm limit, without cutting a single cylinder. Fuel cut on extreme over-rev is a separate setting and is off by default.</p>
         <p><span class="tag plan">Planned</span> Gearbox and propeller protection: a drive model (engine + gearbox + propeller), torque rate limits, soft passage through zero torque to take up gearbox backlash, damping of torsional oscillations with spark timing, and a keep-out band around the driveline resonance. Until the drive parameters are known, the unit uses a careful mode with slow torque ramps.</p>
       </section>
 
-      <section id="start">
+      <section id="start" data-nav="Engine start">
         <h2>Engine start</h2>
         <div class="table-scroll">
           <table>
@@ -216,7 +196,7 @@
         </div>
       </section>
 
-      <section id="protection">
+      <section id="protection" data-nav="Protections">
         <h2>Protections and fault reactions <span class="tag wip">In progress</span></h2>
         <p>Every fault has a code in OBD format and a reaction from a table that can be edited in the application. Reactions are grouped by level. As a rule, limits reduce torque smoothly instead of cutting fuel or spark.</p>
         <div class="table-scroll">
@@ -233,7 +213,7 @@
         <p>Injection and spark are timed by hardware timers, never by a data bus. A second processor core independently checks that the actual torque does not exceed what the lever allows. An external watchdog resets the processor if the engine task stops responding; on any reset the outputs are off.</p>
       </section>
 
-      <section id="setup">
+      <section id="setup" data-nav="Setup step by step">
         <h2>Setup step by step</h2>
         <p>Setup is done in the BrainBus GDI-8 application for Windows. The application is organised in modules: Engine, Trigger, Sensors, Actuators, Start, Idle, Boost, Ignition, Fuel and mixture, Operation (torque), CAN.</p>
         <ol class="steps-list">
@@ -249,7 +229,7 @@
         </ol>
       </section>
 
-      <section id="calibration">
+      <section id="calibration" data-nav="Working with calibrations">
         <h2>Working with calibrations <span class="tag ready">Ready</span></h2>
         <ul>
           <li>Maps are 32×32, curves have 16 points. Each value is checked by the unit; a value outside limits is refused.</li>
@@ -290,21 +270,7 @@
     </div>
   </footer>
 
-  <script>
-  (function () {
-    // Highlight the contents entry of the section being read.
-    if (!('IntersectionObserver' in window)) return;
-    var links = {};
-    document.querySelectorAll('.toc a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        Object.keys(links).forEach(function (id) { links[id].classList.toggle('current', id === e.target.id); });
-      });
-    }, { rootMargin: '-20% 0px -70% 0px' });
-    document.querySelectorAll('.doc section').forEach(function (s) { obs.observe(s); });
-  })();
-  </script>
+  <script src="assets/page-nav.js?v=20261022b"></script>
   <a class="fab" href="contacts.html#request" title="Write to us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Write to us</span></a>
 </body>
 </html>

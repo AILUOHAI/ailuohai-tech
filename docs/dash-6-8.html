@@ -26,7 +26,7 @@
   <script src="/assets/metrika-goals.js" defer></script>
   <!-- /Yandex.Metrika counter -->
   <!-- /seo -->
-  <link rel="stylesheet" href="assets/style.css?v=20261022">
+  <link rel="stylesheet" href="assets/style.css?v=20261022b">
   <style>
     .gallery { margin-top: 24px; }
     .gallery-main {
@@ -228,7 +228,7 @@
     </div>
   </section>
 
-  <section class="container overview">
+  <section class="container overview rail-pad" id="overview" data-nav="Overview">
     <div class="card">
       <h3>Overview</h3>
       <p>Dash-6.8 is the instrument panel of the AILUOHAI system. It reads engine data over CAN and shows it on one 6.8" screen: speed, rpm, temperatures, pressures, fuel and engine hours. A built-in GPS gives the speed, and Wi‑Fi with an onboard web server is used for setup and updates.</p>
@@ -257,7 +257,7 @@
     </div>
   </section>
 
-  <section class="container wide story" id="interface">
+  <section class="container wide story rail-pad" id="interface" data-nav="Screen interface">
     <div class="story-head">
       <span class="kicker">Screen interface</span>
       <h2 class="section-title">Base interface and alerts</h2>
@@ -331,7 +331,7 @@
     </div>
   </section>
 
-  <section class="container wide story" id="construction">
+  <section class="container wide story rail-pad" id="construction" data-nav="Enclosure">
     <div class="story-head">
       <span class="kicker">Construction</span>
       <h2 class="section-title">Enclosure</h2>
@@ -363,7 +363,7 @@
     </div>
   </section>
 
-  <section class="container pinout-cta">
+  <section class="container pinout-cta rail-pad" id="pinout" data-nav="Pinout">
     <div class="card cta-card">
       <div>
         <h3>Connector pinout</h3>
@@ -467,6 +467,7 @@
     if (sceneMq.addEventListener) { sceneMq.addEventListener('change', setMode); narrowMq.addEventListener('change', setMode); }
   })();
   </script>
+  <script src="assets/page-nav.js?v=20261022b"></script>
   <script src="assets/story.js?v=20261022"></script>
   <a class="fab" href="contacts.html#request" title="Write to us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Write to us</span></a>
 </body>
