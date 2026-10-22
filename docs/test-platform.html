@@ -520,6 +520,25 @@
     var sections = Array.prototype.slice.call(document.querySelectorAll('.story'));
     var observers = [];
 
+    // Wide screens: a step takes the picture when its heading comes into the picture area,
+    // and keeps it until the heading goes past the top of the picture.
+    var watchers = [], queued = false;
+    function pick(sec, steps) {
+      var r = (sec.querySelector('.frame') || sec.querySelector('.story-visual')).getBoundingClientRect();
+      var cur = steps[0];
+      for (var i = 0; i < steps.length; i++) {
+        var h = (steps[i].querySelector('h3:not(.sr)') || steps[i]).getBoundingClientRect();
+        if (h.top >= r.bottom) break;
+        cur = steps[i];
+        if (h.bottom > r.top) break;
+      }
+      return cur;
+    }
+    function runWatchers() { queued = false; watchers.forEach(function (w) { w(); }); }
+    function queueWatchers() { if (!queued) { queued = true; window.requestAnimationFrame(runWatchers); } }
+    window.addEventListener('scroll', queueWatchers, { passive: true });
+    window.addEventListener('resize', queueWatchers);
+
     // Phones: picture and title are pinned on top, so the switch line sits one step below the picture.
     function narrowMargin(sec) {
       var vis = sec.querySelector('.story-visual');
@@ -551,9 +570,13 @@
 
       sec.classList.toggle('scene', sceneMq.matches);
       if (!sceneMq.matches || !('IntersectionObserver' in window)) { if (now) fillTo(now); return; }
+      if (!narrowMq.matches) {
+        var watch = function () { var s = pick(sec, steps); if (!s.classList.contains('active')) activate(s); };
+        watchers.push(watch); activate(steps[0]); watch(); return;
+      }
       var obs = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
-      }, { rootMargin: narrowMq.matches ? narrowMargin(sec) : '-45% 0px -45% 0px' });
+      }, { rootMargin: narrowMargin(sec) });
       steps.forEach(function (s) { obs.observe(s); });
       observers.push(obs);
       activate(steps[0]);
@@ -562,6 +585,7 @@
     function setMode() {
       observers.forEach(function (o) { o.disconnect(); });
       observers = [];
+      watchers = [];
       sections.forEach(setup);
     }
     setMode();

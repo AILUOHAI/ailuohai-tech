@@ -339,6 +339,25 @@
     var narrowMq = window.matchMedia('(max-width: 980px)');
     var observer = null;
 
+    // Wide screens: a step takes the picture when its heading comes into the picture area,
+    // and keeps it until the heading goes past the top of the picture.
+    var watchers = [], queued = false;
+    function pick(sec, steps) {
+      var r = (sec.querySelector('.frame') || sec.querySelector('.story-visual')).getBoundingClientRect();
+      var cur = steps[0];
+      for (var i = 0; i < steps.length; i++) {
+        var h = (steps[i].querySelector('h3:not(.sr)') || steps[i]).getBoundingClientRect();
+        if (h.top >= r.bottom) break;
+        cur = steps[i];
+        if (h.bottom > r.top) break;
+      }
+      return cur;
+    }
+    function runWatchers() { queued = false; watchers.forEach(function (w) { w(); }); }
+    function queueWatchers() { if (!queued) { queued = true; window.requestAnimationFrame(runWatchers); } }
+    window.addEventListener('scroll', queueWatchers, { passive: true });
+    window.addEventListener('resize', queueWatchers);
+
     // Phones: picture and title are pinned on top, so the switch line sits one step below the picture.
     function narrowMargin(sec) {
       var vis = sec.querySelector('.story-visual');
@@ -358,12 +377,17 @@
 
     function setMode() {
       if (observer) { observer.disconnect(); observer = null; }
+      watchers = [];
       story.classList.toggle('scene', sceneMq.matches);
       if (!sceneMq.matches || !('IntersectionObserver' in window)) return;
-      // Wide: the middle of the screen. Narrow: the picture sits on top, so look lower.
+      if (!narrowMq.matches) {
+        var watch = function () { var s = pick(story, steps); if (!s.classList.contains('active')) activate(s); };
+        watchers.push(watch); watch(); return;
+      }
+      // Narrow: the picture sits on top, so look lower.
       observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
-      }, { rootMargin: narrowMq.matches ? narrowMargin(story) : '-45% 0px -45% 0px' });
+      }, { rootMargin: narrowMargin(story) });
       steps.forEach(function (s) { observer.observe(s); });
     }
     setMode();
