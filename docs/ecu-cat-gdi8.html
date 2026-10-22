@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ECU Cat-GDI8 — AILUOHAI-TECH</title>
+  <meta name="description" content="Cat-GDI8: engine control unit for V8 direct-injection airboat engines. Dual-core processor, Ethernet setup through BrainBus, onboard logging. In development.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container bar">
+      <a class="brand" href="index.html">AILUOHAI-TECH</a>
+      <nav class="nav">
+        <a href="index.html#products">Products</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="index.html">Home</a> / <span>ECU Cat-GDI8</span></div>
+      <div class="product-title">
+        <div>
+          <span class="status-badge">In development</span>
+          <h1>ECU Cat-GDI8</h1>
+          <p>Engine control unit for V8 direct-injection (GDI) engines in airboats. One processor core runs the engine, the second handles communication, logging and supervision.</p>
+          <div class="actions-row">
+            <a class="btn btn-dark" href="gdi8-docs.html">Documentation &amp; pinout</a>
+            <a class="btn btn-light" href="mailto:info@ailuohai-tech.com?subject=ECU%20Cat-GDI8">Request information</a>
+          </div>
+          <div class="spec-grid"><div class="spec"><strong>Engine</strong><span>V8 GDI</span></div><div class="spec"><strong>Processor</strong><span>STM32H7 dual-core</span></div><div class="spec"><strong>Setup</strong><span>Ethernet / BrainBus</span></div><div class="spec"><strong>Connectors</strong><span>4 × 35-pin</span></div></div>
+        </div>
+        <figure class="side-image">
+          <img src="img/GDI-8.jpg" alt="Cat-GDI8 enclosure with four 35-pin connectors, 3D model">
+          <figcaption class="caption">Enclosure, 3D model</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="container content-grid">
+    <div>
+      <div class="card">
+        <h3>Overview</h3>
+        <p>Cat-GDI8 controls direct injection, ignition and the high-pressure fuel pump of a V8 engine. The engine core handles crank and cam timing, fuel and ignition, electronic throttle, high-pressure pump and knock control.</p>
+        <p>The communication core handles Ethernet, CAN, diagnostics and data logging to onboard memory, and supervises the engine core.</p>
+      </div>
+      <div class="card" style="margin-top:22px">
+        <h3>Key functions</h3>
+        <ul class="list">
+          <li>Direct-injection control for 8 cylinders and two high-pressure fuel pump valves.</li>
+          <li>8 ignition outputs: coil drivers and 5 V logic outputs for coils with built-in igniter.</li>
+          <li>4 H-bridge outputs for electronic throttle and DC actuators.</li>
+          <li>Two knock sensor channels, VR crank input, SENT, analog and digital inputs.</li>
+          <li>Two CAN buses and LIN: works together with Dash-6.8 and other onboard modules.</li>
+          <li>Setup, live data and logs over Ethernet in the BrainBus GDI-8 application.</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>Development status</h3>
+        <p>First prototype boards are assembled. Firmware is verified with automated tests and an ECU simulator; testing on a running engine is the next stage.</p>
+        <p>Specifications may change before release. For project inquiries, write to <a class="text-link" href="mailto:info@ailuohai-tech.com?subject=ECU%20Cat-GDI8">info@ailuohai-tech.com</a>.</p>
+        <a class="btn btn-dark" href="gdi8-docs.html">Open documentation</a>
+      </div>
+      <figure class="side-image" style="margin-top:22px">
+        <img src="img/GDI-8-pcb.jpg" alt="Cat-GDI8 prototype board, 3D model" loading="lazy">
+        <figcaption class="caption">Prototype board, 3D model</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Electronics and control systems for airboats and special-purpose vessels.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="dash-6-8.html">Dash-6.8</a>
+        <a href="ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Downloads</h4>
+        <a href="downloads.html">BrainBus</a>
+        <a href="downloads.html#installer">Installer</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+        <p>For orders and inquiries.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -432,6 +432,53 @@ th {
   .thumbs img { width: 88px; }
 }
 
+/* Shared additions: status badge, secondary button, captions */
+.status-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff1e6;
+  color: #a4410a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.actions-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-light {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.btn-light:hover { background: var(--surface-soft); }
+
+figure.side-image { margin: 0; }
+
+.caption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.text-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn:focus-visible,
+.nav a:focus-visible,
+.brand:focus-visible {
+  outline: 3px solid #e8661a;
+  outline-offset: 3px;
+}
+
 @media (max-width: 980px) {
   .hero { min-height: 540px; }
   .hero h1 { font-size: 48px; }
