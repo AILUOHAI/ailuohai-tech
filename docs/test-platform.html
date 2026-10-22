@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Test platform — AILUOHAI-TECH</title>
-  <meta name="description" content="A 5.5 m AMg5 aluminium airboat with a turbocharged engine converted from the Nissan HR12DDR and the Cat-GDI8 ECU — the test platform for the LEGION boat control system.">
+  <meta name="description" content="A 5.5 m AMg5 aluminium airboat with a turbocharged engine converted from the Nissan HR12DDR and the Cat-GDI4 ECU — the test platform for the LEGION boat control system.">
   <link rel="alternate" hreflang="en" href="test-platform.html">
   <link rel="alternate" hreflang="ru" href="ru/test-platform.html">
   <link rel="stylesheet" href="assets/style.css">
@@ -147,14 +147,14 @@
       <div class="crumbs-dark"><a href="index.html">Home</a> / <span>Test platform</span></div>
       <h1>Test platform</h1>
       <p>We are building our own test boat — to run every AILUOHAI system in real conditions before it reaches customers.</p>
-      <div class="chips"><span><b>5.5 m</b> AMg5 aluminium</span><span><b>~175 hp</b> turbo engine</span><span><b>Cat-GDI8</b> engine control</span><span><b>LEGION</b> electronics</span></div>
+      <div class="chips"><span><b>5.5 m</b> AMg5 aluminium</span><span><b>~175 hp</b> turbo engine</span><span><b>Cat-GDI4</b> engine control</span><span><b>LEGION</b> electronics</span></div>
     </div>
   </section>
 
   <section class="container intro">
     <div>
       <h2>A test boat for the whole system</h2>
-      <p>A 5.5 m aluminium airboat with an engine converted from the Nissan HR12DDR, built for about 175 hp and run by our Cat-GDI8 engine control unit. All our electronics are installed on board.</p>
+      <p>A 5.5 m aluminium airboat with an engine converted from the Nissan HR12DDR, built for about 175 hp and run by our Cat-GDI4 engine control unit. All our electronics are installed on board.</p>
       <p>We are a young company with long experience behind it: more than 10 years of designing airboats and more than 5 years of engine management and electronics. On this boat it all comes together.</p>
       <p>The boat also shows what we can do: hull, powertrain and electronics designed by one team. We do the same for our customers — from fitting our systems to your boat to developing electronics from scratch.</p>
       <div class="legion">
@@ -242,7 +242,7 @@
       <span class="kicker">Powertrain</span>
       <h2 class="section-title">Powertrain</h2>
     </div>
-    <p class="section-lead">A removable, self-contained powertrain built around the Nissan HR12DDR and our Cat-GDI8 engine control unit.</p>
+    <p class="section-lead">A removable, self-contained powertrain built around the Nissan HR12DDR and our Cat-GDI4 engine control unit.</p>
     <div class="story-grid">
       <div class="story-visual" aria-hidden="true">
         <div class="frame" style="aspect-ratio: 1880 / 1000">
@@ -253,6 +253,7 @@
           <img src="img/pt-assembly.webp" alt="" loading="lazy" data-img="img/pt-assembly.webp">
           <img src="img/pt-tank.webp" alt="" loading="lazy" data-img="img/pt-tank.webp">
           <img src="img/pt-cooling.webp" alt="" loading="lazy" data-img="img/pt-cooling.webp">
+          <img src="img/pt-ecu.webp" alt="" loading="lazy" data-img="img/pt-ecu.webp">
           <img src="img/pt-load.webp" alt="" loading="lazy" data-img="img/pt-load.webp">
           <span class="stage-label">Powertrain</span>
         </div>
@@ -303,17 +304,23 @@
           <h3>Aviation-style cooling</h3>
           <p>The cooling system is built the aviation way: the radiator sits inside the cowling, in a special diffuser. The propeller gets cleaner airflow and less shadowing. The main task it solves: in winter the engine does not freeze and warms up faster, in summer it does not overheat — a flap opens and closes the radiator as needed.</p>
         </article>
+        <article class="story-step" data-img="img/pt-ecu.webp" data-label="Engine control">
+          <figure><img src="img/pt-ecu.webp" alt="Cat-GDI4 engine control unit mounted under the powertrain frame, 3D model" loading="lazy"></figure>
+          <span class="num">07</span>
+          <h3>Cat-GDI4 engine control unit</h3>
+          <p>The engine is run by our Cat-GDI4 direct-injection engine control unit, mounted on the powertrain frame. It has auto-start with diagnostics: the engine starts on command, and every fault is checked and reported to the Dash-6.8.</p>
+        </article>
         <article class="story-step" data-img="img/pt-load.webp" data-label="Load control">
           <figure><img src="img/pt-load.webp" alt="Built-in load control unit on the powertrain frame, 3D model" loading="lazy"></figure>
-          <span class="num">07</span>
+          <span class="num">08</span>
           <h3>Built-in load control unit</h3>
           <p>The powertrain is fully self-contained and disconnects from the boat: it only needs the ignition signal and the command to start. Over CAN it reports every fault and open circuit to the Dash-6.8 — pumps, actuators, engine control units, ground connections and everything else installed.</p>
         </article>
         <article class="story-step" data-img="img/pt-workshop.webp" data-label="Summary">
           <figure><img src="img/pt-workshop.webp" alt="Powertrain on its frame in the workshop, visualisation" loading="lazy"></figure>
-          <span class="num">08</span>
+          <span class="num">09</span>
           <h3>About 175 hp</h3>
-          <p>The target output is about 175 hp. The engine is run by our <a class="text-link" href="ecu-cat-gdi8.html">Cat-GDI8</a> engine control unit and set up through BrainBus.</p>
+          <p>The target output is about 175 hp. The engine is run by our <a class="text-link" href="ecu-cat-gdi4.html">Cat-GDI4</a> engine control unit and set up through BrainBus.</p>
         </article>
       </div>
     </div>
@@ -378,7 +385,7 @@
     <h2 class="section-title">Systems on board</h2>
     <div class="onboard-grid">
       <a href="dash-6-8.html"><b>Dash-6.8</b><span>Instrument panel: engine data, alerts, GPS speed.</span></a>
-      <a href="ecu-cat-gdi8.html"><b>Cat-GDI8</b><span>Engine control unit with torque-based control.</span></a>
+      <a href="ecu-cat-gdi4.html"><b>Cat-GDI4</b><span>Direct-injection engine control unit with auto-start and diagnostics.</span></a>
       <div><b>Power management</b><span>Switching and protection of onboard loads.</span><span class="soon">In development</span></div>
       <a href="downloads.html"><b>BrainBus</b><span>Setup, diagnostics and firmware updates.</span></a>
     </div>
