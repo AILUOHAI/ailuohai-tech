@@ -479,6 +479,10 @@ figure.side-image { margin: 0; }
   outline-offset: 3px;
 }
 
+/* Cards and images stacked in one column take their own height; only a lone card stretches to the row. */
+.content-grid > div > .card:not(:only-child),
+.content-grid > div > .side-image { height: auto; min-height: 0; }
+
 @media (max-width: 980px) {
   .hero { min-height: 540px; }
   .hero h1 { font-size: 48px; }
