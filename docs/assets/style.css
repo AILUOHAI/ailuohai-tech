@@ -535,6 +535,11 @@ figure.side-image { margin: 0; }
 .fab:focus-visible { outline: 3px solid #111; outline-offset: 3px; }
 @media (max-width: 640px) { .fab span { display: none; } .fab { padding: 14px; } }
 
+/* Intro pictures in a scroll section: big pictures without text before the description starts */
+.story-step.intro .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.scene .story-step.intro { min-height: 70vh; }
+.shrinks-intro .story-steps, .shrinks-intro .tl { padding-top: 0; }
+
 @media (max-width: 980px) {
   /* Phones: picture and title sit on top, so steps are short and switch just below the picture. */
   .scene .story-step, .scene .stage { min-height: 36vh !important; padding-top: 20px !important; }
