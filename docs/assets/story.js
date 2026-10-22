@@ -31,7 +31,8 @@
       if (!visual || !grid) return;
 
       var intros = sec.querySelectorAll('.story-step.intro');
-      var shrink = sec.classList.contains('scene') && wideMq.matches && !calmMq.matches;
+      // data-fixed-visual: the picture stays in its column from the start (no full-width intro).
+      var shrink = sec.classList.contains('scene') && wideMq.matches && !calmMq.matches && !sec.hasAttribute('data-fixed-visual');
       sec.classList.toggle('shrinks', shrink && !intros.length);
       sec.classList.toggle('shrinks-intro', shrink && intros.length > 0);
       if (!shrink) { visual.style.transform = ''; return; }

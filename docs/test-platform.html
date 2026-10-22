@@ -108,6 +108,12 @@
     .stage h3 { font-size: 28px; letter-spacing: -.03em; line-height: 1.1; margin: 6px 0 10px; }
     .stage p { color: var(--muted); margin: 0 0 10px; }
     .scene .stage::before { top: 50%; margin-top: -8px; }
+    /* Stages: the timeline on the left, the picture on the right (it shrinks towards its right edge) */
+    @media (min-width: 981px) {
+      .tl-section .story-grid { grid-template-columns: minmax(0, .55fr) minmax(0, 1.45fr); }
+      .tl-section .story-visual { order: 2; }
+      .tl-section.scene .story-visual { transform-origin: 100% 0; }
+    }
 
     .onboard { padding-top: 24px; padding-bottom: 60px; }
     .onboard-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 18px; }
@@ -397,7 +403,7 @@
     </div>
   </section>
 
-  <section class="container wide story tl-section rail-pad" id="stages">
+  <section class="container wide story tl-section rail-pad" id="stages" data-fixed-visual>
     <div class="story-head">
       <span class="kicker">Project</span>
       <h2 class="section-title">Project stages</h2>
