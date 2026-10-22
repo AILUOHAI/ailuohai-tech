@@ -158,7 +158,7 @@
     @media (prefers-reduced-motion: reduce) { .scene .frame img, .scene .story-step { transition: none; } }
     @media (max-width: 980px) {
       .overview { grid-template-columns: 1fr; }
-      .story-grid { grid-template-columns: 1fr; gap: 0; }
+      .story-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
       .scene .frame { max-height: 40vh; margin: 0 auto; box-shadow: 0 10px 24px rgba(0,0,0,.12); }
       .scene .cap { display: none; }
       .cta-card { flex-direction: column; align-items: flex-start; }

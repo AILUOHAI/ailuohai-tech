@@ -75,7 +75,7 @@
     .story.scene .story-step figure { display: none; }
 
     @media (max-width: 980px) {
-      .story-grid { grid-template-columns: 1fr; gap: 0; }
+      .story-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
       .tagline { font-size: 21px; }
       .spec-table { grid-template-columns: repeat(3, 1fr); }
       /* Narrow screens: the picture sticks under the header, the steps scroll below it. */
