@@ -4,8 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ECU Cat-GDI8 — AILUOHAI-TECH</title>
-  <meta name="description" content="Cat-GDI8: engine control unit for V8 engines with hybrid injection — 8 direct and 8 port injectors, four cam phasers, fast start. In development.">
+  <meta name="description" content="Cat-GDI8: 8-cylinder multi-injection ECU with torque-based control — 8 direct and 8 port injectors, four cam phasers, fast start. In development.">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .tagline { font-size: 24px; line-height: 1.25; font-weight: 700; letter-spacing: -.02em; color: var(--text); margin: 0 0 12px; max-width: 560px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+    .chips span { padding: 6px 12px; border-radius: 999px; background: #1b1c20; color: #fff; font-size: 14px; font-weight: 700; }
+    .chips span b { color: #f07a2e; }
+
+    /* Hero gallery */
+    .g8-gallery .gallery-main { background: #e8e8e6; aspect-ratio: 2301 / 1216; }
+    .g8-gallery .gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+    .g8-gallery .thumbs { display: grid; grid-template-columns: repeat(5, 1fr); }
+    .g8-gallery .thumbs img { width: 100%; aspect-ratio: 2301 / 1216; object-fit: cover; background: #e8e8e6; }
+    .g8-gallery .thumbs button:focus-visible { outline: 3px solid #e8661a; outline-offset: 2px; border-radius: 10px; }
+
+    /* Scroll story: one sticky picture, steps change it */
+    .story { padding-top: 24px; padding-bottom: 40px; }
+    .story > h2 { font-size: 40px; letter-spacing: -.035em; margin: 0 0 8px; }
+    .story > .lead { color: var(--muted); font-size: 17px; max-width: 760px; margin: 0 0 10px; }
+    .story-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: 40px; }
+    .story-visual { display: none; }
+    .story-step { padding: 28px 0; }
+    .story-step .num { font-size: 13px; font-weight: 800; color: #e8661a; letter-spacing: .08em; }
+    .story-step h3 { font-size: 30px; letter-spacing: -.03em; line-height: 1.1; margin: 6px 0 12px; }
+    .story-step p { color: var(--muted); margin: 0 0 12px; }
+    .story-step ul { color: var(--muted); padding-left: 18px; margin: 0; }
+    .story-step li { margin: 6px 0; }
+    .story-step figure { margin: 0 0 18px; border-radius: 18px; overflow: hidden; background: #e8e8e6; }
+    .story-step figure img { width: 100%; }
+
+    /* Scene mode (set by JS on wide and tall enough screens) */
+    .story.scene .story-visual { display: block; position: sticky; top: calc(50vh - 150px); align-self: start; aspect-ratio: 2301 / 1216; border-radius: 22px; overflow: hidden; background: #e8e8e6; margin-top: 18vh; }
+    .story.scene .story-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .7s ease; }
+    .story.scene .story-visual img.on { opacity: 1; }
+    .story.scene .story-visual .stage-label { position: absolute; left: 18px; bottom: 16px; padding: 6px 12px; border-radius: 999px; background: rgba(27,28,32,.86); color: #fff; font-size: 13px; font-weight: 700; }
+    .story.scene .story-step { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; opacity: .3; transition: opacity .4s ease; }
+    .story.scene .story-step.active { opacity: 1; }
+    .story.scene .story-step figure { display: none; }
+
+    @media (max-width: 980px) {
+      .story-grid { grid-template-columns: 1fr; gap: 0; }
+      .tagline { font-size: 21px; }
+    }
+    @media (max-width: 640px) {
+      .story > h2 { font-size: 30px; }
+      .story-step h3 { font-size: 25px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .story.scene .story-visual img, .story.scene .story-step { transition: none; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -26,17 +75,26 @@
         <div>
           <span class="status-badge">In development</span>
           <h1>ECU Cat-GDI8</h1>
-          <p>Engine control unit for V8 engines with hybrid injection: every cylinder has a direct injector and a port injector. Four cam phasers, fast start and torque-based control in one unit.</p>
+          <p class="tagline">8-cylinder multi-injection ECU with torque-based engine control</p>
+          <div class="chips" aria-label="Key figures"><span><b>8</b> GDI</span><span><b>8</b> port</span><span><b>4</b> VVT</span><span><b>4</b> camshafts</span></div>
+          <p>Every cylinder has a direct injector and a port injector. Four cam phasers, fast start and a torque-based control model in one sealed unit for airboat engines.</p>
           <div class="actions-row">
             <a class="btn btn-dark" href="gdi8-docs.html">Documentation &amp; pinout</a>
             <a class="btn btn-light" href="mailto:info@ailuohai-tech.com?subject=ECU%20Cat-GDI8">Request information</a>
           </div>
-          <div class="spec-grid"><div class="spec"><strong>Injection</strong><span>8 GDI + 8 port</span></div><div class="spec"><strong>Camshafts</strong><span>4 with VVT</span></div><div class="spec"><strong>Processor</strong><span>ARM dual-core</span></div><div class="spec"><strong>Connectors</strong><span>4 × 35-pin</span></div></div>
+          <div class="spec-grid"><div class="spec"><strong>Injection</strong><span>8 GDI + 8 port</span></div><div class="spec"><strong>Valve timing</strong><span>4 cam phasers</span></div><div class="spec"><strong>Control</strong><span>Torque model</span></div><div class="spec"><strong>Connectors</strong><span>4 × 35-pin</span></div></div>
         </div>
-        <figure class="side-image">
-          <img src="img/GDI-8.jpg" alt="Cat-GDI8 enclosure with four 35-pin connectors, 3D model">
-          <figcaption class="caption">Enclosure, 3D model</figcaption>
-        </figure>
+        <div class="gallery g8-gallery" id="g8-gallery">
+          <div class="gallery-main"><img id="g8-main" src="img/GDI-8.jpg" alt="Cat-GDI8 enclosure, 3D model"></div>
+          <div class="thumbs">
+            <button type="button" data-src="img/GDI-8.jpg" data-alt="Cat-GDI8 enclosure, 3D model" aria-label="Enclosure" aria-pressed="true"><img src="img/GDI-8.jpg" alt="" class="active"></button>
+            <button type="button" data-src="img/GDI-8-xray.jpg" data-alt="Cat-GDI8 with transparent cover showing the board, 3D model" aria-label="Inside view" aria-pressed="false"><img src="img/GDI-8-xray.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/GDI-8-top.jpg" data-alt="Cat-GDI8 top view with four connectors, 3D model" aria-label="Top view" aria-pressed="false"><img src="img/GDI-8-top.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/GDI-8-bottom.jpg" data-alt="Cat-GDI8 aluminium base plate with cooling fins, 3D model" aria-label="Base plate" aria-pressed="false"><img src="img/GDI-8-bottom.jpg" alt="" loading="lazy"></button>
+            <button type="button" data-src="img/GDI-8-exploded.jpg" data-alt="Cat-GDI8 exploded view: cover, board, base plate, 3D model" aria-label="Exploded view" aria-pressed="false"><img src="img/GDI-8-exploded.jpg" alt="" loading="lazy"></button>
+          </div>
+          <p class="caption">3D model</p>
+        </div>
       </div>
     </div>
   </section>
@@ -119,6 +177,51 @@
     </div>
   </section>
 
+  <section class="container story" id="enclosure">
+    <h2>Built for airboats</h2>
+    <p class="lead">An airboat engine bay means constant vibration, water spray and wide temperature swings. The enclosure is designed for exactly that.</p>
+    <div class="story-grid">
+      <div class="story-visual" aria-hidden="true">
+        <img src="img/GDI-8.jpg" alt="" class="on" data-step="1">
+        <img src="img/GDI-8-xray.jpg" alt="" data-step="2" loading="lazy">
+        <img src="img/GDI-8-bottom.jpg" alt="" data-step="3" loading="lazy">
+        <img src="img/GDI-8-exploded.jpg" alt="" data-step="4" loading="lazy">
+        <span class="stage-label">Enclosure</span>
+      </div>
+      <div class="story-steps">
+        <article class="story-step active" data-step="1" data-label="Enclosure">
+          <figure><img src="img/GDI-8.jpg" alt="Cat-GDI8 sealed enclosure with four connectors, 3D model" loading="lazy"></figure>
+          <span class="num">01</span>
+          <h3>Sealed enclosure</h3>
+          <p>The housing closes the electronics completely. All wiring enters through four sealed TE AMPSEAL 35-pin connectors, one per function group.</p>
+          <ul>
+            <li>J1 — sensors and communication</li>
+            <li>J2 / J3 — cylinder banks 5–8 and 1–4</li>
+            <li>J4 — battery power and pumps</li>
+          </ul>
+        </article>
+        <article class="story-step" data-step="2" data-label="Inside">
+          <figure><img src="img/GDI-8-xray.jpg" alt="Cat-GDI8 with transparent cover showing the board, 3D model" loading="lazy"></figure>
+          <span class="num">02</span>
+          <h3>One board inside</h3>
+          <p>A single board carries the dual-core processor and all power stages: drivers for 16 injectors, 8 ignition coils, 2 high-pressure pumps and 4 H-bridges. The connectors are soldered directly to it — no internal harness.</p>
+        </article>
+        <article class="story-step" data-step="3" data-label="Base plate">
+          <figure><img src="img/GDI-8-bottom.jpg" alt="Cat-GDI8 aluminium base plate with cooling fins and rubber mounts, 3D model" loading="lazy"></figure>
+          <span class="num">03</span>
+          <h3>Cooling and mounting</h3>
+          <p>The aluminium base plate with cooling fins takes heat away from the power electronics. Four rubber mounts isolate the unit from hull and engine vibration.</p>
+        </article>
+        <article class="story-step" data-step="4" data-label="Assembly">
+          <figure><img src="img/GDI-8-exploded.jpg" alt="Cat-GDI8 exploded view: cover, board and base plate, 3D model" loading="lazy"></figure>
+          <span class="num">04</span>
+          <h3>Simple, serviceable assembly</h3>
+          <p>Three main parts — cover, board and base plate — are held together with screws, so the unit can be opened for inspection.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="container content-grid">
     <div>
       <div class="card">
@@ -163,5 +266,49 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    // Hero gallery: thumbnails switch the main picture.
+    var main = document.getElementById('g8-main');
+    var btns = Array.prototype.slice.call(document.querySelectorAll('#g8-gallery .thumbs button'));
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        main.src = b.dataset.src; main.alt = b.dataset.alt;
+        btns.forEach(function (o) {
+          o.setAttribute('aria-pressed', o === b ? 'true' : 'false');
+          o.querySelector('img').classList.toggle('active', o === b);
+        });
+      });
+    });
+
+    // Enclosure story: the step crossing the middle of the screen chooses the picture.
+    var story = document.getElementById('enclosure');
+    var steps = Array.prototype.slice.call(story.querySelectorAll('.story-step'));
+    var pics = Array.prototype.slice.call(story.querySelectorAll('.story-visual img'));
+    var label = story.querySelector('.stage-label');
+    var sceneMq = window.matchMedia('(min-width: 981px) and (min-height: 640px)');
+    var observer = null;
+
+    function activate(step) {
+      var n = step.dataset.step;
+      steps.forEach(function (s) { s.classList.toggle('active', s === step); });
+      pics.forEach(function (p) { p.classList.toggle('on', p.dataset.step === n); });
+      label.textContent = step.dataset.label;
+    }
+
+    function setMode() {
+      if (observer) { observer.disconnect(); observer = null; }
+      story.classList.toggle('scene', sceneMq.matches);
+      if (!sceneMq.matches || !('IntersectionObserver' in window)) return;
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+      steps.forEach(function (s) { observer.observe(s); });
+    }
+    setMode();
+    if (sceneMq.addEventListener) sceneMq.addEventListener('change', setMode);
+  })();
+  </script>
 </body>
 </html>
