@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dash-6.8</title>
+  <link rel="alternate" hreflang="en" href="../dash-6-8.html">
+  <link rel="alternate" hreflang="ru" href="dash-6-8.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .gallery { margin-top: 24px; }
+    .gallery-main {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #202228;
+    }
+    .gallery-main img {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+    }
+    .thumbs {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .thumbs button {
+      border: none;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+    .thumbs img {
+      width: 120px;
+      border-radius: 10px;
+      opacity: .65;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .thumbs img.active {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+    .pinout-wrap {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 24px;
+    }
+    .pinout-image {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .pinout-image img {
+      width: 100%;
+      border-radius: 14px;
+    }
+    .pin-table-wrap {
+      overflow-x: auto;
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .pin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .pin-table th,
+    .pin-table td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    .pin-table th {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .pin-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-2);
+      white-space: nowrap;
+    }
+    .pin-note {
+      margin-top: 18px;
+      background: #f0f0ec;
+      border-radius: 16px;
+      padding: 14px 16px;
+      color: #444;
+      font-size: 14px;
+    }
+    @media (max-width: 980px) {
+      .pinout-wrap { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .thumbs img { width: 88px; }
+      .pin-table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container bar">
+      <a class="brand" href="index.html">AILUOHAI-TECH</a>
+      <nav class="nav">
+        <a href="index.html#products">Продукты</a>
+        <a href="test-platform.html">Испытательная платформа</a>
+        <a href="downloads.html">Загрузки</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="lang" href="../dash-6-8.html" hreflang="en" lang="en" title="English version">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="index.html">Главная</a> / Dash-6.8</div>
+      <div class="product-title">
+        <div>
+          <h1>Приборная панель Dash-6.8</h1>
+          <p>Настраиваемая приборная панель для аэролодок и судов специального назначения: читаемость, диагностика и состояние систем на одном экране, адаптированном для воды.</p>
+          <div class="actions">
+  <a class="btn btn-dark" href="mailto:info@ailuohai-tech.com">Запросить информацию</a>
+  <a class="btn btn-dark" href="../files/ota_package.bin" download>Скачать прошивку</a>
+</div>
+        </div>
+        <div class="side-image">
+          <div class="gallery" id="dash-gallery">
+            <div class="gallery-main">
+              <img id="dash-main-image" src="../img/Dash6.8_3.png" alt="Dash-6.8, вид спереди" loading="lazy">
+            </div>
+            <div class="thumbs">
+              <button type="button" data-src="../img/Dash6.8_3.png" aria-label="Front view">
+                <img src="../img/Dash6.8_3.png" alt="Dash-6.8, вид спереди" class="active">
+              </button>
+              <button type="button" data-src="../img/Dash6.8_4.png" aria-label="Perspective view">
+                <img src="../img/Dash6.8_4.png" alt="Dash-6.8 в перспективе">
+              </button>
+              <button type="button" data-src="../img/Dash6.8_2.png" aria-label="Side view">
+                <img src="../img/Dash6.8_2.png" alt="Dash-6.8 сбоку">
+              </button>
+              <button type="button" data-src="../img/Dash6.8_4.png" aria-label="Rear connector view">
+                <img src="../img/Dash6.8_4.png" alt="Разъём Dash-6.8 сзади">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec"><strong>Дисплей</strong><span>судовая панель 6,8"</span></div>
+        <div class="spec"><strong>Связь</strong><span>Wi‑Fi + CAN</span></div>
+        <div class="spec"><strong>Функции</strong><span>Диагностика и статус</span></div>
+        <div class="spec"><strong>Применение</strong><span>Аэролодки и суда</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+  <div class="container content-grid">
+    <div class="card">
+      <h3>Обзор</h3>
+      <p>Dash-6.8 поддерживает два стандартных протокола CAN: Rusefi и ABIT ADLM. Панель показывает основные данные двигателя и бортовой сети в понятном интерфейсе и рассчитана на ежедневную работу на аэролодках и судах специального назначения.</p>
+
+      <p>Основные рабочие параметры, индикаторы состояния и предупреждения — на одном экране. В Dash-6.8 встроены GPS-модуль для показа скорости, Wi-Fi с веб-сервером для подключения и обновлений, а также функции диагностики и предупреждений.</p>
+
+      <h3>Основные параметры</h3>
+      <ul class="list">
+        <li>Обороты двигателя.</li>
+        <li>Температура охлаждающей жидкости.</li>
+        <li>Давление топлива.</li>
+        <li>Давление масла.</li>
+        <li>Бортовое напряжение.</li>
+        <li>Моточасы.</li>
+        <li>Уровень топлива.</li>
+        <li>Скорость по встроенному GPS.</li>
+      </ul>
+
+      <h3>Состояние и предупреждения</h3>
+      <ul class="list">
+        <li>Индикатор низкого уровня топлива.</li>
+        <li>Индикатор холодного двигателя.</li>
+        <li>Предупреждение о перегреве.</li>
+        <li>Экраны диагностики и предупреждений.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Экраны интерфейса</h3>
+      <div class="screen-list">
+  <div class="spec screen-item">
+    <img src="../img/warning.png" alt="Экран предупреждений Dash-6.8" loading="lazy">
+    <strong>Предупреждения</strong>
+    <span>Визуальные предупреждения: мало топлива, холодный двигатель, перегрев.</span>
+  </div>
+
+  <div class="spec screen-item">
+    <img src="../img/DTC.png" alt="Экран диагностики Dash-6.8" loading="lazy">
+    <strong>Диагностика</strong>
+    <span>Встроенный экран диагностики с неисправностями и состоянием систем.</span>
+  </div>
+
+  <div class="spec screen-item">
+    <img src="../img/parametr.png" alt="Страница параметров Dash-6.8" loading="lazy">
+    <strong>Страница параметров</strong>
+    <span>Настраиваемый экран параметров с данными двигателя и бортовой сети в реальном времени.</span>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container content-grid">
+      <div class="card">
+        <h3>Конструкция</h3>
+        <p>В Dash-6.8 стоит дисплей 1280×480 с IPS-матрицей, углом обзора 170°, яркостью до 450 кд/м² и рабочей температурой до −30 °C.</p>
+        <p>Панель собрана в жёстком пластиковом корпусе; корпус может быть выполнен герметичным для тяжёлых условий.</p>
+        <p>Все элементы собраны на нержавеющем крепеже A2. В корпусе есть дренажный клапан: он выпускает пар и не пускает влагу внутрь. Панель рассчитана на перегрузки до 4 G.</p>
+      </div>
+
+      <div class="side-image">
+        <img src="../img/rasbor.JPG" alt="Конструкция корпуса Dash-6.8" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h3>Распиновка разъёма</h3>
+        <p>Разъём Dash-6.8 со стороны задней панели: нумерация контактов и назначение сигналов — питание, CAN, аналоговый вход, цифровые входы и выходы.</p>
+
+        <div class="pinout-wrap">
+          <div class="pinout-image">
+            <img src="../img/black14.jpg" alt="Чертёж 14-контактного разъёма Dash-6.8" loading="lazy">
+            <div class="pin-note">Нумерация контактов показана со стороны задней панели, как на чертеже.</div>
+          </div>
+
+          <div class="pin-table-wrap">
+            <table class="pin-table">
+              <thead>
+                <tr>
+                  <th>Контакт</th>
+                  <th>Тип</th>
+                  <th>Назначение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
+                <tr><td>2</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
+                <tr><td>3</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
+                <tr><td>4</td><td><span class="pin-tag">N/A</span></td><td>N/A</td></tr>
+                <tr><td>5</td><td><span class="pin-tag">Аналог</span></td><td>ADC (0-5V)</td></tr>
+                <tr><td>6</td><td><span class="pin-tag">CAN</span></td><td>CAN-H</td></tr>
+                <tr><td>7</td><td><span class="pin-tag">12V (7-30V)</span></td><td>Питание от АКБ</td></tr>
+                <tr><td>8</td><td><span class="pin-tag">GND</span></td><td>Масса питания</td></tr>
+                <tr><td>9</td><td><span class="pin-tag">IN</span></td><td>Цифровой вход 12 В</td></tr>
+                <tr><td>10</td><td><span class="pin-tag">CAN</span></td><td>CAN-L</td></tr>
+                <tr><td>11</td><td><span class="pin-tag">OUT</span></td><td>Коммутируемый выход 12 В (интеллектуальный ключ, до 17 А) для включения нагрузки</td></tr>
+                <tr><td>12</td><td><span class="pin-tag">12V (7-30V)</span></td><td>Питание от АКБ</td></tr>
+                <tr><td>13</td><td><span class="pin-tag">5V</span></td><td>Питание датчиков</td></tr>
+                <tr><td>14</td><td><span class="pin-tag">IN</span></td><td>Цифровой вход 12 В</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Электроника и системы управления для аэролодок и судов специального назначения.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Продукты</h4>
+        <a href="dash-6-8.html">Dash-6.8</a>
+        <a href="ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Загрузки</h4>
+        <a href="downloads.html">BrainBus</a>
+        <a href="downloads.html#installer">Установщик</a>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <a href="contacts.html">Контакты</a>
+        <a href="test-platform.html">Испытательная платформа</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const main = document.getElementById('dash-main-image');
+      const buttons = document.querySelectorAll('#dash-gallery .thumbs button');
+      const thumbs = document.querySelectorAll('#dash-gallery .thumbs img');
+
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var src = btn.getAttribute('data-src');
+          if (!src || !main) return;
+          main.src = src;
+          thumbs.forEach(function(img) { img.classList.remove('active'); });
+          var img = btn.querySelector('img');
+          if (img) img.classList.add('active');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

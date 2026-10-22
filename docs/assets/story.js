@@ -1,0 +1,54 @@
+/* Scroll sections (.story): the section title stays pinned while the section is on screen,
+   and the sticky picture starts full width, then shrinks into its column as the text arrives.
+   One source of progress: the scroll position of the section. Work is done only on scroll/resize. */
+(function () {
+  var wideMq = window.matchMedia('(min-width: 981px)');
+  var calmMq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.story'));
+  if (!sections.length) return;
+  var queued = false;
+
+  function headerHeight() {
+    var h = document.querySelector('.site-header');
+    return h ? h.getBoundingClientRect().height : 64;
+  }
+
+  function update() {
+    queued = false;
+    var hdr = headerHeight();
+    var vh = window.innerHeight;
+    sections.forEach(function (sec) {
+      var head = sec.querySelector('.story-head');
+      var visual = sec.querySelector('.story-visual');
+      var grid = sec.querySelector('.story-grid');
+      var headH = head ? head.getBoundingClientRect().height : 0;
+      sec.style.setProperty('--hdr', hdr + 'px');
+      sec.style.setProperty('--head-h', headH + 'px');
+      if (!visual || !grid) return;
+
+      var shrink = sec.classList.contains('scene') && wideMq.matches && !calmMq.matches;
+      sec.classList.toggle('shrinks', shrink);
+      if (!shrink) { visual.style.transform = ''; return; }
+
+      // Full size: the width of the whole grid, but never taller than the free part of the screen.
+      var w = visual.offsetWidth, h = visual.offsetHeight;
+      var room = vh - hdr - headH - 32;
+      var big = Math.max(1, Math.min(grid.clientWidth / w, room / h));
+      // Progress over the first 60% of a screen after the grid reaches the pinned title.
+      var start = grid.getBoundingClientRect().top - (hdr + headH + 12);
+      var p = Math.min(1, Math.max(0, -start / (vh * 0.6)));
+      var s = big + (1 - big) * p;
+      visual.style.transform = s > 1.001 ? 'scale(' + s.toFixed(4) + ')' : '';
+    });
+  }
+
+  function queue() {
+    if (!queued) { queued = true; window.requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue);
+  if (wideMq.addEventListener) { wideMq.addEventListener('change', queue); calmMq.addEventListener('change', queue); }
+  // Pages switch .scene on in their own scripts; run after them.
+  window.addEventListener('load', queue);
+  queue();
+})();

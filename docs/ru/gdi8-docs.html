@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Документация Cat-GDI8 — AILUOHAI-TECH</title>
+  <meta name="description" content="Документация ЭБУ Cat-GDI8: как работает моментная модель управления, пуск, защиты и пошаговая настройка в BrainBus GDI-8.">
+  <link rel="alternate" hreflang="en" href="../gdi8-docs.html">
+  <link rel="alternate" hreflang="ru" href="gdi8-docs.html">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .docs-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 44px; padding-top: 8px; padding-bottom: 80px; }
+    .toc { position: sticky; top: 84px; align-self: start; font-size: 14px; }
+    .toc strong { display: block; margin-bottom: 10px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    .toc a { display: block; padding: 6px 10px; border-radius: 10px; color: var(--muted); }
+    .toc a:hover { background: var(--surface); color: var(--text); }
+    .toc a.current { background: #1b1c20; color: #fff; }
+    .doc section { scroll-margin-top: 84px; padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .doc section:last-child { border-bottom: none; }
+    .doc h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .doc h3 { font-size: 20px; margin: 26px 0 8px; }
+    .doc p, .doc li { color: #444; max-width: 760px; }
+    .doc ul, .doc ol { padding-left: 20px; }
+    .doc li { margin: 6px 0; }
+    .tag { font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; }
+    .tag.ready { background: #e3f4ec; color: #146c4b; }
+    .tag.wip { background: #fff1e6; color: #a4410a; }
+    .tag.plan { background: #ececf1; color: #4a4b57; }
+    .note { background: var(--surface); border-left: 4px solid #e8661a; border-radius: 12px; padding: 14px 16px; max-width: 760px; color: #444; }
+    .doc table { width: 100%; max-width: 860px; background: var(--surface); border-radius: 14px; overflow: hidden; font-size: 15px; }
+    .doc th { text-align: left; font-size: 13px; color: var(--muted); }
+    .doc td { border-top: 1px solid var(--line); vertical-align: top; }
+    .doc td:first-child { font-weight: 700; white-space: nowrap; }
+    .table-scroll { overflow-x: auto; }
+
+    /* Torque structure diagram */
+    .flow { display: grid; gap: 10px; max-width: 860px; margin: 18px 0; }
+    .flow-row { display: grid; gap: 10px; }
+    .flow-row.c2 { grid-template-columns: 1fr 1fr; }
+    .flow-row.c3 { grid-template-columns: repeat(3, 1fr); }
+    .box { background: var(--surface); border-radius: 14px; padding: 12px 14px; box-shadow: inset 0 0 0 1px var(--line); }
+    .box b { display: block; font-size: 15px; }
+    .box span { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+    .box.dark { background: #1b1c20; color: #fff; box-shadow: none; }
+    .box.dark span { color: #c9cad0; }
+    .box.limit { box-shadow: inset 0 0 0 2px #d64545; }
+    .arrow { text-align: center; color: #e8661a; font-weight: 800; line-height: 1; }
+
+    .steps-list { counter-reset: s; list-style: none; padding: 0; max-width: 860px; }
+    .steps-list > li { counter-increment: s; position: relative; padding: 16px 16px 16px 64px; background: var(--surface); border-radius: 14px; margin: 10px 0; max-width: none; }
+    .steps-list > li::before { content: counter(s); position: absolute; left: 16px; top: 16px; width: 32px; height: 32px; border-radius: 10px; background: #1b1c20; color: #f07a2e; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .steps-list > li b { display: block; color: var(--text); margin-bottom: 4px; }
+
+    @media (max-width: 980px) {
+      .docs-layout { grid-template-columns: 1fr; gap: 0; }
+      .toc { position: static; display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 26px; }
+      .toc strong { width: 100%; margin: 0; }
+      .toc a { background: var(--surface); }
+      .flow-row.c3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .doc h2 { font-size: 26px; }
+      .flow-row.c2 { grid-template-columns: 1fr; }
+      .doc td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container bar">
+      <a class="brand" href="index.html">AILUOHAI-TECH</a>
+      <nav class="nav">
+        <a href="index.html#products">Продукты</a>
+        <a href="test-platform.html">Испытательная платформа</a>
+        <a href="downloads.html">Загрузки</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="lang" href="../gdi8-docs.html" hreflang="en" lang="en" title="English version">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-hero">
+    <div class="container">
+      <div class="breadcrumbs"><a href="index.html">Главная</a> / <a href="ecu-cat-gdi8.html">ECU Cat-GDI8</a> / <span>Документация</span></div>
+      <span class="status-badge">В разработке · предварительно</span>
+      <h1 style="font-size:52px;line-height:1.04;letter-spacing:-.045em;margin:0 0 14px">Документация Cat-GDI8</h1>
+      <p style="font-size:18px;color:var(--muted);max-width:760px;margin:0 0 20px">Как работает модель управления двигателем и как настроить блок под ваш мотор в BrainBus GDI-8.</p>
+      <div class="actions-row">
+        <a class="btn btn-dark" href="gdi8-pinout.html">Распиновка</a>
+        <a class="btn btn-light" href="ecu-cat-gdi8.html">Страница продукта</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container docs-layout">
+    <nav class="toc" aria-label="Содержание">
+      <strong>Содержание</strong>
+      <a href="#principle">Одна прошивка — любой мотор</a>
+      <a href="#torque">Управление по моменту</a>
+      <a href="#air-fuel">Воздух и топливо</a>
+      <a href="#limiter">Ограничитель и винт</a>
+      <a href="#start">Пуск</a>
+      <a href="#protection">Защиты</a>
+      <a href="#setup">Настройка по шагам</a>
+      <a href="#calibration">Калибровки</a>
+    </nav>
+
+    <article class="doc">
+      <p class="note">Прошивка в разработке. Модель проверена автотестами и имитатором ЭБУ; следующий этап — испытания на работающем моторе. Каждый раздел помечен: <span class="tag ready">Готово</span> работает в имитаторе, <span class="tag wip">В работе</span> написано и ждёт проверки на плате, <span class="tag plan">В планах</span> ещё не реализовано.</p>
+
+      <section id="principle">
+        <h2>Одна прошивка — любой мотор <span class="tag ready">Готово</span></h2>
+        <p>Cat-GDI8 не делается под один конкретный мотор. Всё, что зависит от двигателя и проводки, описывается данными в BrainBus GDI-8 и хранится в блоке. Прошивка одна для всех установок.</p>
+        <p>Модель управления работает с логическими величинами — давление во впуске, положение впускного распредвала банка A, клапан фазовращателя банка A. Конфигурация решает, откуда берётся каждая величина и какой контакт использует каждый выход. Приложение показывает, какие контакты подходят для функции, и проверяет результат: один контакт — одна функция.</p>
+        <ul>
+          <li>От 2 до 8 цилиндров, порядок работы и углы цилиндров (равномерные и неравномерные V8, V6…), банк каждого цилиндра.</li>
+          <li>Форсунки: производительность при опорном давлении, задержка открытия от напряжения и давления, минимальный импульс.</li>
+          <li>Катушки: пассивные 12 В или со встроенным коммутатором 5 В; накопление от напряжения АКБ.</li>
+          <li>0–4 распредвала с ролями (впуск/выпуск, банк A/B), у каждого свой диск и фазовращатель.</li>
+          <li>Наддув: нет, одна или две турбины; вестгейт пневматический или электрический; 1 или 2 дросселя.</li>
+          <li>Датчики детонации 0–2, ШДК 0–2, параметры привода винта, если известны.</li>
+        </ul>
+      </section>
+
+      <section id="torque">
+        <h2>Управление по моменту <span class="tag wip">В работе</span></h2>
+        <p>Блок не переводит рычаг газа напрямую в открытие дросселя. Рычаг — это <b>запрос момента</b>. Модель решает, как его выдать — воздухом, углом зажигания или, только в аварии, отключением цилиндров, — а все ограничения действуют на момент. Это тот же принцип, что в современных заводских системах, адаптированный к аэролодке: мотор, редуктор и тяжёлый винт.</p>
+
+        <div class="flow" role="img" aria-label="Моментная структура: запросы рычага и ХХ с учётом ограничений дают целевой момент, который идёт в воздушный путь, путь УОЗ и отключение цилиндров">
+          <div class="flow-row c2">
+            <div class="box"><b>Рычаг</b><span>запрос момента по положению рычага и оборотам</span></div>
+            <div class="box"><b>Регулятор ХХ</b><span>держит обороты холостого хода и резерв момента</span></div>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="flow-row c2">
+            <div class="box dark"><b>Координация</b><span>побеждает больший запрос, затем применяются все ограничения</span></div>
+            <div class="box limit"><b>Ограничения</b><span>ограничитель оборотов, защиты, пуск, аварийные режимы — ограничения всегда главнее</span></div>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="box dark"><b>Целевой момент</b><span>запрос + потери на трение и насосные потери</span></div>
+          <div class="arrow">↓</div>
+          <div class="flow-row c3">
+            <div class="box"><b>Воздух · медленно</b><span>наполнение → давление во впуске → угол дросселя, фазы, наддув</span></div>
+            <div class="box"><b>УОЗ · быстро</b><span>отвод угла от оптимума для быстрых изменений момента</span></div>
+            <div class="box"><b>Отключение цилиндров · авария</b><span>только если разрешено, в обычной работе не используется</span></div>
+          </div>
+        </div>
+
+        <h3>Уровни модели</h3>
+        <ol>
+          <li><b>Положение и время</b> — коленвал и четыре распредвала дают угол двигателя и фазы валов.</li>
+          <li><b>Датчики</b> — у каждой величины есть признак достоверности; отказавший датчик заменяется значением модели.</li>
+          <li><b>Модель двигателя</b> — наполнение, остаточные газы, КПД угла и смеси, потери, температура выпуска.</li>
+          <li><b>Моментная структура</b> — запрос, координация, ограничения, разделение на воздух / УОЗ / отключение.</li>
+          <li><b>Уставки исполнителей</b> — дроссель, фазы, масса топлива, момент и деление впрыска, давление в рампе, УОЗ.</li>
+          <li><b>Выходы</b> — планировщик по углу на аппаратных таймерах управляет форсунками и катушками.</li>
+        </ol>
+        <p>На холостом ходу воздушный путь держит небольшой резерв момента сверх цели, а угол зажигания его использует. Так ХХ реагирует мгновенно, не дожидаясь наполнения коллектора. Фактический момент считается тем же путём вперёд — для контроля и логов.</p>
+      </section>
+
+      <section id="air-fuel">
+        <h2>Воздух и топливо <span class="tag wip">В работе</span></h2>
+        <h3>Наполнение цилиндров</h3>
+        <p>Масса воздуха считается по давлению во впуске линейной моделью: наклон и смещение зависят от оборотов и положения впускного и выпускного распредвалов, с поправкой на температуру. Каждый банк считается отдельно, потому что у каждого свои фазы. Модель легко обращается: по нужной массе воздуха блок получает нужное давление во впуске, а через модель расхода — угол дросселя.</p>
+        <h3>Топливо</h3>
+        <p>Масса топлива на цилиндр = масса воздуха / (стехиометрия × целевая лямбда). Целевая лямбда — из базовой карты, поправок пуска и прогрева, обогащения для защиты деталей и коррекции по ШДК.</p>
+        <h3>Гибридный впрыск</h3>
+        <p>Для каждого цилиндра рассчитанное топливо делится между форсункой прямого впрыска и форсункой во впуск. Прямой впрыск — 1–3 импульса за цикл с высоковольтным профилем тока из калибровки; начало впрыска зависит от оборотов и нагрузки. Время открытия считается по модели форсунки для фактического перепада давления.</p>
+        <h3>Давление в рампе</h3>
+        <p>Два ТНВД, по одному на банк. Целевое давление — карта 32×32 по оборотам и нагрузке; регулятор сочетает упреждение по подаче, модель рампы и интегральную часть вблизи цели.</p>
+        <h3>Фазы газораспределения</h3>
+        <p>Уставки четырёх валов — карты по оборотам и нагрузке. Регулирование разрешено только при достаточном давлении масла; при низком давлении валы возвращаются в базовое положение. Диагностируются растяжение цепи, отказы фазовращателей и упоров.</p>
+      </section>
+
+      <section id="limiter">
+        <h2>Ограничитель оборотов и защита винта</h2>
+        <p><span class="tag wip">В работе</span> Разгруженный винт может почти мгновенно раскрутить мотор, поэтому ограничитель работает на упреждение: смотрит на ускорение и плавно снимает момент в полосе ниже предела — сначала углом, затем воздухом. В имитаторе срыв винта на полной мощности дал пик 6426 об/мин при пределе 6500, без отключения хотя бы одного цилиндра. Отсечка топлива при крайнем забросе — отдельная настройка, по умолчанию выключена.</p>
+        <p><span class="tag plan">В планах</span> Защита редуктора и винта: модель привода (мотор + редуктор + винт), ограничение скорости изменения момента, мягкий проход через ноль для выборки люфта редуктора, гашение крутильных колебаний углом зажигания и запретная полоса вокруг резонанса валопровода. Пока параметры привода неизвестны, блок работает в осторожном режиме с медленными рампами момента.</p>
+      </section>
+
+      <section id="start">
+        <h2>Пуск двигателя</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Фаза</th><th>Что происходит</th><th>Статус</th></tr></thead>
+            <tbody>
+              <tr><td>Подкачка</td><td>Работают топливные насосы, рампы набирают давление.</td><td><span class="tag ready">Готово</span></td></tr>
+              <tr><td>Быстрая синхронизация</td><td>Положение мотора по форме распредвала до пропуска на коленвале — первый впрыск и искра раньше.</td><td><span class="tag ready">Готово</span></td></tr>
+              <tr><td>Стартовый впрыск</td><td>Один впрыск на попытку пуска — когда мотор начинает вращаться, а не при повороте ключа.</td><td><span class="tag plan">В планах</span></td></tr>
+              <tr><td>Прокрутка</td><td>Топливо на цикл по температуре ОЖ, прямой впрыск в такте сжатия, фиксированный угол.</td><td><span class="tag ready">Готово</span></td></tr>
+              <tr><td>Компенсация прокрутки</td><td>Добавка топлива в начале прокрутки, затухающая со временем; на холодном моторе больше.</td><td><span class="tag plan">В планах</span></td></tr>
+              <tr><td>Первые впрыски</td><td>Свой угол впрыска для первых циклов и искра через заданное время после впрыска.</td><td><span class="tag wip">В работе</span></td></tr>
+              <tr><td>После пуска</td><td>Обогащение, затухающее по времени и температуре, повышенный ХХ, переход на моментную модель.</td><td><span class="tag wip">В работе</span></td></tr>
+              <tr><td>Прогрев</td><td>Поправка лямбды по температуре ОЖ, затем обычная работа.</td><td><span class="tag ready">Готово</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="protection">
+        <h2>Защиты и реакции на неисправности <span class="tag wip">В работе</span></h2>
+        <p>У каждой неисправности есть код в формате OBD и реакция из таблицы, которую можно менять в приложении. Реакции сгруппированы по уровням. Как правило, ограничения плавно снижают момент, а не отсекают топливо или искру.</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Уровень</th><th>Реакция</th><th>Примеры</th></tr></thead>
+            <tbody>
+              <tr><td>R0</td><td>Только код ошибки</td><td>Шум датчика детонации, ШДК</td></tr>
+              <tr><td>R1</td><td>Ограничение момента</td><td>Датчик MAP заменён моделью, детонация на пределе отката, начало перегрева</td></tr>
+              <tr><td>R2</td><td>Аварийный режим: ограничение оборотов (~2500) и момента</td><td>Частичный отказ дросселя или рычага, перегрев, низкое давление масла</td></tr>
+              <tr><td>R3</td><td>Остановка двигателя</td><td>Нет давления масла, дроссель не управляется и открыт, отказ контроля</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Впрыск и искра отсчитываются аппаратными таймерами, а не по шине данных. Второе ядро процессора независимо проверяет, что фактический момент не превышает разрешённый рычагом. Внешний сторожевой таймер перезапускает процессор, если задача двигателя перестала отвечать; при любом перезапуске выходы отключены.</p>
+      </section>
+
+      <section id="setup">
+        <h2>Настройка по шагам</h2>
+        <p>Настройка выполняется в приложении BrainBus GDI-8 для Windows. Приложение разбито на модули: Двигатель, Триггер, Датчики, Исполнительные механизмы, Пуск, Холостой ход, Наддув, Зажигание, Топливо и смесь, Работа (момент), CAN.</p>
+        <ol class="steps-list">
+          <li><b>Подключите</b>Соедините блок с ПК кабелем Ethernet и нажмите «Подключиться». Приложение найдёт блок, прочитает каталог параметров и покажет прошивку и серийный номер. Живые данные обновляются 20 раз в секунду.</li>
+          <li><b>Опишите двигатель</b>В модуле «Двигатель»: число цилиндров, порядок работы, банки, форсунки, катушки, наддув, дроссели и распредвалы. От этого включаются нужные модули — например, «Наддув» появляется, только если задана турбина.</li>
+          <li><b>Назначьте входы и выходы</b>Выберите контакт для каждой функции — приложение предлагает только подходящие и предупреждает о конфликтах. Жгут собирайте по <a class="text-link" href="gdi8-pinout.html">распиновке</a>. Свободные выходы можно сделать пользовательскими: по условию, ШИМ по таблице или по неисправности.</li>
+          <li><b>Настройте синхронизацию</b>Опишите диск коленвала (36-1, 60-2, 36-2-2-2…) и форму каждого распредвала. Запишите сигналы встроенным логгером на прокрутке и подтвердите, что диск и фазы распознаны.</li>
+          <li><b>Откалибруйте датчики</b>Выберите типы и шкалы датчиков: давления, температуры, положения дросселя и рычага (два канала или SENT), датчики детонации, ШДК по CAN.</li>
+          <li><b>Обучите дроссели и вестгейты</b>Запустите обучение упоров и автонастройку PID для каждого электронного дросселя и электрического вестгейта.</li>
+          <li><b>Подготовьте пуск</b>Проверьте таблицы топлива и угла на прокрутке и прогрева для вашего мотора. Имитатор ЭБУ в приложении позволяет проверить калибровку до первого пуска.</li>
+          <li><b>Задайте привод винта</b>Введите передаточное число и допустимый момент редуктора, если известны. Инерцию и нагрузку винта можно определить на моторе; до этого работает осторожный режим с медленными рампами момента.</li>
+          <li><b>Сохраните и пишите логи</b>Нажмите «Сохранить в ЭБУ» — калибровки записываются в память блока с возможностью отката. Запустите мотор, пишите логи и уточняйте карты.</li>
+        </ol>
+      </section>
+
+      <section id="calibration">
+        <h2>Работа с калибровками <span class="tag ready">Готово</span></h2>
+        <ul>
+          <li>Карты 32×32, кривые — 16 точек. Каждое значение проверяет блок; значение вне пределов отклоняется.</li>
+          <li>Оси таблиц общие: измените ось оборотов один раз — и все таблицы с этой осью пересчитаются, сохранив те же значения на тех же оборотах. Оси давлений следуют за тарировкой своих датчиков.</li>
+          <li>Структурные изменения — диски, назначение выходов, число цилиндров — применяются только на остановленном моторе. Калибровки можно менять на ходу.</li>
+          <li>Калибровку можно сохранить в файл на ПК и загрузить из файла.</li>
+        </ul>
+        <p>Вопросы по документации: <a class="text-link" href="mailto:info@ailuohai-tech.com?subject=Cat-GDI8%20documentation">info@ailuohai-tech.com</a>.</p>
+      </section>
+    </article>
+  </div>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Электроника и системы управления для аэролодок и судов специального назначения.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Продукты</h4>
+        <a href="dash-6-8.html">Dash-6.8</a>
+        <a href="ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Загрузки</h4>
+        <a href="downloads.html">BrainBus</a>
+        <a href="downloads.html#installer">Установщик</a>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <a href="contacts.html">Контакты</a>
+        <a href="test-platform.html">Испытательная платформа</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    // Highlight the contents entry of the section being read.
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    document.querySelectorAll('.toc a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        Object.keys(links).forEach(function (id) { links[id].classList.toggle('current', id === e.target.id); });
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    document.querySelectorAll('.doc section').forEach(function (s) { obs.observe(s); });
+  })();
+  </script>
+</body>
+</html>

@@ -4,7 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AILUOHAI-TECH</title>
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="ru" href="ru/index.html">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .services-home h2 { font-size: 44px; letter-spacing: -.04em; margin: 0 0 8px; }
+    .services-lead { color: var(--muted); font-size: 17px; margin: 0 0 20px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 22px; }
+    .services-grid div { background: #1b1c20; color: #fff; border-radius: 16px; padding: 20px; }
+    .services-grid b { display: block; font-size: 18px; margin-bottom: 6px; color: #f07a2e; }
+    .services-grid span { color: #c9cad0; font-size: 15px; }
+    @media (max-width: 980px) { .services-grid { grid-template-columns: 1fr; } .services-home h2 { font-size: 32px; } }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -12,8 +23,10 @@
       <a class="brand" href="index.html">AILUOHAI-TECH</a>
       <nav class="nav">
         <a href="index.html#products">Products</a>
+        <a href="test-platform.html">Test platform</a>
         <a href="downloads.html">Downloads</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contacts.html">Contacts</a>
+        <a class="lang" href="ru/index.html" hreflang="ru" lang="ru" title="Русская версия">RU</a>
       </nav>
     </div>
   </header>
@@ -86,6 +99,19 @@
     </div>
   </section>
 
+  <section class="section services-home" id="services">
+    <div class="container">
+      <h2>Not only products</h2>
+      <p class="services-lead">We develop electronics for airboats and take your project from idea to water.</p>
+      <div class="services-grid">
+        <div><b>Our products</b><span>Dashboards, engine control units, power management and BrainBus software.</span></div>
+        <div><b>Integration into your platform</b><span>We fit our systems to your boat and engine and support you through setup and calibration.</span></div>
+        <div><b>Development from scratch</b><span>Electronics designed for your airboat to your requirements.</span></div>
+      </div>
+      <p><a class="btn btn-dark" href="contacts.html">Discuss your project</a> <a class="btn btn-light" href="test-platform.html">Our test platform</a></p>
+    </div>
+  </section>
+
   <footer class="footer" id="contact">
     <div class="container footer-grid">
       <div>
@@ -106,9 +132,10 @@
         <a href="downloads.html#installer">Installer</a>
       </div>
       <div>
-        <h4>Support</h4>
+        <h4>Company</h4>
+        <a href="contacts.html">Contacts</a>
+        <a href="test-platform.html">Test platform</a>
         <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
-        <p>For orders and inquiries.</p>
       </div>
     </div>
   </footer>

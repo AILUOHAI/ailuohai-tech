@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ECU Cat-GDI8 — AILUOHAI-TECH</title>
   <meta name="description" content="Cat-GDI8: 8-cylinder multi-injection ECU with torque-based control — 8 direct and 8 port injectors, four cam phasers, fast start. In development.">
+  <link rel="alternate" hreflang="en" href="ecu-cat-gdi8.html">
+  <link rel="alternate" hreflang="ru" href="ru/ecu-cat-gdi8.html">
   <link rel="stylesheet" href="assets/style.css">
   <style>
     .tagline { font-size: 24px; line-height: 1.25; font-weight: 700; letter-spacing: -.02em; color: var(--text); margin: 0 0 12px; max-width: 560px; }
@@ -15,7 +17,19 @@
 
     /* Tour: one sticky picture, the steps change it */
     .story { padding-top: 8px; padding-bottom: 40px; }
-    .story-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: 40px; }
+    .wide { max-width: 1400px; }
+    .kicker { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #e8661a; }
+    .module { padding-top: 32px; padding-bottom: 32px; }
+    .module-title { font-size: 40px; letter-spacing: -.035em; line-height: 1.05; margin: 6px 0 10px; }
+    .module-lead { color: var(--muted); font-size: 17px; max-width: 760px; margin: 0 0 14px; }
+    .story > .module-title { margin-top: 6px; }
+    .spec-table { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 18px; }
+    .spec-table div { background: var(--surface); border-radius: 12px; padding: 14px; }
+    .spec-table strong { display: block; font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+    .spec-table span { font-size: 15px; font-weight: 700; line-height: 1.35; display: block; }
+    .hero-shot { margin: 14px 0 0; border-radius: 10px; overflow: hidden; background: #111; aspect-ratio: 1408 / 736; }
+    .hero-shot img { width: 100%; height: 100%; object-fit: cover; }
+    .story-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .55fr); gap: 44px; }
     .story-visual { display: none; }
     .story-step { padding: 28px 0; }
     .step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
@@ -27,11 +41,11 @@
     .story-step ul { color: var(--muted); padding-left: 18px; margin: 0; }
     .story-step li { margin: 6px 0; }
     .story-step .figure { display: inline-block; margin-top: 4px; padding: 6px 12px; border-radius: 999px; background: var(--surface); font-size: 13px; font-weight: 700; }
-    .story-step figure { margin: 0 0 18px; border-radius: 18px; overflow: hidden; background: #e8e8e6; }
+    .story-step figure { margin: 0 0 18px; border-radius: 10px; overflow: hidden; background: #e8e8e6; }
     .story-step figure img { width: 100%; }
 
     /* Scene mode (set by JS when the window is tall enough) */
-    .story.scene .story-visual { display: block; position: sticky; top: calc(50vh - 150px); align-self: start; aspect-ratio: 2301 / 1216; border-radius: 22px; overflow: hidden; background: #e8e8e6; margin-top: 12vh; }
+    .story.scene .story-visual { display: block; position: sticky; top: calc(50vh - 150px); align-self: start; aspect-ratio: 2301 / 1216; border-radius: 10px; overflow: hidden; background: #e8e8e6; margin-top: 12vh; }
     .story.scene .story-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .7s ease; }
     .story.scene .story-visual img.on { opacity: 1; }
     .story.scene .stage-label { position: absolute; left: 16px; bottom: 18px; padding: 6px 12px; border-radius: 999px; background: rgba(27,28,32,.86); color: #fff; font-size: 13px; font-weight: 700; }
@@ -44,13 +58,17 @@
     @media (max-width: 980px) {
       .story-grid { grid-template-columns: 1fr; gap: 0; }
       .tagline { font-size: 21px; }
+      .spec-table { grid-template-columns: repeat(3, 1fr); }
       /* Narrow screens: the picture sticks under the header, the steps scroll below it. */
       .story.scene .story-visual { top: 72px; margin-top: 0; z-index: 2; box-shadow: 0 10px 24px rgba(0,0,0,.12);
         height: min(42vh, calc((100vw - 36px) * .5288)); width: auto; justify-self: center; }
       .story.scene .story-step { min-height: 58vh; justify-content: flex-start; padding-top: 40px; }
     }
     @media (max-width: 640px) {
+      .story.scene .story-visual { top: 100px; }
       .story-step h3 { font-size: 25px; }
+      .module-title { font-size: 30px; }
+      .spec-table { grid-template-columns: 1fr 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
       .story.scene .story-visual img, .story.scene .story-step, .story.scene .stage-progress i { transition: none; }
@@ -63,8 +81,10 @@
       <a class="brand" href="index.html">AILUOHAI-TECH</a>
       <nav class="nav">
         <a href="index.html#products">Products</a>
+        <a href="test-platform.html">Test platform</a>
         <a href="downloads.html">Downloads</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contacts.html">Contacts</a>
+        <a class="lang" href="ru/ecu-cat-gdi8.html" hreflang="ru" lang="ru" title="Русская версия">RU</a>
       </nav>
     </div>
   </header>
@@ -90,7 +110,30 @@
     </div>
   </section>
 
-  <section class="container story" id="story" aria-label="Cat-GDI8 tour">
+  <section class="container wide module" id="unit">
+    <span class="kicker">The unit</span>
+    <h2 class="module-title">Cat-GDI8 — specifications</h2>
+    <figure class="hero-shot"><img src="img/GDI-8-render.webp" alt="Cat-GDI8 enclosure with four sealed connectors"></figure>
+    <div class="spec-table">
+      <div><strong>Engines</strong><span>2–8 cylinders, V8 in the base version</span></div>
+      <div><strong>Injection</strong><span>8 direct (GDI) + 8 port injectors</span></div>
+      <div><strong>High-pressure pumps</strong><span>2, one per bank</span></div>
+      <div><strong>Ignition</strong><span>8 outputs: 12 V coils or 5 V igniters</span></div>
+      <div><strong>Valve timing</strong><span>4 camshafts, 4 cam phasers</span></div>
+      <div><strong>H-bridges</strong><span>4: throttles, electric wastegates</span></div>
+      <div><strong>Processor</strong><span>ARM dual-core</span></div>
+      <div><strong>Communication</strong><span>Ethernet · 2 × CAN · LIN</span></div>
+      <div><strong>Connectors</strong><span>4 × TE AMPSEAL 35-pin</span></div>
+      <div><strong>Control</strong><span>Torque-based model</span></div>
+    </div>
+  </section>
+
+  <section class="container wide story" id="hardware" aria-label="Cat-GDI8 hardware">
+    <div class="story-head">
+      <span class="kicker">Hardware</span>
+      <h2 class="module-title">Enclosure and board</h2>
+    </div>
+    <p class="module-lead">Scroll through the unit — from the sealed enclosure to the board inside.</p>
     <div class="story-grid">
       <div class="story-visual" aria-hidden="true">
         <img src="img/GDI-8-render.webp" alt="" class="on" data-img="img/GDI-8-render.webp">
@@ -98,101 +141,115 @@
         <img src="img/GDI-8-xray.jpg" alt="" loading="lazy" data-img="img/GDI-8-xray.jpg">
         <img src="img/GDI-8-bottom.jpg" alt="" loading="lazy" data-img="img/GDI-8-bottom.jpg">
         <img src="img/GDI-8-exploded.jpg" alt="" loading="lazy" data-img="img/GDI-8-exploded.jpg">
-        <span class="stage-label">Hybrid injection</span>
-        <span class="stage-progress"><i style="width:7.14%"></i></span>
+        <span class="stage-label">Enclosure</span>
+        <span class="stage-progress"><i style="width:20.00%"></i></span>
       </div>
       <div class="story-steps">
-        <article class="story-step active" data-img="img/GDI-8-render.webp" data-label="Hybrid injection">
-          <figure><img src="img/GDI-8-render.webp" alt="Cat-GDI8 enclosure" loading="lazy"></figure>
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="11" y="3" width="10" height="7" rx="2"/><path d="M13 10v10h6V10"/><path d="M14 20l1 4h2l1-4"/><path d="M16 26v1M12 27l-1 2M20 27l1 2"/></svg></span><span class="num">01 · Capabilities</span></div>
-          <h3>Hybrid injection</h3>
-          <p>8 direct (GDI) injectors and 8 port injectors. Direct injection with 1–3 pulses per cycle and a high-voltage current profile; the share of port and direct fuel is set in the calibration.</p>
-          <span class="figure">16 injectors · 8 GDI + 8 PFI</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="High-pressure fuel">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h24"/><path d="M8 22v-6h6v6M18 22v-6h6v6"/><path d="M11 16V9h10v7"/><path d="M16 9V5"/><circle cx="16" cy="4" r="1.5"/></svg></span><span class="num">02 · Capabilities</span></div>
-          <h3>High-pressure fuel</h3>
-          <p>Two high-pressure fuel pump valves, one per bank, with closed-loop rail pressure control.</p>
-          <span class="figure">2 HPFP · 2 rails</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="Variable valve timing">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="2"/><path d="M16 4v3M16 25v3M4 16h3M25 16h3M7.5 7.5l2.1 2.1M22.4 22.4l2.1 2.1M7.5 24.5l2.1-2.1M22.4 9.6l2.1-2.1"/></svg></span><span class="num">03 · Capabilities</span></div>
-          <h3>Variable valve timing</h3>
-          <p>Four camshafts — intake and exhaust on each bank — with four cam phasers. Closed-loop control, oil pressure check, chain and phaser diagnostics, automatic tuning.</p>
-          <span class="figure">4 camshafts · 4 phasers</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="Fast start">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27 16a11 11 0 1 1-4-8.5"/><path d="M24 4v4h-4"/><path d="M16 9v7l4 3"/></svg></span><span class="num">04 · Capabilities</span></div>
-          <h3>Fast start</h3>
-          <p>The unit finds the engine position from the camshaft shape before the crank wheel gap arrives, so the first injection and spark come sooner after cranking starts.</p>
-          <span class="figure">Sync in ~190° of crank on average, vs ~310° by the gap</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="Flexible trigger">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="3"/><path d="M16 3v3M25.2 6.8l-2.1 2.1M29 16h-3M25.2 25.2l-2.1-2.1M16 29v-3M6.8 25.2l2.1-2.1M3 16h3"/></svg></span><span class="num">05 · Capabilities</span></div>
-          <h3>Flexible trigger</h3>
-          <p>Crank wheels 36-1, 60-2, 36-2-2-2 or a cam-only wheel; camshaft shapes are described in the setup tool and checked with the built-in trigger logger.</p>
-          <span class="figure">Up to 4 camshaft inputs</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="Ignition">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l-8 15h7l-2 11 9-16h-7z"/></svg></span><span class="num">06 · Capabilities</span></div>
-          <h3>Ignition</h3>
-          <p>Eight outputs for passive 12 V coils with adaptive dwell, or 5 V signals for coils with a built-in igniter.</p>
-          <span class="figure">8 coils · individual timing and knock control</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="Throttles and wastegates">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M8.5 23.5l15-15"/><circle cx="16" cy="16" r="2"/></svg></span><span class="num">07 · Capabilities</span></div>
-          <h3>Throttles and wastegates</h3>
-          <p>Four H-bridge outputs for one or two electronic throttles and electric wastegates. End-stop learning and automatic PID tuning; SENT position sensors supported.</p>
-          <span class="figure">4 H-bridges</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="Torque-based control">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 24a11 11 0 0 1 22 0"/><path d="M16 24l6-8"/><circle cx="16" cy="24" r="1.5"/><path d="M8 18l-1.5-1M24 18l1.5-1M16 13v-2"/></svg></span><span class="num">08 · Capabilities</span></div>
-          <h3>Torque-based control</h3>
-          <p>Air and torque model, lambda control, two knock sensor channels, wideband lambda and exhaust temperature from a CAN module. Pressures are sampled in sync with crank angle.</p>
-          <span class="figure">2 knock channels · wideband + EGT over CAN</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="Safety by design">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3l10 4v8c0 7-4.5 11.5-10 14-5.5-2.5-10-7-10-14V7z"/><path d="M11.5 16l3 3 6-6"/></svg></span><span class="num">09 · Capabilities</span></div>
-          <h3>Safety by design</h3>
-          <p>Injection and spark come from hardware timers, never from a data bus. Three levels of supervision with an independent watchdog; on a fault the outputs are switched off. Fault codes in OBD format.</p>
-          <span class="figure">3-level supervision</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-render.webp" data-label="Setup and logging">
-          <div class="step-head"><span class="step-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="24" height="16" rx="2"/><path d="M11 27h10M16 22v5"/><path d="M8 17l4-4 3 3 5-6 4 4"/></svg></span><span class="num">10 · Capabilities</span></div>
-          <h3>Setup and logging</h3>
-          <p>Calibration, live data and logs over Ethernet in BrainBus GDI-8. Calibrations are stored with rollback; logs are written to onboard memory. A built-in ECU simulator lets you prepare a calibration before the engine runs.</p>
-          <span class="figure">Ethernet · 2 × CAN · LIN</span>
-        </article>
-        <article class="story-step" data-img="img/GDI-8-top.jpg" data-label="Enclosure">
-          <figure><img src="img/GDI-8-top.jpg" alt="Cat-GDI8 top view with four sealed connectors, 3D model" loading="lazy"></figure>
-          <div class="step-head"><span class="num">11 · Built for airboats</span></div>
+        <article class="story-step active" data-img="img/GDI-8-render.webp" data-label="Enclosure">
+          <figure><img src="img/GDI-8-render.webp" alt="Cat-GDI8 enclosure with four sealed connectors" loading="lazy"></figure>
+          <div class="step-head"><span class="num">01 · Hardware</span></div>
           <h3>Sealed enclosure</h3>
-          <p>The housing closes the electronics completely. All wiring enters through four sealed TE AMPSEAL 35-pin connectors, one per function group.</p>
+          <p>The housing closes the electronics completely: black plastic cover on an aluminium base plate. All wiring enters through sealed connectors.</p>
+        </article>
+        <article class="story-step" data-img="img/GDI-8-top.jpg" data-label="Connectors">
+          <figure><img src="img/GDI-8-top.jpg" alt="Cat-GDI8 top view with four sealed connectors, 3D model" loading="lazy"></figure>
+          <div class="step-head"><span class="num">02 · Hardware</span></div>
+          <h3>Four 35-pin connectors</h3>
+          <p>Four sealed TE AMPSEAL 35-pin connectors, one per function group:</p>
           <ul>
             <li>J1 — sensors and communication</li>
             <li>J2 / J3 — cylinder banks 5–8 and 1–4</li>
             <li>J4 — battery power and pumps</li>
           </ul>
+          <a class="text-link" href="gdi8-pinout.html">Open the pinout</a>
         </article>
         <article class="story-step" data-img="img/GDI-8-xray.jpg" data-label="Inside">
           <figure><img src="img/GDI-8-xray.jpg" alt="Cat-GDI8 with transparent cover showing the board, 3D model" loading="lazy"></figure>
-          <div class="step-head"><span class="num">12 · Built for airboats</span></div>
+          <div class="step-head"><span class="num">03 · Hardware</span></div>
           <h3>One board inside</h3>
-          <p>A single board carries the dual-core processor and all power stages: drivers for 16 injectors, 8 ignition coils, 2 high-pressure pumps and 4 H-bridges. The connectors are soldered directly to it — no internal harness.</p>
+          <p>A single board carries the dual-core ARM processor and all power stages: drivers for 16 injectors, 8 ignition coils, 2 high-pressure pumps and 4 H-bridges. The connectors are soldered directly to it — no internal harness.</p>
         </article>
         <article class="story-step" data-img="img/GDI-8-bottom.jpg" data-label="Base plate">
           <figure><img src="img/GDI-8-bottom.jpg" alt="Cat-GDI8 aluminium base plate with cooling fins and rubber mounts, 3D model" loading="lazy"></figure>
-          <div class="step-head"><span class="num">13 · Built for airboats</span></div>
+          <div class="step-head"><span class="num">04 · Hardware</span></div>
           <h3>Cooling and mounting</h3>
           <p>The aluminium base plate with cooling fins takes heat away from the power electronics. Four rubber mounts isolate the unit from hull and engine vibration.</p>
         </article>
         <article class="story-step" data-img="img/GDI-8-exploded.jpg" data-label="Assembly">
           <figure><img src="img/GDI-8-exploded.jpg" alt="Cat-GDI8 exploded view: cover, board and base plate, 3D model" loading="lazy"></figure>
-          <div class="step-head"><span class="num">14 · Built for airboats</span></div>
+          <div class="step-head"><span class="num">05 · Hardware</span></div>
           <h3>Simple assembly</h3>
           <p>Three main parts — cover, board and base plate — are held together with screws, so the unit can be opened for inspection.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="container wide module" id="capabilities">
+    <span class="kicker">Capabilities</span>
+    <h2 class="module-title">What the unit does</h2>
+    <p class="module-lead">One unit controls fuel, air, ignition and valve timing of a V8 engine, and records everything it does.</p>
+    <div class="feature-grid">
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="11" y="3" width="10" height="7" rx="2"/><path d="M13 10v10h6V10"/><path d="M14 20l1 4h2l1-4"/><path d="M16 26v1M12 27l-1 2M20 27l1 2"/></svg></div>
+        <h3>Hybrid injection</h3>
+        <p>8 direct (GDI) injectors and 8 port injectors. Direct injection with 1–3 pulses per cycle and a high-voltage current profile; the share of port and direct fuel is set in the calibration.</p>
+        <span class="figure">16 injectors · 8 GDI + 8 PFI</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h24"/><path d="M8 22v-6h6v6M18 22v-6h6v6"/><path d="M11 16V9h10v7"/><path d="M16 9V5"/><circle cx="16" cy="4" r="1.5"/></svg></div>
+        <h3>High-pressure fuel</h3>
+        <p>Two high-pressure fuel pump valves, one per bank, with closed-loop rail pressure control.</p>
+        <span class="figure">2 HPFP · 2 rails</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="2"/><path d="M16 4v3M16 25v3M4 16h3M25 16h3M7.5 7.5l2.1 2.1M22.4 22.4l2.1 2.1M7.5 24.5l2.1-2.1M22.4 9.6l2.1-2.1"/></svg></div>
+        <h3>Variable valve timing</h3>
+        <p>Four camshafts — intake and exhaust on each bank — with four cam phasers. Closed-loop control, oil pressure check, chain and phaser diagnostics, automatic tuning.</p>
+        <span class="figure">4 camshafts · 4 phasers</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27 16a11 11 0 1 1-4-8.5"/><path d="M24 4v4h-4"/><path d="M16 9v7l4 3"/></svg></div>
+        <h3>Fast start</h3>
+        <p>The unit finds the engine position from the camshaft shape before the crank wheel gap arrives, so the first injection and spark come sooner after cranking starts.</p>
+        <span class="figure">Sync in ~190° of crank on average, vs ~310° by the gap</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="3"/><path d="M16 3v3M25.2 6.8l-2.1 2.1M29 16h-3M25.2 25.2l-2.1-2.1M16 29v-3M6.8 25.2l2.1-2.1M3 16h3"/></svg></div>
+        <h3>Flexible trigger</h3>
+        <p>Crank wheels 36-1, 60-2, 36-2-2-2 or a cam-only wheel; camshaft shapes are described in the setup tool and checked with the built-in trigger logger.</p>
+        <span class="figure">Up to 4 camshaft inputs</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l-8 15h7l-2 11 9-16h-7z"/></svg></div>
+        <h3>Ignition</h3>
+        <p>Eight outputs for passive 12 V coils with adaptive dwell, or 5 V signals for coils with a built-in igniter.</p>
+        <span class="figure">8 coils · individual timing and knock control</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M8.5 23.5l15-15"/><circle cx="16" cy="16" r="2"/></svg></div>
+        <h3>Throttles and wastegates</h3>
+        <p>Four H-bridge outputs for one or two electronic throttles and electric wastegates. End-stop learning and automatic PID tuning; SENT position sensors supported.</p>
+        <span class="figure">4 H-bridges</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 24a11 11 0 0 1 22 0"/><path d="M16 24l6-8"/><circle cx="16" cy="24" r="1.5"/><path d="M8 18l-1.5-1M24 18l1.5-1M16 13v-2"/></svg></div>
+        <h3>Torque-based control</h3>
+        <p>Air and torque model, lambda control, two knock sensor channels, wideband lambda and exhaust temperature from a CAN module. Pressures are sampled in sync with crank angle.</p>
+        <span class="figure">2 knock channels · wideband + EGT over CAN</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3l10 4v8c0 7-4.5 11.5-10 14-5.5-2.5-10-7-10-14V7z"/><path d="M11.5 16l3 3 6-6"/></svg></div>
+        <h3>Safety by design</h3>
+        <p>Injection and spark come from hardware timers, never from a data bus. Three levels of supervision with an independent watchdog; on a fault the outputs are switched off. Fault codes in OBD format.</p>
+        <span class="figure">3-level supervision</span>
+      </article>
+      <article class="feature">
+        <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="24" height="16" rx="2"/><path d="M11 27h10M16 22v5"/><path d="M8 17l4-4 3 3 5-6 4 4"/></svg></div>
+        <h3>Setup and logging</h3>
+        <p>Calibration, live data and logs over Ethernet in BrainBus GDI-8. Calibrations are stored with rollback; logs are written to onboard memory. A built-in ECU simulator lets you prepare a calibration before the engine runs.</p>
+        <span class="figure">Ethernet · 2 × CAN · LIN</span>
+      </article>
     </div>
   </section>
 
@@ -234,9 +291,10 @@
         <a href="downloads.html#installer">Installer</a>
       </div>
       <div>
-        <h4>Support</h4>
+        <h4>Company</h4>
+        <a href="contacts.html">Contacts</a>
+        <a href="test-platform.html">Test platform</a>
         <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
-        <p>For orders and inquiries.</p>
       </div>
     </div>
   </footer>
@@ -244,7 +302,7 @@
   <script>
   (function () {
     // Tour: the step crossing the reading line chooses the picture, label and progress.
-    var story = document.getElementById('story');
+    var story = document.getElementById('hardware');
     var steps = Array.prototype.slice.call(story.querySelectorAll('.story-step'));
     var pics = Array.prototype.slice.call(story.querySelectorAll('.story-visual img'));
     var label = story.querySelector('.stage-label');
@@ -252,6 +310,15 @@
     var sceneMq = window.matchMedia('(min-height: 360px)');
     var narrowMq = window.matchMedia('(max-width: 980px)');
     var observer = null;
+
+    // Phones: picture and title are pinned on top, so the switch line sits one step below the picture.
+    function narrowMargin(sec) {
+      var vis = sec.querySelector('.story-visual');
+      var vh = window.innerHeight;
+      var bottom = parseFloat(getComputedStyle(vis).top) + vis.offsetHeight;
+      var line = Math.min(vh - 60, bottom + vh * 0.36);
+      return '-' + Math.round(line) + 'px 0px -' + Math.max(0, Math.round(vh - line - 40)) + 'px 0px';
+    }
 
     function activate(step) {
       var img = step.dataset.img;
@@ -268,12 +335,13 @@
       // Wide: the middle of the screen. Narrow: the picture sits on top, so look lower.
       observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
-      }, { rootMargin: narrowMq.matches ? '-62% 0px -30% 0px' : '-45% 0px -45% 0px' });
+      }, { rootMargin: narrowMq.matches ? narrowMargin(story) : '-45% 0px -45% 0px' });
       steps.forEach(function (s) { observer.observe(s); });
     }
     setMode();
     if (sceneMq.addEventListener) { sceneMq.addEventListener('change', setMode); narrowMq.addEventListener('change', setMode); }
   })();
   </script>
+  <script src="assets/story.js"></script>
 </body>
 </html>
