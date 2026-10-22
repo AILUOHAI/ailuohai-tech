@@ -46,9 +46,9 @@
         var last = intros[intros.length - 1].getBoundingClientRect();
         p = clamp01((vh * 0.5 - last.top) / last.height);
       } else {
-        // Shrink over the first 60% of a screen after the grid reaches the pinned title.
+        // Shrink over the first 40% of a screen after the grid reaches the pinned title.
         var start = grid.getBoundingClientRect().top - (hdr + headH + 12);
-        p = clamp01(-start / (vh * 0.6));
+        p = clamp01(-start / (vh * 0.4));
       }
       var s = big + (1 - big) * p;
       visual.style.transform = s > 1.001 ? 'scale(' + s.toFixed(4) + ')' : '';
