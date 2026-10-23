@@ -15,7 +15,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overscroll-behavior-y: none; }
 
 body {
   margin: 0;
@@ -45,8 +45,13 @@ img {
   top: 0;
   z-index: 20;
   background: rgba(17,17,17,.82);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,.12);
+  /* iPhone: keep the pinned header on its own layer so it does not jump while Safari's bars move */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .site-header .bar {
