@@ -561,16 +561,13 @@
       paint(); setHash();
     }
 
-    // Bring the row into view inside the scrolling table without jumping the page (desktop),
-    // or with a normal page scroll when the table is not a scroll box (mobile).
+    // Bring the row into view inside the scrolling table (wide screens). The page itself never moves:
+    // the pin card under the connector already shows the pin, and the row is highlighted in place.
     function scrollRow(tr) {
       var box = document.querySelector('.pin-scroll');
-      if (box.scrollHeight > box.clientHeight + 1) {
-        var r = tr.getBoundingClientRect(), b = box.getBoundingClientRect();
-        if (r.top < b.top + 44 || r.bottom > b.bottom) box.scrollTop += r.top - b.top - b.height / 2;
-      } else {
-        tr.scrollIntoView({ block: 'nearest' });
-      }
+      if (box.scrollHeight <= box.clientHeight + 1) return;
+      var r = tr.getBoundingClientRect(), b = box.getBoundingClientRect();
+      if (r.top < b.top + 44 || r.bottom > b.bottom) box.scrollTop += r.top - b.top - b.height / 2;
     }
 
     function selectPin(pin, from) {
