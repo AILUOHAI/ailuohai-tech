@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Температура ОЖ — документация Cat-GDI8 — AILUOHAI-TECH</title>
+<meta name="description" content="Модуль «Датчики»: что это, как работает, как настроить."><!-- Yandex.Metrika counter -->
+  <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=113736844','ym');ym(113736844,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/113736844" style="position:absolute;left:-9999px" alt=""></div></noscript>
+  <script src="/assets/metrika-goals.js" defer></script>
+  <!-- /Yandex.Metrika counter -->
+<link rel="stylesheet" href="../../.././../assets/style.css?v=20261023b"><style>
+    .docs-layout { padding-top: 8px; padding-bottom: 80px; }
+    .doc section { padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .doc section:last-child { border-bottom: none; }
+    .doc h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .doc h3 { font-size: 20px; margin: 26px 0 8px; }
+    .doc p, .doc li { color: #444; max-width: 760px; }
+    .doc ul, .doc ol { padding-left: 20px; }
+    .doc li { margin: 6px 0; }
+    .tag { font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; }
+    .tag.ready { background: #e3f4ec; color: #146c4b; }
+    .tag.wip { background: #fff1e6; color: #a4410a; }
+    .tag.plan { background: #ececf1; color: #4a4b57; }
+    .note { background: var(--surface); box-shadow: 0 8px 24px rgba(0,0,0,.08); border-radius: 12px; padding: 14px 16px; max-width: 760px; color: #444; }
+    .doc table { width: 100%; max-width: 860px; background: var(--surface); border-radius: 14px; overflow: hidden; font-size: 15px; }
+    .doc th { text-align: left; font-size: 13px; color: var(--muted); }
+    .doc td { border-top: 1px solid var(--line); vertical-align: top; }
+    .doc td:first-child { font-weight: 700; white-space: nowrap; }
+    .table-scroll { overflow-x: auto; }
+
+    /* Torque structure diagram */
+    .flow { display: grid; gap: 10px; max-width: 860px; margin: 18px 0; }
+    .flow-row { display: grid; gap: 10px; }
+    .flow-row.c2 { grid-template-columns: 1fr 1fr; }
+    .flow-row.c3 { grid-template-columns: repeat(3, 1fr); }
+    .box { background: var(--surface); border-radius: 14px; padding: 12px 14px; box-shadow: inset 0 0 0 1px var(--line); }
+    .box b { display: block; font-size: 15px; }
+    .box span { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+    .box.dark { background: #1b1c20; color: #fff; box-shadow: none; }
+    .box.dark span { color: #c9cad0; }
+    .box.limit { box-shadow: inset 0 0 0 2px #d64545; }
+    .arrow { text-align: center; color: #e8661a; font-weight: 800; line-height: 1; }
+
+    .steps-list { counter-reset: s; list-style: none; padding: 0; max-width: 860px; }
+    .steps-list > li { counter-increment: s; position: relative; padding: 16px 16px 16px 64px; background: var(--surface); border-radius: 14px; margin: 10px 0; max-width: none; }
+    .steps-list > li::before { content: counter(s); position: absolute; left: 16px; top: 16px; width: 32px; height: 32px; border-radius: 10px; background: #1b1c20; color: #f07a2e; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .steps-list > li b { display: block; color: var(--text); margin-bottom: 4px; }
+
+    @media (max-width: 980px) {
+            .flow-row.c3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .doc h2 { font-size: 26px; }
+      .flow-row.c2 { grid-template-columns: 1fr; }
+      .doc td:first-child { white-space: normal; }
+    }
+  </style>
+<link rel="stylesheet" href="../../.././../assets/docs-interactive.css?v=20261123b"><link rel="stylesheet" href="../../.././../assets/docs-site.css?v=20261123b">
+</head><body data-root="../../">
+<header class="site-header"><div class="container bar"><a class="brand" href="../../.././index.html">AILUOHAI-TECH</a><nav class="nav">
+<a href="../../.././index.html#products">Продукты</a><a href="../../.././test-platform.html">Испытательная платформа</a><a href="../../.././downloads.html">Загрузки</a><a href="../../.././contacts.html">Контакты</a>
+</nav></div></header>
+<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Разделы документации</button><nav class="ds-side" aria-label="Разделы документации"><a href="../../index.html">Каталог</a><h4>1. Знакомство</h4><a href="../../learn/ecu.html">Что такое блок управления</a><a href="../../learn/injection.html">Какой бывает впрыск</a><a href="../../learn/schemes.html">Схемы моторов</a><h4>2. Как это работает</h4><a href="../../how/torque.html">Управление по моменту</a><a href="../../how/air-fuel.html">Воздух и топливо</a><a href="../../how/limiter.html">Ограничитель и винт</a><a href="../../how/start.html">Пуск</a><a href="../../how/protection.html">Защиты и реакции</a><a href="../../how/principle.html">Один блок, разные моторы</a><h4>3. Настройка</h4><a href="../../build/index.html">Сборка по шагам</a><a href="../../setup/calibration.html">Работа с калибровками</a><h4>4. Модули подробно</h4><a href="../engine.html">Двигатель</a><a href="../trigger.html">Триггер</a><a href="../sensors.html">Датчики</a><div class="sub"><a href="clt.html" class="on" aria-current="page">Температура ОЖ</a></div><a href="../actuators.html">Исполн. механизмы</a><a href="../start.html">Пуск</a><a href="../idle.html">Холостой ход</a><a href="../boost.html">Наддув</a><a href="../ignition.html">Зажигание</a><a href="../fuel.html">Топливо и смесь</a><a href="../air.html">Воздух (наполнение)</a><a href="../torque.html">Момент и ограничения</a><a href="../health.html">Здоровье двигателя</a><a href="../can.html">CAN</a><h4>Инструменты</h4><a href="../../tools/trigger.html">Колесо триггера</a><a href="../../tools/fuel.html">Топливо и импульс</a><a href="../../tools/ntc.html">Датчик температуры</a><h4>Справочник</h4><a href="../../../gdi8-pinout.html">Распиновка</a><a href="../../../downloads.html">Загрузки</a></nav></div>
+<main class="ds-main doc"><div class="ds-crumbs"><a href="../../.././index.html">Главная</a> / <a href="../../.././ecu-cat-gdi8.html">ECU Cat-GDI8</a> / <a href="../../index.html">Документация</a> / <a href="../sensors.html">Датчики</a></div><h1>Температура ОЖ</h1><p class="ds-lead">Модуль «Датчики»: что это, как работает, как настроить.</p>
+<div class="dx-search"><input id="ds-q" type="search" placeholder="Поиск по всей документации" aria-label="Поиск по всей документации"><kbd>Ctrl K</kbd><div id="ds-res" class="dx-results"></div></div>
+<div class="ds-toc"><a href="#simple">Назначение</a><a href="#how">Как это работает</a><a href="#wire">Как подключить</a><a href="#app">Где это в приложении</a><a href="#setup">Как настроить</a><a href="#uses">Кому нужна эта температура</a><a href="#trouble">Если что-то не так</a></div><section id="simple">
+  <h2>Назначение</h2>
+  <p>Датчик температуры охлаждающей жидкости (ОЖ, англ. CLT) показывает тепловое состояние двигателя. Устанавливается в рубашке охлаждения, обычно рядом с термостатом.</p>
+  <p>По этой температуре блок выбирает дозу пуска, обогащение прогрева и обороты холостого хода, а при перегреве ступенями ограничивает момент.</p>
+  <div class="note"><b>Важно:</b> датчик пассивный. Температуру блок вычисляет по его сопротивлению, поэтому тарировка должна соответствовать конкретному датчику.</div>
+</section>
+
+<section id="how">
+  <h2>Как это работает</h2>
+  <p>Чувствительный элемент это NTC-терморезистор: с ростом температуры сопротивление падает. Датчик включён на массу и вместе с опорным резистором 10 кОм от 5 В образует делитель напряжения.</p>
+  <div class="flow">
+    <div class="box"><b>Температура</b><span>нагрев чувствительного элемента</span></div><div class="arrow">↓</div>
+    <div class="box"><b>Сопротивление</b><span>падает по характеристике NTC</span></div><div class="arrow">↓</div>
+    <div class="box"><b>Напряжение на входе</b><span>делитель с опорным резистором</span></div><div class="arrow">↓</div>
+    <div class="box dark"><b>Блок считает градусы</b><span>по тарировке датчика</span></div>
+  </div>
+  <h3>Характеристика датчика</h3>
+  <div class="dx-panel" id="dx-ntc">
+    <div class="dx-grid"><div>
+      <label class="dx-field"><span class="row">Температура<output></output></span><input id="n-t" type="range" min="-40" max="130" value="20" data-u="°C"></label>
+      <label class="dx-field"><span class="row">Сопротивление при 25 °C<output></output></span><input id="n-r25" type="range" min="1000" max="10000" step="100" value="2500" data-u="Ом"></label>
+      <label class="dx-field"><span class="row">Коэффициент β<output></output></span><input id="n-b" type="range" min="3000" max="4500" step="10" value="3800" data-u="К"></label>
+    </div><div>
+      <canvas class="dx-canvas" id="n-chart" role="img" aria-label="График сопротивления датчика от температуры"></canvas>
+    </div></div>
+    <div class="dx-stats">
+      <div class="dx-stat"><small>Сопротивление датчика</small><strong id="n-r">-</strong></div>
+      <div class="dx-stat"><small>Напряжение на входе</small><strong id="n-v">-</strong></div>
+      <div class="dx-stat"><small>Состояние</small><strong id="n-s">-</strong></div>
+    </div>
+    <div class="dx-formula" id="n-f"></div>
+    <p class="dx-note">Пример для типового датчика. Точные значения берите из паспорта вашего датчика.</p>
+  </div>
+</section>
+
+<section id="wire">
+  <h2>Как подключить</h2>
+  <ol>
+    <li>У датчика <b>два провода</b>, полярности нет.</li>
+    <li>Первый провод на вход блока. По умолчанию это <b>IO-5</b>, контакт J1.26.</li>
+    <li>Второй провод на <b>массу датчиков блока</b>, а не на кузов и не на блок цилиндров.</li>
+    <li>Сверьте контакты по <a href="../../.././gdi8-pinout.html">распиновке</a>.</li>
+  </ol>
+</section>
+
+<section id="app">
+  <h2>Где это в приложении</h2>
+  <p class="dx-path"><span>Датчики</span> → <span>Температура ОЖ</span> → <span>Тарировка и сырые</span></p>
+  <table>
+    <tr><th>Что видите</th><th>Что это значит</th></tr>
+    <tr><td>Приборы</td><td>Температура, сопротивление датчика и напряжение на входе прямо сейчас.</td></tr>
+    <tr><td>Тарировка</td><td>Какой температуре соответствует какое значение датчика.</td></tr>
+  </table>
+  <p class="dx-path"><span>Датчики</span> → <span>Температура ОЖ</span> → <span>Ошибки и ограничения</span></p>
+  <table>
+    <tr><th>Настройка</th><th>Что делает</th></tr>
+    <tr><td>Правдоподобный минимум</td><td>Ниже этого значения блок не верит датчику и берёт замену.</td></tr>
+    <tr><td>Правдоподобный максимум</td><td>То же для верхней границы.</td></tr>
+    <tr><td>Значение замены</td><td>Какую температуру считать, пока датчик неисправен. По умолчанию 90 °C.</td></tr>
+    <tr><td>Коды неисправностей</td><td>Красный значит «активен сейчас». Галочка включает использование кода.</td></tr>
+  </table>
+</section>
+
+<section id="setup">
+  <h2>Как настроить</h2>
+  <ol class="steps-list">
+    <li><b>Подключите датчик</b>Два провода, как описано выше.</li>
+    <li><b>Откройте вкладку</b>Датчики → Температура ОЖ → Тарировка и сырые.</li>
+    <li><b>Проверьте показание</b>На холодном моторе температура должна быть близка к температуре воздуха вокруг.</li>
+    <li><b>Сверьте тарировку</b>Если показание отличается, введите значения из паспорта датчика.</li>
+    <li><b>Проверьте нагрев</b>Заведите мотор или прогрейте датчик: температура должна расти плавно, без скачков.</li>
+    <li><b>Сохраните в ЭБУ</b>Иначе после выключения настройка потеряется.</li>
+  </ol>
+</section>
+
+<section id="uses">
+  <h2>Кому нужна эта температура</h2>
+  <div class="flow"><div class="flow-row c2">
+    <div class="box"><b>Пуск</b><span>сколько топлива дать на прокрутке</span></div>
+    <div class="box"><b>Прогрев</b><span>насколько обогатить смесь</span></div>
+    <div class="box"><b>Холостой ход</b><span>какие обороты держать</span></div>
+    <div class="box limit"><b>Защита от перегрева</b><span>когда плавно снижать момент</span></div>
+  </div></div>
+</section>
+
+<section id="trouble">
+  <h2>Если что-то не так</h2>
+  <table>
+    <tr><th>Что видите</th><th>Обычно это</th><th>Чем проверить</th></tr>
+    <tr><td>Ошибка «выше диапазона»</td><td>Нет датчика или обрыв провода</td><td>Тестер, Омы, на контактах датчика</td></tr>
+    <tr><td>Ошибка «ниже диапазона»</td><td>Провод замкнут на массу</td><td>Снять разъём: ошибка должна смениться на обрыв</td></tr>
+    <tr><td>Показание скачет</td><td>Плохой контакт в разъёме</td><td>Пошевелить провод и смотреть прибор</td></tr>
+    <tr><td>Холодный мотор показывает «жару»</td><td>Неверная тарировка или другой датчик</td><td>Сверить сопротивление с паспортом</td></tr>
+    <tr><td>Мотор плохо заводится на холодную</td><td>Датчик неисправен, блок считает мотор горячим (замена 90 °C)</td><td>Посмотреть активные коды</td></tr>
+  </table>
+</section>
+<div class="ds-pn"><a href="../sensors.html"><small>Назад</small>Датчики</a><a class="next" href="../actuators.html"><small>Дальше</small>Исполн. механизмы</a></div></main></div>
+<footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Электроника и системы управления для аэролодок и судов специального назначения.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Продукты</h4>
+        <a href="../../../dash-6-8.html">Dash-6.8</a>
+        <a href="../../../ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="../../../ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="../../../cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Загрузки</h4>
+        <a href="../../../downloads.html">BrainBus</a>
+        <a href="../../../downloads.html#installer">Установщик</a>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <a href="../../../contacts.html">Контакты</a>
+        <a href="../../../test-platform.html">Испытательная платформа</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+      </div>
+    </div>
+  </footer>
+<script src="../../.././../assets/docs-index.js?v=20261123b"></script><script src="../../.././../assets/docs-interactive.js?v=20261123b"></script><script src="../../.././../assets/docs-site.js?v=20261123b"></script>
+</body></html>

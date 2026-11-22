@@ -1,0 +1,68 @@
+/* Интерактивная документация Cat-GDI8: поиск, живые схемы, калькуляторы, чек-лист. Цвета берутся из style.css. */
+.dx-hub { margin: 0 0 40px; max-width: 860px; }
+.dx-search { position: relative; margin-bottom: 14px; }
+.dx-search input { width: 100%; font: inherit; font-size: 17px; padding: 14px 64px 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--text); }
+.dx-search input:focus { outline: 2px solid #e8661a; outline-offset: 1px; }
+.dx-search kbd { position: absolute; right: 12px; top: 14px; font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 3px 6px; background: var(--surface-soft); }
+.dx-results { display: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; margin-top: 6px; overflow: hidden; }
+.dx-results.on { display: block; }
+.dx-results a { display: block; padding: 10px 14px; text-decoration: none; color: var(--text); border-top: 1px solid var(--line); }
+.dx-results a:first-child { border-top: 0; }
+.dx-results a:hover, .dx-results a:focus { background: var(--surface-soft); }
+.dx-results b { display: block; font-size: 14px; }
+.dx-results span { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; }
+.dx-results mark { background: #ffe3cf; color: inherit; }
+.dx-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.dx-card { display: block; padding: 14px; background: var(--surface); border-radius: 14px; box-shadow: inset 0 0 0 1px var(--line); text-decoration: none; color: var(--text); transition: box-shadow .15s, transform .15s; }
+.dx-card:hover { box-shadow: inset 0 0 0 2px #e8661a; transform: translateY(-1px); }
+.dx-card b { display: block; font-size: 16px; margin-bottom: 3px; }
+.dx-card span { display: block; font-size: 13px; line-height: 1.4; color: var(--muted); }
+
+.dx-panel { background: var(--surface); border-radius: 14px; box-shadow: inset 0 0 0 1px var(--line); padding: 16px; max-width: 860px; margin: 16px 0; }
+.dx-grid { display: grid; grid-template-columns: 280px 1fr; gap: 18px; align-items: start; }
+.dx-field { display: block; margin-bottom: 11px; font-size: 13px; color: var(--muted); }
+.dx-field .row { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 2px; }
+.dx-field output { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dx-field input[type=range] { width: 100%; accent-color: #e8661a; margin: 0; }
+.dx-field select { width: 100%; font: inherit; padding: 7px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); }
+.dx-canvas { display: block; width: 100%; height: 300px; }
+.dx-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 8px; margin-top: 10px; }
+.dx-stat { background: var(--surface-soft); border-radius: 10px; padding: 9px 11px; }
+.dx-stat small { display: block; font-size: 12px; color: var(--muted); line-height: 1.25; }
+.dx-stat strong { font-size: 19px; font-variant-numeric: tabular-nums; }
+.dx-stat.warn { background: #fff1e6; }
+.dx-formula { font-family: Consolas, "Courier New", monospace; font-size: 13px; line-height: 1.75; background: #1b1c20; color: #e9e9ee; border-radius: 10px; padding: 11px 13px; margin-top: 10px; overflow-x: auto; white-space: nowrap; }
+.dx-formula em { color: #ffb37d; font-style: normal; }
+.dx-note { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.dx-btn { font: inherit; font-size: 13px; font-weight: 700; padding: 7px 12px; border: 0; border-radius: 8px; background: #1b1c20; color: #fff; cursor: pointer; }
+
+.flow .box[role=button] { cursor: pointer; transition: box-shadow .15s, transform .15s; }
+.flow .box[role=button]:hover { transform: translateY(-1px); }
+.flow .box[role=button]:focus-visible { outline: 2px solid #e8661a; outline-offset: 2px; }
+.flow .box.dx-on { box-shadow: inset 0 0 0 2px #e8661a; }
+.dx-detail { background: #fff7f0; border-radius: 12px; padding: 12px 14px; max-width: 860px; font-size: 14px; color: #444; line-height: 1.5; }
+.dx-detail b { color: var(--text); }
+
+.dx-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 10px; max-width: 860px; }
+.dx-tab { font: inherit; font-size: 13px; font-weight: 700; padding: 7px 11px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; }
+.dx-tab[aria-selected=true] { background: #1b1c20; border-color: #1b1c20; color: #fff; }
+.dx-meter { display: flex; gap: 4px; margin: 10px 0; }
+.dx-meter i { flex: 1; height: 8px; border-radius: 4px; background: var(--line); }
+.dx-meter i.on { background: #e8661a; }
+
+.dx-progress { display: flex; align-items: center; gap: 12px; max-width: 860px; margin: 10px 0; font-size: 13px; color: var(--muted); }
+.dx-progress div { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.dx-progress div i { display: block; height: 100%; width: 0; background: #e8661a; transition: width .2s; }
+.dx-progress button { font: inherit; font-size: 12px; background: none; border: 0; color: var(--muted); text-decoration: underline; cursor: pointer; }
+.steps-list > li.dx-check { cursor: pointer; }
+.steps-list > li.dx-done { opacity: .62; }
+.steps-list > li.dx-done::before { content: "✓"; background: #146c4b; }
+
+@media (max-width: 760px) {
+  .dx-cards { grid-template-columns: 1fr 1fr; }
+  .dx-grid { grid-template-columns: minmax(0, 1fr); }
+  .dx-canvas { height: 250px; }
+  .dx-search kbd { display: none; }
+  .dx-search input { padding-right: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .dx-card, .flow .box[role=button] { transition: none; } }
