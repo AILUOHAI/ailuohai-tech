@@ -2,9 +2,11 @@
 // Вход: разметка страницы и блоки #dx-*. Выход: поиск, колесо триггера, расчёт топлива, живые схемы, чек-лист.
 (function () {
   'use strict';
+  const EN = document.documentElement.lang === 'en';
+  const L = (r, n) => (EN ? n : r);
   const $ = (s, r) => (r || document).querySelector(s);
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
-  const fmt = (v, d) => Number(v).toLocaleString('ru-RU', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 });
+  const fmt = (v, d) => Number(v).toLocaleString(EN ? 'en-US' : 'ru-RU', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 });
   const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
@@ -62,7 +64,7 @@
     if (!root) return;
     const cv = $('canvas', root), ctx = cv.getContext('2d');
     const rpm = $('#w-rpm'), kind = $('#w-kind'), ang = $('#w-ang'), play = $('#w-play');
-    const strokes = ['Впуск', 'Сжатие', 'Рабочий ход', 'Выпуск'];
+    const strokes = EN ? ['Intake', 'Compression', 'Power', 'Exhaust'] : ['Впуск', 'Сжатие', 'Рабочий ход', 'Выпуск'];
     let running = !window.matchMedia('(prefers-reduced-motion: reduce)').matches, last = 0, visible = true;
     const wheel = () => { const [n, m] = kind.value.split('-').map(Number); return { n, m }; };
     const present = (i, w) => i < w.n - w.m;
@@ -89,10 +91,10 @@
       ctx.fillStyle = '#111'; ctx.textAlign = 'center'; ctx.font = '700 ' + Math.max(14, R * .17) + 'px system-ui,sans-serif';
       ctx.fillText(strokes[Math.floor(a / 180) % 4], cx, cy - 2);
       ctx.fillStyle = '#666'; ctx.font = '12px system-ui,sans-serif';
-      ctx.fillText('цилиндр 1 · ' + Math.round(a) + '° из 720°', cx, cy + 17);
+      ctx.fillText(L('цилиндр 1 · ', 'cylinder 1 · ') + Math.round(a) + L('° из 720°', '° of 720°'), cx, cy + 17);
       // сигнал датчика за оборот
       const x0 = 6, tw = r.width - 12, top = r.height - traceH + 16, h = 30, sx = (deg) => x0 + deg / 360 * tw;
-      ctx.fillStyle = '#666'; ctx.textAlign = 'left'; ctx.font = '12px system-ui,sans-serif'; ctx.fillText('Сигнал датчика за оборот', x0, top - 5);
+      ctx.fillStyle = '#666'; ctx.textAlign = 'left'; ctx.font = '12px system-ui,sans-serif'; ctx.fillText(L('Сигнал датчика за оборот', 'Sensor signal per revolution'), x0, top - 5);
       ctx.strokeStyle = '#1b1c20'; ctx.lineWidth = 1.3; ctx.beginPath(); ctx.moveTo(x0, top + h);
       for (let i = 0; i < w.n; i++) {
         if (!present(i, w)) continue;
@@ -108,12 +110,12 @@
 
     function stats() {
       const v = Number(rpm.value), w = wheel(), usDeg = 60e6 / (v * 360), tooth = 60e6 / (v * w.n), gap = tooth * (w.m + 1);
-      const f = (x) => x >= 1000 ? fmt(x / 1000, 2) + ' мс' : fmt(x, 1) + ' мкс';
+      const f = (x) => x >= 1000 ? fmt(x / 1000, 2) + L(' мс', ' ms') : fmt(x, 1) + L(' мкс', ' µs');
       $('#w-tooth').textContent = f(tooth);
       $('#w-gap').textContent = f(gap);
       $('#w-deg').textContent = f(usDeg);
-      $('#w-cycle').textContent = fmt(120000 / v, 1) + ' мс';
-      $('#w-f').innerHTML = 't<sub>зуба</sub> = 60 / (n × Z) = 60 / (<em>' + fmt(v) + '</em> × <em>' + w.n + '</em>) = <em>' + f(tooth) + '</em>';
+      $('#w-cycle').textContent = fmt(120000 / v, 1) + L(' мс', ' ms');
+      $('#w-f').innerHTML = 't<sub>' + L('зуба', 'tooth') + '</sub> = 60 / (n × Z) = 60 / (<em>' + fmt(v) + '</em> × <em>' + w.n + '</em>) = <em>' + f(tooth) + '</em>';
     }
 
     function frame(t) {
@@ -126,7 +128,7 @@
       last = t;
       requestAnimationFrame(frame);
     }
-    const setPlay = () => { play.textContent = running ? 'Пауза' : 'Вращать'; };
+    const setPlay = () => { play.textContent = running ? L('Пауза', 'Pause') : L('Вращать', 'Rotate'); };
     play.addEventListener('click', () => { running = !running; setPlay(); });
     ang.addEventListener('pointerdown', () => { running = false; setPlay(); });
     bind(root, () => { stats(); draw(); });
@@ -145,17 +147,18 @@
       const rho = p / (287.05 * T), air = rho * Vc * ve * 1e6, fuel = air / (14.7 * n('f-lam'));
       const flow = n('f-flow') * Math.sqrt(n('f-rail') / 100), open = fuel / flow, ms = open + n('f-dead');
       const rpm = n('f-rpm'), deg = ms * rpm * 6 / 1000, duty = ms / (120000 / rpm) * 100;
-      $('#f-air').textContent = fmt(air, 0) + ' мг';
-      $('#f-fuel').textContent = fmt(fuel, 1) + ' мг';
-      $('#f-ms').textContent = fmt(ms, 2) + ' мс';
+      const mg = L(' мг', ' mg'), msU = L(' мс', ' ms');
+      $('#f-air').textContent = fmt(air, 0) + mg;
+      $('#f-fuel').textContent = fmt(fuel, 1) + mg;
+      $('#f-ms').textContent = fmt(ms, 2) + msU;
       $('#f-deg').textContent = fmt(deg, 0) + '°';
       $('#f-duty').textContent = fmt(duty, 0) + ' %';
       $('#f-deg').parentNode.classList.toggle('warn', deg > 180);
-      $('#f-warn').textContent = deg > 180 ? 'Импульс длиннее такта впуска (180°). Нужна форсунка больше, давление выше или деление впрыска.' : 'Импульс помещается в такт впуска.';
+      $('#f-warn').textContent = deg > 180 ? L('Импульс длиннее такта впуска (180°). Нужна форсунка больше, давление выше или деление впрыска.', 'The pulse is longer than the intake stroke (180°). A larger injector, higher pressure or split injection is needed.') : L('Импульс помещается в такт впуска.', 'The pulse fits within the intake stroke.');
       $('#f-formula').innerHTML =
-        'm<sub>возд</sub> = P / (R·T) · V<sub>цил</sub> · VE = <em>' + fmt(air, 0) + ' мг</em><br>' +
-        'm<sub>топл</sub> = m<sub>возд</sub> / (14,7 · λ) = <em>' + fmt(fuel, 1) + ' мг</em><br>' +
-        't = m<sub>топл</sub> / (Q · √(P<sub>рампы</sub> / 100)) + t<sub>задержки</sub> = <em>' + fmt(ms, 2) + ' мс</em>';
+        'm<sub>' + L('возд', 'air') + '</sub> = P / (R·T) · V<sub>' + L('цил', 'cyl') + '</sub> · VE = <em>' + fmt(air, 0) + mg + '</em><br>' +
+        'm<sub>' + L('топл', 'fuel') + '</sub> = m<sub>' + L('возд', 'air') + '</sub> / (' + L('14,7', '14.7') + ' · λ) = <em>' + fmt(fuel, 1) + mg + '</em><br>' +
+        't = m<sub>' + L('топл', 'fuel') + '</sub> / (Q · √(P<sub>' + L('рампы', 'rail') + '</sub> / 100)) + t<sub>' + L('задержки', 'delay') + '</sub> = <em>' + fmt(ms, 2) + msU + '</em>';
     }
     bind(root, update); update();
   }
@@ -169,14 +172,22 @@
     'Целевой момент': 'Сколько момента нужно получить на валу с учётом трения и насосных потерь.',
     'Воздух · медленно': 'Заслонка, наддув и фазы. Точный, но медленный путь: коллектору нужно время наполниться.',
     'УОЗ · быстро': 'Отвод угла зажигания от оптимума. Меняет момент за один цикл, поэтому отвечает за быстрые изменения.',
-    'Отключение цилиндров · авария': 'Только если разрешено, только в аварии. В обычной работе не используется.'
+    'Аварийная отсечка': 'Отдельная настройка, по умолчанию выключена. В обычной работе и ограничениях не используется.',
+    'Lever': 'Turns lever position and rpm into a <b>torque request</b>. Everything below depends on it, but it does not drive the throttle directly.',
+    'Idle controller': 'Holds idle speed. It asks for a little extra air and makes fast corrections with spark.',
+    'Coordination': 'Compares the lever and idle requests. The larger one wins, then limits are applied.',
+    'Limits': 'Rev limiter, protections, start and limp modes. <b>Always above the request</b>: torque is reduced smoothly.',
+    'Torque target': 'The torque needed at the shaft, including friction and pumping losses.',
+    'Air path · slow': 'Throttle, boost and cams. Accurate but slow: the manifold needs time to fill.',
+    'Spark path · fast': 'Spark retard from optimum. Changes torque within one cycle, so it handles fast changes.',
+    'Emergency cut': 'A separate setting, off by default. Not used in normal operation or limiting.'
   };
   function initFlow() {
     const flow = $('#torque .flow');
     if (!flow) return;
     const detail = document.createElement('div');
     detail.className = 'dx-detail'; detail.setAttribute('aria-live', 'polite');
-    detail.innerHTML = 'Нажмите на любой блок схемы: появится, что он делает.';
+    detail.innerHTML = L('Нажмите на любой блок схемы: появится, что он делает.', 'Click any block in the diagram to see what it does.');
     flow.after(detail);
     $$('.box', flow).forEach((box) => {
       const key = $('b', box).textContent.trim();
@@ -213,11 +224,11 @@
   }
   function initTables() {
     const start = $('#start table');
-    if (start) tabsFromTable(start, (c, i, n) => '<b>Шаг ' + (i + 1) + ' из ' + n + ': ' + esc(c[0].textContent.trim()) + '</b> ' + c[2].innerHTML +
+    if (start) tabsFromTable(start, (c, i, n) => '<b>' + L('Шаг ', 'Step ') + (i + 1) + L(' из ', ' of ') + n + ': ' + esc(c[0].textContent.trim()) + '</b> ' + c[2].innerHTML +
       '<div class="dx-meter">' + Array.from({ length: n }, (_, k) => '<i class="' + (k <= i ? 'on' : '') + '"></i>').join('') + '</div>' + esc(c[1].textContent.trim()));
     const prot = $('#protection table');
     if (prot) tabsFromTable(prot, (c, i, n) => '<b>' + esc(c[1].textContent.trim()) + '</b>' +
-      '<div class="dx-meter">' + Array.from({ length: n }, (_, k) => '<i class="' + (k <= i ? 'on' : '') + '"></i>').join('') + '</div>Примеры: ' + esc(c[2].textContent.trim()));
+      '<div class="dx-meter">' + Array.from({ length: n }, (_, k) => '<i class="' + (k <= i ? 'on' : '') + '"></i>').join('') + '</div>' + L('Примеры: ', 'Examples: ') + esc(c[2].textContent.trim()));
   }
 
   // ---- настройка: чек-лист с прогрессом в браузере читателя
@@ -227,11 +238,11 @@
     const KEY = 'gdi8-docs:' + location.pathname, items = $$(':scope > li', list).filter((li) => !li.hidden);
     let done = new Set((store.get(KEY) || '').split(',').filter(Boolean).map(Number));
     const bar = document.createElement('div'); bar.className = 'dx-progress';
-    bar.innerHTML = '<span></span><div><i></i></div><button type="button">Сбросить</button>';
+    bar.innerHTML = '<span></span><div><i></i></div><button type="button">' + L('Сбросить', 'Reset') + '</button>';
     list.before(bar);
     const paint = () => {
       items.forEach((li, i) => { li.classList.toggle('dx-done', done.has(i)); li.setAttribute('aria-checked', done.has(i) ? 'true' : 'false'); });
-      $('span', bar).textContent = 'Пройдено ' + done.size + ' из ' + items.length;
+      $('span', bar).textContent = L('Пройдено ', 'Done ') + done.size + L(' из ', ' of ') + items.length;
       $('i', bar).style.width = (done.size / items.length * 100) + '%';
       store.set(KEY, Array.from(done).join(','));
     };

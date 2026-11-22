@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 650" width="1500" height="650">
+<rect width="1500" height="650" fill="#FFFFFF"/>
+<text x="24.0" y="32.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="start" fill="#14202B" font-weight="700" xml:space="preserve">Резерв момента: воздух держит больше, УОЗ съедает лишнее</text>
+
+<path d="M174 143.0 H217.0 V146.8 H259" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(260,146.8) rotate(0)"/>
+<circle cx="174" cy="143.0" r="2.2" fill="#4A5866"/>
+<path d="M210 190.0 H235.0 V169.2 H259" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(260,169.2) rotate(0)"/>
+<circle cx="210" cy="190.0" r="2.2" fill="#4A5866"/>
+<path d="M200 95.0 H288.0 V129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(288.0,130) rotate(90)"/>
+<circle cx="200" cy="95.0" r="2.2" fill="#4A5866"/>
+<path d="M180 265.0 H200.0 V264.0 H219" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(220,264.0) rotate(0)"/>
+<circle cx="180" cy="265.0" r="2.2" fill="#4A5866"/>
+<path d="M200 360.0 H215 V359.0 H219" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(220,359.0) rotate(0)"/>
+<circle cx="200" cy="360.0" r="2.2" fill="#4A5866"/>
+<path d="M340 264.0 H365.0 V295.0 H389" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(390,295.0) rotate(0)"/>
+<circle cx="340" cy="264.0" r="2.2" fill="#4A5866"/>
+<path d="M340 359.0 H407.6 V311" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(407.6,310) rotate(-90)"/>
+<circle cx="340" cy="359.0" r="2.2" fill="#4A5866"/>
+<path d="M316 158.0 H428.0 V163.8 H539" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(540,163.8) rotate(0)"/>
+<circle cx="316" cy="158.0" r="2.2" fill="#4A5866"/>
+<path d="M434 295.0 H470 V182.2 H539" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(540,182.2) rotate(0)"/>
+<circle cx="434" cy="295.0" r="2.2" fill="#4A5866"/>
+<path d="M596 173.0 H618.0 V273.8 H639" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(640,273.8) rotate(0)"/>
+<circle cx="596" cy="173.0" r="2.2" fill="#4A5866"/>
+<path d="M790 470.0 H810.0 V469.0 H829" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(830,469.0) rotate(0)"/>
+<circle cx="790" cy="470.0" r="2.2" fill="#4A5866"/>
+<path d="M950 469.0 H980 V384.2 H879" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(880,384.2) rotate(0)"/>
+<circle cx="950" cy="469.0" r="2.2" fill="#4A5866"/>
+<path d="M936 375.0 H1043.0 V357.8 H1149" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1150,357.8) rotate(0)"/>
+<circle cx="936" cy="375.0" r="2.2" fill="#4A5866"/>
+<path d="M1110 205.0 H1125 V376.2 H1149" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1150,376.2) rotate(0)"/>
+<circle cx="1110" cy="205.0" r="2.2" fill="#4A5866"/>
+<path d="M1206 367.0 H1233.0 V367.0 H1259" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1260,367.0) rotate(0)"/>
+<circle cx="1206" cy="367.0" r="2.2" fill="#4A5866"/>
+<path d="M1190 535.0 H1275.0 V383" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1275.0,382) rotate(-90)"/>
+<circle cx="1190" cy="535.0" r="2.2" fill="#4A5866"/>
+<path d="M1290 367.0 H1305.0 V367.0 H1319" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1320,367.0) rotate(0)"/>
+<circle cx="1290" cy="367.0" r="2.2" fill="#4A5866"/>
+<path d="M1190 535.0 H1255.0 V535.0 H1319" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1320,535.0) rotate(0)"/>
+<circle cx="1190" cy="535.0" r="2.2" fill="#4A5866"/>
+<path d="M434 483.0 H467.0 V476.8 H499" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(500,476.8) rotate(0)"/>
+<circle cx="434" cy="483.0" r="2.2" fill="#4A5866"/>
+<path d="M460 525.0 H480.0 V499.2 H499" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(500,499.2) rotate(0)"/>
+<circle cx="460" cy="525.0" r="2.2" fill="#4A5866"/>
+<path d="M270 455.0 H528.0 V459" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(528.0,460) rotate(90)"/>
+<circle cx="270" cy="455.0" r="2.2" fill="#4A5866"/>
+<path d="M556 488.0 H600 V292.2 H639" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(640,292.2) rotate(0)"/>
+<circle cx="556" cy="488.0" r="2.2" fill="#4A5866"/>
+<path d="M696 283.0 H788.0 V365.8 H879" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(880,365.8) rotate(0)"/>
+<circle cx="696" cy="283.0" r="2.2" fill="#4A5866"/>
+<rect x="30" y="80" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,86.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l-3.5-3"/><circle cx="12" cy="13" r="1.6"/><path d="M5 20h3M16 20h3"/></g>
+<text x="126.0" y="99.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">ХХ активен</text>
+<rect x="120" y="130" width="54" height="26" rx="5" fill="#F1F3F5" stroke="#6B7785" stroke-width="1.6" stroke-dasharray=""/>
+<text x="147.0" y="147.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3A4652" font-weight="600" xml:space="preserve">0</text>
+<rect x="60" y="175" width="150" height="30" rx="5" fill="#F1F3F5" stroke="#6B7785" stroke-width="1.6" stroke-dasharray="4 2"/>
+<text x="135.0" y="194.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#3A4652" font-weight="600" xml:space="preserve">idle.reserveNm</text>
+<rect x="260" y="130" width="56" height="56" rx="6" fill="#F2ECFB" stroke="#7A4FC2" stroke-width="1.6"/>
+<path d="M266 146.8 H276 M266 169.2 H276 M276 146.8 L302 158.0 H310" fill="none" stroke="#7A4FC2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="276" cy="146.8" r="2.5" fill="#7A4FC2"/><circle cx="276" cy="169.2" r="2.5" fill="#7A4FC2"/>
+<text x="264.0" y="142.8" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">0</text>
+<text x="264.0" y="165.2" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">1</text>
+<text x="288.0" y="200.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">резерв ХХ</text>
+<rect x="30" y="250" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,256.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="116.0" y="269.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">t ОЖ, °C</text>
+<rect x="220" y="225" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="220" y="225" width="120" height="18" rx="7" fill="#159A8A"/><rect x="220" y="236" width="120" height="7" fill="#159A8A"/>
+<text x="280.0" y="238.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">после пуска (план)</text>
+<path d="M242 249 V295 H328" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M245 289 C272.1 287 280.7 255 326 253" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="280.0" y="317.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">резерв по t ОЖ, Н·м</text>
+<rect x="30" y="345" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,351.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9.5 2.5h5"/></g>
+<text x="126.0" y="364.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">время после пуска, с</text>
+<rect x="220" y="320" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="220" y="320" width="120" height="18" rx="7" fill="#159A8A"/><rect x="220" y="331" width="120" height="7" fill="#159A8A"/>
+<text x="280.0" y="333.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">спад (план)</text>
+<path d="M242 344 V390 H328" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M245 384 C272.1 382 280.7 350 326 348" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="280.0" y="412.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">1 -&gt; 0 за время</text>
+<path d="M390 280 H422 L434 295.0 L422 310 H390 Z" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="407.0" y="302.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">×</text>
+<rect x="540" y="150" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="568.0" y="178.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MAX</text>
+<rect x="640" y="260" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="668.0" y="288.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MAX</text>
+<rect x="640" y="455" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(651.0,461.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="726.0" y="474.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, об/мин</text>
+<rect x="830" y="430" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="830" y="430" width="120" height="18" rx="7" fill="#159A8A"/><rect x="830" y="441" width="120" height="7" fill="#159A8A"/>
+<text x="890.0" y="443.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">KLDMMX (план)</text>
+<path d="M852 454 V500 H938" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M855 494 C882.1 492 890.7 460 936 458" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="890.0" y="522.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">наибольший резерв по n</text>
+<rect x="880" y="352" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="908.0" y="380.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MIN</text>
+<rect x="860" y="170" width="250" height="70" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="860" y="170" width="250" height="18" rx="6" fill="#1F3B57"/><rect x="860" y="181" width="250" height="7" fill="#1F3B57"/>
+<text x="985.0" y="183.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">Что съест поздний УОЗ (план)</text>
+<text x="868.0" y="203.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">цель / ηУОЗ(самый поздний) − цель</text>
+<text x="868.0" y="217.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">резерв не поднимает момент</text>
+<rect x="1150" y="344" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="1178.0" y="372.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MIN</text>
+<rect x="1000" y="520" width="190" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(1011.0,526.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></g>
+<text x="1106.0" y="539.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">индикаторная цель</text>
+<circle cx="1275.0" cy="367.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M1268.0 367.0 H1282.0 M1275.0 360.0 V374.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="1320" y="352" width="160" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(1331.0,358.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></g>
+<text x="1411.0" y="371.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">воздух: цель + резерв</text>
+<rect x="1320" y="520" width="160" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(1331.0,526.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v6H9z"/><path d="M10.5 8v4h3V8"/><path d="M11 12h2v3h-2z"/><path d="M12 15v2"/><path d="M12 19l-2.5 2M12 19l2.5 2M12 19l-3-1M12 19l3-1"/></g>
+<text x="1411.0" y="539.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">УОЗ: цель как есть</text>
+<rect x="30" y="440" width="240" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<text x="150.0" y="459.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">включается нагрузка (план)</text>
+<rect x="380" y="470" width="54" height="26" rx="5" fill="#F1F3F5" stroke="#6B7785" stroke-width="1.6" stroke-dasharray=""/>
+<text x="407.0" y="487.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3A4652" font-weight="600" xml:space="preserve">0</text>
+<rect x="290" y="510" width="170" height="30" rx="5" fill="#F1F3F5" stroke="#6B7785" stroke-width="1.6" stroke-dasharray="4 2"/>
+<text x="375.0" y="529.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#3A4652" font-weight="600" xml:space="preserve">резерв нагрузки (план)</text>
+<rect x="500" y="460" width="56" height="56" rx="6" fill="#F2ECFB" stroke="#7A4FC2" stroke-width="1.6"/>
+<path d="M506 476.8 H516 M506 499.2 H516 M516 476.8 L542 488.0 H550" fill="none" stroke="#7A4FC2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="516" cy="476.8" r="2.5" fill="#7A4FC2"/><circle cx="516" cy="499.2" r="2.5" fill="#7A4FC2"/>
+<text x="504.0" y="472.8" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">0</text>
+<text x="504.0" y="495.2" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">1</text>
+<text x="528.0" y="530.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">резерв нагрузки</text>
+<text x="30.0" y="585.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">Резерв - воздуха больше, чем надо для цели; лишнее съедает поздний УОЗ. Нужен момент - УОЗ возвращается к оптимальному за один цикл,</text>
+<text x="30.0" y="603.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">дроссель и коллектор не ждём. Сейчас - только резерв ХХ (подхват при нагрузке на холостом). Из резервов берётся больший; в MED9 он ограничен</text>
+<text x="30.0" y="621.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">кривой по оборотам (KLDMMX) и тем, что может съесть самый поздний УОЗ, - иначе резерв поднимал бы фактический момент.</text>
+</svg>

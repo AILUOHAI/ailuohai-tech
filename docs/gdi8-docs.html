@@ -95,7 +95,7 @@
       <span class="status-badge">In development · preliminary</span>
       <h1 style="font-size:52px;line-height:1.04;letter-spacing:-.045em;margin:0 0 14px">Cat-GDI8 documentation</h1>
       <p style="font-size:18px;color:var(--muted);max-width:760px;margin:0 0 20px">How the engine control model works and how to set the unit up for your engine in BrainBus GDI-8.</p>
-      <div class="actions-row">
+      <div class="actions-row"><a class="btn btn-dark btn-big" href="docs/index.html">Documentation catalog</a>
         <a class="btn btn-dark btn-big" href="gdi8-pinout.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>Pinout</a>
         <a class="btn btn-dark btn-big" href="downloads.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Firmware</a>
         <a class="btn btn-light btn-big" href="ecu-cat-gdi8.html">Product page</a>
@@ -108,12 +108,12 @@
     <article class="doc">
       <p class="note">Firmware is in development. The model is verified with automated tests and the ECU simulator; testing on a running engine is the next stage. Each section is marked: <span class="tag ready">Ready</span> works in the simulator, <span class="tag wip">In progress</span> written and waiting for hardware tests, <span class="tag plan">Planned</span> not yet implemented.</p>
 
-      <section id="principle" data-nav="One firmware, any engine">
-        <h2>One firmware, any engine <span class="tag ready">Ready</span></h2>
+      <section id="principle" data-nav="One unit, different engines">
+        <h2>One unit, different engines <span class="tag ready">Ready</span></h2>
         <p>Cat-GDI8 is not built for one specific engine. Everything that depends on the engine and its wiring is described as data in BrainBus GDI-8 and stored in the unit. The firmware is the same for every installation.</p>
         <p>The control model works with logical values — intake pressure, intake cam position of bank A, the phaser valve of bank A. The configuration decides where each value comes from and which physical pin each output uses. The application shows which pins are suitable for each function and checks the result: one pin — one function.</p>
         <ul>
-          <li>2 to 8 cylinders, firing order and cylinder angles (even and uneven V8, V6…), bank of each cylinder.</li>
+          <li>Up to 8 cylinders, firing order and cylinder angles (even and uneven V8, V6…), bank of each cylinder.</li>
           <li>Injectors: flow at reference pressure, opening delay from voltage and pressure, minimum pulse.</li>
           <li>Coils: passive 12 V or with built-in igniter 5 V; dwell from battery voltage.</li>
           <li>0–4 camshafts with roles (intake/exhaust, bank A/B), each with its own wheel and phaser.</li>
@@ -124,9 +124,9 @@
 
       <section id="torque" data-nav="Torque-based control">
         <h2>Torque-based control <span class="tag wip">In progress</span></h2>
-        <p>The unit does not convert the throttle lever directly into throttle opening. The lever is a <b>torque request</b>. The model decides how to deliver this torque — with air, with spark timing or, in an emergency only, by cutting cylinders — and all limits act on torque. This is the same principle as in modern OEM engine management, adapted to an airboat: engine, gearbox and a heavy propeller.</p>
+        <p>The unit does not convert the throttle lever directly into throttle opening. The lever is a <b>torque request</b>. The model decides how to deliver this torque — with air and spark timing — and all limits act on torque. This is the same principle as in modern OEM engine management, adapted to an airboat: engine, gearbox and a heavy propeller.</p>
 
-        <div class="flow" role="img" aria-label="Torque structure: lever and idle requests are coordinated with limits into a torque target, which goes to the air path, the spark path and cylinder cut">
+        <div class="flow" role="img" aria-label="Torque structure: lever and idle requests are coordinated with limits into a torque target, which goes to the air path and the spark path">
           <div class="flow-row c2">
             <div class="box"><b>Lever</b><span>torque request from lever position and rpm</span></div>
             <div class="box"><b>Idle controller</b><span>keeps idle speed, holds a torque reserve</span></div>
@@ -142,16 +142,16 @@
           <div class="flow-row c3">
             <div class="box"><b>Air path · slow</b><span>cylinder filling → intake pressure → throttle angle, cam targets, boost</span></div>
             <div class="box"><b>Spark path · fast</b><span>spark retard from optimum for quick torque changes</span></div>
-            <div class="box"><b>Cylinder cut · emergency</b><span>only if allowed, never used for normal control</span></div>
+            <div class="box"><b>Emergency cut</b><span>separate setting, off by default</span></div>
           </div>
         </div>
 
         <h3>Model levels</h3>
         <ol>
           <li><b>Position and time</b> — crankshaft and four camshafts give the engine angle and cam phases.</li>
-          <li><b>Sensors</b> — every value has a validity flag; a failed sensor is replaced by a model value.</li>
+          <li><b>Sensors</b> — every value has a validity flag; a failed sensor is replaced by a substitute or model value.</li>
           <li><b>Engine model</b> — cylinder filling, residual gas, spark and mixture efficiency, losses, exhaust temperature.</li>
-          <li><b>Torque structure</b> — request, coordination, limits, split into air / spark / cut.</li>
+          <li><b>Torque structure</b> — request, coordination, limits, split into air and spark.</li>
           <li><b>Actuator targets</b> — throttle, cam phases, fuel mass, injection timing and split, rail pressure, spark.</li>
           <li><b>Outputs</b> — angle-based scheduling on hardware timers drives injectors and coils.</li>
         </ol>
@@ -167,52 +167,32 @@
         <h3>Hybrid injection</h3>
         <p>For each cylinder the calculated fuel is split between the direct injector and the port injector. Direct injection can use 1–3 pulses per cycle with a high-voltage current profile from the calibration; start of injection depends on rpm and load. Injector open time is calculated from the injector model for the actual pressure difference.</p>
         <h3>Rail pressure</h3>
-        <p>Two high-pressure pumps, one per bank. Target pressure is a 32×32 map of rpm and load; control combines feed-forward from fuel demand with a rail model and integral action near the target.</p>
+        <p>Two high-pressure pumps, normally one per bank. Target pressure is a 32×32 map of rpm and load; control combines feed-forward from fuel demand with a rail model and integral action near the target.</p>
         <h3>Valve timing</h3>
-        <p>Targets for four cams are maps of rpm and load. Control is allowed only with enough oil pressure; on low oil pressure the cams return to the base position. Chain stretch, phaser and end-stop faults are diagnosed.</p>
+        <p>Targets for four cams are maps of rpm and load. Control is allowed only with enough oil pressure; on low oil pressure the cams return to the base position. Valve circuit open and short faults, failure to reach target and a shifted rest position are diagnosed.</p>
       </section>
 
       <section id="limiter" data-nav="Rev limiter and propeller">
-        <h2>Rev limiter and propeller protection</h2>
-        <p><span class="tag wip">In progress</span> An unloaded propeller can over-rev the engine almost instantly, so the limiter works ahead: it looks at acceleration and removes torque smoothly in a band below the limit — first with spark, then with air. In the simulator, a propeller unloading at full power gave a peak of 6426 rpm with a 6500 rpm limit, without cutting a single cylinder. Fuel cut on extreme over-rev is a separate setting and is off by default.</p>
-        <p><span class="tag plan">Planned</span> Gearbox and propeller protection: a drive model (engine + gearbox + propeller), torque rate limits, soft passage through zero torque to take up gearbox backlash, damping of torsional oscillations with spark timing, and a keep-out band around the driveline resonance. Until the drive parameters are known, the unit uses a careful mode with slow torque ramps.</p>
-      </section>
+<h2>Rev limiter and propeller protection</h2>
+<p><span class="tag wip">In progress</span> An unloaded propeller can over-rev the engine almost instantly, so the limiter works ahead: it takes shaft acceleration into account and removes torque smoothly in a band below the limit, quickly with spark, then with air. Emergency fuel cut on extreme over-rev is a separate setting and is off by default.</p>
+<p><span class="tag wip">In progress</span> Torque rises through a soft zone that takes up driveline backlash, then faster. Rise and fall rates are curves over rpm.</p>
+<p><span class="tag plan">Planned</span> A drive model (engine, gearbox, propeller), damping of torsional oscillations with spark timing, and a keep-out band around the driveline resonance.</p>
+</section>
 
       <section id="start" data-nav="Engine start">
-        <h2>Engine start</h2>
-        <div class="table-scroll">
-          <table>
-            <thead><tr><th>Phase</th><th>What happens</th><th>Status</th></tr></thead>
-            <tbody>
-              <tr><td>Prime</td><td>Fuel pumps run, rails build pressure.</td><td><span class="tag ready">Ready</span></td></tr>
-              <tr><td>Fast sync</td><td>Engine position from the camshaft shape before the crank gap — first injection and spark sooner.</td><td><span class="tag ready">Ready</span></td></tr>
-              <tr><td>Prime pulse</td><td>One injection per start attempt when the engine starts turning, not when the key is switched on.</td><td><span class="tag plan">Planned</span></td></tr>
-              <tr><td>Cranking</td><td>Fuel per cycle from coolant temperature, direct injection on the compression stroke, fixed spark.</td><td><span class="tag ready">Ready</span></td></tr>
-              <tr><td>Cranking compensation</td><td>Extra fuel at the start of cranking that fades with time, stronger on a cold engine.</td><td><span class="tag plan">Planned</span></td></tr>
-              <tr><td>First injections</td><td>Own injection angle for the first cycles and spark at a set time after injection.</td><td><span class="tag wip">In progress</span></td></tr>
-              <tr><td>After start</td><td>Enrichment that fades to normal by time and temperature, raised idle, hand-over to the torque model.</td><td><span class="tag wip">In progress</span></td></tr>
-              <tr><td>Warm-up</td><td>Lambda correction by coolant temperature, then normal operation.</td><td><span class="tag ready">Ready</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+<h2>Engine start <span class="tag wip">In progress</span></h2>
+<p>The strategy counts events (injection number, engine cycles) rather than seconds. Everything below is implemented in code and tested on the model; it has not yet been verified on a running engine.</p>
+<div class="table-scroll"><table><thead><tr><th>Phase</th><th>What happens</th><th>Status</th></tr></thead><tbody><tr><td>Prime</td><td>Lift pumps run, the unit waits for cranking.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>Quick start</td><td>Crank position is found from the camshaft shape before the gap; the gap then confirms it.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>Waiting for pressure</td><td>No injection until the rail reaches the first-injection pressure.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>High pressure</td><td>Injection on the compression stroke.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>Low-pressure fallback</td><td>If pressure is not reached within a set number of revolutions, injection moves to the intake stroke with a long pulse.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>Start dose</td><td>Base dose in mg by temperature, corrected by injection number, pressure and rpm.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>Flood clear</td><td>Lever fully open while cranking: no fuel is injected.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>Repeat and hot start</td><td>Separate dose corrections.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>After start</td><td>Extra fuel fades over engine cycles, raised idle, hand-over to the torque model.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>Warm-up</td><td>Lambda correction by coolant temperature.</td><td><span class="tag wip">In progress</span></td></tr><tr><td>Adaptation</td><td>Basic learning of the start dose.</td><td><span class="tag wip">In progress</span></td></tr></tbody></table></div>
+</section>
 
       <section id="protection" data-nav="Protections">
-        <h2>Protections and fault reactions <span class="tag wip">In progress</span></h2>
-        <p>Every fault has a code in OBD format and a reaction from a table that can be edited in the application. Reactions are grouped by level. As a rule, limits reduce torque smoothly instead of cutting fuel or spark.</p>
-        <div class="table-scroll">
-          <table>
-            <thead><tr><th>Level</th><th>Reaction</th><th>Examples</th></tr></thead>
-            <tbody>
-              <tr><td>R0</td><td>Fault code only</td><td>Knock sensor noise, wideband sensor</td></tr>
-              <tr><td>R1</td><td>Torque limit</td><td>MAP sensor replaced by model, knock at retard limit, overheating start</td></tr>
-              <tr><td>R2</td><td>Limp mode: rpm limit (~2500) and torque limit</td><td>Throttle or lever partly failed, overheating, low oil pressure</td></tr>
-              <tr><td>R3</td><td>Engine stop</td><td>No oil pressure, throttle not controlled and open, supervision failure</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>Injection and spark are timed by hardware timers, never by a data bus. A second processor core independently checks that the actual torque does not exceed what the lever allows. An external watchdog resets the processor if the engine task stops responding; on any reset the outputs are off.</p>
-      </section>
+<h2>Protections and fault reactions <span class="tag wip">In progress</span></h2>
+<p>The main requirement: <b>the boat must get back to shore</b>. Every fault has a code in OBD format and a reaction level. If several are active, the strictest applies. Torque is reduced smoothly, without cutting fuel or spark.</p>
+<div class="table-scroll"><table><thead><tr><th>Level</th><th>Reaction</th><th>Examples</th></tr></thead><tbody><tr><td>R0</td><td>Fault code only</td><td>Knock sensor noise, wideband sensor</td></tr><tr><td>R1</td><td>Torque and filling limit</td><td>MAP sensor replaced by model</td></tr><tr><td>R2</td><td>Limp mode: as R1 plus an rpm limit (~2500) to get home</td><td>Throttle not responding, both lever channels or rail sensor failed</td></tr><tr><td>R3</td><td>Engine stop</td><td>Not assigned to any fault by default</td></tr></tbody></table></div>
+<h3>Temperatures and oil pressure</h3>
+<p>Coolant, oil, exhaust and gearbox temperatures and oil pressure reduce torque in four steps. The lowest step is a “get home” mode, not zero.</p>
+<p>Injection and spark are timed by hardware timers. A silent second core is detected as a fault. An external power-management chip with a watchdog supervises the processor.</p>
+</section>
 
       <section id="setup" data-nav="Setup step by step">
         <h2>Setup step by step</h2>

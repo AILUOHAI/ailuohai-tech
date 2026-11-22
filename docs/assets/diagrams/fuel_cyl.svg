@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2640 600" width="2640" height="600">
+<rect width="2640" height="600" fill="#FFFFFF"/>
+<text x="24.0" y="32.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="start" fill="#14202B" font-weight="700" xml:space="preserve">Топливо и импульс форсунки на цилиндр</text>
+
+<path d="M180 151.0 H200.0 V135.5 H219" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(220,135.5) rotate(0)"/>
+<circle cx="180" cy="151.0" r="2.2" fill="#4A5866"/>
+<path d="M180 335.0 H330.0 V335.0 H479" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(480,335.0) rotate(0)"/>
+<circle cx="180" cy="335.0" r="2.2" fill="#4A5866"/>
+<path d="M440 151.0 H497.6 V319" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(497.6,320) rotate(90)"/>
+<circle cx="440" cy="151.0" r="2.2" fill="#4A5866"/>
+<path d="M180 265.0 H380.0 V265.0 H579" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(580,265.0) rotate(0)"/>
+<circle cx="180" cy="265.0" r="2.2" fill="#4A5866"/>
+<path d="M524 335.0 H595.0 V281" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(595.0,280) rotate(-90)"/>
+<circle cx="524" cy="335.0" r="2.2" fill="#4A5866"/>
+<path d="M610 265.0 H630.0 V265.0 H649" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(650,265.0) rotate(0)"/>
+<circle cx="610" cy="265.0" r="2.2" fill="#4A5866"/>
+<path d="M706 265.0 H733.0 V242.5 H759" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(760,242.5) rotate(0)"/>
+<circle cx="706" cy="265.0" r="2.2" fill="#4A5866"/>
+<path d="M710 405.0 H735.0 V287.5 H759" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(760,287.5) rotate(0)"/>
+<circle cx="710" cy="405.0" r="2.2" fill="#4A5866"/>
+<path d="M1020 165.0 H1040.0 V165.0 H1059" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1060,165.0) rotate(0)"/>
+<circle cx="1020" cy="165.0" r="2.2" fill="#4A5866"/>
+<path d="M1030 105.0 H1077.6 V149" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1077.6,150) rotate(90)"/>
+<circle cx="1030" cy="105.0" r="2.2" fill="#4A5866"/>
+<path d="M1035 265.0 H1092.5 V265.0 H1149" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1150,265.0) rotate(0)"/>
+<circle cx="1035" cy="265.0" r="2.2" fill="#4A5866"/>
+<text x="1041.0" y="260.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="start" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">мг воздуха</text>
+<path d="M1104 165.0 H1167.6 V249" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1167.6,250) rotate(90)"/>
+<circle cx="1104" cy="165.0" r="2.2" fill="#4A5866"/>
+<path d="M1194 265.0 H1222.0 V265.0 H1249" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1250,265.0) rotate(0)"/>
+<circle cx="1194" cy="265.0" r="2.2" fill="#4A5866"/>
+<path d="M1250 121.0 H1267.6 V249" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1267.6,250) rotate(90)"/>
+<circle cx="1250" cy="121.0" r="2.2" fill="#4A5866"/>
+<path d="M1294 265.0 H1400 V253.8 H1479" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1480,253.8) rotate(0)"/>
+<circle cx="1294" cy="265.0" r="2.2" fill="#4A5866"/>
+<path d="M1300 387.0 H1315.0 V389.0 H1329" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1330,389.0) rotate(0)"/>
+<circle cx="1300" cy="387.0" r="2.2" fill="#4A5866"/>
+<path d="M1450 389.0 H1465.0 V276.2 H1479" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1480,276.2) rotate(0)"/>
+<circle cx="1450" cy="389.0" r="2.2" fill="#4A5866"/>
+<path d="M1480 185.0 H1508.0 V236" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1508.0,237) rotate(90)"/>
+<circle cx="1480" cy="185.0" r="2.2" fill="#4A5866"/>
+<path d="M1536 265.0 H1563.0 V240.0 H1589" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1590,240.0) rotate(0)"/>
+<circle cx="1536" cy="265.0" r="2.2" fill="#4A5866"/>
+<path d="M1890 266.0 H1920.0 V227.5 H1949" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1950,227.5) rotate(0)"/>
+<circle cx="1890" cy="266.0" r="2.2" fill="#4A5866"/>
+<path d="M2210 125.0 H2115.0 V199" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(2115.0,200) rotate(90)"/>
+<circle cx="2210" cy="125.0" r="2.2" fill="#4A5866"/>
+<path d="M1870 367.0 H1910.0 V282.5 H1949" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1950,282.5) rotate(0)"/>
+<circle cx="1870" cy="367.0" r="2.2" fill="#4A5866"/>
+<path d="M2280 255.0 H2300.0 V255.0 H2319" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(2320,255.0) rotate(0)"/>
+<circle cx="2280" cy="255.0" r="2.2" fill="#4A5866"/>
+<path d="M1890 266.0 H1920 V429.0 H1949" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1950,429.0) rotate(0)"/>
+<circle cx="1890" cy="266.0" r="2.2" fill="#4A5866"/>
+<path d="M1870 367.0 H1900 V467.0 H1949" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1950,467.0) rotate(0)"/>
+<circle cx="1870" cy="367.0" r="2.2" fill="#4A5866"/>
+<path d="M2280 448.0 H2300.0 V448.0 H2319" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(2320,448.0) rotate(0)"/>
+<circle cx="2280" cy="448.0" r="2.2" fill="#4A5866"/>
+<rect x="30" y="136" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,142.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="116.0" y="155.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, об/мин</text>
+<rect x="220" y="120" width="220" height="62" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="220" y="120" width="220" height="18" rx="6" fill="#1F3B57"/><rect x="220" y="131" width="220" height="7" fill="#1F3B57"/>
+<text x="330.0" y="133.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">Горизонт прогноза, с</text>
+<text x="228.0" y="153.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">(упреждение − 180°) / 6n</text>
+<text x="228.0" y="167.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">0 … fill.mapPredictMax</text>
+<rect x="30" y="250" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,256.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l4.5-4.5"/><circle cx="12" cy="13" r="1.6"/><path d="M7 20h10"/></g>
+<text x="116.0" y="269.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">MAP, кПа</text>
+<rect x="30" y="320" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,326.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l4.5-4.5"/><circle cx="12" cy="13" r="1.6"/><path d="M7 20h10"/></g>
+<text x="116.0" y="339.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">dMAP/dt, кПа/с</text>
+<path d="M480 320 H512 L524 335.0 L512 350 H480 Z" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="497.0" y="342.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">×</text>
+<circle cx="595.0" cy="265.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M588.0 265.0 H602.0 M595.0 258.0 V272.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="650" y="242" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M660 278 H670 L686 252 H696" fill="none" stroke="#3E4C5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="678.0" y="301.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">0.7·MAP … 1.05·pатм</text>
+<text x="678.0" y="314.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">MAP на такт впуска</text>
+<rect x="540" y="390" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(551.0,396.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="636.0" y="409.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, фазы, t возд., t ОЖ</text>
+<rect x="760" y="220" width="275" height="90" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="760" y="220" width="275" height="18" rx="6" fill="#1F3B57"/><rect x="760" y="231" width="275" height="7" fill="#1F3B57"/>
+<text x="897.5" y="233.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">Наполнение  fill.massMg()</text>
+<text x="768.0" y="253.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">kFill(n, фаза впуска) · kEx(n, выпуск)</text>
+<text x="768.0" y="267.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">· (pMAP − pRes(n, фаза))</text>
+<text x="768.0" y="281.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">· подогрев fill.heat(t ОЖ)</text>
+<text x="768.0" y="295.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">= воздух в цилиндре, мг</text>
+<rect x="880" y="150" width="140" height="30" rx="5" fill="#F1F3F5" stroke="#6B7785" stroke-width="1.6" stroke-dasharray="4 2"/>
+<text x="950.0" y="169.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#3A4652" font-weight="600" xml:space="preserve">fuel.afr</text>
+<rect x="880" y="90" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(891.0,96.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20L12 6"/><path d="M8.5 5H11l7 15"/></g>
+<text x="966.0" y="109.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">λ цель банка</text>
+<path d="M1060 150 H1092 L1104 165.0 L1092 180 H1060 Z" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="1077.0" y="172.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">×</text>
+<path d="M1150 250 H1182 L1194 265.0 L1182 280 H1150 Z" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="1167.0" y="272.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">÷</text>
+<rect x="1100" y="106" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(1111.0,112.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20L12 6"/><path d="M8.5 5H11l7 15"/></g>
+<text x="1186.0" y="125.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">коррекция ШДК</text>
+<path d="M1250 250 H1282 L1294 265.0 L1282 280 H1250 Z" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="1267.0" y="272.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">×</text>
+<rect x="1150" y="372" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(1161.0,378.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="1236.0" y="391.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">t ОЖ, °C</text>
+<rect x="1330" y="350" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="1330" y="350" width="120" height="18" rx="7" fill="#159A8A"/><rect x="1330" y="361" width="120" height="7" fill="#159A8A"/>
+<text x="1390.0" y="363.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">crank.fuel</text>
+<path d="M1352 374 V420 H1438" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M1355 414 C1382.1 412 1390.7 380 1436 378" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="1390.0" y="442.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">доза на прокрутке, мг</text>
+<rect x="1330" y="170" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<text x="1405.0" y="189.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">режим = Crank</text>
+<rect x="1480" y="237" width="56" height="56" rx="6" fill="#F2ECFB" stroke="#7A4FC2" stroke-width="1.6"/>
+<path d="M1486 253.8 H1496 M1486 276.2 H1496 M1496 253.8 L1522 265.0 H1530" fill="none" stroke="#7A4FC2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1496" cy="253.8" r="2.5" fill="#7A4FC2"/><circle cx="1496" cy="276.2" r="2.5" fill="#7A4FC2"/>
+<text x="1484.0" y="249.8" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">0</text>
+<text x="1484.0" y="272.2" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">1</text>
+<text x="1508.0" y="307.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">топливо, мг</text>
+<rect x="1590" y="214" width="300" height="104" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="1590" y="214" width="300" height="18" rx="6" fill="#1F3B57"/><rect x="1590" y="225" width="300" height="7" fill="#1F3B57"/>
+<text x="1740.0" y="227.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">Деление топлива цикла</text>
+<text x="1598.0" y="247.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">PFI: pfi.share(n, rl) × подмешивание (pfi.ramp)</text>
+<text x="1598.0" y="261.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">GDI 2, 3: split.share2/3 × split.clt</text>
+<text x="1598.0" y="275.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">GDI 1 - остаток; часть короче мин. импульса</text>
+<text x="1598.0" y="289.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">или без паузы split.minPause - в первый</text>
+<rect x="2010" y="110" width="200" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(2021.0,116.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l4.5-4.5"/><circle cx="12" cy="13" r="1.6"/><path d="M7 20h10"/></g>
+<text x="2121.0" y="129.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">p рампы, MAP, кПа</text>
+<rect x="1720" y="352" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(1731.0,358.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5h3v2M14 7V5h3v2"/><path d="M6.5 13h3M8 11.5v3M14.5 13h3"/></g>
+<text x="1806.0" y="371.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">АКБ, В</text>
+<rect x="1950" y="200" width="330" height="110" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="1950" y="200" width="330" height="18" rx="6" fill="#1F3B57"/><rect x="1950" y="211" width="330" height="7" fill="#1F3B57"/>
+<text x="2115.0" y="213.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">Время импульса GDI (как RKTI MED9)</text>
+<text x="1958.0" y="233.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">перепад = рампа − MAP</text>
+<text x="1958.0" y="247.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">te = мг / (inj.flow · inj.flowFactor(перепад))</text>
+<text x="1958.0" y="261.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">ti = te + inj.smallPulse(te) + inj.dead(перепад)</text>
+<text x="1958.0" y="275.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">     + inj.deadUbat(АКБ); inj.minPulse … maxPulse</text>
+<rect x="2320" y="240" width="280" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<text x="2460.0" y="259.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">GDI 1..3: inj.soi, split.soi2/3</text>
+<rect x="1950" y="410" width="330" height="76" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="1950" y="410" width="330" height="18" rx="6" fill="#1F3B57"/><rect x="1950" y="421" width="330" height="7" fill="#1F3B57"/>
+<text x="2115.0" y="423.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">Время PFI</text>
+<text x="1958.0" y="443.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">pfi.flow · √(перепад подкачки / pfi.refPressure)</text>
+<text x="1958.0" y="457.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">+ pfi.dead(АКБ); короче pfi.minPulse - на GDI</text>
+<rect x="2320" y="433" width="280" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<text x="2460.0" y="452.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">PFI: конец pfi.eoi(n)</text>
+<text x="30.0" y="470.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">1. MAP на такт впуска этого цилиндра прогнозируется по скорости изменения: расчёт идёт раньше впуска на (упреждение − 180)°. Прогноз ограничен - от провала датчика и выше атмосферы с запасом.</text>
+<text x="30.0" y="490.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">2. Модель наполнения даёт массу воздуха (мг) по оборотам, фазам распредвалов, давлению и подогреву заряда; топливо = воздух ÷ (AFR × λ цели) × коррекция ШДК банка.</text>
+
+<text x="30.0" y="530.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">4. Топливо делится: PFI (доля × подмешивание после пуска; на прокрутке - 0), GDI - до 3 импульсов; время каждой части - по модели форсунки (перепад рампа − MAP). Аварийная отсечка (если разрешена) - 0.</text>
+</svg>

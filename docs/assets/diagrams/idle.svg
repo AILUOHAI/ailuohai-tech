@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1740 860" width="1740" height="860">
+<rect width="1740" height="860" fill="#FFFFFF"/>
+<text x="24.0" y="32.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="start" fill="#14202B" font-weight="700" xml:space="preserve">Холостой ход: цель оборотов и запрос момента</text>
+
+<path d="M180 110.0 H205.0 V111.0 H229" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(230,111.0) rotate(0)"/>
+<circle cx="180" cy="110.0" r="2.2" fill="#4A5866"/>
+<path d="M200 218.0 H215.0 V219.0 H229" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(230,219.0) rotate(0)"/>
+<circle cx="200" cy="218.0" r="2.2" fill="#4A5866"/>
+<path d="M200 328.0 H215.0 V329.0 H229" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(230,329.0) rotate(0)"/>
+<circle cx="200" cy="328.0" r="2.2" fill="#4A5866"/>
+<path d="M350 219.0 H375.0 V219.0 H399" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(400,219.0) rotate(0)"/>
+<circle cx="350" cy="219.0" r="2.2" fill="#4A5866"/>
+<path d="M350 329.0 H417.6 V235" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(417.6,234) rotate(-90)"/>
+<circle cx="350" cy="329.0" r="2.2" fill="#4A5866"/>
+<path d="M350 111.0 H410.0 V111.0 H469" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(470,111.0) rotate(0)"/>
+<circle cx="350" cy="111.0" r="2.2" fill="#4A5866"/>
+<path d="M444 219.0 H485.0 V127" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(485.0,126) rotate(-90)"/>
+<circle cx="444" cy="219.0" r="2.2" fill="#4A5866"/>
+<path d="M500 111.0 H515.0 V111.0 H529" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(530,111.0) rotate(0)"/>
+<circle cx="500" cy="111.0" r="2.2" fill="#4A5866"/>
+<path d="M460 415.0 H545.0 V127" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(545.0,126) rotate(-90)"/>
+<circle cx="460" cy="415.0" r="2.2" fill="#4A5866"/>
+<path d="M560 111.0 H575.0 V111.0 H589" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(590,111.0) rotate(0)"/>
+<circle cx="560" cy="111.0" r="2.2" fill="#4A5866"/>
+<path d="M460 465.0 H605.0 V127" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(605.0,126) rotate(-90)"/>
+<circle cx="460" cy="465.0" r="2.2" fill="#4A5866"/>
+<path d="M620 111.0 H635.0 V101.8 H649" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(650,101.8) rotate(0)"/>
+<circle cx="620" cy="111.0" r="2.2" fill="#4A5866"/>
+<path d="M460 515.0 H640 V120.19999999999999 H649" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(650,120.19999999999999) rotate(0)"/>
+<circle cx="460" cy="515.0" r="2.2" fill="#4A5866"/>
+<path d="M706 111.0 H723.0 V111.0 H739" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(740,111.0) rotate(0)"/>
+<circle cx="706" cy="111.0" r="2.2" fill="#4A5866"/>
+<text x="712.0" y="106.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="start" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">цель</text>
+<path d="M796 111.0 H838 V96.5 H879" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(880,96.5) rotate(0)"/>
+<circle cx="796" cy="111.0" r="2.2" fill="#4A5866"/>
+<path d="M800 180.0 H865 V113.0 H879" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(880,113.0) rotate(0)"/>
+<circle cx="800" cy="180.0" r="2.2" fill="#4A5866"/>
+<path d="M810 240.0 H870 V190.0 H879" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(880,190.0) rotate(0)"/>
+<circle cx="810" cy="240.0" r="2.2" fill="#4A5866"/>
+<path d="M796 111.0 H875 V426.8 H909" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(910,426.8) rotate(0)"/>
+<circle cx="796" cy="111.0" r="2.2" fill="#4A5866"/>
+<path d="M830 455.0 H870 V449.2 H909" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(910,449.2) rotate(0)"/>
+<circle cx="830" cy="455.0" r="2.2" fill="#4A5866"/>
+<path d="M830 455.0 H860 V515.5 H879" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(880,515.5) rotate(0)"/>
+<circle cx="830" cy="455.0" r="2.2" fill="#4A5866"/>
+<path d="M1100 113.0 H1125.0 V113.0 H1149" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1150,113.0) rotate(0)"/>
+<circle cx="1100" cy="113.0" r="2.2" fill="#4A5866"/>
+<path d="M1100 205.0 H1165.0 V129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1165.0,128) rotate(-90)"/>
+<circle cx="1100" cy="205.0" r="2.2" fill="#4A5866"/>
+<path d="M1180 113.0 H1195 V113.0 H1199" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1200,113.0) rotate(0)"/>
+<circle cx="1180" cy="113.0" r="2.2" fill="#4A5866"/>
+<path d="M1080 280.0 H1215.0 V129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1215.0,128) rotate(-90)"/>
+<circle cx="1080" cy="280.0" r="2.2" fill="#4A5866"/>
+<path d="M1230 113.0 H1245 V113.0 H1249" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1250,113.0) rotate(0)"/>
+<circle cx="1230" cy="113.0" r="2.2" fill="#4A5866"/>
+<path d="M1100 350.0 H1265.0 V129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1265.0,128) rotate(-90)"/>
+<circle cx="1100" cy="350.0" r="2.2" fill="#4A5866"/>
+<path d="M1280 113.0 H1295 V113.0 H1299" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1300,113.0) rotate(0)"/>
+<circle cx="1280" cy="113.0" r="2.2" fill="#4A5866"/>
+<path d="M980 438.0 H1315.0 V129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1315.0,128) rotate(-90)"/>
+<circle cx="980" cy="438.0" r="2.2" fill="#4A5866"/>
+<path d="M1330 113.0 H1345 V113.0 H1349" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1350,113.0) rotate(0)"/>
+<circle cx="1330" cy="113.0" r="2.2" fill="#4A5866"/>
+<path d="M1100 531.0 H1365.0 V129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1365.0,128) rotate(-90)"/>
+<circle cx="1100" cy="531.0" r="2.2" fill="#4A5866"/>
+<path d="M1380 113.0 H1400.0 V113.0 H1419" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1420,113.0) rotate(0)"/>
+<circle cx="1380" cy="113.0" r="2.2" fill="#4A5866"/>
+<path d="M180 635.0 H205.0 V636.0 H229" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(230,636.0) rotate(0)"/>
+<circle cx="180" cy="635.0" r="2.2" fill="#4A5866"/>
+<path d="M350 636.0 H380 V615.0 H819" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(820,615.0) rotate(0)"/>
+<circle cx="350" cy="636.0" r="2.2" fill="#4A5866"/>
+<path d="M350 636.0 H400 V657.5 H479" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(480,657.5) rotate(0)"/>
+<circle cx="350" cy="636.0" r="2.2" fill="#4A5866"/>
+<path d="M410 735.0 H440 V692.5 H479" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(480,692.5) rotate(0)"/>
+<circle cx="410" cy="735.0" r="2.2" fill="#4A5866"/>
+<path d="M760 675.0 H790.0 V675.0 H819" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(820,675.0) rotate(0)"/>
+<circle cx="760" cy="675.0" r="2.2" fill="#4A5866"/>
+<rect x="30" y="95" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,101.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="116.0" y="114.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">t ОЖ, °C</text>
+<rect x="230" y="72" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="230" y="72" width="120" height="18" rx="7" fill="#159A8A"/><rect x="230" y="83" width="120" height="7" fill="#159A8A"/>
+<text x="290.0" y="85.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">coord.idleRpm</text>
+<path d="M252 96 V142 H338" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M255 136 C282.1 134 290.7 102 336 100" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="290.0" y="164.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">цель по t ОЖ, об/мин</text>
+<rect x="30" y="203" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,209.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="126.0" y="222.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">t ОЖ при пуске, °C</text>
+<rect x="230" y="180" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="230" y="180" width="120" height="18" rx="7" fill="#159A8A"/><rect x="230" y="191" width="120" height="7" fill="#159A8A"/>
+<text x="290.0" y="193.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">idle.afterRpm</text>
+<path d="M252 204 V250 H338" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M255 244 C282.1 242 290.7 210 336 208" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="290.0" y="272.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">добавка после пуска</text>
+<rect x="30" y="313" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,319.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9.5 2.5h5"/></g>
+<text x="126.0" y="332.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">время после пуска, с</text>
+<rect x="230" y="290" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="230" y="290" width="120" height="18" rx="7" fill="#159A8A"/><rect x="230" y="301" width="120" height="7" fill="#159A8A"/>
+<text x="290.0" y="303.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">idle.afterHold</text>
+<path d="M252 314 V360 H338" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M255 354 C282.1 352 290.7 320 336 318" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="290.0" y="382.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">1 -&gt; 0: держится, спадает</text>
+<path d="M400 204 H432 L444 219.0 L432 234 H400 Z" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="417.0" y="226.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">×</text>
+<circle cx="485.0" cy="111.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M478.0 111.0 H492.0 M485.0 104.0 V118.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="250" y="400" width="210" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(261.0,406.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5h3v2M14 7V5h3v2"/><path d="M6.5 13h3M8 11.5v3M14.5 13h3"/></g>
+<text x="366.0" y="419.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">+ подъём при низком U</text>
+<circle cx="545.0" cy="111.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M538.0 111.0 H552.0 M545.0 104.0 V118.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="250" y="450" width="210" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(261.0,456.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c4.5 0 7 3.5 7 7.5S16 20 12 20s-7-4.5-7-8.5S7.5 4 12 4z"/><circle cx="12" cy="13" r="2.2"/><path d="M12 4V1.5"/></g>
+<text x="366.0" y="469.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">+ по распредвалу</text>
+<circle cx="605.0" cy="111.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M598.0 111.0 H612.0 M605.0 104.0 V118.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="250" y="500" width="210" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(261.0,506.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="366.0" y="519.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">не ниже: обороты удержания</text>
+<rect x="650" y="88" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="678.0" y="116.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MAX</text>
+<rect x="740" y="88" width="56" height="46" rx="6" fill="#FDF1E4" stroke="#D9822B" stroke-width="1.6"/>
+<text x="768.0" y="110.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#D9822B" font-weight="700" font-style="italic" xml:space="preserve">d</text>
+<path d="M759.0 113.0 H777.0" fill="none" stroke="#D9822B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="768.0" y="126.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#D9822B" font-weight="700" font-style="italic" xml:space="preserve">dt</text>
+<path d="M782 96 H790 M746 126 H754" fill="none" stroke="#D9822B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="768.0" y="82.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">idle.tgtFall</text>
+<text x="768.0" y="148.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">вниз - не быстрее</text>
+<rect x="880" y="80" width="220" height="66" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="880" y="80" width="220" height="18" rx="6" fill="#1F3B57"/><rect x="880" y="91" width="220" height="7" fill="#1F3B57"/>
+<text x="990.0" y="93.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">винт · всегда на валу</text>
+<text x="888.0" y="113.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">idle.propGain · k · цель²</text>
+<rect x="650" y="165" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(661.0,171.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.8"/><path d="M12 10.2C11 6 11.5 3 13 2.5c1.5.5 1 4-1 7.7"/><path d="M13.6 13c4 1.5 6 3.8 5.4 5.3-1.5.6-4.4-1.4-5.4-5.3"/><path d="M10.4 13c-3.4 2.4-6.3 3-7.3 1.8.2-1.6 3.3-2.6 7.3-1.8"/></g>
+<text x="736.0" y="184.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">k винта (выучен)</text>
+<rect x="880" y="175" width="220" height="60" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="880" y="175" width="220" height="18" rx="6" fill="#1F3B57"/><rect x="880" y="186" width="220" height="7" fill="#1F3B57"/>
+<text x="990.0" y="188.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">нагрузки · этап 4</text>
+<text x="888.0" y="208.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">насосы, вентилятор, генератор</text>
+<text x="888.0" y="222.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">idle.loadNm, idle.genLowV</text>
+<rect x="640" y="225" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(651.0,231.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 15h3l3-5"/><path d="M14 15h2"/><circle cx="8" cy="15" r=".8"/></g>
+<text x="736.0" y="244.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">включены насосы, U</text>
+<rect x="900" y="265" width="180" height="30" rx="5" fill="#F1F3F5" stroke="#6B7785" stroke-width="1.6" stroke-dasharray="4 2"/>
+<text x="990.0" y="284.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#3A4652" font-weight="600" xml:space="preserve">idle.manual</text>
+<text x="990.0" y="309.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">ручная добавка · этап 1</text>
+<rect x="880" y="320" width="220" height="60" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="880" y="320" width="220" height="18" rx="6" fill="#1F3B57"/><rect x="880" y="331" width="220" height="7" fill="#1F3B57"/>
+<text x="990.0" y="333.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">адаптация · этап 6</text>
+<text x="888.0" y="353.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">холодная / тёплая</text>
+<text x="888.0" y="367.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">не больше idle.adaptMax</text>
+<rect x="910" y="410" width="70" height="56" rx="6" fill="#FDF1E4" stroke="#D9822B" stroke-width="1.6"/>
+<text x="945.0" y="443.0" font-family="Segoe UI, Arial, sans-serif" font-size="15" text-anchor="middle" fill="#D9822B" font-weight="700" xml:space="preserve">PID</text>
+<text x="945.0" y="404.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">coord.idlePid</text>
+<text x="945.0" y="480.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">регулятор · этап 2</text>
+<rect x="660" y="440" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(671.0,446.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="756.0" y="459.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, об/мин</text>
+<rect x="880" y="500" width="220" height="62" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="880" y="500" width="220" height="18" rx="6" fill="#1F3B57"/><rect x="880" y="511" width="220" height="7" fill="#1F3B57"/>
+<text x="990.0" y="513.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">подхват · этап 5</text>
+<text x="888.0" y="533.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">n &lt; цель − idle.catchDrop:</text>
+<text x="888.0" y="547.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">+ idle.catchNm, потом спад</text>
+<circle cx="1165.0" cy="113.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M1158.0 113.0 H1172.0 M1165.0 106.0 V120.0" stroke="#3E4C5A" stroke-width="2"/>
+<circle cx="1215.0" cy="113.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M1208.0 113.0 H1222.0 M1215.0 106.0 V120.0" stroke="#3E4C5A" stroke-width="2"/>
+<circle cx="1265.0" cy="113.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M1258.0 113.0 H1272.0 M1265.0 106.0 V120.0" stroke="#3E4C5A" stroke-width="2"/>
+<circle cx="1315.0" cy="113.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M1308.0 113.0 H1322.0 M1315.0 106.0 V120.0" stroke="#3E4C5A" stroke-width="2"/>
+<circle cx="1365.0" cy="113.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M1358.0 113.0 H1372.0 M1365.0 106.0 V120.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="1420" y="98" width="280" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(1431.0,104.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 1 1 3 5.7"/><path d="M5 15.5V12h3.5"/><path d="M12 12l3-3"/></g>
+<text x="1571.0" y="117.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">запрос момента ХХ -&gt; координатор</text>
+<rect x="30" y="620" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,626.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="116.0" y="639.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">t ОЖ, °C</text>
+<rect x="230" y="597" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="230" y="597" width="120" height="18" rx="7" fill="#159A8A"/><rect x="230" y="608" width="120" height="7" fill="#159A8A"/>
+<text x="290.0" y="610.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">idle.reserveNm</text>
+<path d="M252 621 V667 H338" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M255 661 C282.1 659 290.7 627 336 625" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="290.0" y="689.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">запас по t ОЖ, Н·м</text>
+<rect x="480" y="640" width="280" height="70" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="480" y="640" width="280" height="18" rx="6" fill="#1F3B57"/><rect x="480" y="651" width="280" height="7" fill="#1F3B57"/>
+<text x="620.0" y="653.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">быстрый путь · этап 3</text>
+<text x="488.0" y="673.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">idle.sparkKp·e − idle.sparkKd·dn/dt</text>
+<text x="488.0" y="687.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">только УОЗ, в пределах ± запаса</text>
+<rect x="230" y="720" width="180" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(241.0,726.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="331.0" y="739.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n и dn/dt</text>
+<rect x="820" y="600" width="280" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(831.0,606.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></g>
+<text x="971.0" y="619.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">запас -&gt; воздух держит больше</text>
+<rect x="820" y="660" width="280" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(831.0,666.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v6H9z"/><path d="M10.5 8v4h3V8"/><path d="M11 12h2v3h-2z"/><path d="M12 15v2"/><path d="M12 19l-2.5 2M12 19l2.5 2M12 19l-3-1M12 19l3-1"/></g>
+<text x="971.0" y="679.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">поправка УОЗ (быстро)</text>
+<text x="30.0" y="790.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">1. Цель: кривая по ОЖ + добавка после пуска + подъём при низком напряжении + по распредвалу; не ниже оборотов удержания; вниз - не быстрее idle.tgtFall. Датчик ОЖ неисправен - цель idle.cltFailRpm.</text>
+<text x="30.0" y="806.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">2. Запрос момента = винт + нагрузки + ручная добавка + адаптация + регулятор + подхват. Выключенный этап даёт 0 - остальное работает как было.</text>
+<text x="30.0" y="822.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">3. Запас: воздуха больше на запас, УОЗ позже; быстрый путь двигает только УОЗ внутри запаса. Заслонка в аварийном положении - быстрый путь включается сам.</text>
+</svg>

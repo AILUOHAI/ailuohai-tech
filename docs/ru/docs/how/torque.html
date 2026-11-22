@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Управление по моменту — документация Cat-GDI8 — AILUOHAI-TECH</title>
-<meta name="description" content="Как рычаг превращается в воздух и угол зажигания"><!-- Yandex.Metrika counter -->
+<meta name="description" content="Как рычаг превращается в воздух и угол зажигания"><link rel="canonical" href="https://ailuohai-tech.com/ru/docs/how/torque.html"><link rel="alternate" hreflang="en" href="https://ailuohai-tech.com/docs/how/torque.html"><link rel="alternate" hreflang="ru" href="https://ailuohai-tech.com/ru/docs/how/torque.html"><link rel="alternate" hreflang="x-default" href="https://ailuohai-tech.com/docs/how/torque.html"><!-- Yandex.Metrika counter -->
   <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=113736844','ym');ym(113736844,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
   <noscript><div><img src="https://mc.yandex.ru/watch/113736844" style="position:absolute;left:-9999px" alt=""></div></noscript>
   <script src="/assets/metrika-goals.js" defer></script>
@@ -53,17 +53,18 @@
       .doc td:first-child { white-space: normal; }
     }
   </style>
-<link rel="stylesheet" href="../.././../assets/docs-interactive.css?v=20261123b"><link rel="stylesheet" href="../.././../assets/docs-site.css?v=20261123b">
+<link rel="stylesheet" href="../.././../assets/docs-interactive.css?v=20261123d"><link rel="stylesheet" href="../.././../assets/docs-site.css?v=20261123d">
 </head><body data-root="../">
 <header class="site-header"><div class="container bar"><a class="brand" href="../.././index.html">AILUOHAI-TECH</a><nav class="nav">
 <a href="../.././index.html#products">Продукты</a><a href="../.././test-platform.html">Испытательная платформа</a><a href="../.././downloads.html">Загрузки</a><a href="../.././contacts.html">Контакты</a>
+<a class="lang" href="../../../docs/how/torque.html" hreflang="en" lang="en" title="English version">EN</a>
 </nav></div></header>
-<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Разделы документации</button><nav class="ds-side" aria-label="Разделы документации"><a href="../index.html">Каталог</a><h4>1. Знакомство</h4><a href="../learn/ecu.html">Что такое блок управления</a><a href="../learn/injection.html">Какой бывает впрыск</a><a href="../learn/schemes.html">Схемы моторов</a><h4>2. Как это работает</h4><a href="torque.html" class="on" aria-current="page">Управление по моменту</a><a href="air-fuel.html">Воздух и топливо</a><a href="limiter.html">Ограничитель и винт</a><a href="start.html">Пуск</a><a href="protection.html">Защиты и реакции</a><a href="principle.html">Один блок, разные моторы</a><h4>3. Настройка</h4><a href="../build/index.html">Сборка по шагам</a><a href="../setup/calibration.html">Работа с калибровками</a><h4>4. Модули подробно</h4><a href="../modules/engine.html">Двигатель</a><a href="../modules/trigger.html">Триггер</a><a href="../modules/sensors.html">Датчики</a><a href="../modules/actuators.html">Исполн. механизмы</a><a href="../modules/start.html">Пуск</a><a href="../modules/idle.html">Холостой ход</a><a href="../modules/boost.html">Наддув</a><a href="../modules/ignition.html">Зажигание</a><a href="../modules/fuel.html">Топливо и смесь</a><a href="../modules/air.html">Воздух (наполнение)</a><a href="../modules/torque.html">Момент и ограничения</a><a href="../modules/health.html">Здоровье двигателя</a><a href="../modules/can.html">CAN</a><h4>Инструменты</h4><a href="../tools/trigger.html">Колесо триггера</a><a href="../tools/fuel.html">Топливо и импульс</a><a href="../tools/ntc.html">Датчик температуры</a><h4>Справочник</h4><a href="../../gdi8-pinout.html">Распиновка</a><a href="../../downloads.html">Загрузки</a></nav></div>
+<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Разделы документации</button><nav class="ds-side" aria-label="Разделы документации"><a href="../index.html">Каталог</a><h4>1. Знакомство</h4><a href="../learn/ecu.html">Что такое блок управления</a><a href="../learn/injection.html">Какой бывает впрыск</a><a href="../learn/schemes.html">Схемы моторов</a><h4>2. Как это работает</h4><a href="torque.html" class="on" aria-current="page">Управление по моменту</a><a href="air-fuel.html">Воздух и топливо</a><a href="limiter.html">Ограничитель и винт</a><a href="start.html">Пуск</a><a href="protection.html">Защиты и реакции</a><a href="principle.html">Один блок, разные моторы</a><a href="diagrams.html">Как читать схемы</a><h4>3. Настройка</h4><a href="../build/index.html">Сборка по шагам</a><a href="../setup/calibration.html">Работа с калибровками</a><h4>4. Модули подробно</h4><a href="../modules/engine.html">Двигатель</a><a href="../modules/trigger.html">Триггер</a><a href="../modules/sensors.html">Датчики</a><a href="../modules/actuators.html">Исполн. механизмы</a><a href="../modules/start.html">Пуск</a><a href="../modules/idle.html">Холостой ход</a><a href="../modules/boost.html">Наддув</a><a href="../modules/ignition.html">Зажигание</a><a href="../modules/fuel.html">Топливо и смесь</a><a href="../modules/air.html">Воздух (наполнение)</a><a href="../modules/torque.html">Момент и ограничения</a><a href="../modules/health.html">Здоровье двигателя</a><a href="../modules/can.html">CAN</a><h4>Инструменты</h4><a href="../tools/trigger.html">Колесо триггера</a><a href="../tools/fuel.html">Топливо и импульс</a><a href="../tools/ntc.html">Датчик температуры</a><h4>Справочник</h4><a href="../../gdi8-pinout.html">Распиновка</a><a href="../../downloads.html">Загрузки</a></nav></div>
 <main class="ds-main doc"><div class="ds-crumbs"><a href="../.././index.html">Главная</a> / <a href="../.././ecu-cat-gdi8.html">ECU Cat-GDI8</a> / <a href="../index.html">Документация</a></div><h1>Управление по моменту</h1><p class="ds-lead">Как рычаг превращается в воздух и угол зажигания</p>
 <div class="dx-search"><input id="ds-q" type="search" placeholder="Поиск по всей документации" aria-label="Поиск по всей документации"><kbd>Ctrl K</kbd><div id="ds-res" class="dx-results"></div></div>
-<section id="torque" data-nav="Управление по моменту">
+<div class="ds-toc"><a href="#torque">Управление по моменту</a><a href="#scheme-torque">Моментная структура</a><a href="#scheme-reserve">Резерв момента</a></div><section id="torque" data-nav="Управление по моменту">
         <h2>Управление по моменту <span class="tag wip">В работе</span></h2>
-        <p>Блок не переводит рычаг газа напрямую в открытие дросселя. Рычаг — это <b>запрос момента</b>. Модель решает, как его выдать — воздухом, углом зажигания или, только в аварии, отключением цилиндров, — а все ограничения действуют на момент. Это тот же принцип, что в современных заводских системах, адаптированный к аэролодке: мотор, редуктор и тяжёлый винт.</p>
+        <p>Блок не переводит рычаг газа напрямую в открытие дросселя. Рычаг — это <b>запрос момента</b>. Модель решает, как его выдать — воздухом и углом зажигания, — а все ограничения действуют на момент. Это тот же принцип, что в современных заводских системах, адаптированный к аэролодке: мотор, редуктор и тяжёлый винт.</p>
 
         <div class="flow" role="img" aria-label="Моментная структура: запросы рычага и ХХ с учётом ограничений дают целевой момент, который идёт в воздушный путь, путь УОЗ и отключение цилиндров">
           <div class="flow-row c2">
@@ -81,21 +82,22 @@
           <div class="flow-row c3">
             <div class="box"><b>Воздух · медленно</b><span>наполнение → давление во впуске → угол дросселя, фазы, наддув</span></div>
             <div class="box"><b>УОЗ · быстро</b><span>отвод угла от оптимума для быстрых изменений момента</span></div>
-            <div class="box"><b>Отключение цилиндров · авария</b><span>только если разрешено, в обычной работе не используется</span></div>
+            <div class="box"><b>Аварийная отсечка</b><span>отдельная настройка, по умолчанию выключена</span></div>
           </div>
         </div>
 
         <h3>Уровни модели</h3>
         <ol>
           <li><b>Положение и время</b> — коленвал и четыре распредвала дают угол двигателя и фазы валов.</li>
-          <li><b>Датчики</b> — у каждой величины есть признак достоверности; отказавший датчик заменяется значением модели.</li>
+          <li><b>Датчики</b> — у каждой величины есть признак достоверности; отказавший датчик заменяется значением замены или модели.</li>
           <li><b>Модель двигателя</b> — наполнение, остаточные газы, КПД угла и смеси, потери, температура выпуска.</li>
-          <li><b>Моментная структура</b> — запрос, координация, ограничения, разделение на воздух / УОЗ / отключение.</li>
+          <li><b>Моментная структура</b> — запрос, координация, ограничения, разделение на воздух и УОЗ.</li>
           <li><b>Уставки исполнителей</b> — дроссель, фазы, масса топлива, момент и деление впрыска, давление в рампе, УОЗ.</li>
           <li><b>Выходы</b> — планировщик по углу на аппаратных таймерах управляет форсунками и катушками.</li>
         </ol>
         <p>На холостом ходу воздушный путь держит небольшой резерв момента сверх цели, а угол зажигания его использует. Так ХХ реагирует мгновенно, не дожидаясь наполнения коллектора. Фактический момент считается тем же путём вперёд — для контроля и логов.</p>
-      </section><div class="ds-pn"><a href="../learn/schemes.html"><small>Назад</small>Схемы моторов</a><a class="next" href="air-fuel.html"><small>Дальше</small>Воздух и топливо</a></div></main></div>
+      </section>
+<section id="scheme-torque" class="ds-fn"><h2>Моментная структура</h2><p>Рычаг и регулятор ХХ просят момент, ограничения забирают его минимумом, а исполняют два пути: воздух медленно и угол зажигания быстро. Поэтому ограничения плавные, без отсечек.</p><figure class="dx-diagram"><button type="button" aria-label="Нажмите, чтобы увеличить: Моментная структура"><img loading="lazy" src="../.././../assets/diagrams/torque.svg?v=20261123d" alt="Структурная схема: Моментная структура"></button><figcaption>Нажмите, чтобы увеличить. <a href="diagrams.html">Как читать схему</a></figcaption></figure></section><section id="scheme-reserve" class="ds-fn"><h2>Резерв момента</h2><p>Воздуха держат больше, чем нужно, а лишний момент съедает поздний угол. Когда момент нужен сразу, угол возвращается к оптимальному за один цикл, не дожидаясь наполнения коллектора.</p><figure class="dx-diagram"><button type="button" aria-label="Нажмите, чтобы увеличить: Резерв момента"><img loading="lazy" src="../.././../assets/diagrams/reserve.svg?v=20261123d" alt="Структурная схема: Резерв момента"></button><figcaption>Нажмите, чтобы увеличить. <a href="diagrams.html">Как читать схему</a></figcaption></figure></section><div class="ds-pn"><a href="../learn/schemes.html"><small>Назад</small>Схемы моторов</a><a class="next" href="air-fuel.html"><small>Дальше</small>Воздух и топливо</a></div></main></div>
 <footer class="footer" id="contact">
     <div class="container footer-grid">
       <div>
@@ -123,5 +125,6 @@
       </div>
     </div>
   </footer>
-<script src="../.././../assets/docs-index.js?v=20261123b"></script><script src="../.././../assets/docs-interactive.js?v=20261123b"></script><script src="../.././../assets/docs-site.js?v=20261123b"></script>
+<a class="fab" href="../../contacts.html#request" title="Написать нам"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Написать нам</span></a>
+<script src="../.././../assets/docs-index.ru.js?v=20261123d"></script><script src="../.././../assets/docs-interactive.js?v=20261123d"></script><script src="../.././../assets/docs-site.js?v=20261123d"></script>
 </body></html>

@@ -18,14 +18,14 @@ a.ds-tile:hover { box-shadow: inset 0 0 0 2px #e8661a; }
 .ds-tile b { display: block; font-size: 15px; margin-bottom: 3px; }
 .ds-tile span { display: block; font-size: 13px; line-height: 1.4; color: var(--muted); }
 .ds-tile.wait { background: transparent; }
-.ds-tile em { display: inline-block; margin-top: 7px; font-style: normal; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 999px; background: #ececf1; color: #4a4b57; }
+.ds-tile em { display: inline-block; margin-top: 7px; font-style: normal; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 8px; background: #ececf1; color: #4a4b57; }
 .ds-tile em.ok { background: #e3f4ec; color: #146c4b; }
 .ds-pn { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 32px; }
 .ds-pn a { display: block; padding: 12px 14px; background: var(--surface); border-radius: 12px; box-shadow: inset 0 0 0 1px var(--line); text-decoration: none; color: var(--text); font-weight: 700; font-size: 14px; }
 .ds-pn a small { display: block; font-weight: 400; color: var(--muted); }
 .ds-pn a.next { text-align: right; grid-column: 2; }
 .ds-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 24px; }
-.ds-toc a { font-size: 13px; padding: 5px 10px; border-radius: 999px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); color: var(--text); text-decoration: none; }
+.ds-toc a { font-size: 13px; padding: 5px 10px; border-radius: 8px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); color: var(--text); text-decoration: none; }
 .dx-path { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
 .dx-path span { background: #1b1c20; color: #fff; border-radius: 7px; padding: 4px 9px; font-weight: 700; font-size: 13px; }
 .doc td:first-child { white-space: normal !important; }
@@ -59,3 +59,34 @@ a.ds-tile:hover { box-shadow: inset 0 0 0 2px #e8661a; }
 .ds-ok li::before, .ds-stop li::before { position: absolute; left: 13px; font-weight: 800; }
 .ds-ok li::before { content: "✓"; }
 .ds-stop li::before { content: "■"; }
+
+/* единый стиль сайта: кнопки и метки со скруглёнными углами, не «таблетки» */
+.ds-wrap .tag, .site-header .nav .lang, .fab { border-radius: 8px; }
+.ds-pic { margin: 0 0 24px; border-radius: 14px; overflow: hidden; background: var(--surface-soft); }
+.ds-pic img { display: block; width: 100%; max-height: 340px; object-fit: cover; }
+.ds-story { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 24px; align-items: start; }
+.ds-story-pic { position: sticky; top: 92px; aspect-ratio: 4 / 5; border-radius: 14px; overflow: hidden; background: #1b1c20; }
+.ds-story-pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s; }
+.ds-story-pic img.on { opacity: 1; }
+.ds-level { padding-bottom: 12px !important; }
+.ds-level-pic { display: none; }
+.dx-diagram { margin: 14px 0 0; }
+.dx-diagram button { display: block; width: 100%; padding: 8px; background: #fff; border: 1px solid var(--line); border-radius: 12px; cursor: zoom-in; transition: border-color .15s; }
+.dx-diagram button:hover, .dx-diagram button:focus-visible { border-color: #e8661a; outline: none; }
+.dx-diagram img { display: block; width: 100%; height: auto; }
+.dx-diagram figcaption { margin-top: 6px; font-size: 13px; color: var(--muted); }
+.dx-diagram figcaption span { display: block; }
+.dx-zoom { width: min(96vw, 1500px); height: 92vh; max-width: none; max-height: none; padding: 0; border: 0; border-radius: 14px; overflow: hidden; }
+.dx-zoom[open] { display: flex; flex-direction: column; }
+.dx-zoom::backdrop { background: rgba(10, 10, 12, .7); }
+.dx-zoom-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; background: #1b1c20; color: #fff; }
+.dx-zoom-bar span { display: flex; gap: 5px; flex: none; }
+.dx-zoom-bar button { font: inherit; font-size: 13px; font-weight: 700; min-width: 36px; padding: 6px 9px; border: 0; border-radius: 8px; background: #3a3b42; color: #fff; cursor: pointer; }
+.dx-zoom-view { flex: 1; position: relative; overflow: hidden; background: #fff; cursor: grab; touch-action: none; }
+.dx-zoom-view img { display: block; width: 100%; height: 100%; object-fit: contain; transform-origin: 0 0; user-select: none; -webkit-user-drag: none; pointer-events: none; }
+@media (max-width: 1100px) {
+  .ds-story { grid-template-columns: minmax(0, 1fr); }
+  .ds-story-pic { display: none; }
+  .ds-level-pic { display: block; width: 100%; height: 180px; object-fit: cover; border-radius: 14px; margin-bottom: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .ds-story-pic img { transition: none; } }

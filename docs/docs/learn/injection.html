@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Injection types — Cat-GDI8 documentation — AILUOHAI-TECH</title>
+<meta name="description" content="PFI, GDI and hybrid"><link rel="canonical" href="https://ailuohai-tech.com/docs/learn/injection.html"><link rel="alternate" hreflang="en" href="https://ailuohai-tech.com/docs/learn/injection.html"><link rel="alternate" hreflang="ru" href="https://ailuohai-tech.com/ru/docs/learn/injection.html"><link rel="alternate" hreflang="x-default" href="https://ailuohai-tech.com/docs/learn/injection.html"><!-- Yandex.Metrika counter -->
+  <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=113736844','ym');ym(113736844,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/113736844" style="position:absolute;left:-9999px" alt=""></div></noscript>
+  <script src="/assets/metrika-goals.js" defer></script>
+  <!-- /Yandex.Metrika counter -->
+<link rel="stylesheet" href="../.././assets/style.css?v=20261023b"><style>
+    .docs-layout { padding-top: 8px; padding-bottom: 80px; }
+    .doc section { padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .doc section:last-child { border-bottom: none; }
+    .doc h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .doc h3 { font-size: 20px; margin: 26px 0 8px; }
+    .doc p, .doc li { color: #444; max-width: 760px; }
+    .doc ul, .doc ol { padding-left: 20px; }
+    .doc li { margin: 6px 0; }
+    .tag { font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; }
+    .tag.ready { background: #e3f4ec; color: #146c4b; }
+    .tag.wip { background: #fff1e6; color: #a4410a; }
+    .tag.plan { background: #ececf1; color: #4a4b57; }
+    .note { background: var(--surface); box-shadow: 0 8px 24px rgba(0,0,0,.08); border-radius: 12px; padding: 14px 16px; max-width: 760px; color: #444; }
+    .doc table { width: 100%; max-width: 860px; background: var(--surface); border-radius: 14px; overflow: hidden; font-size: 15px; }
+    .doc th { text-align: left; font-size: 13px; color: var(--muted); }
+    .doc td { border-top: 1px solid var(--line); vertical-align: top; }
+    .doc td:first-child { font-weight: 700; white-space: nowrap; }
+    .table-scroll { overflow-x: auto; }
+
+    /* Torque structure diagram */
+    .flow { display: grid; gap: 10px; max-width: 860px; margin: 18px 0; }
+    .flow-row { display: grid; gap: 10px; }
+    .flow-row.c2 { grid-template-columns: 1fr 1fr; }
+    .flow-row.c3 { grid-template-columns: repeat(3, 1fr); }
+    .box { background: var(--surface); border-radius: 14px; padding: 12px 14px; box-shadow: inset 0 0 0 1px var(--line); }
+    .box b { display: block; font-size: 15px; }
+    .box span { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+    .box.dark { background: #1b1c20; color: #fff; box-shadow: none; }
+    .box.dark span { color: #c9cad0; }
+    .box.limit { box-shadow: inset 0 0 0 2px #d64545; }
+    .arrow { text-align: center; color: #e8661a; font-weight: 800; line-height: 1; }
+
+    .steps-list { counter-reset: s; list-style: none; padding: 0; max-width: 860px; }
+    .steps-list > li { counter-increment: s; position: relative; padding: 16px 16px 16px 64px; background: var(--surface); border-radius: 14px; margin: 10px 0; max-width: none; }
+    .steps-list > li::before { content: counter(s); position: absolute; left: 16px; top: 16px; width: 32px; height: 32px; border-radius: 10px; background: #1b1c20; color: #f07a2e; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .steps-list > li b { display: block; color: var(--text); margin-bottom: 4px; }
+
+    @media (max-width: 980px) {
+            .flow-row.c3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .doc h2 { font-size: 26px; }
+      .flow-row.c2 { grid-template-columns: 1fr; }
+      .doc td:first-child { white-space: normal; }
+    }
+  </style>
+<link rel="stylesheet" href="../.././assets/docs-interactive.css?v=20261123d"><link rel="stylesheet" href="../.././assets/docs-site.css?v=20261123d">
+</head><body data-root="../">
+<header class="site-header"><div class="container bar"><a class="brand" href="../.././index.html">AILUOHAI-TECH</a><nav class="nav">
+<a href="../.././index.html#products">Products</a><a href="../.././test-platform.html">Test platform</a><a href="../.././downloads.html">Downloads</a><a href="../.././contacts.html">Contacts</a>
+<a class="lang" href="../../ru/docs/learn/injection.html" hreflang="ru" lang="ru" title="Русская версия">RU</a>
+</nav></div></header>
+<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Documentation sections</button><nav class="ds-side" aria-label="Documentation sections"><a href="../index.html">Catalog</a><h4>1. Introduction</h4><a href="ecu.html">What an ECU is</a><a href="injection.html" class="on" aria-current="page">Injection types</a><a href="schemes.html">Engine layouts</a><h4>2. How it works</h4><a href="../how/torque.html">Torque-based control</a><a href="../how/air-fuel.html">Air and fuel</a><a href="../how/limiter.html">Rev limiter and propeller</a><a href="../how/start.html">Engine start</a><a href="../how/protection.html">Protections and reactions</a><a href="../how/principle.html">One unit, different engines</a><a href="../how/diagrams.html">How to read diagrams</a><h4>3. Setup</h4><a href="../build/index.html">Step-by-step build</a><a href="../setup/calibration.html">Working with calibrations</a><h4>4. Modules in detail</h4><a href="../modules/engine.html">Engine</a><a href="../modules/trigger.html">Trigger</a><a href="../modules/sensors.html">Sensors</a><a href="../modules/actuators.html">Actuators</a><a href="../modules/start.html">Start</a><a href="../modules/idle.html">Idle</a><a href="../modules/boost.html">Boost</a><a href="../modules/ignition.html">Ignition</a><a href="../modules/fuel.html">Fuel &amp; mixture</a><a href="../modules/air.html">Air (filling)</a><a href="../modules/torque.html">Torque &amp; limits</a><a href="../modules/health.html">Engine health</a><a href="../modules/can.html">CAN</a><h4>Tools</h4><a href="../tools/trigger.html">Trigger wheel</a><a href="../tools/fuel.html">Fuel and pulse</a><a href="../tools/ntc.html">Temperature sensor</a><h4>Reference</h4><a href="../../gdi8-pinout.html">Pinout</a><a href="../../downloads.html">Downloads</a></nav></div>
+<main class="ds-main doc"><div class="ds-crumbs"><a href="../.././index.html">Home</a> / <a href="../.././ecu-cat-gdi8.html">ECU Cat-GDI8</a> / <a href="../index.html">Documentation</a></div><h1>Injection types</h1><p class="ds-lead">PFI, GDI and hybrid</p>
+<div class="dx-search"><input id="ds-q" type="search" placeholder="Search all documentation" aria-label="Search all documentation"><kbd>Ctrl K</kbd><div id="ds-res" class="dx-results"></div></div>
+<figure class="ds-pic"><img src="../.././img/pt-engine-cad.webp" alt="Powertrain model"></figure><div class="ds-toc"><a href="#kinds">Injection layouts</a><a href="#compare">Comparison</a></div><section id="kinds">
+  <h2>Injection layouts</h2>
+  <p>Layouts differ in where fuel is delivered, at what pressure and when in the cycle.</p>
+  <div class="dx-switch">
+    <div class="dx-tabs" role="tablist">
+      <button class="dx-tab" type="button" role="tab" data-k="pfi">Port (PFI)</button>
+      <button class="dx-tab" type="button" role="tab" data-k="gdi">Direct (GDI)</button>
+      <button class="dx-tab" type="button" role="tab" data-k="hyb">Hybrid</button>
+    </div>
+    <div class="dx-panel" data-p="pfi"><div class="dx-grid">
+      <svg class="dx-cyl" viewBox="0 0 240 230" role="img" aria-label="Injector in the intake port"><use href="#cyl"/><g class="inj-p"><rect x="20" y="10" width="12" height="34" rx="3"/><path class="spray" d="M28 46 L62 66 L46 76 Z"/></g></svg>
+      <div><h3>Injector in the intake port</h3><p><b>Pressure:</b> typically 3–6 bar.</p><div class="dx-bar"><i style="width:2%"></i></div>
+      <p>Fuel is delivered into the intake port ahead of the valve, usually before the intake stroke. The mixture has time to prepare, but part of the fuel forms a film on the port walls.</p>
+      <ul><li><b>Pros:</b> simple fuel system, good homogenization, fuel washes the valves.</li><li><b>Cons:</b> transport delay from the wall film, less charge cooling.</li></ul></div>
+    </div></div>
+    <div class="dx-panel" data-p="gdi" hidden><div class="dx-grid">
+      <svg class="dx-cyl" viewBox="0 0 240 230" role="img" aria-label="Injector directly in the cylinder"><use href="#cyl"/><g class="inj-d"><rect x="114" y="4" width="12" height="42" rx="3"/><path class="spray" d="M120 48 L92 112 L148 112 Z"/></g></svg>
+      <div><h3>Injector in the cylinder</h3><p><b>Pressure:</b> typically 50–350 bar.</p><div class="dx-bar"><i style="width:60%"></i></div>
+      <p>Fuel is delivered straight into the combustion chamber. Pressure comes from a cam-driven high-pressure pump; the injector is opened by a driver with a high-voltage current peak and a hold phase.</p>
+      <ul><li><b>Pros:</b> precise fuel per cycle, multiple injections, charge cooling and a larger knock margin.</li><li><b>Cons:</b> complex driver and pump, carbon build-up on intake valves, limited mixing time at high rpm.</li></ul></div>
+    </div></div>
+    <div class="dx-panel" data-p="hyb" hidden><div class="dx-grid">
+      <svg class="dx-cyl" viewBox="0 0 240 230" role="img" aria-label="Two injectors per cylinder"><use href="#cyl"/><g class="inj-p"><rect x="20" y="10" width="12" height="34" rx="3"/><path class="spray" d="M28 46 L62 66 L46 76 Z"/></g><g class="inj-d"><rect x="114" y="4" width="12" height="42" rx="3"/><path class="spray" d="M120 48 L92 112 L148 112 Z"/></g></svg>
+      <div><h3>Two injectors per cylinder</h3><p><b>Pressure:</b> each injector has its own.</p><div class="dx-bar"><i style="width:60%"></i></div>
+      <p>For each cylinder the ECU splits the fuel per cycle between the GDI and PFI injectors depending on the operating point.</p>
+      <ul><li><b>Pros:</b> extra flow capacity, clean valves, flexibility across operating points.</li><li><b>Cons:</b> two fuel systems and an additional split calibration.</li></ul></div>
+    </div></div>
+  </div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="cyl">
+    <path d="M60 60 V210 H180 V60" fill="#f1f1ee" stroke="#1b1c20" stroke-width="3"/>
+    <path d="M60 60 L8 36 M60 86 L8 62" stroke="#1b1c20" stroke-width="3"/>
+    <path d="M60 60 H180" stroke="#1b1c20" stroke-width="3"/>
+    <rect x="63" y="150" width="114" height="56" rx="4" fill="#1b1c20"/>
+    <text x="120" y="183" text-anchor="middle" fill="#fff" font-size="13">piston</text>
+    <text x="4" y="102" fill="#666" font-size="12">intake</text>
+  </g></defs></svg>
+</section>
+
+<section id="compare">
+  <h2>Comparison</h2>
+  <table>
+    <tr><th></th><th>Port</th><th>Direct</th><th>Hybrid</th></tr>
+    <tr><td>Where</td><td>Intake port</td><td>Cylinder</td><td>Both</td></tr>
+    <tr><td>Pressure</td><td>3–6 bar</td><td>50–350 bar</td><td>Both levels</td></tr>
+    <tr><td>Pump</td><td>Lift pump</td><td>Lift + high-pressure</td><td>Lift + high-pressure</td></tr>
+    <tr><td>Complexity</td><td>Low</td><td>High</td><td>Highest</td></tr>
+  </table>
+</section>
+<div class="ds-pn"><a href="ecu.html"><small>Previous</small>What an ECU is</a><a class="next" href="schemes.html"><small>Next</small>Engine layouts</a></div></main></div>
+<footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Electronics and control systems for airboats and special-purpose vessels.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="../../dash-6-8.html">Dash-6.8</a>
+        <a href="../../ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="../../ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="../../cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Downloads</h4>
+        <a href="../../downloads.html">BrainBus</a>
+        <a href="../../downloads.html#installer">Installer</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="../../contacts.html">Contacts</a>
+        <a href="../../test-platform.html">Test platform</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+      </div>
+    </div>
+  </footer>
+<a class="fab" href="../../contacts.html#request" title="Write to us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Write to us</span></a>
+<script src="../.././assets/docs-index.en.js?v=20261123d"></script><script src="../.././assets/docs-interactive.js?v=20261123d"></script><script src="../.././assets/docs-site.js?v=20261123d"></script>
+</body></html>

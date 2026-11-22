@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1740 720" width="1740" height="720">
+<rect width="1740" height="720" fill="#FFFFFF"/>
+<text x="24.0" y="32.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="start" fill="#14202B" font-weight="700" xml:space="preserve">Моментная структура: запрос -&gt; координация -&gt; пути</text>
+
+<path d="M180 183.0 H195.0 V183.4 H209" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(210,183.4) rotate(0)"/>
+<circle cx="180" cy="183.0" r="2.2" fill="#4A5866"/>
+<path d="M180 215.0 H195.0 V214.6 H209" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(210,214.6) rotate(0)"/>
+<circle cx="180" cy="215.0" r="2.2" fill="#4A5866"/>
+<path d="M330 199.0 H365.0 V199.0 H399" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(400,199.0) rotate(0)"/>
+<circle cx="330" cy="199.0" r="2.2" fill="#4A5866"/>
+<path d="M500 115.0 H415.0 V183" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(415.0,184) rotate(90)"/>
+<circle cx="500" cy="115.0" r="2.2" fill="#4A5866"/>
+<path d="M180 395.0 H195.0 V394.0 H209" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(210,394.0) rotate(0)"/>
+<circle cx="180" cy="395.0" r="2.2" fill="#4A5866"/>
+<path d="M330 394.0 H365.0 V394.0 H399" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(400,394.0) rotate(0)"/>
+<circle cx="330" cy="394.0" r="2.2" fill="#4A5866"/>
+<path d="M520 311.0 H415.0 V378" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(415.0,379) rotate(90)"/>
+<circle cx="520" cy="311.0" r="2.2" fill="#4A5866"/>
+<path d="M430 394.0 H495.0 V384.8 H559" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(560,384.8) rotate(0)"/>
+<circle cx="430" cy="394.0" r="2.2" fill="#4A5866"/>
+<path d="M520 470.0 H540.0 V403.2 H559" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(560,403.2) rotate(0)"/>
+<circle cx="520" cy="470.0" r="2.2" fill="#4A5866"/>
+<path d="M616 394.0 H633.0 V394.0 H649" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(650,394.0) rotate(0)"/>
+<circle cx="616" cy="394.0" r="2.2" fill="#4A5866"/>
+<path d="M706 394.0 H728.0 V386.8 H749" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(750,386.8) rotate(0)"/>
+<circle cx="706" cy="394.0" r="2.2" fill="#4A5866"/>
+<text x="712.0" y="389.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="start" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">цель</text>
+<path d="M710 485.0 H730.0 V409.2 H749" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(750,409.2) rotate(0)"/>
+<circle cx="710" cy="485.0" r="2.2" fill="#4A5866"/>
+<path d="M820 398.0 H845.0 V398.0 H869" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(870,398.0) rotate(0)"/>
+<circle cx="820" cy="398.0" r="2.2" fill="#4A5866"/>
+<path d="M960 311.0 H885.0 V382" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(885.0,383) rotate(90)"/>
+<circle cx="960" cy="311.0" r="2.2" fill="#4A5866"/>
+<path d="M430 199.0 H930 V313.8 H959" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(960,313.8) rotate(0)"/>
+<circle cx="430" cy="199.0" r="2.2" fill="#4A5866"/>
+<path d="M900 398.0 H930.0 V332.2 H959" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(960,332.2) rotate(0)"/>
+<circle cx="900" cy="398.0" r="2.2" fill="#4A5866"/>
+<path d="M430 199.0 H1000 V240.8 H1039" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1040,240.8) rotate(0)"/>
+<circle cx="430" cy="199.0" r="2.2" fill="#4A5866"/>
+<path d="M1016 323.0 H1031 V263.2 H1039" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1040,263.2) rotate(0)"/>
+<circle cx="1016" cy="323.0" r="2.2" fill="#4A5866"/>
+<path d="M950 124.0 H1068.0 V223" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1068.0,224) rotate(90)"/>
+<circle cx="950" cy="124.0" r="2.2" fill="#4A5866"/>
+<path d="M1096 252.0 H1113.0 V249.8 H1129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1130,249.8) rotate(0)"/>
+<circle cx="1096" cy="252.0" r="2.2" fill="#4A5866"/>
+<path d="M1140 445.0 H1155 V268.2 H1129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1130,268.2) rotate(0)"/>
+<circle cx="1140" cy="445.0" r="2.2" fill="#4A5866"/>
+<path d="M1186 259.0 H1201 V260.0 H1209" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1210,260.0) rotate(0)"/>
+<circle cx="1186" cy="259.0" r="2.2" fill="#4A5866"/>
+<path d="M1460 260.0 H1475.0 V260.0 H1489" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1490,260.0) rotate(0)"/>
+<circle cx="1460" cy="260.0" r="2.2" fill="#4A5866"/>
+<path d="M1546 260.0 H1563.0 V260.0 H1579" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1580,260.0) rotate(0)"/>
+<circle cx="1546" cy="260.0" r="2.2" fill="#4A5866"/>
+<path d="M1460 115.0 H1480.0 V115.0 H1499" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1500,115.0) rotate(0)"/>
+<circle cx="1460" cy="115.0" r="2.2" fill="#4A5866"/>
+<path d="M1546 260.0 H1515.0 V131" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1515.0,130) rotate(-90)"/>
+<circle cx="1546" cy="260.0" r="2.2" fill="#4A5866"/>
+<path d="M1530 115.0 H1545 V115.0 H1549" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1550,115.0) rotate(0)"/>
+<circle cx="1530" cy="115.0" r="2.2" fill="#4A5866"/>
+<path d="M1370 485.0 H1405.0 V489.8 H1439" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1440,489.8) rotate(0)"/>
+<circle cx="1370" cy="485.0" r="2.2" fill="#4A5866"/>
+<path d="M1370 535.0 H1405.0 V508.2 H1439" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1440,508.2) rotate(0)"/>
+<circle cx="1370" cy="535.0" r="2.2" fill="#4A5866"/>
+<path d="M1486 499.0 H1518.0 V499.0 H1549" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1550,499.0) rotate(0)"/>
+<circle cx="1486" cy="499.0" r="2.2" fill="#4A5866"/>
+<rect x="30" y="168" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,174.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="116.0" y="187.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, об/мин</text>
+<rect x="30" y="200" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,206.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h12"/><path d="M12 20l4-14"/><circle cx="16.5" cy="5" r="2.2"/><path d="M5 15a7 7 0 0 1 3-5"/></g>
+<text x="116.0" y="219.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">рычаг, %</text>
+<rect x="210" y="160" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="210" y="160" width="120" height="18" rx="7" fill="#159A8A"/><rect x="210" y="171" width="120" height="7" fill="#159A8A"/>
+<text x="270.0" y="173.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">coord.leverTq</text>
+<path d="M232 184 V230 H318" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M238.0 224.0 L256.9 215.2 L275.8 211.3 L294.8 213.6" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M248.3 212.7 L267.2 206.2 L286.2 205.9 L305.1 210.2" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M258.6 202.3 L277.6 199.1 L296.5 201.9 L315.4 206.8" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M269.0 193.7 L287.9 194.0 L306.8 198.6 L325.7 202.2" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M238.0 224.0 L248.3 212.7 L258.6 202.3 L269.0 193.7" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M256.9 215.2 L267.2 206.2 L277.6 199.1 L287.9 194.0" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M275.8 211.3 L286.2 205.9 L296.5 201.9 L306.8 198.6" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M294.8 213.6 L305.1 210.2 L315.4 206.8 L325.7 202.2" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<text x="215.0" y="187.4" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="start" fill="#159A8A" font-weight="600" xml:space="preserve">x</text>
+<text x="215.0" y="218.6" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="start" fill="#159A8A" font-weight="600" xml:space="preserve">y</text>
+<text x="270.0" y="252.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">запрос водителя (на валу), Н·м</text>
+<rect x="330" y="100" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(341.0,106.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 1 1 3 5.7"/><path d="M5 15.5V12h3.5"/><path d="M12 12l3-3"/></g>
+<text x="426.0" y="119.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">потери (модель), Н·м</text>
+<circle cx="415.0" cy="199.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M408.0 199.0 H422.0 M415.0 192.0 V206.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="30" y="380" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,386.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="116.0" y="399.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">t ОЖ, °C</text>
+<rect x="210" y="355" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="210" y="355" width="120" height="18" rx="7" fill="#159A8A"/><rect x="210" y="366" width="120" height="7" fill="#159A8A"/>
+<text x="270.0" y="368.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">coord.idleRpm</text>
+<path d="M232 379 V425 H318" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M235 419 C262.1 417 270.7 385 316 383" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="270.0" y="447.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">цель ХХ, об/мин</text>
+<rect x="300" y="296" width="220" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(311.0,302.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l-3.5-3"/><circle cx="12" cy="13" r="1.6"/><path d="M5 20h3M16 20h3"/></g>
+<text x="421.0" y="315.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">+ подъём ХХ (низкое U)</text>
+<circle cx="415.0" cy="394.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M408.0 394.0 H422.0 M415.0 387.0 V401.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="260" y="455" width="260" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(271.0,461.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="401.0" y="474.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">не ниже: обороты удержания</text>
+<rect x="560" y="371" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="588.0" y="399.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MAX</text>
+<rect x="650" y="371" width="56" height="46" rx="6" fill="#FDF1E4" stroke="#D9822B" stroke-width="1.6"/>
+<text x="678.0" y="393.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#D9822B" font-weight="700" font-style="italic" xml:space="preserve">d</text>
+<path d="M669.0 396.0 H687.0" fill="none" stroke="#D9822B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="678.0" y="409.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#D9822B" font-weight="700" font-style="italic" xml:space="preserve">dt</text>
+<path d="M692 379 H700 M656 409 H664" fill="none" stroke="#D9822B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="678.0" y="365.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">coord.idleRamp</text>
+<rect x="560" y="470" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(571.0,476.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="646.0" y="489.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, об/мин</text>
+<rect x="750" y="370" width="70" height="56" rx="6" fill="#FDF1E4" stroke="#D9822B" stroke-width="1.6"/>
+<text x="785.0" y="403.0" font-family="Segoe UI, Arial, sans-serif" font-size="15" text-anchor="middle" fill="#D9822B" font-weight="700" xml:space="preserve">PID</text>
+<text x="785.0" y="364.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">coord.idlePid</text>
+<text x="785.0" y="439.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">≥ −min(потери, coord.idleBrake)</text>
+<text x="785.0" y="452.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">регулятор ХХ (на валу), Н·м</text>
+<rect x="790" y="296" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(801.0,302.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 1 1 3 5.7"/><path d="M5 15.5V12h3.5"/><path d="M12 12l3-3"/></g>
+<text x="886.0" y="315.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">потери (модель), Н·м</text>
+<circle cx="885.0" cy="398.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M878.0 398.0 H892.0 M885.0 391.0 V405.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="700" y="96" width="250" height="56" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="700" y="96" width="250" height="18" rx="6" fill="#1F3B57"/><rect x="700" y="107" width="250" height="7" fill="#1F3B57"/>
+<text x="825.0" y="109.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">ХХ активен</text>
+<text x="708.0" y="129.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">рычаг &lt; coord.idleLever</text>
+<text x="708.0" y="143.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">и n &lt; цель ХХ + coord.idleExitRpm</text>
+<rect x="960" y="300" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="988.0" y="328.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MAX</text>
+<text x="988.0" y="360.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">рычаг тронут - не меньше его</text>
+<rect x="1040" y="224" width="56" height="56" rx="6" fill="#F2ECFB" stroke="#7A4FC2" stroke-width="1.6"/>
+<path d="M1046 240.8 H1056 M1046 263.2 H1056 M1056 240.8 L1082 252.0 H1090" fill="none" stroke="#7A4FC2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1056" cy="240.8" r="2.5" fill="#7A4FC2"/><circle cx="1056" cy="263.2" r="2.5" fill="#7A4FC2"/>
+<text x="1044.0" y="236.8" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">0</text>
+<text x="1044.0" y="259.2" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">1</text>
+<rect x="960" y="430" width="180" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(971.0,436.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.5-3 8-7.5 9.5-4.5-1.5-7.5-5-7.5-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g>
+<text x="1061.0" y="449.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">лимит защит R1/R2, Н·м</text>
+<rect x="1130" y="236" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="1158.0" y="264.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MIN</text>
+<rect x="1210" y="214" width="250" height="92" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="1210" y="214" width="250" height="18" rx="6" fill="#1F3B57"/><rect x="1210" y="225" width="250" height="7" fill="#1F3B57"/>
+<text x="1335.0" y="227.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">Ограничитель оборотов</text>
+<text x="1218.0" y="247.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">предел = min(coord.nLimit, R2)</text>
+<text x="1218.0" y="261.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">в полосе coord.softBand -&gt; потери</text>
+<text x="1218.0" y="275.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">упреждение coord.lead·dn</text>
+<rect x="1490" y="237" width="56" height="46" rx="6" fill="#FDF1E4" stroke="#D9822B" stroke-width="1.6"/>
+<text x="1518.0" y="259.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#D9822B" font-weight="700" font-style="italic" xml:space="preserve">d</text>
+<path d="M1509.0 262.0 H1527.0" fill="none" stroke="#D9822B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1518.0" y="275.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#D9822B" font-weight="700" font-style="italic" xml:space="preserve">dt</text>
+<path d="M1532 245 H1540 M1496 275 H1504" fill="none" stroke="#D9822B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1518.0" y="231.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">coord.tqRise / tqFall</text>
+<text x="1518.0" y="297.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">вниз от ограничителя - сразу, ≥ 0</text>
+<rect x="1580" y="245" width="150" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(1591.0,251.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v6H9z"/><path d="M10.5 8v4h3V8"/><path d="M11 12h2v3h-2z"/><path d="M12 15v2"/><path d="M12 19l-2.5 2M12 19l2.5 2M12 19l-3-1M12 19l3-1"/></g>
+<text x="1666.0" y="264.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">УОЗ (быстро)</text>
+<rect x="1210" y="80" width="250" height="70" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="1210" y="80" width="250" height="18" rx="6" fill="#1F3B57"/><rect x="1210" y="91" width="250" height="7" fill="#1F3B57"/>
+<text x="1335.0" y="93.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">Резерв момента</text>
+<text x="1218.0" y="113.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">ХХ активен: + idle.reserveNm</text>
+<text x="1218.0" y="127.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">(подробно - схема резервов)</text>
+<circle cx="1515.0" cy="115.0" r="15.0" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<path d="M1508.0 115.0 H1522.0 M1515.0 108.0 V122.0" stroke="#3E4C5A" stroke-width="2"/>
+<rect x="1550" y="100" width="180" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(1561.0,106.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></g>
+<text x="1651.0" y="119.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">воздух: дроссель</text>
+<rect x="1130" y="470" width="240" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(1141.0,476.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="1261.0" y="489.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n &gt; предел + emergencyMargin</text>
+<rect x="1130" y="520" width="240" height="30" rx="5" fill="#F1F3F5" stroke="#6B7785" stroke-width="1.6" stroke-dasharray="4 2"/>
+<text x="1250.0" y="539.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#3A4652" font-weight="600" xml:space="preserve">coord.emergencyCut (выкл.)</text>
+<rect x="1440" y="476" width="46" height="46" rx="6" fill="#F2ECFB" stroke="#7A4FC2" stroke-width="1.6"/>
+<text x="1463.0" y="504.0" font-family="Segoe UI, Arial, sans-serif" font-size="15" text-anchor="middle" fill="#7A4FC2" font-weight="700" xml:space="preserve">&amp;</text>
+<rect x="1550" y="484" width="180" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<text x="1640.0" y="503.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">аварийная отсечка</text>
+<text x="30.0" y="590.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">1. Запрос водителя - карта по оборотам и рычагу (на валу) + потери = индикаторный. На ХХ - PID по оборотам; цель по t ОЖ + подъём при низком напряжении, не ниже оборотов удержания; сверху подходит плавно.</text>
+<text x="30.0" y="610.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">2. ХХ активен - больший из рычага и ХХ (рычаг отпущен - только ХХ). Ограничения - минимумом: лимит защит R1/R2, затем ограничитель оборотов (плавно, с упреждением по разгону).</text>
+<text x="30.0" y="630.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">3. Рампа нарастания/спада бережёт привод винта; вниз от ограничителя оборотов - без рампы. УОЗ получает цель как есть, воздух - цель + резерв (держит больше, УОЗ съедает).</text>
+<text x="30.0" y="650.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">4. Цилиндры не отключаются: только аварийная отсечка при крайнем забросе и только если разрешена (coord.emergencyCut, по умолчанию выключена).</text>
+</svg>

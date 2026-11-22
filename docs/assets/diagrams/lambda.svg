@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1650 790" width="1650" height="790">
+<rect width="1650" height="790" fill="#FFFFFF"/>
+<text x="24.0" y="32.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="start" fill="#14202B" font-weight="700" xml:space="preserve">Смесь: цель λ, защита выпуска, коррекция по ШДК</text>
+
+<path d="M200 110.0 H215 V110.0 H219" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(220,110.0) rotate(0)"/>
+<circle cx="200" cy="110.0" r="2.2" fill="#4A5866"/>
+<path d="M480 110.0 H535.0 V110.0 H589" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(590,110.0) rotate(0)"/>
+<circle cx="480" cy="110.0" r="2.2" fill="#4A5866"/>
+<path d="M180 193.0 H200.0 V193.4 H219" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(220,193.4) rotate(0)"/>
+<circle cx="180" cy="193.0" r="2.2" fill="#4A5866"/>
+<path d="M180 225.0 H200.0 V224.6 H219" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(220,224.6) rotate(0)"/>
+<circle cx="180" cy="225.0" r="2.2" fill="#4A5866"/>
+<path d="M180 309.0 H200.0 V309.0 H219" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(220,309.0) rotate(0)"/>
+<circle cx="180" cy="309.0" r="2.2" fill="#4A5866"/>
+<path d="M340 209.0 H370.0 V209.0 H399" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(400,209.0) rotate(0)"/>
+<circle cx="340" cy="209.0" r="2.2" fill="#4A5866"/>
+<path d="M340 309.0 H417.6 V225" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(417.6,224) rotate(-90)"/>
+<circle cx="340" cy="309.0" r="2.2" fill="#4A5866"/>
+<path d="M444 209.0 H552.0 V196.8 H659" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(660,196.8) rotate(0)"/>
+<circle cx="444" cy="209.0" r="2.2" fill="#4A5866"/>
+<path d="M640 289.0 H655 V219.2 H659" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(660,219.2) rotate(0)"/>
+<circle cx="640" cy="289.0" r="2.2" fill="#4A5866"/>
+<path d="M646 110.0 H688.0 V179" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(688.0,180) rotate(90)"/>
+<circle cx="646" cy="110.0" r="2.2" fill="#4A5866"/>
+<path d="M716 208.0 H733.0 V210.0 H749" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(750,210.0) rotate(0)"/>
+<circle cx="716" cy="208.0" r="2.2" fill="#4A5866"/>
+<path d="M806 210.0 H1118.0 V210.0 H1429" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1430,210.0) rotate(0)"/>
+<circle cx="806" cy="210.0" r="2.2" fill="#4A5866"/>
+<path d="M806 210.0 H1260.0 V419" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1260.0,420) rotate(90)"/>
+<circle cx="806" cy="210.0" r="2.2" fill="#4A5866"/>
+<path d="M806 210.0 H821 V442.0 H819" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(820,442.0) rotate(0)"/>
+<circle cx="806" cy="210.0" r="2.2" fill="#4A5866"/>
+<path d="M200 420.0 H510.0 V421.0 H819" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(820,421.0) rotate(0)"/>
+<circle cx="200" cy="420.0" r="2.2" fill="#4A5866"/>
+<path d="M1070 442.0 H1090 V452.5 H1129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1130,452.5) rotate(0)"/>
+<circle cx="1070" cy="442.0" r="2.2" fill="#4A5866"/>
+<path d="M1070 545.0 H1105 V485.0 H1129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1130,485.0) rotate(0)"/>
+<circle cx="1070" cy="545.0" r="2.2" fill="#4A5866"/>
+<path d="M1070 645.0 H1120 V517.5 H1129" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1130,517.5) rotate(0)"/>
+<circle cx="1070" cy="645.0" r="2.2" fill="#4A5866"/>
+<path d="M1390 485.0 H1405.0 V485.0 H1419" fill="none" stroke="#4A5866" stroke-width="1.4"/>
+<path d="M0 0 L-8 -4 L-8 4 Z" fill="#4A5866" transform="translate(1420,485.0) rotate(0)"/>
+<circle cx="1390" cy="485.0" r="2.2" fill="#4A5866"/>
+<rect x="30" y="95" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,101.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h9c3 0 4-2 6-2h3"/><path d="M3 11h9c3 0 4-2 6-2h3"/><path d="M6 7c0-1.5 1.5-1.5 1.5-3M10 7c0-1.5 1.5-1.5 1.5-3"/></g>
+<text x="126.0" y="114.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, rl, откат УОЗ</text>
+<rect x="220" y="70" width="260" height="80" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="220" y="70" width="260" height="18" rx="6" fill="#1F3B57"/><rect x="220" y="81" width="260" height="7" fill="#1F3B57"/>
+<g transform="translate(224.0,72.0) scale(0.5833)" fill="none" stroke="#FFFFFF" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h9c3 0 4-2 6-2h3"/><path d="M3 11h9c3 0 4-2 6-2h3"/><path d="M6 7c0-1.5 1.5-1.5 1.5-3M10 7c0-1.5 1.5-1.5 1.5-3"/></g>
+<text x="357.0" y="83.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">модель температуры выпуска</text>
+<text x="228.0" y="103.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">стационар lam.exhSteady(n, rl)</text>
+<text x="228.0" y="117.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">+ lam.exhIgnHeat(поздний УОЗ)</text>
+<text x="228.0" y="131.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">запаздывание lam.exhTau</text>
+<rect x="590" y="87" width="56" height="46" rx="6" fill="#F2ECFB" stroke="#7A4FC2" stroke-width="1.6"/>
+<path d="M598 123 H626.0 V97 H638 M638 97 H610.0 V123" fill="none" stroke="#7A4FC2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="618.0" y="81.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">lam.exhLimit, lam.exhHyst</text>
+<text x="618.0" y="147.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">горячо - защита</text>
+<rect x="30" y="178" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,184.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="116.0" y="197.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, об/мин</text>
+<rect x="30" y="210" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,216.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></g>
+<text x="116.0" y="229.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">наполнение rl, %</text>
+<rect x="220" y="170" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="220" y="170" width="120" height="18" rx="7" fill="#159A8A"/><rect x="220" y="181" width="120" height="7" fill="#159A8A"/>
+<text x="280.0" y="183.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">lam.base</text>
+<path d="M242 194 V240 H328" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M248.0 234.0 L266.9 225.2 L285.8 221.3 L304.8 223.6" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M258.3 222.7 L277.2 216.2 L296.2 215.9 L315.1 220.2" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M268.6 212.3 L287.6 209.1 L306.5 211.9 L325.4 216.8" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M279.0 203.7 L297.9 204.0 L316.8 208.6 L335.7 212.2" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M248.0 234.0 L258.3 222.7 L268.6 212.3 L279.0 203.7" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M266.9 225.2 L277.2 216.2 L287.6 209.1 L297.9 204.0" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M285.8 221.3 L296.2 215.9 L306.5 211.9 L316.8 208.6" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M304.8 223.6 L315.1 220.2 L325.4 216.8 L335.7 212.2" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<text x="225.0" y="197.4" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="start" fill="#159A8A" font-weight="600" xml:space="preserve">x</text>
+<text x="225.0" y="228.6" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="start" fill="#159A8A" font-weight="600" xml:space="preserve">y</text>
+<rect x="30" y="294" width="150" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,300.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="116.0" y="313.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">t ОЖ, °C</text>
+<rect x="220" y="270" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="220" y="270" width="120" height="18" rx="7" fill="#159A8A"/><rect x="220" y="281" width="120" height="7" fill="#159A8A"/>
+<text x="280.0" y="283.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">lam.warmup</text>
+<path d="M242 294 V340 H328" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M245 334 C272.1 332 280.7 300 326 298" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
+<text x="280.0" y="362.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">прогрев: &lt;1 - богаче</text>
+<path d="M400 194 H432 L444 209.0 L432 224 H400 Z" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
+<text x="417.0" y="216.0" font-family="Segoe UI, Arial, sans-serif" font-size="20" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">×</text>
+<rect x="520" y="250" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
+<rect x="520" y="250" width="120" height="18" rx="7" fill="#159A8A"/><rect x="520" y="261" width="120" height="7" fill="#159A8A"/>
+<text x="580.0" y="263.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">lam.protect</text>
+<path d="M542 274 V320 H628" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
+<path d="M548.0 314.0 L566.9 305.2 L585.8 301.3 L604.8 303.6" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M558.3 302.7 L577.2 296.2 L596.2 295.9 L615.1 300.2" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M568.6 292.3 L587.6 289.1 L606.5 291.9 L625.4 296.8" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M579.0 283.7 L597.9 284.0 L616.8 288.6 L635.7 292.2" fill="none" stroke="#159A8A" stroke-width="1.5"/>
+<path d="M548.0 314.0 L558.3 302.7 L568.6 292.3 L579.0 283.7" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M566.9 305.2 L577.2 296.2 L587.6 289.1 L597.9 284.0" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M585.8 301.3 L596.2 295.9 L606.5 291.9 L616.8 288.6" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<path d="M604.8 303.6 L615.1 300.2 L625.4 296.8 L635.7 292.2" fill="none" stroke="#159A8A" stroke-width="1.1" opacity=".7"/>
+<text x="525.0" y="277.4" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="start" fill="#159A8A" font-weight="600" xml:space="preserve">x</text>
+<text x="525.0" y="308.6" font-family="Segoe UI, Arial, sans-serif" font-size="10" text-anchor="start" fill="#159A8A" font-weight="600" xml:space="preserve">y</text>
+<text x="580.0" y="342.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">λ защиты деталей (n × rl)</text>
+<rect x="660" y="180" width="56" height="56" rx="6" fill="#F2ECFB" stroke="#7A4FC2" stroke-width="1.6"/>
+<path d="M666 196.8 H676 M666 219.2 H676 M676 196.8 L702 208.0 H710" fill="none" stroke="#7A4FC2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="676" cy="196.8" r="2.5" fill="#7A4FC2"/><circle cx="676" cy="219.2" r="2.5" fill="#7A4FC2"/>
+<text x="664.0" y="192.8" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">0</text>
+<text x="664.0" y="215.2" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">1</text>
+<rect x="750" y="187" width="56" height="46" rx="6" fill="#FDF1E4" stroke="#D9822B" stroke-width="1.6"/>
+<text x="778.0" y="209.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#D9822B" font-weight="700" font-style="italic" xml:space="preserve">d</text>
+<path d="M769.0 212.0 H787.0" fill="none" stroke="#D9822B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="778.0" y="225.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#D9822B" font-weight="700" font-style="italic" xml:space="preserve">dt</text>
+<path d="M792 195 H800 M756 225 H764" fill="none" stroke="#D9822B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="778.0" y="181.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" xml:space="preserve">lam.protectRate</text>
+<text x="778.0" y="247.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">плавно</text>
+<rect x="1430" y="195" width="170" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(1441.0,201.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></g>
+<text x="1526.0" y="214.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">λ цель</text>
+<rect x="30" y="405" width="170" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
+<g transform="translate(41.0,411.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20L12 6"/><path d="M8.5 5H11l7 15"/></g>
+<text x="126.0" y="424.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">λ ШДК (банк)</text>
+<rect x="820" y="400" width="250" height="84" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="820" y="400" width="250" height="18" rx="6" fill="#1F3B57"/><rect x="820" y="411" width="250" height="7" fill="#1F3B57"/>
+<g transform="translate(824.0,402.0) scale(0.5833)" fill="none" stroke="#FFFFFF" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20L12 6"/><path d="M8.5 5H11l7 15"/></g>
+<text x="952.0" y="413.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">PI-коррекция</text>
+<text x="828.0" y="433.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">lam.pid, предел ±lam.corrLimit</text>
+<text x="828.0" y="447.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">ШДК готов, ОЖ &gt; lam.minClt,</text>
+<text x="828.0" y="461.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">ровный режим, нет защиты</text>
+<rect x="820" y="510" width="250" height="70" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="820" y="510" width="250" height="18" rx="6" fill="#1F3B57"/><rect x="820" y="521" width="250" height="7" fill="#1F3B57"/>
+<g transform="translate(824.0,512.0) scale(0.5833)" fill="none" stroke="#FFFFFF" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9.5 2.5h5"/></g>
+<text x="952.0" y="523.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">быстрая по ячейке</text>
+<text x="828.0" y="543.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">16×16 в памяти, lam.fastEnable</text>
+<text x="828.0" y="557.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">после lam.fastCycles циклов</text>
+<rect x="820" y="610" width="250" height="70" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="820" y="610" width="250" height="18" rx="6" fill="#1F3B57"/><rect x="820" y="621" width="250" height="7" fill="#1F3B57"/>
+<g transform="translate(824.0,612.0) scale(0.5833)" fill="none" stroke="#FFFFFF" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c3-1.5 6-1.5 9 .5 3-2 6-2 9-.5V19c-3-1.5-6-1.5-9 .5-3-2-6-2-9-.5z"/><path d="M12 6v13.5"/><path d="M6 9.5h3M15 9.5h3M6 13h3"/></g>
+<text x="952.0" y="623.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">долгосрочная адаптация</text>
+<text x="828.0" y="643.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">16×16 сохраняется, lam.adaptEnable</text>
+<text x="828.0" y="657.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">lam.learnGain, lam.adaptMin…Max</text>
+<rect x="1130" y="420" width="260" height="130" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
+<rect x="1130" y="420" width="260" height="18" rx="6" fill="#1F3B57"/><rect x="1130" y="431" width="260" height="7" fill="#1F3B57"/>
+<g transform="translate(1134.0,422.0) scale(0.5833)" fill="none" stroke="#FFFFFF" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4.5 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-6.5 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></g>
+<text x="1267.0" y="433.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">топливо цилиндра</text>
+<text x="1138.0" y="453.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">m = воздух / (AFR · λ цель)</text>
+<text x="1138.0" y="467.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">  · (1 + коррекция)</text>
+<text x="1138.0" y="481.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">  · быстрая · адаптация</text>
+<text x="1138.0" y="495.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">после пуска - × добавка (§15)</text>
+<text x="1138.0" y="509.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">доля PFI / GDI - §13</text>
+<rect x="1420" y="470" width="200" height="30" rx="15.0" fill="#E7F5EA" stroke="#3C9D4E" stroke-width="1.6"/>
+<g transform="translate(1431.0,476.0) scale(0.7500)" fill="none" stroke="#3C9D4E" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4.5 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-6.5 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></g>
+<text x="1531.0" y="489.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">топливо цилиндра, мг</text>
+<circle cx="216" cy="64" r="10" fill="#C0392B" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="216.0" y="68.0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#FFFFFF" font-weight="700" xml:space="preserve">1</text>
+<circle cx="216" cy="164" r="10" fill="#C0392B" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="216.0" y="168.0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#FFFFFF" font-weight="700" xml:space="preserve">2</text>
+<circle cx="816" cy="394" r="10" fill="#C0392B" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="816.0" y="398.0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#FFFFFF" font-weight="700" xml:space="preserve">3</text>
+<circle cx="816" cy="504" r="10" fill="#C0392B" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="816.0" y="508.0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#FFFFFF" font-weight="700" xml:space="preserve">4</text>
+<circle cx="816" cy="604" r="10" fill="#C0392B" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="816.0" y="608.0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#FFFFFF" font-weight="700" xml:space="preserve">5</text>
+<circle cx="1126" cy="414" r="10" fill="#C0392B" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="1126.0" y="418.0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#FFFFFF" font-weight="700" xml:space="preserve">6</text>
+<text x="30.0" y="720.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">Три режима по ШДК включаются по одному (владелец 2026-11-11): PI-коррекция, быстрая по ячейке, долгосрочная адаптация. Быстрая учится от PI, долгосрочная - от их произведения.</text>
+<text x="30.0" y="736.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">Нет ШДК или не готов - работает только карта λ, без коррекции; ИИ может выключить коррекцию (ai.funcOff 1).</text>
+</svg>

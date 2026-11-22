@@ -44,7 +44,7 @@
 .dx-detail b { color: var(--text); }
 
 .dx-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 10px; max-width: 860px; }
-.dx-tab { font: inherit; font-size: 13px; font-weight: 700; padding: 7px 11px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; }
+.dx-tab { font: inherit; font-size: 13px; font-weight: 700; padding: 7px 11px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; }
 .dx-tab[aria-selected=true] { background: #1b1c20; border-color: #1b1c20; color: #fff; }
 .dx-meter { display: flex; gap: 4px; margin: 10px 0; }
 .dx-meter i { flex: 1; height: 8px; border-radius: 4px; background: var(--line); }

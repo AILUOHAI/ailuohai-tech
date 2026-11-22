@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 608" width="1240" height="608">
+<rect width="1240" height="608" fill="#FFFFFF"/>
+<text x="24" y="32" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#14202B">Значки схем</text>
+<text x="24" y="52" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#55626E">У входов и выходов значок ставится по подписи (tools/diagrams/icons.py); те же картинки - в общей схеме блока</text>
+<rect x="24" y="70" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,76.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
+<text x="70" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Коленвал, обороты</text>
+<text x="70" y="101" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">crank</text>
+<rect x="24" y="118" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,124.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c4.5 0 7 3.5 7 7.5S16 20 12 20s-7-4.5-7-8.5S7.5 4 12 4z"/><circle cx="12" cy="13" r="2.2"/><path d="M12 4V1.5"/></g>
+<text x="70" y="134" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Распредвал, фаза</text>
+<text x="70" y="149" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">cam</text>
+<rect x="24" y="166" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,172.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/><circle cx="12" cy="17" r="1.6"/><path d="M12 15.4V8M16.5 6h2.5M16.5 9h2.5M16.5 12h2.5"/></g>
+<text x="70" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Температура</text>
+<text x="70" y="197" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">temp</text>
+<rect x="24" y="214" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,220.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/><path d="M12 14V7"/><path d="M3 20c1.5-1.2 3-1.2 4.5 0s3 1.2 4.5 0 3-1.2 4.5 0 3 1.2 4.5 0"/></g>
+<text x="70" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Температура ОЖ</text>
+<text x="70" y="245" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">coolant</text>
+<rect x="24" y="262" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,268.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l4.5-4.5"/><circle cx="12" cy="13" r="1.6"/><path d="M7 20h10"/></g>
+<text x="70" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Давление</text>
+<text x="70" y="293" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">press</text>
+<rect x="24" y="310" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,316.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h9l4-3 5 2-6 6H7l-4-3z"/><path d="M19 15c0 1.4 1 2.2 1 3.2a1 1 0 0 1-2 0c0-1 1-1.8 1-3.2z"/><path d="M8 7V5h4"/></g>
+<text x="70" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Масло</text>
+<text x="70" y="341" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">oil</text>
+<rect x="24" y="358" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,364.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></g>
+<text x="70" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Воздух, наполнение</text>
+<text x="70" y="389" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">air</text>
+<rect x="24" y="406" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,412.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h12"/><path d="M12 20l4-14"/><circle cx="16.5" cy="5" r="2.2"/><path d="M5 15a7 7 0 0 1 3-5"/></g>
+<text x="70" y="422" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Рычаг газа</text>
+<text x="70" y="437" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">lever</text>
+<rect x="24" y="454" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,460.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20L12 6"/><path d="M8.5 5H11l7 15"/></g>
+<text x="70" y="470" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Лямбда, смесь</text>
+<text x="70" y="485" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">lambda</text>
+<rect x="24" y="502" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,508.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l2-6 3 12 3-9 2 6 2-3h5"/></g>
+<text x="70" y="518" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Детонация</text>
+<text x="70" y="533" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">knock</text>
+<rect x="24" y="550" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(30.0,556.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5h3v2M14 7V5h3v2"/><path d="M6.5 13h3M8 11.5v3M14.5 13h3"/></g>
+<text x="70" y="566" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Напряжение АКБ</text>
+<text x="70" y="581" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">battery</text>
+<rect x="324" y="70" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,76.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15h9c3 0 4-2 6-2h3"/><path d="M3 11h9c3 0 4-2 6-2h3"/><path d="M6 7c0-1.5 1.5-1.5 1.5-3M10 7c0-1.5 1.5-1.5 1.5-3"/></g>
+<text x="370" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Выпуск</text>
+<text x="370" y="101" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">exhaust</text>
+<rect x="324" y="118" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,124.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4.5 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-6.5 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></g>
+<text x="370" y="134" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Топливо</text>
+<text x="370" y="149" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">fuel</text>
+<rect x="324" y="166" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,172.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M5 13h14"/><path d="M8 16h2M8 8h8"/></g>
+<text x="370" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Уровень топлива</text>
+<text x="370" y="197" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">level</text>
+<rect x="324" y="214" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,220.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2"/><path d="M9.5 2.5h5"/></g>
+<text x="370" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Время, задержка</text>
+<text x="370" y="245" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">time</text>
+<rect x="324" y="262" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,268.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v8"/><path d="M7 6a8 8 0 1 0 10 0"/></g>
+<text x="370" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Пуск, стартер</text>
+<text x="370" y="293" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">start</text>
+<rect x="324" y="310" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,316.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9.5 17h-19z"/><path d="M12 9v5"/><circle cx="12" cy="17" r=".6"/></g>
+<text x="370" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Неисправность</text>
+<text x="370" y="341" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">fault</text>
+<rect x="324" y="358" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,364.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2.5v3.5M15 2.5v3.5M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/><path d="M9.5 14.5l1.5-5 1.5 5M10 13h2M14.5 9.5v5"/></g>
+<text x="370" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">ИИ</text>
+<text x="370" y="389" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">ai</text>
+<rect x="324" y="406" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,412.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15h20l-3 4H5z"/><path d="M13 15V4l-6 9h6"/></g>
+<text x="370" y="422" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Лодка, нагрузка</text>
+<text x="370" y="437" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">boat</text>
+<rect x="324" y="454" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,460.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 1 1 3 5.7"/><path d="M5 15.5V12h3.5"/><path d="M12 12l3-3"/></g>
+<text x="370" y="470" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Момент</text>
+<text x="370" y="485" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">torque</text>
+<rect x="324" y="502" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,508.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l-3.5-3"/><circle cx="12" cy="13" r="1.6"/><path d="M5 20h3M16 20h3"/></g>
+<text x="370" y="518" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Холостой ход</text>
+<text x="370" y="533" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">idle</text>
+<rect x="324" y="550" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(330.0,556.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h4l4-10h10"/><path d="M3 8h18" stroke-dasharray="2 2"/></g>
+<text x="370" y="566" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Ограничение</text>
+<text x="370" y="581" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">limit</text>
+<rect x="624" y="70" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,76.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.5-3 8-7.5 9.5-4.5-1.5-7.5-5-7.5-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g>
+<text x="670" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Защита</text>
+<text x="670" y="101" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">shield</text>
+<rect x="624" y="118" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,124.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.4 12 20 12 20z"/><path d="M5.5 12H9l1.5-3 2 5 1.5-2h4.5"/></g>
+<text x="670" y="134" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Здоровье двигателя</text>
+<text x="670" y="149" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">health</text>
+<rect x="624" y="166" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,172.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></g>
+<text x="670" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">«Домой»</text>
+<text x="670" y="197" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">home</text>
+<rect x="624" y="214" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,220.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15"/><path d="M3 20h14"/><path d="M7.5 7h5v4h-5z"/><path d="M15 9h2.5l1.5 2v6a1.5 1.5 0 0 0 3 0V8l-3-3"/></g>
+<text x="670" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Расход, запас хода</text>
+<text x="670" y="245" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">eco</text>
+<rect x="624" y="262" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,268.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"/><path d="M12 13l4-4"/><circle cx="12" cy="13" r="1.6"/><path d="M9 20h6M12 17v3"/></g>
+<text x="670" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Регулятор оборотов</text>
+<text x="670" y="293" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">gov</text>
+<rect x="624" y="310" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,316.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></g>
+<text x="670" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Блок управления</text>
+<text x="670" y="341" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">chip</text>
+<rect x="624" y="358" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,364.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M3 16l4-5 4 3 4-7 6 5"/></g>
+<text x="670" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Запись, журнал</text>
+<text x="670" y="389" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">log</text>
+<rect x="624" y="406" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,412.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="8" height="6" rx="1"/><rect x="13" y="14" width="8" height="6" rx="1"/><path d="M7 10v4h10"/><path d="M17 10V7"/><rect x="13" y="4" width="8" height="3" rx="1"/></g>
+<text x="670" y="422" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Связь (Ethernet, CAN)</text>
+<text x="670" y="437" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">link</text>
+<rect x="624" y="454" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,460.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v7H9z"/><path d="M10 9h4l-1 6h-2z"/><path d="M12 15v1.5"/><path d="M12 18l-3 4M12 18v4M12 18l3 4"/></g>
+<text x="670" y="470" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Форсунка</text>
+<text x="670" y="485" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">injector</text>
+<rect x="624" y="502" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,508.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v6H9z"/><path d="M10.5 8v4h3V8"/><path d="M11 12h2v3h-2z"/><path d="M12 15v2"/><path d="M12 19l-2.5 2M12 19l2.5 2M12 19l-3-1M12 19l3-1"/></g>
+<text x="670" y="518" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Искра, катушка</text>
+<text x="670" y="533" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">spark</text>
+<rect x="624" y="550" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(630.0,556.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M6.5 17.5l11-11"/><circle cx="12" cy="12" r="1.4"/></g>
+<text x="670" y="566" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Заслонка (ETB)</text>
+<text x="670" y="581" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">throttle</text>
+<rect x="924" y="70" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,76.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="13" r="6.5"/><path d="M10 13l3.5-3.5"/><path d="M16.5 13H21M10 6.5V3h4"/><path d="M3.5 13H2"/></g>
+<text x="970" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Насос (ТНВД, подкачка)</text>
+<text x="970" y="101" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">pump</text>
+<rect x="924" y="118" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,124.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15l6-4v8zM21 15l-6-4v8z"/><path d="M9 15h6"/><path d="M12 15V7"/><path d="M8 7h8"/></g>
+<text x="970" y="134" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Клапан</text>
+<text x="970" y="149" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">valve</text>
+<rect x="924" y="166" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,172.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 8 8"/><path d="M20 12l-2-2.5M20 12l2-2.5"/><circle cx="12" cy="12" r="2.5"/></g>
+<text x="970" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Фазовращатель</text>
+<text x="970" y="197" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">phaser</text>
+<rect x="924" y="214" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,220.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 15h3l3-5"/><path d="M14 15h2"/><circle cx="8" cy="15" r=".8"/></g>
+<text x="970" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Реле, силовой выход</text>
+<text x="970" y="245" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">relay</text>
+<rect x="924" y="262" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,268.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.8"/><path d="M12 10.2C11 6 11.5 3 13 2.5c1.5.5 1 4-1 7.7"/><path d="M13.6 13c4 1.5 6 3.8 5.4 5.3-1.5.6-4.4-1.4-5.4-5.3"/><path d="M10.4 13c-3.4 2.4-6.3 3-7.3 1.8.2-1.6 3.3-2.6 7.3-1.8"/></g>
+<text x="970" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Винт</text>
+<text x="970" y="293" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">prop</text>
+<rect x="924" y="310" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,316.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/></g>
+<text x="970" y="326" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Стоп, двигатель стоит</text>
+<text x="970" y="341" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">stop</text>
+<rect x="924" y="358" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,364.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></g>
+<text x="970" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Цель, уставка</text>
+<text x="970" y="389" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">target</text>
+<rect x="924" y="406" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,412.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c3-1.5 6-1.5 9 .5 3-2 6-2 9-.5V19c-3-1.5-6-1.5-9 .5-3-2-6-2-9-.5z"/><path d="M12 6v13.5"/><path d="M6 9.5h3M15 9.5h3M6 13h3"/></g>
+<text x="970" y="422" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Адаптация, обучение</text>
+<text x="970" y="437" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">learn</text>
+<rect x="924" y="454" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,460.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 9h18"/><path d="M8 3v4M16 3v4"/><path d="M7.5 13h2M11 13h2M14.5 13h2M7.5 16.5h2M11 16.5h2"/></g>
+<text x="970" y="470" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Таймер, растр</text>
+<text x="970" y="485" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">timer</text>
+<rect x="924" y="502" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
+<g transform="translate(930.0,508.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 15a5.5 5.5 0 1 1 7 0c-1 .8-1.5 1.8-1.5 3h-4c0-1.2-.5-2.2-1.5-3z"/><path d="M10 21h4"/></g>
+<text x="970" y="518" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Лампа, сигнал</text>
+<text x="970" y="533" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">lamp</text>
+</svg>
