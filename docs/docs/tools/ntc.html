@@ -53,18 +53,18 @@
       .doc td:first-child { white-space: normal; }
     }
   </style>
-<link rel="stylesheet" href="../.././assets/docs-interactive.css?v=20261123i"><link rel="stylesheet" href="../.././assets/docs-site.css?v=20261123i">
+<link rel="stylesheet" href="../.././assets/docs-interactive.css?v=20261123k"><link rel="stylesheet" href="../.././assets/docs-site.css?v=20261123k">
 </head><body data-root="../">
 <header class="site-header"><div class="container bar"><a class="brand" href="../.././index.html">AILUOHAI-TECH</a><nav class="nav">
 <a href="../.././index.html#products">Products</a><a href="../.././test-platform.html">Test platform</a><a href="../.././downloads.html">Downloads</a><a href="../.././contacts.html">Contacts</a>
 <a class="lang" href="../../ru/docs/tools/ntc.html" hreflang="ru" lang="ru" title="Русская версия">RU</a>
 </nav></div></header>
-<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Documentation sections</button><nav class="ds-side" aria-label="Documentation sections"><a href="../index.html">Catalog</a><h4>1. Introduction</h4><a href="../learn/ecu.html">What an ECU is</a><a href="../learn/injection.html">Injection types</a><a href="../learn/schemes.html">Engine layouts</a><h4>2. How it works</h4><a href="../how/torque.html">Torque-based control</a><a href="../how/air-fuel.html">Air and fuel</a><a href="../how/limiter.html">Rev limiter and propeller</a><a href="../how/start.html">Engine start</a><a href="../how/protection.html">Protections and reactions</a><a href="../how/principle.html">One unit, different engines</a><a href="../how/diagrams.html">How to read diagrams</a><h4>3. Setup</h4><a href="../build/index.html">Step-by-step build</a><a href="../setup/calibration.html">Working with calibrations</a><h4>4. Modules in detail</h4><a href="../modules/engine.html">Engine</a><a href="../modules/trigger.html">Trigger</a><a href="../modules/sensors.html">Sensors</a><a href="../modules/actuators.html">Actuators</a><a href="../modules/start.html">Start</a><a href="../modules/idle.html">Idle</a><a href="../modules/boost.html">Boost</a><a href="../modules/ignition.html">Ignition</a><a href="../modules/fuel.html">Fuel &amp; mixture</a><a href="../modules/air.html">Air (filling)</a><a href="../modules/torque.html">Torque &amp; limits</a><a href="../modules/health.html">Engine health</a><a href="../modules/can.html">CAN</a><h4>Tools</h4><a href="trigger.html">Trigger wheel</a><a href="fuel.html">Fuel and pulse</a><a href="ntc.html" class="on" aria-current="page">Temperature sensor</a><h4>Reference</h4><a href="../../gdi8-pinout.html">Pinout</a><a href="../../downloads.html">Downloads</a></nav></div>
+<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Documentation sections</button><nav class="ds-side" aria-label="Documentation sections"><a href="../index.html">Catalog</a><h4>How to read the docs</h4><a href="../basics/diagrams.html">How to read diagrams</a><a href="../basics/icons.html">Icons</a><a href="../basics/abbr.html">Abbreviations</a><h4>1. Introduction</h4><a href="../learn/ecu.html">What an ECU is</a><a href="../learn/injection.html">Injection types</a><a href="../learn/schemes.html">Engine layouts</a><h4>2. How it works</h4><a href="../how/torque.html">Torque-based control</a><a href="../how/air-fuel.html">Air and fuel</a><a href="../how/limiter.html">Rev limiter and propeller</a><a href="../how/start.html">Engine start</a><a href="../how/protection.html">Protections and reactions</a><a href="../how/principle.html">One unit, different engines</a><h4>3. Setup</h4><a href="../build/index.html">Step-by-step build</a><a href="../setup/calibration.html">Working with calibrations</a><h4>4. Modules in detail</h4><a href="../modules/engine.html">Engine</a><a href="../modules/trigger.html">Trigger</a><a href="../modules/sensors.html">Sensors</a><a href="../modules/actuators.html">Actuators</a><a href="../modules/start.html">Start</a><a href="../modules/idle.html">Idle</a><a href="../modules/boost.html">Boost</a><a href="../modules/ignition.html">Ignition</a><a href="../modules/fuel.html">Fuel &amp; mixture</a><a href="../modules/air.html">Air (filling)</a><a href="../modules/torque.html">Torque &amp; limits</a><a href="../modules/health.html">Engine health</a><a href="../modules/can.html">CAN</a><h4>Tools</h4><a href="trigger.html">Trigger wheel</a><a href="fuel.html">Fuel and pulse</a><a href="ntc.html" class="on" aria-current="page">Temperature sensor</a><h4>Reference</h4><a href="../../gdi8-pinout.html">Pinout</a><a href="../../downloads.html">Downloads</a></nav></div>
 <main class="ds-main doc"><div class="ds-crumbs"><a href="../.././index.html">Home</a> / <a href="../.././ecu-cat-gdi8.html">ECU Cat-GDI8</a> / <a href="../index.html">Documentation</a></div><h1>Temperature sensor</h1><p class="ds-lead">NTC sensor resistance and voltage.</p>
 <div class="dx-search"><input id="ds-q" type="search" placeholder="Search all documentation" aria-label="Search all documentation"><kbd>Ctrl K</kbd><div id="ds-res" class="dx-results"></div></div>
 <section id="how">
   <h2>How it works</h2>
-  <p>The sensing element is an NTC thermistor: resistance falls as temperature rises. The sensor is connected to ground and forms a voltage divider with a 10 kΩ reference resistor from 5 V.</p>
+  <p>The sensing element is an <a class="dx-ab" href="../basics/abbr.html#a-ntc" title="Negative Temperature Coefficient. A thermistor whose resistance falls as it heats up.">NTC</a> thermistor: resistance falls as temperature rises. The sensor is connected to ground and forms a voltage divider with a 10 kΩ reference resistor from 5 V.</p>
   <div class="flow">
     <div class="box"><b>Temperature</b><span>the sensing element heats up</span></div><div class="arrow">↓</div>
     <div class="box"><b>Resistance</b><span>falls along the NTC curve</span></div><div class="arrow">↓</div>
@@ -76,7 +76,7 @@
     <div class="dx-grid"><div>
       <label class="dx-field"><span class="row">Temperature<output></output></span><input id="n-t" type="range" min="-40" max="130" value="20" data-u="°C"></label>
       <label class="dx-field"><span class="row">Resistance at 25 °C<output></output></span><input id="n-r25" type="range" min="1000" max="10000" step="100" value="2500" data-u="Ω"></label>
-      <label class="dx-field"><span class="row">β coefficient<output></output></span><input id="n-b" type="range" min="3000" max="4500" step="10" value="3800" data-u="K"></label>
+      <label class="dx-field"><span class="row"><span>β coefficient <a class="dx-q" href="#ntc-beta">what is it?</a></span><output></output></span><input id="n-b" type="range" min="3000" max="4500" step="10" value="3500" data-u="K"></label>
     </div><div>
       <canvas class="dx-canvas" id="n-chart" role="img" aria-label="Chart of sensor voltage against temperature"></canvas>
     </div></div>
@@ -87,6 +87,16 @@
     </div>
     <div class="dx-formula" id="n-f"></div>
     <p class="dx-note">Example for a typical sensor. Take exact values from your sensor's datasheet.</p>
+  </div>
+  <div id="ntc-beta">
+    <h3>What R25 and β mean</h3>
+    <p>A thermistor curve is described by two numbers. <b><a class="dx-ab" href="../basics/abbr.html#a-r25" title="Resistance at 25 °C. The anchor point of a thermistor curve.">R25</a></b> is the resistance at 25 °C, where the curve is anchored. <b><a class="dx-ab" href="../basics/abbr.html#a-beta" title="Thermistor beta coefficient. Shows how quickly resistance falls with heat, in kelvin.">β</a></b> shows how quickly resistance falls as the sensor heats up: the larger β, the steeper the curve. It is measured in kelvin, typically 3000…4500 K for automotive sensors.</p>
+    <div class="dx-formula">R(T) = R25 · e<sup>β · (1/T − 1/298.15)</sup>, with T in kelvin: T = °C + 273.15</div>
+    <p>Example: three sensors with the same 2500 Ω at 25 °C but different β. At 25 °C they are identical; at operating temperature they diverge. The last column shows the error if the sensor's β is 3500 but the unit is set to another value.</p>
+    <table><tr><th>β</th><th>Resistance at 90 °C</th><th>Unit reads at a true 90 °C</th></tr><tr><td>3000 K</td><td>413 Ω</td><td>104 °C</td></tr><tr><td>3500 K</td><td>306 Ω</td><td>90 °C</td></tr><tr><td>4000 K</td><td>226 Ω</td><td>80 °C</td></tr></table>
+    <p><b>If β is unknown,</b> measure the sensor resistance with a multimeter at two temperatures, for example 25 °C and 90 °C, and calculate:</p>
+    <div class="dx-formula">β = ln(R<sub>1</sub> / R<sub>2</sub>) / (1/T<sub>1</sub> − 1/T<sub>2</sub>) = ln(2500 / 306) / (1/298.15 − 1/363.15) ≈ 3500 K</div>
+    <p>β is an approximation, most accurate between the two measured points. If the datasheet has a temperature-resistance table, enter that instead: the application stores the sensor calibration as a 16-point table.</p>
   </div>
 </section><div class="ds-pn"><a href="fuel.html"><small>Previous</small>Fuel and pulse</a></div></main></div>
 <footer class="footer" id="contact">
@@ -117,5 +127,5 @@
     </div>
   </footer>
 <a class="fab" href="../../contacts.html#request" title="Write to us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Write to us</span></a>
-<script src="../.././assets/docs-index.en.js?v=20261123i"></script><script src="../.././assets/docs-interactive.js?v=20261123i"></script><script src="../.././assets/docs-site.js?v=20261123i"></script>
+<script src="../.././assets/docs-index.en.js?v=20261123k"></script><script src="../.././assets/docs-interactive.js?v=20261123k"></script><script src="../.././assets/docs-site.js?v=20261123k"></script>
 </body></html>

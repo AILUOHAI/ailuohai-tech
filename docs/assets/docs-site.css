@@ -116,3 +116,28 @@ a.ds-tile:hover { box-shadow: inset 0 0 0 2px #e8661a; }
 .dx-shot-dlg::backdrop { background: rgba(10, 10, 12, .78); }
 .dx-shot-dlg .dx-shot-frame { cursor: zoom-out; border-radius: 0; }
 @media (max-width: 760px) { .dx-box i { width: 14px; height: 14px; left: -16px; font-size: 9px; } .dx-box.dx-r i { left: auto; right: -16px; } .dx-box { border-width: 1px; } }
+
+/* справочный раздел: ссылки у схем, сокращения, типы блоков, значки */
+.dx-refs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 10px 0 8px; font-size: 13.5px; }
+.dx-refs span { color: var(--muted, #667); }
+.doc .dx-refs a { padding: 4px 10px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--text); text-decoration: none; font-weight: 600; }
+.doc .dx-refs a:hover { border-color: #e8661a; color: #c9500f; }
+.doc a.dx-ab { color: inherit; text-decoration: underline dotted #e8661a; text-underline-offset: 3px; }
+.doc a.dx-ab:hover { color: #c9500f; }
+.ds-basics { margin: 0 0 22px; }
+.dx-blocks { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+.dx-block-g { min-width: 0; }
+.dx-block-g h3 { display: flex; align-items: center; gap: 8px; margin: 4px 0 6px; font-size: 16px; }
+.dx-block-g h3 i { width: 22px; height: 14px; border: 2px solid; border-radius: 4px; flex: none; }
+.dx-block-g table { width: 100%; font-size: 13.5px; }
+.dx-icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.dx-icon { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); font-size: 13.5px; line-height: 1.25; }
+.dx-icon svg { width: 26px; height: 26px; flex: none; fill: none; stroke: #2F7FD1; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.dx-abbr-q { max-width: 340px; margin-bottom: 8px; }
+.dx-abbr-t { width: 100%; }
+.dx-abbr-t th { width: 130px; text-align: left; vertical-align: top; white-space: nowrap; }
+.dx-abbr-t tr { scroll-margin-top: 84px; }
+.dx-abbr-t tr:target { background: #fff1e6; }
+@media (max-width: 760px) { .dx-blocks { grid-template-columns: 1fr; } .dx-abbr-t th { width: 88px; white-space: normal; } }
+.doc a.dx-q { margin-left: 4px; font-size: 12px; font-weight: 600; color: #c9500f; }
+#ntc-beta { scroll-margin-top: 84px; margin-top: 18px; }

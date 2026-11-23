@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 608" width="1240" height="608">
 <rect width="1240" height="608" fill="#FFFFFF"/>
 <text x="24" y="32" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#14202B">Значки схем</text>
-<text x="24" y="52" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#55626E">У входов и выходов значок ставится по подписи (tools/diagrams/icons.py); те же картинки - в общей схеме блока</text>
+
 <rect x="24" y="70" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
 <g transform="translate(30.0,76.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8"/></g>
 <text x="70" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Коленвал, обороты</text>
@@ -72,8 +72,8 @@
 <text x="370" y="341" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">fault</text>
 <rect x="324" y="358" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
 <g transform="translate(330.0,364.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2.5v3.5M15 2.5v3.5M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/><path d="M9.5 14.5l1.5-5 1.5 5M10 13h2M14.5 9.5v5"/></g>
-<text x="370" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">ИИ</text>
-<text x="370" y="389" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785">ai</text>
+<text x="370" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Внешняя команда</text>
+<text x="370" y="389" font-family="Consolas, monospace" font-size="10.5" fill="#6B7785"></text>
 <rect x="324" y="406" width="36" height="36" rx="8" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.2"/>
 <g transform="translate(330.0,412.0) scale(1.0000)" fill="none" stroke="#1F3B57" stroke-width="1.70" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15h20l-3 4H5z"/><path d="M13 15V4l-6 9h6"/></g>
 <text x="370" y="422" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1D2731">Лодка, нагрузка</text>

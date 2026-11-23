@@ -237,7 +237,7 @@
 <rect x="30" y="780" width="270" height="84" rx="10" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
 <g transform="translate(42.0,791.0) scale(1.2500)" fill="none" stroke="#1F3B57" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="8" height="6" rx="1"/><rect x="13" y="14" width="8" height="6" rx="1"/><path d="M7 10v4h10"/><path d="M17 10V7"/><rect x="13" y="4" width="8" height="3" rx="1"/></g>
 <text x="82.0" y="812.0" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="start" fill="#1F3B57" font-weight="700" xml:space="preserve">Связь</text>
-<text x="44.0" y="840.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">Ethernet: приложение, ИИ;</text>
+<text x="44.0" y="840.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">Ethernet: приложение;</text>
 <text x="44.0" y="855.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">CAN: модули, приборка</text>
 <rect x="330" y="780" width="270" height="84" rx="10" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
 <g transform="translate(342.0,791.0) scale(1.2500)" fill="none" stroke="#1F3B57" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M3 16l4-5 4 3 4-7 6 5"/></g>
@@ -251,7 +251,7 @@
 <text x="644.0" y="855.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">TLF35584 - сторожевой таймер</text>
 <rect x="930" y="780" width="270" height="84" rx="10" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
 <g transform="translate(942.0,791.0) scale(1.2500)" fill="none" stroke="#1F3B57" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2.5v3.5M15 2.5v3.5M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/><path d="M9.5 14.5l1.5-5 1.5 5M10 13h2M14.5 9.5v5"/></g>
-<text x="982.0" y="812.0" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="start" fill="#1F3B57" font-weight="700" xml:space="preserve">Пульт ИИ</text>
+<text x="982.0" y="812.0" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="start" fill="#1F3B57" font-weight="700" xml:space="preserve">Внешний пульт</text>
 <text x="944.0" y="840.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">только в границах,</text>
 <text x="944.0" y="855.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">которые задал человек</text>
 </svg>

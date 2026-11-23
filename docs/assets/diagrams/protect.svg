@@ -86,7 +86,7 @@
 <text x="768.0" y="225.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">вниз быстрее, вверх медленно</text>
 <rect x="590" y="250" width="260" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>
 <g transform="translate(601.0,256.0) scale(0.7500)" fill="none" stroke="#2F7FD1" stroke-width="2.13" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9.5 17h-19z"/><path d="M12 9v5"/><circle cx="12" cy="17" r=".6"/></g>
-<text x="731.0" y="269.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">неисправности, детонация, ИИ (доли)</text>
+<text x="731.0" y="269.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">неисправности, детонация (доли)</text>
 <rect x="880" y="165" width="56" height="46" rx="6" fill="#FFFFFF" stroke="#3E4C5A" stroke-width="1.6"/>
 <text x="908.0" y="193.0" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#3E4C5A" font-weight="700" xml:space="preserve">MIN</text>
 <rect x="780" y="110" width="200" height="30" rx="15.0" fill="#E8F1FB" stroke="#2F7FD1" stroke-width="1.6"/>

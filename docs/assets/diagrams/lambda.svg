@@ -181,5 +181,5 @@
 <circle cx="1126" cy="414" r="10" fill="#C0392B" stroke="#FFFFFF" stroke-width="1.5"/>
 <text x="1126.0" y="418.0" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" text-anchor="middle" fill="#FFFFFF" font-weight="700" xml:space="preserve">6</text>
 <text x="30.0" y="720.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">Три режима по ШДК включаются по одному (владелец 2026-11-11): PI-коррекция, быстрая по ячейке, долгосрочная адаптация. Быстрая учится от PI, долгосрочная - от их произведения.</text>
-<text x="30.0" y="736.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">Нет ШДК или не готов - работает только карта λ, без коррекции; ИИ может выключить коррекцию (ai.funcOff 1).</text>
+<text x="30.0" y="736.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">Нет ШДК или не готов - работает только карта λ, без коррекции.</text>
 </svg>

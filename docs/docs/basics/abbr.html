@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abbreviations — Cat-GDI8 documentation — AILUOHAI-TECH</title>
+<meta name="description" content="TDC, MAP, PFI, EGT and other terms explained."><link rel="canonical" href="https://ailuohai-tech.com/docs/basics/abbr.html"><link rel="alternate" hreflang="en" href="https://ailuohai-tech.com/docs/basics/abbr.html"><link rel="alternate" hreflang="ru" href="https://ailuohai-tech.com/ru/docs/basics/abbr.html"><link rel="alternate" hreflang="x-default" href="https://ailuohai-tech.com/docs/basics/abbr.html"><!-- Yandex.Metrika counter -->
+  <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=113736844','ym');ym(113736844,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/113736844" style="position:absolute;left:-9999px" alt=""></div></noscript>
+  <script src="/assets/metrika-goals.js" defer></script>
+  <!-- /Yandex.Metrika counter -->
+<link rel="stylesheet" href="../.././assets/style.css?v=20261023b"><style>
+    .docs-layout { padding-top: 8px; padding-bottom: 80px; }
+    .doc section { padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .doc section:last-child { border-bottom: none; }
+    .doc h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .doc h3 { font-size: 20px; margin: 26px 0 8px; }
+    .doc p, .doc li { color: #444; max-width: 760px; }
+    .doc ul, .doc ol { padding-left: 20px; }
+    .doc li { margin: 6px 0; }
+    .tag { font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; }
+    .tag.ready { background: #e3f4ec; color: #146c4b; }
+    .tag.wip { background: #fff1e6; color: #a4410a; }
+    .tag.plan { background: #ececf1; color: #4a4b57; }
+    .note { background: var(--surface); box-shadow: 0 8px 24px rgba(0,0,0,.08); border-radius: 12px; padding: 14px 16px; max-width: 760px; color: #444; }
+    .doc table { width: 100%; max-width: 860px; background: var(--surface); border-radius: 14px; overflow: hidden; font-size: 15px; }
+    .doc th { text-align: left; font-size: 13px; color: var(--muted); }
+    .doc td { border-top: 1px solid var(--line); vertical-align: top; }
+    .doc td:first-child { font-weight: 700; white-space: nowrap; }
+    .table-scroll { overflow-x: auto; }
+
+    /* Torque structure diagram */
+    .flow { display: grid; gap: 10px; max-width: 860px; margin: 18px 0; }
+    .flow-row { display: grid; gap: 10px; }
+    .flow-row.c2 { grid-template-columns: 1fr 1fr; }
+    .flow-row.c3 { grid-template-columns: repeat(3, 1fr); }
+    .box { background: var(--surface); border-radius: 14px; padding: 12px 14px; box-shadow: inset 0 0 0 1px var(--line); }
+    .box b { display: block; font-size: 15px; }
+    .box span { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+    .box.dark { background: #1b1c20; color: #fff; box-shadow: none; }
+    .box.dark span { color: #c9cad0; }
+    .box.limit { box-shadow: inset 0 0 0 2px #d64545; }
+    .arrow { text-align: center; color: #e8661a; font-weight: 800; line-height: 1; }
+
+    .steps-list { counter-reset: s; list-style: none; padding: 0; max-width: 860px; }
+    .steps-list > li { counter-increment: s; position: relative; padding: 16px 16px 16px 64px; background: var(--surface); border-radius: 14px; margin: 10px 0; max-width: none; }
+    .steps-list > li::before { content: counter(s); position: absolute; left: 16px; top: 16px; width: 32px; height: 32px; border-radius: 10px; background: #1b1c20; color: #f07a2e; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .steps-list > li b { display: block; color: var(--text); margin-bottom: 4px; }
+
+    @media (max-width: 980px) {
+            .flow-row.c3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .doc h2 { font-size: 26px; }
+      .flow-row.c2 { grid-template-columns: 1fr; }
+      .doc td:first-child { white-space: normal; }
+    }
+  </style>
+<link rel="stylesheet" href="../.././assets/docs-interactive.css?v=20261123k"><link rel="stylesheet" href="../.././assets/docs-site.css?v=20261123k">
+</head><body data-root="../">
+<header class="site-header"><div class="container bar"><a class="brand" href="../.././index.html">AILUOHAI-TECH</a><nav class="nav">
+<a href="../.././index.html#products">Products</a><a href="../.././test-platform.html">Test platform</a><a href="../.././downloads.html">Downloads</a><a href="../.././contacts.html">Contacts</a>
+<a class="lang" href="../../ru/docs/basics/abbr.html" hreflang="ru" lang="ru" title="Русская версия">RU</a>
+</nav></div></header>
+<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Documentation sections</button><nav class="ds-side" aria-label="Documentation sections"><a href="../index.html">Catalog</a><h4>How to read the docs</h4><a href="diagrams.html">How to read diagrams</a><a href="icons.html">Icons</a><a href="abbr.html" class="on" aria-current="page">Abbreviations</a><h4>1. Introduction</h4><a href="../learn/ecu.html">What an ECU is</a><a href="../learn/injection.html">Injection types</a><a href="../learn/schemes.html">Engine layouts</a><h4>2. How it works</h4><a href="../how/torque.html">Torque-based control</a><a href="../how/air-fuel.html">Air and fuel</a><a href="../how/limiter.html">Rev limiter and propeller</a><a href="../how/start.html">Engine start</a><a href="../how/protection.html">Protections and reactions</a><a href="../how/principle.html">One unit, different engines</a><h4>3. Setup</h4><a href="../build/index.html">Step-by-step build</a><a href="../setup/calibration.html">Working with calibrations</a><h4>4. Modules in detail</h4><a href="../modules/engine.html">Engine</a><a href="../modules/trigger.html">Trigger</a><a href="../modules/sensors.html">Sensors</a><a href="../modules/actuators.html">Actuators</a><a href="../modules/start.html">Start</a><a href="../modules/idle.html">Idle</a><a href="../modules/boost.html">Boost</a><a href="../modules/ignition.html">Ignition</a><a href="../modules/fuel.html">Fuel &amp; mixture</a><a href="../modules/air.html">Air (filling)</a><a href="../modules/torque.html">Torque &amp; limits</a><a href="../modules/health.html">Engine health</a><a href="../modules/can.html">CAN</a><h4>Tools</h4><a href="../tools/trigger.html">Trigger wheel</a><a href="../tools/fuel.html">Fuel and pulse</a><a href="../tools/ntc.html">Temperature sensor</a><h4>Reference</h4><a href="../../gdi8-pinout.html">Pinout</a><a href="../../downloads.html">Downloads</a></nav></div>
+<main class="ds-main doc"><div class="ds-crumbs"><a href="../.././index.html">Home</a> / <a href="../.././ecu-cat-gdi8.html">ECU Cat-GDI8</a> / <a href="../index.html">Documentation</a></div><h1>Abbreviations</h1><p class="ds-lead">TDC, MAP, PFI, EGT and other terms explained.</p>
+<div class="dx-search"><input id="ds-q" type="search" placeholder="Search all documentation" aria-label="Search all documentation"><kbd>Ctrl K</kbd><div id="ds-res" class="dx-results"></div></div>
+<div class="ds-toc"><a href="#g-engine">Engine</a><a href="#g-fuel">Fuel and mixture</a><a href="#g-sensor">Sensors and signals</a><a href="#g-ctrl">Control</a><a href="#g-bus">Unit and communication</a></div><label class="dx-field dx-abbr-q"><span class="row">Filter</span><input id="ab-q" type="search" placeholder="MAP, TDC…"></label><section id="g-engine"><h2>Engine</h2><table class="dx-abbr-t"><tr id="a-dvs"><th>ICE</th><td><b>Internal combustion engine</b> A piston engine.</td></tr><tr id="a-tdc"><th>TDC</th><td><b>Top dead centre</b> The highest piston position, the reference for angles.</td></tr><tr id="a-bdc"><th>BDC</th><td><b>Bottom dead centre</b> The lowest piston position.</td></tr><tr id="a-kv"><th>Crankshaft</th><td><b>Crankshaft</b> The shaft the unit uses to track engine angle.</td></tr><tr id="a-sa"><th>SA</th><td><b>Spark advance</b> How many degrees before TDC the spark fires.</td></tr><tr id="a-mbt"><th>MBT</th><td><b>Maximum Brake Torque</b> The spark angle that gives the highest torque.</td></tr><tr id="a-idle"><th>Idle</th><td><b>Idle</b> Engine running with no torque request from the lever.</td></tr><tr id="a-kpd"><th>Efficiency</th><td><b>Efficiency</b> The share of energy turned into useful work.</td></tr><tr id="a-ve"><th>VE</th><td><b>Volumetric Efficiency</b> How much air a cylinder takes relative to its volume.</td></tr><tr id="a-rl"><th>rl</th><td><b>Relative filling</b> Air mass in the cylinder relative to nominal, in percent.</td></tr></table></section><section id="g-fuel"><h2>Fuel and mixture</h2><table class="dx-abbr-t"><tr id="a-gdi"><th>GDI</th><td><b>Gasoline Direct Injection</b> Fuel is injected directly into the cylinder.</td></tr><tr id="a-pfi"><th>PFI</th><td><b>Port Fuel Injection</b> Fuel is injected into the intake port before the valve.</td></tr><tr id="a-hpfp"><th>HPFP</th><td><b>High-pressure fuel pump</b> Builds pressure in the GDI rail.</td></tr><tr id="a-afr"><th>AFR</th><td><b>Air-Fuel Ratio</b> The mass ratio of air to fuel.</td></tr><tr id="a-lambda"><th>λ</th><td><b>Lambda</b> Mixture relative to ideal: 1 is ideal, below 1 is rich, above 1 is lean.</td></tr><tr id="a-wbo"><th>WBO</th><td><b>Wideband oxygen sensor</b> Measures λ over a wide range.</td></tr><tr id="a-e85"><th>E85</th><td><b>85% ethanol fuel</b> A blend of ethanol and gasoline.</td></tr><tr id="a-soi"><th>SOI</th><td><b>Start Of Injection</b> The angle at which injection begins.</td></tr></table></section><section id="g-sensor"><h2>Sensors and signals</h2><table class="dx-abbr-t"><tr id="a-map"><th>MAP</th><td><b>Manifold Absolute Pressure</b> Absolute pressure in the intake manifold.</td></tr><tr id="a-clt"><th>CLT</th><td><b>Coolant temperature</b> The main indicator of engine warm-up.</td></tr><tr id="a-egt"><th>EGT</th><td><b>Exhaust Gas Temperature</b> The temperature of the exhaust gases.</td></tr><tr id="a-ntc"><th>NTC</th><td><b>Negative Temperature Coefficient</b> A thermistor whose resistance falls as it heats up.</td></tr><tr id="a-r25"><th>R25</th><td><b>Resistance at 25 °C</b> The anchor point of a thermistor curve.</td></tr><tr id="a-beta"><th>β</th><td><b>Thermistor beta coefficient</b> Shows how quickly resistance falls with heat, in kelvin.</td></tr><tr id="a-vr"><th>VR</th><td><b>Variable Reluctance</b> An inductive shaft position sensor with two wires.</td></tr><tr id="a-sent"><th>SENT</th><td><b>Single Edge Nibble Transmission</b> A one-wire digital sensor protocol.</td></tr><tr id="a-rms"><th>RMS</th><td><b>Root mean square</b> A measure of the strength of an alternating signal.</td></tr><tr id="a-short"><th>Short circuit</th><td><b>Short circuit</b> A circuit shorted to ground or supply.</td></tr></table></section><section id="g-ctrl"><h2>Control</h2><table class="dx-abbr-t"><tr id="a-etb"><th>ETB</th><td><b>Electronic Throttle Body</b> A motor-driven throttle.</td></tr><tr id="a-pwm"><th>PWM</th><td><b>Pulse-width modulation</b> Controls average power by the on-time fraction.</td></tr><tr id="a-pid"><th>PID</th><td><b>Proportional-integral-derivative controller</b> Drives the difference between target and actual to zero.</td></tr><tr id="a-pi"><th>PI</th><td><b>Proportional-integral controller</b> A PID without the derivative part.</td></tr></table></section><section id="g-bus"><h2>Unit and communication</h2><table class="dx-abbr-t"><tr id="a-ecu"><th>ECU</th><td><b>Engine control unit</b> The unit that controls the engine.</td></tr><tr id="a-akb"><th>Battery</th><td><b>Battery</b> The 12 V on-board supply.</td></tr><tr id="a-can"><th>CAN</th><td><b>Controller Area Network</b> A communication bus between units.</td></tr><tr id="a-obd"><th>OBD-II / OBD</th><td><b>On-Board Diagnostics</b> The standard for diagnostics and fault codes.</td></tr><tr id="a-nmea"><th>NMEA 2000 / NMEA</th><td><b>Marine communication standard</b> The bus for marine instruments.</td></tr></table></section><div class="ds-pn"><a href="icons.html"><small>Previous</small>Icons</a><a class="next" href="../learn/ecu.html"><small>Next</small>What an ECU is</a></div></main></div>
+<footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Electronics and control systems for airboats and special-purpose vessels.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="../../dash-6-8.html">Dash-6.8</a>
+        <a href="../../ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="../../ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="../../cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Downloads</h4>
+        <a href="../../downloads.html">BrainBus</a>
+        <a href="../../downloads.html#installer">Installer</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="../../contacts.html">Contacts</a>
+        <a href="../../test-platform.html">Test platform</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+      </div>
+    </div>
+  </footer>
+<a class="fab" href="../../contacts.html#request" title="Write to us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Write to us</span></a>
+<script src="../.././assets/docs-index.en.js?v=20261123k"></script><script src="../.././assets/docs-interactive.js?v=20261123k"></script><script src="../.././assets/docs-site.js?v=20261123k"></script>
+</body></html>

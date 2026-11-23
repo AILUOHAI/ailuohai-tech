@@ -113,7 +113,7 @@
 <text x="726.0" y="474.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2F7FD1" font-weight="600" xml:space="preserve">n, об/мин</text>
 <rect x="830" y="430" width="120" height="78" rx="7" fill="#E3F5F2" stroke="#159A8A" stroke-width="1.6"/>
 <rect x="830" y="430" width="120" height="18" rx="7" fill="#159A8A"/><rect x="830" y="441" width="120" height="7" fill="#159A8A"/>
-<text x="890.0" y="443.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">KLDMMX (план)</text>
+<text x="890.0" y="443.0" font-family="Consolas, monospace" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">(план)</text>
 <path d="M852 454 V500 H938" fill="none" stroke="#7FA9A3" stroke-width="1.2"/>
 <path d="M855 494 C882.1 492 890.7 460 936 458" fill="none" stroke="#159A8A" stroke-width="2.4" stroke-linecap="round"/>
 <text x="890.0" y="522.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">наибольший резерв по n</text>
@@ -150,6 +150,6 @@
 <text x="504.0" y="495.2" font-family="Segoe UI, Arial, sans-serif" font-size="9" text-anchor="start" fill="#7A4FC2" font-weight="normal" xml:space="preserve">1</text>
 <text x="528.0" y="530.0" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" text-anchor="middle" fill="#55626E" font-weight="normal" font-style="italic" xml:space="preserve">резерв нагрузки</text>
 <text x="30.0" y="585.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">Резерв - воздуха больше, чем надо для цели; лишнее съедает поздний УОЗ. Нужен момент - УОЗ возвращается к оптимальному за один цикл,</text>
-<text x="30.0" y="603.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">дроссель и коллектор не ждём. Сейчас - только резерв ХХ (подхват при нагрузке на холостом). Из резервов берётся больший; в MED9 он ограничен</text>
-<text x="30.0" y="621.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">кривой по оборотам (KLDMMX) и тем, что может съесть самый поздний УОЗ, - иначе резерв поднимал бы фактический момент.</text>
+<text x="30.0" y="603.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">дроссель и коллектор не ждём. Сейчас - только резерв ХХ (подхват при нагрузке на холостом). Из резервов берётся больший; он ограничен</text>
+<text x="30.0" y="621.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">кривой по оборотам и тем, что может съесть самый поздний УОЗ, - иначе резерв поднимал бы фактический момент.</text>
 </svg>

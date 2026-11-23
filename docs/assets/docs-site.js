@@ -136,6 +136,17 @@
     dlg.addEventListener('click', () => dlg.close());
   }
 
+  // ---- сокращения: фильтр по странице
+  const abQ = document.getElementById('ab-q');
+  if (abQ) abQ.addEventListener('input', () => {
+    const q = abQ.value.trim().toLowerCase();
+    document.querySelectorAll('.dx-abbr-t').forEach((t) => {
+      let any = false;
+      t.querySelectorAll('tr').forEach((r) => { const on = !q || r.textContent.toLowerCase().includes(q); r.hidden = !on; any = any || on; });
+      t.closest('section').hidden = !any;
+    });
+  });
+
   // ---- главная каталога: картинка рядом меняется вместе со ступенью
   const story = $('.ds-story');
   if (story && 'IntersectionObserver' in window) {

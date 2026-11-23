@@ -84,5 +84,5 @@
 <text x="1231.0" y="132.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#3C9D4E" font-weight="600" xml:space="preserve">запрос момента на валу -&gt; координатор</text>
 <text x="30.0" y="370.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">1. Включение на ходу без скачка: цель начинается от текущих оборотов, интеграл - от текущего момента.</text>
 <text x="30.0" y="386.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">2. Основную часть момента сразу даёт упреждение по винту (пока k не выучен - 0, работает только регулятор).</text>
-<text x="30.0" y="402.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">3. Дальше - общая цепочка: ограничители и защиты действуют как всегда, ИИ может режим только выключить.</text>
+<text x="30.0" y="402.0" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="start" fill="#3A4652" font-weight="normal" xml:space="preserve">3. Дальше - общая цепочка: ограничители и защиты действуют как всегда.</text>
 </svg>
