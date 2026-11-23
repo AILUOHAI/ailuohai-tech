@@ -292,7 +292,77 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/coils.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/etb.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/gdi.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/hpfp.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/oilValve.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/pfi.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/phasers.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/power.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/relays.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/wgServo.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/wgValve.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/docs/modules/air.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/air/autocal.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/air/fill.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/air/throttle.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -302,7 +372,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/docs/modules/boost/protect.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/boost/target.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/docs/modules/can.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/can/buses.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/can/dash.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/can/out.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -312,7 +407,47 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/docs/modules/engine/axes.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/engine/caps.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/engine/config.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/docs/modules/fuel.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/fuel/closed.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/fuel/exh.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/fuel/inject.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/fuel/pressure.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/fuel/target.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -322,7 +457,57 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/docs/modules/health/eco.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/health/now.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/health/prop.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/health/tol.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/docs/modules/idle.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/idle/adapt.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/idle/faults.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/idle/loads.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/idle/now.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/idle/pid.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/idle/speed.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -332,7 +517,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/docs/modules/ignition/knock.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/ignition/knockFuel.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/ignition/knockRetard.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/ignition/timing.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/docs/modules/sensors.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/baro.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -342,7 +552,122 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/egt.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/fuelLowP.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/fuelLvl.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/fuelT.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/gearT.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/iat.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/knock.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/lambda.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/lever.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/map.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/oilP.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/oilT.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/rail.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/sensors/volt.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/docs/modules/start.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/adapt.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/air.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/cond.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/fuel.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/ign.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/now.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/post.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/press.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/start/warm.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -352,7 +677,77 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/coord.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/gov.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/limAir.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/limEngine.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/limFuel.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/limMain.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/limNow.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/limSurvive.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/limits.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/model.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/torque/protect.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/docs/modules/trigger.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/trigger/inputs.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/trigger/log.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/docs/modules/trigger/wheel.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -497,7 +892,77 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/coils.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/etb.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/gdi.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/hpfp.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/oilValve.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/pfi.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/phasers.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/power.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/relays.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/wgServo.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/wgValve.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/ru/docs/modules/air.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/air/autocal.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/air/fill.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/air/throttle.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -507,7 +972,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/boost/protect.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/boost/target.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/ru/docs/modules/can.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/can/buses.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/can/dash.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/can/out.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -517,7 +1007,47 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/engine/axes.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/engine/caps.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/engine/config.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/ru/docs/modules/fuel.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/fuel/closed.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/fuel/exh.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/fuel/inject.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/fuel/pressure.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/fuel/target.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -527,7 +1057,57 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/health/eco.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/health/now.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/health/prop.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/health/tol.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/ru/docs/modules/idle.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/idle/adapt.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/idle/faults.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/idle/loads.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/idle/now.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/idle/pid.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/idle/speed.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -537,7 +1117,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/ignition/knock.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/ignition/knockFuel.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/ignition/knockRetard.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/ignition/timing.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/ru/docs/modules/sensors.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/baro.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -547,7 +1152,122 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/egt.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/fuelLowP.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/fuelLvl.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/fuelT.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/gearT.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/iat.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/knock.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/lambda.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/lever.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/map.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/oilP.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/oilT.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/rail.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/sensors/volt.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/ru/docs/modules/start.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/adapt.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/air.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/cond.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/fuel.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/ign.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/now.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/post.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/press.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/start/warm.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
@@ -557,7 +1277,77 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/coord.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/gov.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/limAir.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/limEngine.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/limFuel.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/limMain.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/limNow.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/limSurvive.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/limits.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/model.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/torque/protect.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/ru/docs/modules/trigger.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/trigger/inputs.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/trigger/log.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/trigger/wheel.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>

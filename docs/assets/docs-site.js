@@ -113,6 +113,29 @@
     ['pointerup', 'pointercancel'].forEach((n) => view.addEventListener(n, () => { drag = null; }));
   }
 
+  // ---- снимки приложения: номер и строка подсвечивают друг друга, нажатие увеличивает снимок
+  const frames = document.querySelectorAll('.dx-shot');
+  if (frames.length) {
+    const dlg = document.createElement('dialog');
+    dlg.className = 'dx-shot-dlg';
+    document.body.appendChild(dlg);
+    frames.forEach((fig) => {
+      const hot = (n, on) => fig.querySelectorAll('[data-n="' + n + '"]').forEach((x) => x.classList.toggle('hot', on));
+      fig.querySelectorAll('[data-n]').forEach((x) => {
+        x.addEventListener('mouseenter', () => hot(x.dataset.n, true));
+        x.addEventListener('mouseleave', () => hot(x.dataset.n, false));
+      });
+      $('.dx-shot-frame', fig).addEventListener('click', () => {
+        dlg.innerHTML = '';
+        const c = $('.dx-shot-frame', fig).cloneNode(true);
+        c.querySelector('img').loading = 'eager';
+        dlg.appendChild(c);
+        dlg.showModal();
+      });
+    });
+    dlg.addEventListener('click', () => dlg.close());
+  }
+
   // ---- главная каталога: картинка рядом меняется вместе со ступенью
   const story = $('.ds-story');
   if (story && 'IntersectionObserver' in window) {
@@ -122,6 +145,34 @@
     }), { rootMargin: '-40% 0px -50% 0px' });
     story.querySelectorAll('.ds-level').forEach((s) => io.observe(s));
   }
+
+  // ---- подписи ползунков для примеров
+  const live = (root, up) => {
+    const els = root.querySelectorAll('input');
+    const show = (el) => { $('output', el.closest('label')).textContent = fmt(el.value, Number(el.dataset.d || 0)) + (el.dataset.u ? (el.dataset.u === '°' ? '°' : ' ' + el.dataset.u) : ''); };
+    els.forEach((el) => { show(el); el.addEventListener('input', () => { show(el); up(); }); });
+    up();
+  };
+
+  // ---- угол между картами 92 и 100
+  const oct = $('#dx-oct');
+  if (oct) live(oct, () => {
+    const a = Number($('#o-100').value), b = Number($('#o-92').value), k = Number($('#o-k').value), r = Number($('#o-r').value);
+    const base = a - (1 - k) * (a - b), res = base - r;
+    $('#o-base').textContent = fmt(base, 1) + '°'; $('#o-res').textContent = fmt(res, 1) + '°';
+    $('#o-f').innerHTML = fmt(a, 1) + ' − (1 − <em>' + fmt(k, 2) + '</em>) · (' + fmt(a, 1) + ' − ' + fmt(b, 1) + ') − <em>' + fmt(r, 1) + '</em> = <em>' + fmt(res, 1) + '°</em>';
+  });
+
+  // ---- решение о стуке и шаг отката
+  const knk = $('#dx-knk');
+  if (knk) live(knk, () => {
+    const q = Number($('#k-ratio').value), t = Number($('#k-thr').value), s = Number($('#k-step').value), g = Number($('#k-gain').value);
+    const hit = q > t, st = hit ? s * (1 + g * (q - t)) : 0;
+    $('#k-state').textContent = hit ? L('Стук', 'Knock') : L('Тихо', 'Quiet');
+    $('#k-state').parentNode.classList.toggle('warn', hit);
+    $('#k-res').textContent = fmt(st, 2) + '°';
+    $('#k-f').innerHTML = hit ? fmt(s, 1) + ' · (1 + ' + fmt(g, 1) + ' · (<em>' + fmt(q, 1) + '</em> − ' + fmt(t, 1) + ')) = <em>' + fmt(st, 2) + '°</em>' : fmt(q, 1) + ' ≤ ' + fmt(t, 1) + ': ' + L('отката нет', 'no retard');
+  });
 
   // ---- датчик температуры: R(T) по β и делитель с опорным резистором 10 кОм от 5 В
   const ntc = $('#dx-ntc');

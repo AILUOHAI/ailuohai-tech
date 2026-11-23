@@ -90,3 +90,29 @@ a.ds-tile:hover { box-shadow: inset 0 0 0 2px #e8661a; }
   .ds-level-pic { display: block; width: 100%; height: 180px; object-fit: cover; border-radius: 14px; margin-bottom: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .ds-story-pic img { transition: none; } }
+
+.ds-set { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 8px 0; overflow: hidden; }
+.ds-set > summary { cursor: pointer; padding: 11px 14px; font-weight: 700; font-size: 15px; }
+.ds-set > summary:hover { background: var(--surface-soft); }
+.ds-set > summary small { margin-left: 6px; color: var(--muted); font-weight: 400; }
+.ds-set > p { padding: 0 14px; font-size: 14px; }
+.ds-set table { border-radius: 0; font-size: 14px; max-width: none; }
+.ds-set td:first-child { width: 36%; }
+
+/* снимки приложения с номерами */
+.dx-shot { margin: 14px 0 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px; }
+.dx-shot-frame { position: relative; display: block; width: 100%; aspect-ratio: 1536 / 794; padding: 0; border: 0; border-radius: 8px; overflow: hidden; background: #14181d; cursor: zoom-in; }
+.dx-shot-frame img { position: absolute; left: 0; width: 100%; height: auto; display: block; }
+.dx-box { position: absolute; border: 2px solid #e8661a; border-radius: 5px; background: rgba(232, 102, 26, .13); transition: background .12s, box-shadow .12s; }
+.dx-box i { position: absolute; left: -23px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width: 19px; height: 19px; border-radius: 5px; background: #e8661a; color: #fff; font-style: normal; font-weight: 800; font-size: 11px; line-height: 1; }
+.dx-box.dx-r i { left: auto; right: -23px; }
+.dx-box.hot { background: rgba(232, 102, 26, .36); box-shadow: 0 0 0 3px rgba(232, 102, 26, .35); }
+.dx-shot figcaption { margin: 8px 2px 4px; font-size: 13px; font-weight: 700; color: var(--text); }
+.doc .dx-legend { counter-reset: m; list-style: none; padding: 0; margin: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 3px 12px; }
+.doc .dx-legend li { counter-increment: m; position: relative; margin: 0; padding: 4px 6px 4px 30px; border-radius: 6px; font-size: 13.5px; line-height: 1.35; max-width: none; }
+.dx-legend li::before { content: counter(m); position: absolute; left: 5px; top: 4px; width: 19px; height: 19px; display: flex; align-items: center; justify-content: center; border-radius: 5px; background: #e8661a; color: #fff; font-weight: 800; font-size: 11px; }
+.dx-legend li.hot { background: #fff1e6; }
+.dx-shot-dlg { width: min(97vw, 1536px); max-width: none; padding: 0; border: 0; border-radius: 10px; overflow: hidden; background: #14181d; }
+.dx-shot-dlg::backdrop { background: rgba(10, 10, 12, .78); }
+.dx-shot-dlg .dx-shot-frame { cursor: zoom-out; border-radius: 0; }
+@media (max-width: 760px) { .dx-box i { width: 14px; height: 14px; left: -16px; font-size: 9px; } .dx-box.dx-r i { left: auto; right: -16px; } .dx-box { border-width: 1px; } }

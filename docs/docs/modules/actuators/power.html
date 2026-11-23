@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power control — Cat-GDI8 documentation — AILUOHAI-TECH</title>
+<meta name="description" content="“Actuators” module: what it is, how it works, how to set it up."><link rel="canonical" href="https://ailuohai-tech.com/docs/modules/actuators/power.html"><link rel="alternate" hreflang="en" href="https://ailuohai-tech.com/docs/modules/actuators/power.html"><link rel="alternate" hreflang="ru" href="https://ailuohai-tech.com/ru/docs/modules/actuators/power.html"><link rel="alternate" hreflang="x-default" href="https://ailuohai-tech.com/docs/modules/actuators/power.html"><!-- Yandex.Metrika counter -->
+  <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=113736844','ym');ym(113736844,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/113736844" style="position:absolute;left:-9999px" alt=""></div></noscript>
+  <script src="/assets/metrika-goals.js" defer></script>
+  <!-- /Yandex.Metrika counter -->
+<link rel="stylesheet" href="../../.././assets/style.css?v=20261023b"><style>
+    .docs-layout { padding-top: 8px; padding-bottom: 80px; }
+    .doc section { padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .doc section:last-child { border-bottom: none; }
+    .doc h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .doc h3 { font-size: 20px; margin: 26px 0 8px; }
+    .doc p, .doc li { color: #444; max-width: 760px; }
+    .doc ul, .doc ol { padding-left: 20px; }
+    .doc li { margin: 6px 0; }
+    .tag { font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; }
+    .tag.ready { background: #e3f4ec; color: #146c4b; }
+    .tag.wip { background: #fff1e6; color: #a4410a; }
+    .tag.plan { background: #ececf1; color: #4a4b57; }
+    .note { background: var(--surface); box-shadow: 0 8px 24px rgba(0,0,0,.08); border-radius: 12px; padding: 14px 16px; max-width: 760px; color: #444; }
+    .doc table { width: 100%; max-width: 860px; background: var(--surface); border-radius: 14px; overflow: hidden; font-size: 15px; }
+    .doc th { text-align: left; font-size: 13px; color: var(--muted); }
+    .doc td { border-top: 1px solid var(--line); vertical-align: top; }
+    .doc td:first-child { font-weight: 700; white-space: nowrap; }
+    .table-scroll { overflow-x: auto; }
+
+    /* Torque structure diagram */
+    .flow { display: grid; gap: 10px; max-width: 860px; margin: 18px 0; }
+    .flow-row { display: grid; gap: 10px; }
+    .flow-row.c2 { grid-template-columns: 1fr 1fr; }
+    .flow-row.c3 { grid-template-columns: repeat(3, 1fr); }
+    .box { background: var(--surface); border-radius: 14px; padding: 12px 14px; box-shadow: inset 0 0 0 1px var(--line); }
+    .box b { display: block; font-size: 15px; }
+    .box span { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+    .box.dark { background: #1b1c20; color: #fff; box-shadow: none; }
+    .box.dark span { color: #c9cad0; }
+    .box.limit { box-shadow: inset 0 0 0 2px #d64545; }
+    .arrow { text-align: center; color: #e8661a; font-weight: 800; line-height: 1; }
+
+    .steps-list { counter-reset: s; list-style: none; padding: 0; max-width: 860px; }
+    .steps-list > li { counter-increment: s; position: relative; padding: 16px 16px 16px 64px; background: var(--surface); border-radius: 14px; margin: 10px 0; max-width: none; }
+    .steps-list > li::before { content: counter(s); position: absolute; left: 16px; top: 16px; width: 32px; height: 32px; border-radius: 10px; background: #1b1c20; color: #f07a2e; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .steps-list > li b { display: block; color: var(--text); margin-bottom: 4px; }
+
+    @media (max-width: 980px) {
+            .flow-row.c3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .doc h2 { font-size: 26px; }
+      .flow-row.c2 { grid-template-columns: 1fr; }
+      .doc td:first-child { white-space: normal; }
+    }
+  </style>
+<link rel="stylesheet" href="../../.././assets/docs-interactive.css?v=20261123h"><link rel="stylesheet" href="../../.././assets/docs-site.css?v=20261123h">
+</head><body data-root="../../">
+<header class="site-header"><div class="container bar"><a class="brand" href="../../.././index.html">AILUOHAI-TECH</a><nav class="nav">
+<a href="../../.././index.html#products">Products</a><a href="../../.././test-platform.html">Test platform</a><a href="../../.././downloads.html">Downloads</a><a href="../../.././contacts.html">Contacts</a>
+<a class="lang" href="../../../ru/docs/modules/actuators/power.html" hreflang="ru" lang="ru" title="Русская версия">RU</a>
+</nav></div></header>
+<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Documentation sections</button><nav class="ds-side" aria-label="Documentation sections"><a href="../../index.html">Catalog</a><h4>1. Introduction</h4><a href="../../learn/ecu.html">What an ECU is</a><a href="../../learn/injection.html">Injection types</a><a href="../../learn/schemes.html">Engine layouts</a><h4>2. How it works</h4><a href="../../how/torque.html">Torque-based control</a><a href="../../how/air-fuel.html">Air and fuel</a><a href="../../how/limiter.html">Rev limiter and propeller</a><a href="../../how/start.html">Engine start</a><a href="../../how/protection.html">Protections and reactions</a><a href="../../how/principle.html">One unit, different engines</a><a href="../../how/diagrams.html">How to read diagrams</a><h4>3. Setup</h4><a href="../../build/index.html">Step-by-step build</a><a href="../../setup/calibration.html">Working with calibrations</a><h4>4. Modules in detail</h4><a href="../engine.html">Engine</a><a href="../trigger.html">Trigger</a><a href="../sensors.html">Sensors</a><a href="../actuators.html">Actuators</a><div class="sub"><a href="gdi.html">GDI injectors</a><a href="pfi.html">PFI injectors</a><a href="coils.html">Ignition coils</a><a href="hpfp.html">HPFP</a><a href="etb.html">Electronic throttle</a><a href="wgValve.html">Wastegate pneumatic</a><a href="wgServo.html">Wastegate servo</a><a href="phasers.html">Cam phasers</a><a href="power.html" class="on" aria-current="page">Power control</a><a href="oilValve.html">Oil pressure valve</a><a href="relays.html">Pumps &amp; relays</a></div><a href="../start.html">Start</a><a href="../idle.html">Idle</a><a href="../boost.html">Boost</a><a href="../ignition.html">Ignition</a><a href="../fuel.html">Fuel &amp; mixture</a><a href="../air.html">Air (filling)</a><a href="../torque.html">Torque &amp; limits</a><a href="../health.html">Engine health</a><a href="../can.html">CAN</a><h4>Tools</h4><a href="../../tools/trigger.html">Trigger wheel</a><a href="../../tools/fuel.html">Fuel and pulse</a><a href="../../tools/ntc.html">Temperature sensor</a><h4>Reference</h4><a href="../../../gdi8-pinout.html">Pinout</a><a href="../../../downloads.html">Downloads</a></nav></div>
+<main class="ds-main doc"><div class="ds-crumbs"><a href="../../.././index.html">Home</a> / <a href="../../.././ecu-cat-gdi8.html">ECU Cat-GDI8</a> / <a href="../../index.html">Documentation</a> / <a href="../actuators.html">Actuators</a></div><h1>Power control</h1><p class="ds-lead">“Actuators” module: what it is, how it works, how to set it up.</p>
+<div class="dx-search"><input id="ds-q" type="search" placeholder="Search all documentation" aria-label="Search all documentation"><kbd>Ctrl K</kbd><div id="ds-res" class="dx-results"></div></div>
+<section id="settings"><h2>What is in the application</h2><p class="dx-path"><span>Actuators</span> → <span>Power control</span></p><details class="ds-set"><summary>Switches</summary><p>Current and state of each switch; switch a bank off on a stopped engine.</p></details><details class="ds-set"><summary>GDI limits <small>4</small></summary><p>Working current range: below the lower - open load, above the upper - overload. Averaging, delays and retries are inside the firmware.</p><table><tr><td>Open-load current - GDI A</td></tr><tr><td>Trip current - GDI A</td></tr><tr><td>Open-load current - GDI B</td></tr><tr><td>Trip current - GDI B</td></tr></table></details><details class="ds-set"><summary>Bank and internal limits <small>8</small></summary><p>Working current range: below the lower - open load, above the upper - overload. Averaging, delays and retries are inside the firmware.</p><table><tr><td>Open-load current - bank A supply</td></tr><tr><td>Trip current - bank A supply</td></tr><tr><td>Open-load current - bank B supply</td></tr><tr><td>Trip current - bank B supply</td></tr><tr><td>Open-load current - internal supply</td></tr><tr><td>Trip current - internal supply</td></tr><tr><td>Open-load current - starter</td></tr><tr><td>Trip current - starter</td></tr></table></details></section><div class="ds-pn"><a href="phasers.html"><small>Previous</small>Cam phasers</a><a class="next" href="oilValve.html"><small>Next</small>Oil pressure valve</a></div></main></div>
+<footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Electronics and control systems for airboats and special-purpose vessels.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="../../../dash-6-8.html">Dash-6.8</a>
+        <a href="../../../ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="../../../ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="../../../cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Downloads</h4>
+        <a href="../../../downloads.html">BrainBus</a>
+        <a href="../../../downloads.html#installer">Installer</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="../../../contacts.html">Contacts</a>
+        <a href="../../../test-platform.html">Test platform</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+      </div>
+    </div>
+  </footer>
+<a class="fab" href="../../../contacts.html#request" title="Write to us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Write to us</span></a>
+<script src="../../.././assets/docs-index.en.js?v=20261123h"></script><script src="../../.././assets/docs-interactive.js?v=20261123h"></script><script src="../../.././assets/docs-site.js?v=20261123h"></script>
+</body></html>

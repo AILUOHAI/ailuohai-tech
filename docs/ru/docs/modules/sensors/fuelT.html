@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Температура топлива — документация Cat-GDI8 — AILUOHAI-TECH</title>
+<meta name="description" content="Модуль «Датчики»: что это, как работает, как настроить."><link rel="canonical" href="https://ailuohai-tech.com/ru/docs/modules/sensors/fuelT.html"><link rel="alternate" hreflang="en" href="https://ailuohai-tech.com/docs/modules/sensors/fuelT.html"><link rel="alternate" hreflang="ru" href="https://ailuohai-tech.com/ru/docs/modules/sensors/fuelT.html"><link rel="alternate" hreflang="x-default" href="https://ailuohai-tech.com/docs/modules/sensors/fuelT.html"><!-- Yandex.Metrika counter -->
+  <script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=113736844','ym');ym(113736844,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/113736844" style="position:absolute;left:-9999px" alt=""></div></noscript>
+  <script src="/assets/metrika-goals.js" defer></script>
+  <!-- /Yandex.Metrika counter -->
+<link rel="stylesheet" href="../../.././../assets/style.css?v=20261023b"><style>
+    .docs-layout { padding-top: 8px; padding-bottom: 80px; }
+    .doc section { padding-bottom: 36px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+    .doc section:last-child { border-bottom: none; }
+    .doc h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .doc h3 { font-size: 20px; margin: 26px 0 8px; }
+    .doc p, .doc li { color: #444; max-width: 760px; }
+    .doc ul, .doc ol { padding-left: 20px; }
+    .doc li { margin: 6px 0; }
+    .tag { font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; }
+    .tag.ready { background: #e3f4ec; color: #146c4b; }
+    .tag.wip { background: #fff1e6; color: #a4410a; }
+    .tag.plan { background: #ececf1; color: #4a4b57; }
+    .note { background: var(--surface); box-shadow: 0 8px 24px rgba(0,0,0,.08); border-radius: 12px; padding: 14px 16px; max-width: 760px; color: #444; }
+    .doc table { width: 100%; max-width: 860px; background: var(--surface); border-radius: 14px; overflow: hidden; font-size: 15px; }
+    .doc th { text-align: left; font-size: 13px; color: var(--muted); }
+    .doc td { border-top: 1px solid var(--line); vertical-align: top; }
+    .doc td:first-child { font-weight: 700; white-space: nowrap; }
+    .table-scroll { overflow-x: auto; }
+
+    /* Torque structure diagram */
+    .flow { display: grid; gap: 10px; max-width: 860px; margin: 18px 0; }
+    .flow-row { display: grid; gap: 10px; }
+    .flow-row.c2 { grid-template-columns: 1fr 1fr; }
+    .flow-row.c3 { grid-template-columns: repeat(3, 1fr); }
+    .box { background: var(--surface); border-radius: 14px; padding: 12px 14px; box-shadow: inset 0 0 0 1px var(--line); }
+    .box b { display: block; font-size: 15px; }
+    .box span { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+    .box.dark { background: #1b1c20; color: #fff; box-shadow: none; }
+    .box.dark span { color: #c9cad0; }
+    .box.limit { box-shadow: inset 0 0 0 2px #d64545; }
+    .arrow { text-align: center; color: #e8661a; font-weight: 800; line-height: 1; }
+
+    .steps-list { counter-reset: s; list-style: none; padding: 0; max-width: 860px; }
+    .steps-list > li { counter-increment: s; position: relative; padding: 16px 16px 16px 64px; background: var(--surface); border-radius: 14px; margin: 10px 0; max-width: none; }
+    .steps-list > li::before { content: counter(s); position: absolute; left: 16px; top: 16px; width: 32px; height: 32px; border-radius: 10px; background: #1b1c20; color: #f07a2e; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .steps-list > li b { display: block; color: var(--text); margin-bottom: 4px; }
+
+    @media (max-width: 980px) {
+            .flow-row.c3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .doc h2 { font-size: 26px; }
+      .flow-row.c2 { grid-template-columns: 1fr; }
+      .doc td:first-child { white-space: normal; }
+    }
+  </style>
+<link rel="stylesheet" href="../../.././../assets/docs-interactive.css?v=20261123h"><link rel="stylesheet" href="../../.././../assets/docs-site.css?v=20261123h">
+</head><body data-root="../../">
+<header class="site-header"><div class="container bar"><a class="brand" href="../../.././index.html">AILUOHAI-TECH</a><nav class="nav">
+<a href="../../.././index.html#products">Продукты</a><a href="../../.././test-platform.html">Испытательная платформа</a><a href="../../.././downloads.html">Загрузки</a><a href="../../.././contacts.html">Контакты</a>
+<a class="lang" href="../../../../docs/modules/sensors/fuelT.html" hreflang="en" lang="en" title="English version">EN</a>
+</nav></div></header>
+<div class="container ds-wrap"><div><button class="ds-toggle" type="button" aria-expanded="false">Разделы документации</button><nav class="ds-side" aria-label="Разделы документации"><a href="../../index.html">Каталог</a><h4>1. Знакомство</h4><a href="../../learn/ecu.html">Что такое блок управления</a><a href="../../learn/injection.html">Какой бывает впрыск</a><a href="../../learn/schemes.html">Схемы моторов</a><h4>2. Как это работает</h4><a href="../../how/torque.html">Управление по моменту</a><a href="../../how/air-fuel.html">Воздух и топливо</a><a href="../../how/limiter.html">Ограничитель и винт</a><a href="../../how/start.html">Пуск</a><a href="../../how/protection.html">Защиты и реакции</a><a href="../../how/principle.html">Один блок, разные моторы</a><a href="../../how/diagrams.html">Как читать схемы</a><h4>3. Настройка</h4><a href="../../build/index.html">Сборка по шагам</a><a href="../../setup/calibration.html">Работа с калибровками</a><h4>4. Модули подробно</h4><a href="../engine.html">Двигатель</a><a href="../trigger.html">Триггер</a><a href="../sensors.html">Датчики</a><div class="sub"><a href="clt.html">Температура ОЖ</a><a href="iat.html">Температура воздуха</a><a href="oilT.html">Температура масла</a><a href="gearT.html">Температура редуктора</a><a href="fuelT.html" class="on" aria-current="page">Температура топлива</a><a href="fuelLvl.html">Уровень топлива</a><a href="map.html">Абс. давление / наддув</a><a href="baro.html">Барометр</a><a href="oilP.html">Давление масла</a><a href="fuelLowP.html">Давление топлива, низкое</a><a href="rail.html">Давление в рампе</a><a href="lever.html">Рычаг / педаль</a><a href="lambda.html">Лямбда</a><a href="egt.html">Температура выпуска (EGT)</a><a href="knock.html">Датчики детонации</a><a href="volt.html">Напряжения</a></div><a href="../actuators.html">Исполн. механизмы</a><a href="../start.html">Пуск</a><a href="../idle.html">Холостой ход</a><a href="../boost.html">Наддув</a><a href="../ignition.html">Зажигание</a><a href="../fuel.html">Топливо и смесь</a><a href="../air.html">Воздух (наполнение)</a><a href="../torque.html">Момент и ограничения</a><a href="../health.html">Здоровье двигателя</a><a href="../can.html">CAN</a><h4>Инструменты</h4><a href="../../tools/trigger.html">Колесо триггера</a><a href="../../tools/fuel.html">Топливо и импульс</a><a href="../../tools/ntc.html">Датчик температуры</a><h4>Справочник</h4><a href="../../../gdi8-pinout.html">Распиновка</a><a href="../../../downloads.html">Загрузки</a></nav></div>
+<main class="ds-main doc"><div class="ds-crumbs"><a href="../../.././index.html">Главная</a> / <a href="../../.././ecu-cat-gdi8.html">ECU Cat-GDI8</a> / <a href="../../index.html">Документация</a> / <a href="../sensors.html">Датчики</a></div><h1>Температура топлива</h1><p class="ds-lead">Модуль «Датчики»: что это, как работает, как настроить.</p>
+<div class="dx-search"><input id="ds-q" type="search" placeholder="Поиск по всей документации" aria-label="Поиск по всей документации"><kbd>Ctrl K</kbd><div id="ds-res" class="dx-results"></div></div>
+<section id="settings"><h2>Что есть в приложении</h2><p class="dx-path"><span>Датчики</span> → <span>Температура топлива</span></p><details class="ds-set"><summary>Тарировка и сырые</summary><p>Экран приложения с живыми данными.</p></details><details class="ds-set"><summary>Ошибки и ограничения</summary><p>Экран приложения с живыми данными.</p></details></section><div class="ds-pn"><a href="gearT.html"><small>Назад</small>Температура редуктора</a><a class="next" href="fuelLvl.html"><small>Дальше</small>Уровень топлива</a></div></main></div>
+<footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>AILUOHAI-TECH</h4>
+        <p>Электроника и системы управления для аэролодок и судов специального назначения.</p>
+        <p>Shenzhen Ailuohai Power Technology Co., Ltd.</p>
+      </div>
+      <div>
+        <h4>Продукты</h4>
+        <a href="../../../dash-6-8.html">Dash-6.8</a>
+        <a href="../../../ecu-cat-gdi4.html">ECU Cat-GDI4</a>
+        <a href="../../../ecu-cat-gdi8.html">ECU Cat-GDI8</a>
+        <a href="../../../cat-mpi8.html">Cat-MPI8</a>
+      </div>
+      <div>
+        <h4>Загрузки</h4>
+        <a href="../../../downloads.html">BrainBus</a>
+        <a href="../../../downloads.html#installer">Установщик</a>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <a href="../../../contacts.html">Контакты</a>
+        <a href="../../../test-platform.html">Испытательная платформа</a>
+        <a href="mailto:info@ailuohai-tech.com">info@ailuohai-tech.com</a>
+      </div>
+    </div>
+  </footer>
+<a class="fab" href="../../../contacts.html#request" title="Написать нам"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Написать нам</span></a>
+<script src="../../.././../assets/docs-index.ru.js?v=20261123h"></script><script src="../../.././../assets/docs-interactive.js?v=20261123h"></script><script src="../../.././../assets/docs-site.js?v=20261123h"></script>
+</body></html>
