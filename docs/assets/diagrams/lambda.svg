@@ -142,7 +142,7 @@
 <g transform="translate(824.0,402.0) scale(0.5833)" fill="none" stroke="#FFFFFF" stroke-width="2.57" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20L12 6"/><path d="M8.5 5H11l7 15"/></g>
 <text x="952.0" y="413.0" font-family="Segoe UI, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#FFFFFF" font-weight="600" xml:space="preserve">PI-коррекция</text>
 <text x="828.0" y="433.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">lam.pid, предел ±lam.corrLimit</text>
-<text x="828.0" y="447.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">ШДК готов, ОЖ &gt; lam.minClt,</text>
+<text x="828.0" y="447.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">ШДК готов, ОЖ &gt; lam.loopMinClt,</text>
 <text x="828.0" y="461.0" font-family="Consolas, monospace" font-size="10.5" text-anchor="start" fill="#2B3A48" font-weight="normal" xml:space="preserve">ровный режим, нет защиты</text>
 <rect x="820" y="510" width="250" height="70" rx="6" fill="#EAF0F6" stroke="#1F3B57" stroke-width="1.6"/>
 <rect x="820" y="510" width="250" height="18" rx="6" fill="#1F3B57"/><rect x="820" y="521" width="250" height="7" fill="#1F3B57"/>
