@@ -82,7 +82,8 @@ a.ds-tile:hover { box-shadow: inset 0 0 0 2px #e8661a; }
 .dx-zoom-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; background: #1b1c20; color: #fff; }
 .dx-zoom-bar span { display: flex; gap: 5px; flex: none; }
 .dx-zoom-bar button { font: inherit; font-size: 13px; font-weight: 700; min-width: 36px; padding: 6px 9px; border: 0; border-radius: 8px; background: #3a3b42; color: #fff; cursor: pointer; }
-.dx-zoom-view { flex: 1; position: relative; overflow: hidden; background: #fff; cursor: grab; touch-action: none; }
+.dx-zoom-view { flex: 1; position: relative; overflow: hidden; background: #fff; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+.dx-zoom-view.drag { cursor: grabbing; }
 .dx-zoom-view img { display: block; width: 100%; height: 100%; object-fit: contain; transform-origin: 0 0; user-select: none; -webkit-user-drag: none; pointer-events: none; }
 @media (max-width: 1100px) {
   .ds-story { grid-template-columns: minmax(0, 1fr); }

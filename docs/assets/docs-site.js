@@ -108,9 +108,18 @@
       if (k === 'x' || ev.target === dlg) dlg.close(); else if (k === '0') reset(); else if (k === '+') zoomAt(1.3, r.width / 2, r.height / 2); else if (k === '-') zoomAt(1 / 1.3, r.width / 2, r.height / 2);
     });
     view.addEventListener('wheel', (ev) => { ev.preventDefault(); const r = view.getBoundingClientRect(); zoomAt(ev.deltaY < 0 ? 1.15 : 1 / 1.15, ev.clientX - r.left, ev.clientY - r.top); }, { passive: false });
-    view.addEventListener('pointerdown', (ev) => { drag = { x: ev.clientX - px, y: ev.clientY - py }; view.setPointerCapture(ev.pointerId); });
+    // перетаскивание схемы: браузеру не даём начать своё выделение и перетаскивание (dragstart) - иначе он забирает
+    // мышь (pointercancel), схема встаёт и окно «подвисает», пока не отпустишь кнопку
+    view.addEventListener('pointerdown', (ev) => {
+      if (ev.button !== 0) return;
+      ev.preventDefault();
+      drag = { x: ev.clientX - px, y: ev.clientY - py };
+      view.setPointerCapture(ev.pointerId);
+      view.classList.add('drag');
+    });
     view.addEventListener('pointermove', (ev) => { if (drag) { px = ev.clientX - drag.x; py = ev.clientY - drag.y; apply(); } });
-    ['pointerup', 'pointercancel'].forEach((n) => view.addEventListener(n, () => { drag = null; }));
+    ['pointerup', 'pointercancel', 'lostpointercapture'].forEach((n) => view.addEventListener(n, () => { drag = null; view.classList.remove('drag'); }));
+    ['dragstart', 'selectstart'].forEach((n) => view.addEventListener(n, (ev) => ev.preventDefault()));
   }
 
   // ---- снимки приложения: номер и строка подсвечивают друг друга, нажатие увеличивает снимок

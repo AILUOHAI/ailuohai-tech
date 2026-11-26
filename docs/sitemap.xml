@@ -352,6 +352,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ailuohai-tech.com/docs/modules/actuators/startStop.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ailuohai-tech.com/docs/modules/actuators/wgServo.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
@@ -963,6 +968,11 @@
   </url>
   <url>
     <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/relays.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailuohai-tech.com/ru/docs/modules/actuators/startStop.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
